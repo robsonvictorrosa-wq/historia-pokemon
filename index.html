@@ -1,0 +1,2147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#e3350d">
+  <title>A Jornada de Robson Ketchum</title>
+  <style>
+:root {
+  --vermelho: #e3350d;
+  --vermelho-esc: #b3260a;
+  --escuro: #1f2430;
+  --escuro-2: #2c3342;
+  --fundo: #f3f4f7;
+  --branco: #ffffff;
+  --texto: #1f2430;
+  --suave: #6b7280;
+  --borda: #e5e7eb;
+  --amarelo: #ffcb05;
+  --azul: #3b6fd8;
+  --verde: #1f9d55;
+  --raio: 16px;
+  --sombra: 0 2px 10px rgba(31, 36, 48, .08);
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: var(--fundo);
+  color: var(--texto);
+  line-height: 1.5;
+}
+a { color: var(--vermelho-esc); }
+h1, h2, h3, h4 { line-height: 1.25; margin: 0 0 .5em; }
+
+/* ---------- Topo ---------- */
+.topo {
+  background: var(--vermelho);
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  box-shadow: 0 2px 8px rgba(0,0,0,.2);
+}
+.topo-inner { max-width: 1100px; margin: 0 auto; padding: 10px 16px 6px; }
+.marca { display: flex; align-items: center; gap: 10px; color: #fff; text-decoration: none; font-weight: 800; font-size: 1.1rem; }
+.pokebola {
+  width: 28px; height: 28px; border-radius: 50%; flex: none;
+  background: linear-gradient(to bottom, #fff 0 45%, var(--escuro) 45% 55%, #fff 55%);
+  border: 3px solid var(--escuro);
+  position: relative;
+}
+.topo .pokebola { background: linear-gradient(to bottom, #fff 0 45%, var(--escuro) 45% 55%, #fff 55%); }
+.pokebola::after {
+  content: ""; position: absolute; width: 8px; height: 8px; border-radius: 50%;
+  background: #fff; border: 2px solid var(--escuro); left: 50%; top: 50%; transform: translate(-50%, -50%);
+}
+.abas {
+  max-width: 1100px; margin: 0 auto; display: flex; gap: 4px; padding: 0 10px;
+  overflow-x: auto; scrollbar-width: none;
+}
+.abas::-webkit-scrollbar { display: none; }
+.abas a {
+  color: #ffe3dc; text-decoration: none; padding: 10px 14px; font-weight: 600; font-size: .95rem;
+  border-bottom: 3px solid transparent; white-space: nowrap;
+}
+.abas a:hover { color: #fff; }
+.abas a.ativa { color: #fff; border-bottom-color: var(--amarelo); }
+
+/* ---------- Layout ---------- */
+.conteudo { max-width: 1100px; margin: 0 auto; padding: 18px 16px 40px; }
+.rodape { text-align: center; color: var(--suave); font-size: .85rem; padding: 20px 16px 30px; }
+.secao { margin-bottom: 26px; }
+.secao-titulo { font-size: 1.2rem; display: flex; align-items: center; gap: 8px; }
+.secao-titulo::before { content: ""; width: 6px; height: 1.1em; background: var(--vermelho); border-radius: 3px; }
+.grade { display: grid; gap: 14px; }
+.grade-2 { grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
+.grade-3 { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+
+.card {
+  background: var(--branco); border-radius: var(--raio); box-shadow: var(--sombra);
+  padding: 16px; border: 1px solid var(--borda);
+}
+.card h3 { font-size: 1.05rem; }
+.suave { color: var(--suave); }
+.pequeno { font-size: .85rem; }
+
+/* ---------- Aviso ---------- */
+.aviso {
+  display: flex; gap: 12px; align-items: flex-start;
+  background: #fff8db; border: 1px solid #f5d76e; color: #6b5200;
+  border-radius: var(--raio); padding: 12px 14px; margin-bottom: 18px; font-size: .95rem;
+}
+.aviso-icone { font-size: 1.3rem; line-height: 1; }
+
+/* ---------- Hero ---------- */
+.hero {
+  background: linear-gradient(135deg, var(--escuro) 0%, var(--escuro-2) 100%);
+  color: #fff; border-radius: 20px; padding: 22px 20px; margin-bottom: 18px; position: relative; overflow: hidden;
+}
+.hero::after {
+  content: ""; position: absolute; right: -50px; top: -50px; width: 190px; height: 190px; border-radius: 50%;
+  border: 22px solid rgba(255,255,255,.07);
+  background: linear-gradient(to bottom, rgba(227,53,13,.35) 0 46%, transparent 46% 54%, rgba(255,255,255,.06) 54%);
+}
+.hero h1 { font-size: 1.6rem; margin-bottom: 4px; }
+.hero p { margin: 0; color: #cfd5e2; }
+.hero .chips { margin-top: 12px; }
+
+/* ---------- Contadores ---------- */
+.contadores { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; margin-bottom: 8px; }
+.contador { background: var(--branco); border-radius: var(--raio); padding: 14px; box-shadow: var(--sombra); border: 1px solid var(--borda); border-top: 4px solid var(--vermelho); }
+.contador .num { font-size: 1.9rem; font-weight: 800; line-height: 1.1; }
+.contador .rot { color: var(--suave); font-size: .85rem; font-weight: 600; }
+.contador.azul { border-top-color: var(--azul); }
+.contador.amarelo { border-top-color: var(--amarelo); }
+.contador.verde { border-top-color: var(--verde); }
+.contador.escuro { border-top-color: var(--escuro); }
+
+/* ---------- Chips ---------- */
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip {
+  display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; border-radius: 999px;
+  font-size: .8rem; font-weight: 600; background: #eef0f4; color: var(--escuro); text-decoration: none; border: 0;
+}
+.chip.vermelho { background: #fde4dd; color: var(--vermelho-esc); }
+.chip.escuro { background: var(--escuro); color: #fff; }
+.chip.amarelo { background: #fff3c4; color: #7a5b00; }
+.chip.azul { background: #e2ebfc; color: #1e4fb3; }
+.chip.verde { background: #dcf3e5; color: #146c3a; }
+.hero .chip { background: rgba(255,255,255,.14); color: #fff; }
+button.chip, a.chip { cursor: pointer; }
+
+/* ---------- Pokémon ---------- */
+.time { display: flex; flex-wrap: wrap; gap: 10px; }
+.poke { display: flex; flex-direction: column; align-items: center; width: 84px; text-align: center; }
+.poke-img {
+  width: 72px; height: 72px; border-radius: 50%; background: #f1f3f7; border: 2px solid var(--borda);
+  display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;
+}
+.poke-img img { width: 72px; height: 72px; image-rendering: pixelated; }
+.poke-img .fallback { display: none; }
+.poke-img.sem-img .fallback {
+  display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%;
+  border: 3px solid var(--escuro); font-weight: 800; color: var(--escuro); font-size: .95rem;
+  background: linear-gradient(to bottom, #f36b4f 0 46%, var(--escuro) 46% 54%, #fff 54%);
+  text-shadow: 0 0 3px #fff, 0 0 3px #fff;
+}
+.poke-nome { font-size: .8rem; font-weight: 700; margin-top: 4px; }
+.poke.nao-usado .poke-img { opacity: .6; border-style: dashed; }
+.poke-mini { width: 60px; }
+.poke-mini .poke-img { width: 52px; height: 52px; }
+.poke-mini .poke-img img { width: 56px; height: 56px; }
+.poke-mini .poke-img.sem-img .fallback { width: 34px; height: 34px; font-size: .8rem; }
+
+/* ---------- Episódios ---------- */
+.filtros { display: grid; grid-template-columns: 1fr; gap: 10px; margin-bottom: 14px; }
+@media (min-width: 720px) { .filtros { grid-template-columns: 2fr 1fr 1fr; } }
+.campo { display: flex; flex-direction: column; gap: 4px; font-size: .8rem; font-weight: 700; color: var(--suave); }
+.campo input, .campo select {
+  font: inherit; font-size: 1rem; font-weight: 400; color: var(--texto);
+  padding: 10px 12px; border-radius: 12px; border: 1px solid var(--borda); background: #fff; width: 100%;
+}
+.campo input:focus, .campo select:focus { outline: 2px solid var(--vermelho); border-color: transparent; }
+.ep-card { display: flex; gap: 14px; align-items: flex-start; text-decoration: none; color: inherit; transition: transform .1s, box-shadow .1s; }
+.ep-card:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(31,36,48,.12); }
+.ep-num {
+  flex: none; width: 54px; height: 54px; border-radius: 14px; background: var(--vermelho); color: #fff;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; font-weight: 800; font-size: 1.25rem; line-height: 1;
+}
+.ep-num small { font-size: .6rem; font-weight: 600; opacity: .85; margin-bottom: 2px; }
+.ep-card h3 { margin-bottom: 4px; }
+.ep-card p { margin: 6px 0 0; font-size: .9rem; color: #444b5a; }
+.vazio { text-align: center; color: var(--suave); padding: 30px 10px; }
+
+.voltar { display: inline-flex; align-items: center; gap: 6px; margin-bottom: 12px; font-weight: 700; text-decoration: none; }
+.ep-topo { display: flex; gap: 14px; align-items: center; margin-bottom: 12px; }
+.ep-topo .ep-num { width: 64px; height: 64px; font-size: 1.5rem; }
+.ep-topo h1 { font-size: 1.35rem; margin-bottom: 6px; }
+.eventos { margin: 0; padding-left: 22px; }
+.eventos li { margin-bottom: 6px; }
+.time-bloco { border-top: 1px solid var(--borda); padding-top: 12px; margin-top: 12px; }
+.time-bloco:first-of-type { border-top: 0; margin-top: 0; padding-top: 0; }
+.poke-detalhe { display: flex; gap: 12px; align-items: flex-start; padding: 8px 0; }
+.poke-detalhe .info { flex: 1; min-width: 0; }
+.poke-detalhe .info strong { display: block; }
+.poke-detalhe .chips { margin-top: 4px; }
+.nav-ep { display: flex; justify-content: space-between; gap: 10px; margin-top: 16px; }
+.botao {
+  display: inline-flex; align-items: center; gap: 6px; padding: 10px 14px; border-radius: 12px; font-weight: 700;
+  background: var(--escuro); color: #fff; text-decoration: none; font-size: .9rem;
+}
+.botao.desativado { opacity: .35; pointer-events: none; }
+
+/* ---------- Personagens ---------- */
+.pers-card { display: flex; flex-direction: column; gap: 10px; }
+.pers-topo { display: flex; gap: 12px; align-items: center; }
+.avatar {
+  flex: none; width: 48px; height: 48px; border-radius: 50%; background: var(--escuro); color: #fff;
+  display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.1rem;
+}
+.papel-protagonista .avatar { background: var(--vermelho); }
+.papel-rival .avatar { background: var(--azul); }
+.papel-companheiro .avatar { background: var(--verde); }
+.papel-mentor .avatar { background: #8a5cd1; }
+.papel-familia .avatar, .papel-outro .avatar { background: #6b7280; }
+.pers-card h3 { margin: 0; }
+.pers-card p { margin: 0; font-size: .92rem; color: #444b5a; }
+.sub { font-size: .75rem; font-weight: 800; text-transform: uppercase; letter-spacing: .04em; color: var(--suave); margin: 4px 0 6px; }
+.historico { width: 100%; border-collapse: collapse; font-size: .88rem; }
+.historico td { padding: 6px 4px; border-top: 1px solid var(--borda); vertical-align: middle; }
+.historico td:first-child { width: 1%; white-space: nowrap; font-weight: 700; }
+.destaque { border: 2px solid var(--vermelho); }
+
+/* ---------- Tabelas ---------- */
+.tabela-wrap { overflow-x: auto; background: #fff; border-radius: var(--raio); box-shadow: var(--sombra); border: 1px solid var(--borda); }
+table.tabela { width: 100%; border-collapse: collapse; font-size: .9rem; min-width: 520px; }
+.tabela th { text-align: left; background: var(--escuro); color: #fff; padding: 10px 12px; font-size: .8rem; text-transform: uppercase; letter-spacing: .03em; white-space: nowrap; }
+.tabela td { padding: 10px 12px; border-top: 1px solid var(--borda); }
+.tabela tr:nth-child(even) td { background: #fafbfc; }
+.tabela td.n { text-align: center; font-weight: 700; }
+.tabela th.n { text-align: center; }
+.zero { color: #b8bdc7; font-weight: 400 !important; }
+
+/* ---------- Arcos ---------- */
+.linha-tempo { position: relative; padding-left: 28px; }
+.linha-tempo::before { content: ""; position: absolute; left: 10px; top: 4px; bottom: 4px; width: 4px; background: #d7dbe3; border-radius: 2px; }
+.arco { position: relative; margin-bottom: 16px; }
+.arco::before {
+  content: ""; position: absolute; left: -25px; top: 18px; width: 18px; height: 18px; border-radius: 50%;
+  background: linear-gradient(to bottom, var(--vermelho) 0 44%, var(--escuro) 44% 56%, #fff 56%); border: 2px solid var(--escuro);
+}
+.arco.atual { border: 2px solid var(--vermelho); }
+.faixa { font-size: 1.4rem; font-weight: 800; color: var(--vermelho-esc); }
+
+@media (max-width: 480px) {
+  .hero h1 { font-size: 1.35rem; }
+  .contador .num { font-size: 1.6rem; }
+  .grade-2, .grade-3 { grid-template-columns: 1fr; }
+  .contadores { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Abas cabem na tela do celular */
+@media (max-width: 560px) {
+  .abas { padding: 0 4px; gap: 0; }
+  .abas a { flex: 1 1 auto; text-align: center; padding: 10px 6px; font-size: .82rem; }
+  .hero::after { opacity: .5; }
+}
+.texto-ep summary { cursor: pointer; font-weight: 800; font-size: 1.05rem; }
+.texto-ep[open] summary { margin-bottom: 10px; }
+.texto-ep p { margin: 0 0 .9em; font-size: 1rem; line-height: 1.7; }
+.ep-faltando { opacity: .6; border-style: dashed; background: transparent; box-shadow: none; }
+.ep-faltando:hover { transform: none; box-shadow: none; }
+.ep-faltando .ep-num { background: #c3c8d2; }
+.chip.faltando { background: transparent; border: 1px dashed #b8bdc7; color: #9aa1ad; }
+.papel-vilao .avatar { background: #4b2a6b; }
+.membros { list-style: none; margin: 0; padding: 0; }
+.membros li { display: flex; gap: 10px; align-items: flex-start; padding: 10px 0; border-top: 1px solid var(--borda); }
+.membros li:first-child { border-top: 0; padding-top: 0; }
+.membros .avatar { width: 38px; height: 38px; font-size: .9rem; }
+.poke-micro { width: auto; }
+.poke-micro .poke-img { width: 36px; height: 36px; border-width: 1px; }
+.poke-micro .poke-img img { width: 40px; height: 40px; }
+.poke-micro .poke-img.sem-img .fallback { width: 24px; height: 24px; font-size: .65rem; border-width: 2px; }
+.poke-micro .poke-nome { display: none; }
+.membros .time { gap: 4px; }
+.objetivos { list-style: none; margin: 0; padding: 0; }
+.objetivos li { display: flex; gap: 10px; align-items: flex-start; padding: 8px 0; border-top: 1px solid var(--borda); }
+.objetivos li:first-child { border-top: 0; }
+.marca-obj { color: var(--vermelho); font-weight: 800; }
+.objetivos li.feito { color: var(--suave); text-decoration: line-through; }
+.objetivos li.feito .marca-obj { color: var(--verde); }
+.evolucao { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.evolucao .seta { font-size: 1.4rem; color: var(--verde); font-weight: 800; }
+
+</style>
+</head>
+<body>
+  <header class="topo">
+    <div class="topo-inner">
+      <a class="marca" href="#inicio">
+        <span class="pokebola" aria-hidden="true"></span>
+        <span class="marca-txt" id="titulo-site">A Jornada de Robson Ketchum</span>
+      </a>
+    </div>
+    <nav class="abas" id="abas">
+      <a href="#inicio" data-aba="inicio">Início</a>
+      <a href="#episodios" data-aba="episodios">Episódios</a>
+      <a href="#personagens" data-aba="personagens">Personagens</a>
+      <a href="#conquistas" data-aba="conquistas">Conquistas</a>
+      <a href="#arcos" data-aba="arcos">Arcos</a>
+    </nav>
+  </header>
+
+  <main id="app" class="conteudo"></main>
+
+  <footer class="rodape" id="rodape"></footer>
+
+  <script>
+/*
+ * data.js — TODOS os dados da história ficam aqui.
+ * Depois de editar, rode:  python3 build.py   (gera o site-historia-pokemon.html atualizado)
+ *
+ * ESQUEMA
+ * meta:        { titulo, subtitulo, protagonista (nome exato do personagem), atualizadoEm, nota }
+ * arcos:       [{ nome, regiao, episodios: { inicio, fim }, provisorio?: true, descricao }]
+ *                - inicio/fim podem ser null (desconhecido/em andamento). Ex.: { inicio: 4, fim: null } aparece como "4 – 11+".
+ * grupos:      [{ nome, descricao?, membros: [{ nome, funcao, desde?, ate? }] }]
+ *                - grupos de viagem. desde = nº do episódio em que entrou; ate = até quando (texto ou nº); obs? = observação.
+ * personagens: [{ nome, papel, rivalDe?, idade?, apelidos?, descricao, pokemon, primeiraAparicao, observacoes?, contagemDeclarada? }]
+ *                - apelidos: outros nomes usados no texto (ex.: "Gary Carvalho"); também valem em times/aparecem.
+ *                - contagemDeclarada: [{ tipo: "insignia"|"fita"|..., quantidade, episodio, fonte }]
+ *                  para números ditos em diálogo sem os nomes das conquistas (ex.: "tenho 4 insígnias").
+ *                - papel: "protagonista" | "rival" | "companheiro" | "mentor" | "vilao" | "familia" | "outro"
+ *                - rivalDe: de quem a pessoa é rival (ex.: "Robson Ketchum" ou "Ash Ketchum").
+ *                - pokemon: time atual fixo. Deixe [] para o site calcular: junta todos os Pokémon
+ *                  já vistos com o personagem (menos os marcados com saiu: true).
+ *                - primeiraAparicao: número do episódio (ou null se ainda não se sabe).
+ * conquistasAnteriores: [{ personagem, tipo, nome, local, observacao?, mencionadaNoEpisodio? }]
+ *                - conquistas de antes da história começar (aparecem como "Antes da história").
+ * objetivos:   [{ descricao, personagem?, origem (nº do episódio), status: "pendente" | "concluido", concluidoEm? }]
+ * episodes:    [{ numero, titulo, arco (nome do arco), local, resumo (2 a 4 frases),
+ *                 eventos: ["...", ...],
+ *                 aparecem: ["nome", ...]            (personagens presentes, mesmo sem time conhecido)
+ *                 times: { "Nome do personagem": [ "Pikachu"  OU  { nome, golpes?: [], nota?, personalidade?, usado?: false, saiu?: true } ] },
+ *                 lendarios?: [ "Suicune"  OU  { nome, nota } ]     (Pokémon lendários avistados)
+ *                 novosGolpes?: [{ pokemon, personagem, golpe, nota? }]  (golpes aprendidos/revelados no episódio)
+ *                 itens?: [{ nome, descricao, personagem? }]      (itens importantes para a trama, ex.: GS Ball)
+ *                 evolucoes?: [{ personagem, de, para }]          (o time passa a mostrar a forma evoluída)
+ *                 conquistas: [{ personagem, tipo, nome, local }]
+ *                    - tipo: "insignia" | "fita" | "ilha" | "desafio" | "outro"
+ *                 resultados?: [{ personagem, evento, resultado }]   (opcional: vitórias, derrotas, colocações)
+ *                 proximoObjetivo?: "...",
+ *                 texto?: "..." }]   (opcional: texto completo do episódio; parágrafos separados por linha em branco)
+ * Os nomes dos personagens em "times", "aparecem", "conquistas", "resultados" e "grupos"
+ * devem ser iguais ao campo "nome" em personagens. Episódios que faltam aparecem sozinhos como "ainda não enviado".
+ */
+window.STORY_DATA = {
+  meta: {
+    titulo: "A Jornada de Robson Ketchum",
+    subtitulo: "O acompanhamento da história, episódio por episódio",
+    protagonista: "Robson Ketchum",
+    atualizadoEm: "24/09/2026",
+    nota: "Os dados estão sendo preenchidos aos poucos, conforme os episódios chegam. Arcos e números ainda são provisórios."
+  },
+
+  arcos: [
+    {
+      nome: "Prólogo: Sinnoh e Pallet",
+      regiao: "Sinnoh e Kanto",
+      episodios: { inicio: 1, fim: 3 },
+      provisorio: true,
+      descricao: "A formatura de Robson na Academia Pokémon de Sinnoh, o nascimento de Riolu, a volta para casa em Pallet, o reencontro com Ash e a derrota para o rival Josias, que leva os irmãos a partirem para Johto."
+    },
+    {
+      nome: "Johto",
+      regiao: "Johto",
+      episodios: { inicio: 4, fim: null },
+      provisorio: true,
+      descricao: "Robson recebe Cyndaquil em New Bark, ganha Dratini, conhece Wallace, decide se tornar Coordenador, forma o seu grupo com Renato e Eyshila e disputa o seu primeiro Contest em Johto, em Cidade Violeta."
+    }
+  ],
+
+  grupos: [
+    {
+      nome: "Grupo de Robson",
+      membros: [
+        { nome: "Robson Ketchum", funcao: "Protagonista" },
+        { nome: "Renato", funcao: "Companheiro de viagem", desde: 7 },
+        { nome: "Eyshila", funcao: "Companheira de viagem", desde: 8 },
+        { nome: "Wallace", funcao: "Mentor", desde: 11, ate: 14, obs: "Deixou o grupo no Ep. 14, antes de Azaleia." }
+      ]
+    },
+    {
+      nome: "Grupo de Ash",
+      membros: [
+        { nome: "Ash Ketchum", funcao: "Treinador" },
+        { nome: "Misty", funcao: "Companheira de viagem" },
+        { nome: "Brock", funcao: "Companheiro de viagem" }
+      ]
+    }
+  ],
+
+  personagens: [
+    {
+      nome: "Robson Ketchum",
+      papel: "protagonista",
+      idade: 10,
+      descricao: "Irmão mais novo de Ash Ketchum. Estudioso, estratégico e quieto, bem diferente do irmão. Aos 7 anos, ganhou uma bolsa na Academia Pokémon de Sinnoh, onde se formou. Declarou que vai se tornar Mestre Pokémon antes de Ash e, inspirado por Wallace, decidiu também se tornar Top Coordenador. Consegue sentir Riolu por meio da Aura.",
+      pokemon: [],
+      primeiraAparicao: 1
+    },
+    {
+      nome: "Josias Carvalho",
+      papel: "rival",
+      rivalDe: "Robson Ketchum",
+      descricao: "Rival principal de Robson desde a infância. Chegou a Pallet com Gary Oak, venceu Robson com Abra, disse que sempre será o número 1 e partiu para Johto para se tornar campeão. Reapareceu na floresta das ilusões com um Hoothoot e provocou Robson pelas derrotas para Líderes de Ginásio. Segundo Gary (Ep. 21), já tem 3 insígnias.",
+      contagemDeclarada: [
+        { tipo: "insignia", quantidade: 3, episodio: 21, fonte: "Gary" }
+      ],
+      pokemon: [],
+      primeiraAparicao: 2
+    },
+    {
+      nome: "Drew",
+      papel: "rival",
+      rivalDe: "Robson Ketchum",
+      descricao: "Coordenador rival de Robson. Estreou em Cidade Cerejeira com Beautifly, dominou o Contest e ficou com a fita. Arrogante no começo (chamou Pedro de fraco), deu uma rosa a Robson e o desafiou para o Contest de Violeta. Assistiu à batalha de Robson no Ginásio de Violeta, disse \"Nada mal\" e lhe deu outra rosa, mostrando respeito pelo seu talento. Em Azaleia, apresentou-se com Vulpix e perdeu para Pedro na semifinal.",
+      pokemon: [],
+      primeiraAparicao: 6
+    },
+    {
+      nome: "Pedro",
+      papel: "rival",
+      rivalDe: "Robson Ketchum",
+      descricao: "Treinador novato da Ilha de Cianwood que quer ser Top Coordenador; admira Wallace e Juan. O seu Totodile, recebido do Professor Elm, é o mesmo que Robson resgatou no Ep. 4. Ficou amigo de Robson. Perdeu para Drew na semifinal em Cerejeira e venceu o Contest de Cidade Violeta, conquistando a sua primeira fita. Em Azaleia, estreou Growlithe, venceu Drew na semifinal e perdeu a final para Robson (84 × 89).",
+      pokemon: [],
+      primeiraAparicao: 6
+    },
+    {
+      nome: "Gary Oak",
+      papel: "rival",
+      rivalDe: "Ash Ketchum",
+      apelidos: ["Gary Carvalho"],
+      descricao: "Rival de Ash, também chamado de Gary Carvalho. Chegou a Pallet com Josias, venceu Ash em uma batalha e partiu para Johto. Nos arredores de Goldenrod, apareceu em um conversível esportivo, contou que tem 4 insígnias e que Josias já tem 3, alertou sobre a Miltank de Whitney e zombou dos Ketchum como \"especialistas em perder\".",
+      contagemDeclarada: [
+        { tipo: "insignia", quantidade: 4, episodio: 21, fonte: "o próprio Gary" }
+      ],
+      pokemon: [],
+      primeiraAparicao: 2
+    },
+    {
+      nome: "Renato",
+      papel: "companheiro",
+      descricao: "Cabelo escuro e jaleco curto; viaja para se tornar Médico Pokémon, com Oshawott como parceiro desde o início. Passou horas ajudando Shuckle a curar Pokémon envenenados e o capturou. O seu Oshawott evoluiu para Dewott na batalha contra uma Miltank furiosa, que ele capturou por causa do Leite MuMu. Zoa Pallet chamando-a de \"roça\" (para ele, o que vale é Celadon, a capital de Kanto) e discute Futebol Pokémon com Robson: torce para o Blaziken, enquanto Robson torce para o Ninetales (segundo Renato, o Ninetales \"roubou o Mandibuzz em 1980\"). Chama Cassidy e Butch de \"Quessid e Burtic\". Foi quem disse a Robson: \"Você não é o irmão do Ash. Você é o Robson.\" Costuma provocar, mas, depois da derrota em Violeta, ficou em silêncio ao lado do amigo.",
+      pokemon: [],
+      primeiraAparicao: 7
+    },
+    {
+      nome: "Eyshila",
+      papel: "companheiro",
+      descricao: "Quer se tornar Professora Pokémon e tem medo de batalhar. Foi salva, com o seu Aipom, de um enxame de Beedrill por Robson e Renato, e entrou para o grupo. Acalmou um Gloom assustado sem batalhar, entendendo o seu medo, e o capturou: \"Nunca vou te deixar sozinha.\" Venceu o medo de batalhar para salvar um Hoppip dos Spearow e o capturou. Ficou feliz pelo amigo em Violeta.",
+      pokemon: [],
+      primeiraAparicao: 8
+    },
+    {
+      nome: "Wallace",
+      papel: "mentor",
+      descricao: "Campeão de Hoenn e Top Coordenador. Salvou Robson e Dratini de um Gyarados com Milotic, deu bronca pela imprudência, mas admirou a coragem de Robson e explicou que os Contests desenvolvem controle, precisão e criatividade. A sua exibição em Cerejeira inspirou Robson a ser Coordenador. Assistiu ao Contest de Violeta disfarçado, ensinou que um Contest deve mostrar o coração do Pokémon, e não só os efeitos, e viajou disfarçado com o grupo como mentor (Ep. 11 a 14), ensinando que o Pokémon é sempre o centro de uma apresentação e que a essência de um Pokémon é quem ele é. Na lição final, venceu os quatro Pokémon de Robson só com Milotic, aprovou-o e deixou o grupo: \"Espero encontrar você novamente. Lá no topo.\"",
+      pokemon: [],
+      primeiraAparicao: 5
+    },
+    {
+      nome: "Ash Ketchum",
+      papel: "familia",
+      descricao: "Irmão mais velho de Robson e rival amigável. Voltou das Ilhas Laranja como campeão da Liga Laranja. Ao ver Ho-Oh voando para Johto, decidiu disputar a Liga Johto. Em New Bark, ele e Robson se declararam rivais: \"Nos vemos na Liga Johto.\" Conquistou a Insígnia Zephyr em Cidade Violeta e seguiu na frente com Misty e Brock para Cidade Azaleia, onde reencontrou Robson e entregou a Kurt a GS Ball do Professor Carvalho. Venceu Bugsy, também com o seu Cyndaquil, e ganhou a Insígnia Colmeia, a sua segunda; depois, se separou de Robson de novo.",
+      pokemon: [],
+      primeiraAparicao: 2
+    },
+    {
+      nome: "Delia Ketchum",
+      papel: "familia",
+      descricao: "Mãe de Robson e Ash. Recebeu Robson em casa com lasanha.",
+      pokemon: [],
+      primeiraAparicao: 2
+    },
+    {
+      nome: "Brock",
+      papel: "outro",
+      descricao: "Companheiro de viagem de Ash e amigo da família. Passou a noite contando a Robson as aventuras de Ash.",
+      pokemon: [],
+      primeiraAparicao: 2
+    },
+    {
+      nome: "Misty",
+      papel: "outro",
+      descricao: "Companheira de viagem de Ash.",
+      pokemon: [],
+      primeiraAparicao: 3
+    },
+    {
+      nome: "Jessie",
+      papel: "vilao",
+      descricao: "Integrante da Equipe Rocket, ao lado de James e Meowth. Participou do roubo do Totodile do laboratório do Professor Elm.",
+      pokemon: [],
+      primeiraAparicao: 4
+    },
+    {
+      nome: "James",
+      papel: "vilao",
+      descricao: "Integrante da Equipe Rocket, ao lado de Jessie e Meowth.",
+      pokemon: [],
+      primeiraAparicao: 4
+    },
+    {
+      nome: "Meowth",
+      papel: "vilao",
+      descricao: "Integrante da Equipe Rocket, ao lado de Jessie e James.",
+      pokemon: [],
+      primeiraAparicao: 4
+    },
+    {
+      nome: "Cassidy",
+      papel: "vilao",
+      descricao: "Agente da Equipe Rocket, parceira de Butch. Quer capturar Riolu porque ele sabe usar Aura Esférica. Renato a chama de \"Quessid\".",
+      pokemon: [],
+      primeiraAparicao: 7
+    },
+    {
+      nome: "Butch",
+      papel: "vilao",
+      descricao: "Agente da Equipe Rocket, parceiro de Cassidy. Renato o chama de \"Burtic\".",
+      pokemon: [],
+      primeiraAparicao: 7
+    },
+    {
+      nome: "Proton",
+      papel: "vilao",
+      descricao: "Administrador da Equipe Rocket, de cabelo roxo. Sequestrou os Slowpoke de Azaleia, perdeu para Robson em uma batalha dupla e fugiu quando a polícia chegou: \"Isso não acabou!\"",
+      pokemon: [],
+      primeiraAparicao: 15
+    },
+    {
+      nome: "Bugsy",
+      papel: "outro",
+      descricao: "Líder do Ginásio de Cidade Azaleia, especialista em Pokémon do tipo Inseto. Perdeu para Robson e, no dia seguinte, para Ash; os dois ganharam a Insígnia Colmeia.",
+      pokemon: [],
+      primeiraAparicao: 16
+    },
+    {
+      nome: "Kurt",
+      papel: "outro",
+      descricao: "Morador de Cidade Azaleia. Contou ao grupo sobre o sequestro dos Slowpoke, agradeceu a Robson pelo resgate e recebeu de Ash a GS Ball.",
+      pokemon: [],
+      primeiraAparicao: 15
+    },
+    {
+      nome: "Cynthia",
+      papel: "outro",
+      descricao: "Campeã de Sinnoh. Trouxe à formatura de Robson o ovo que não chocava, de onde nasceu Riolu, e venceu Robson com Garchomp.",
+      observacoes: "Prometeu uma revanche a Robson.",
+      pokemon: [],
+      primeiraAparicao: 1
+    },
+    {
+      nome: "Professor Daniel",
+      papel: "outro",
+      descricao: "Professor da Academia Pokémon de Sinnoh.",
+      pokemon: [],
+      primeiraAparicao: 1
+    },
+    {
+      nome: "Professor Carvalho",
+      papel: "outro",
+      descricao: "Professor Pokémon de Pallet. Deu a Ash e Robson Pokédex atualizadas.",
+      pokemon: [],
+      primeiraAparicao: 2
+    },
+    {
+      nome: "Professor Elm",
+      papel: "outro",
+      descricao: "Professor Pokémon de New Bark. Ofereceu um Pokémon inicial a Robson, que escolheu Cyndaquil. Deu o Totodile a Pedro.",
+      pokemon: [],
+      primeiraAparicao: 4
+    },
+    {
+      nome: "Falkner",
+      papel: "outro",
+      descricao: "Líder do Ginásio de Cidade Violeta. Perdeu para Ash, que ganhou a Insígnia Zephyr, e venceu Robson em uma batalha 3 contra 3. Elogiou Robson e prometeu uma revanche quando ele tiver cinco insígnias.",
+      pokemon: [],
+      primeiraAparicao: 9
+    }
+  ],
+
+  conquistasAnteriores: [
+    { personagem: "Ash Ketchum", tipo: "outro", nome: "Campeão da Liga Laranja", local: "Ilhas Laranja", observacao: "Conquistada antes do início da história.", mencionadaNoEpisodio: 2 }
+  ],
+
+  objetivos: [
+    { descricao: "Conquistar a primeira fita no Contest de Azaleia", personagem: "Robson Ketchum", origem: 11, status: "concluido", concluidoEm: 17 },
+    { descricao: "Vencer o Ginásio de Azaleia (Líder Bugsy)", personagem: "Robson Ketchum", origem: 15, status: "concluido", concluidoEm: 16 },
+    { descricao: "Reencontrar Ash em Cidade Azaleia", personagem: "Robson Ketchum", origem: 11, status: "concluido", concluidoEm: 15 },
+    { descricao: "Ginásio de Goldenrod (Líder Whitney)", personagem: "Robson Ketchum", origem: 21, status: "pendente" },
+    { descricao: "Revanche com Falkner depois de conquistar 5 insígnias", personagem: "Robson Ketchum", origem: 10, status: "pendente" },
+    { descricao: "Revanche com Cynthia", personagem: "Robson Ketchum", origem: 1, status: "pendente" },
+    { descricao: "Liga Johto (\"Nos vemos na Liga Johto\")", personagem: "Robson Ketchum", origem: 4, status: "pendente" }
+  ],
+
+  episodes: [
+    {
+      numero: 1,
+      titulo: "O Despertar da Aura! O Primeiro Passo de Robson",
+      arco: "Prólogo: Sinnoh e Pallet",
+      local: "Academia Pokémon, Sinnoh",
+      resumo: "Na sua formatura, Robson Ketchum, estudioso, estratégico e quieto, bem diferente do irmão Ash, conhece a Campeã Cynthia e o Professor Daniel. Cynthia traz um ovo que não chocava; quando Robson o toca, as auras dos dois ressoam e dele nasce um Riolu. Robson desafia Cynthia e perde com um único golpe do Garchomp dela, mas a Campeã reconhece o seu talento e promete uma revanche. Formado, Robson embarca para Kanto, rumo a Pallet.",
+      eventos: [
+        "Na formatura da Academia Pokémon, Robson conhece a Campeã Cynthia e o Professor Daniel.",
+        "Cynthia traz um ovo que não chocava. Quando Robson o toca, as auras dos dois ressoam e o ovo choca: nasce Riolu.",
+        "Robson desafia Cynthia: Riolu (Ataque Rápido, Palma da Força, Aura Esférica e Soco de Gelo) contra Garchomp.",
+        "Garchomp vence com um único golpe de Garra do Dragão.",
+        "Cynthia reconhece o talento de Robson e promete uma revanche.",
+        "Robson se forma e embarca para Kanto, rumo a Pallet."
+      ],
+      aparecem: ["Robson Ketchum", "Cynthia", "Professor Daniel"],
+      times: {
+        "Robson Ketchum": [
+          { nome: "Riolu", golpes: ["Ataque Rápido", "Palma da Força", "Aura Esférica", "Soco de Gelo"], nota: "Nasceu do ovo trazido por Cynthia, quando a aura de Robson ressoou com ele. Aura Esférica é incomum para um Riolu." }
+        ],
+        "Cynthia": [
+          { nome: "Garchomp", golpes: ["Garra do Dragão"], nota: "Venceu Riolu com um único golpe." }
+        ]
+      },
+      novosGolpes: [
+        { pokemon: "Riolu", personagem: "Robson Ketchum", golpe: "Aura Esférica", nota: "Já usa ao nascer, o que é incomum para um Riolu." }
+      ],
+      conquistas: [
+        { personagem: "Robson Ketchum", tipo: "outro", nome: "Formatura na Academia Pokémon", local: "Academia Pokémon, Sinnoh" }
+      ],
+      resultados: [
+        { personagem: "Robson Ketchum", evento: "Batalha contra Cynthia", resultado: "Derrota (Riolu caiu com um único golpe de Garchomp)" },
+        { personagem: "Cynthia", evento: "Batalha contra Robson", resultado: "Vitória" }
+      ],
+      proximoObjetivo: "Voltar para casa, em Pallet",
+      texto: ""
+    },
+    {
+      numero: 2,
+      titulo: "Reencontro em Pallet! Irmãos, Rivais e Promessas!",
+      arco: "Prólogo: Sinnoh e Pallet",
+      local: "Pallet / Laboratório do Professor Carvalho",
+      resumo: "Robson volta para casa, conhece Brock e é recebido pela mãe, Delia, com lasanha; Brock passa a noite contando as aventuras de Ash. Ash volta das Ilhas Laranja como campeão da Liga Laranja, Pikachu e Riolu se veem como rivais, e Robson declara que vai ser Mestre Pokémon primeiro. Gary Oak chega com Josias Carvalho, rival de infância de Robson; Gary vence Ash e parte para Johto, e Josias desafia Robson.",
+      eventos: [
+        "Robson volta para casa, em Pallet, conhece Brock e é recebido pela mãe, Delia, com lasanha.",
+        "Brock passa a noite contando a Robson as aventuras de Ash.",
+        "Ash volta das Ilhas Laranja, campeão da Liga Laranja.",
+        "Pikachu e Riolu se veem como rivais; Robson declara que vai ser Mestre Pokémon primeiro.",
+        "Gary Oak chega com Josias Carvalho, rival de infância de Robson.",
+        "Ash (Pikachu, com Choque do Trovão) enfrenta Gary (Eevee), e Gary vence.",
+        "Gary parte para Johto.",
+        "Josias desafia Robson para uma batalha."
+      ],
+      aparecem: ["Robson Ketchum", "Brock", "Delia Ketchum", "Ash Ketchum", "Gary Oak", "Josias Carvalho", "Professor Carvalho"],
+      times: {
+        "Robson Ketchum": [
+          { nome: "Riolu", nota: "Vê Pikachu como rival." }
+        ],
+        "Ash Ketchum": [
+          { nome: "Pikachu", golpes: ["Choque do Trovão"], nota: "Perdeu a batalha contra o Eevee de Gary." }
+        ],
+        "Gary Oak": [
+          { nome: "Eevee", nota: "Venceu o Pikachu de Ash." }
+        ]
+      },
+      conquistas: [],
+      resultados: [
+        { personagem: "Gary Oak", evento: "Batalha contra Ash", resultado: "Vitória" },
+        { personagem: "Ash Ketchum", evento: "Batalha contra Gary", resultado: "Derrota" }
+      ],
+      proximoObjetivo: "Batalha de Robson contra Josias",
+      texto: ""
+    },
+    {
+      numero: 3,
+      titulo: "Derrota e Destino! O Chamado de Johto!",
+      arco: "Prólogo: Sinnoh e Pallet",
+      local: "Laboratório do Professor Carvalho, Pallet",
+      resumo: "Robson e Riolu perdem para Josias e seu Abra; Josias diz que sempre será o número 1 e parte para Johto para se tornar campeão. Ash e Robson ficam abalados, e à noite os irmãos prometem ficar mais fortes e vencer os seus rivais. Na manhã seguinte, Robson vê Lugia e Ash vê Ho-Oh voando em direção a Johto, e os dois decidem partir para lá; Ash vai disputar a Liga Johto.",
+      eventos: [
+        "Robson (Riolu: Ataque Rápido, Palma da Força, Aura Esférica) perde para Josias (Abra: Teletransporte, Confusão, Poder Oculto).",
+        "Josias diz que sempre será o número 1 e parte para Johto para se tornar campeão.",
+        "Ash e Robson ficam abalados; Misty, Brock e Delia se preocupam com eles.",
+        "Em uma conversa à noite, os irmãos prometem ficar mais fortes e vencer os seus rivais.",
+        "Na manhã seguinte, Robson vê Lugia e Ash vê Ho-Oh voando em direção a Johto.",
+        "Os dois decidem ir para Johto; Ash vai disputar a Liga Johto."
+      ],
+      aparecem: ["Robson Ketchum", "Josias Carvalho", "Ash Ketchum", "Misty", "Brock", "Delia Ketchum"],
+      times: {
+        "Robson Ketchum": [
+          { nome: "Riolu", golpes: ["Ataque Rápido", "Palma da Força", "Aura Esférica"], nota: "Perdeu para o Abra de Josias." }
+        ],
+        "Josias Carvalho": [
+          { nome: "Abra", golpes: ["Teletransporte", "Confusão", "Poder Oculto"], nota: "Venceu o Riolu de Robson." }
+        ],
+        "Ash Ketchum": [
+          { nome: "Pikachu" }
+        ]
+      },
+      lendarios: [
+        { nome: "Lugia", nota: "Visto por Robson, voando em direção a Johto." },
+        { nome: "Ho-Oh", nota: "Visto por Ash, voando em direção a Johto." }
+      ],
+      conquistas: [],
+      resultados: [
+        { personagem: "Robson Ketchum", evento: "Batalha contra Josias", resultado: "Derrota" },
+        { personagem: "Josias Carvalho", evento: "Batalha contra Robson", resultado: "Vitória" }
+      ],
+      proximoObjetivo: "Viajar para Johto (Ash vai disputar a Liga Johto)",
+      texto: ""
+    },
+    {
+      numero: 4,
+      titulo: "Novos Começos! Cyndaquil, Eu Escolho Você!",
+      arco: "Johto",
+      local: "Pallet (Laboratório do Prof. Carvalho) e New Bark (Laboratório do Professor Elm)",
+      resumo: "O Professor Carvalho entrega a Ash e Robson Pokédex atualizadas e avisa que o Professor Elm vai oferecer um Pokémon inicial a Robson. Em New Bark, o Totodile do laboratório foi roubado e só resta Cyndaquil, que cria um laço com Robson e rastreia os ladrões: a Equipe Rocket. Com a ajuda de Ash e Pikachu, Totodile é libertado, Robson escolhe Cyndaquil como inicial e os irmãos se declaram rivais antes de seguirem caminhos separados.",
+      eventos: [
+        "O Professor Carvalho entrega a Ash e Robson Pokédex atualizadas e avisa que o Professor Elm vai oferecer um Pokémon inicial a Robson.",
+        "Robson viaja com Ash, Misty e Brock; no caminho, Suicune dissipa uma névoa espessa.",
+        "Em New Bark, o Totodile foi roubado do laboratório do Professor Elm, e o Chikorita já tinha sido levado por outro treinador no dia anterior; só resta Cyndaquil.",
+        "Cyndaquil cria um laço com Robson e rastreia os ladrões: a Equipe Rocket (Jessie, James e Meowth, com Arbok e Weezing).",
+        "Robson batalha com Riolu (Ataque Rápido) e Cyndaquil (Brasas, Cortina de Fumaça, Swift); os dois caem, mas se levantam.",
+        "Ash chega, Pikachu liberta Totodile com Choque do Trovão e a Equipe Rocket sai voando.",
+        "Robson escolhe Cyndaquil como o seu Pokémon inicial.",
+        "Ash e Robson se declaram rivais e seguem caminhos separados: \"Nos vemos na Liga Johto.\""
+      ],
+      aparecem: ["Robson Ketchum", "Ash Ketchum", "Misty", "Brock", "Professor Carvalho", "Professor Elm", "Jessie", "James", "Meowth"],
+      times: {
+        "Robson Ketchum": [
+          { nome: "Riolu", golpes: ["Ataque Rápido"] },
+          { nome: "Cyndaquil", golpes: ["Brasas", "Cortina de Fumaça", "Swift"], nota: "Novo no time! Escolhido como Pokémon inicial de Robson, depois de rastrear a Equipe Rocket." }
+        ],
+        "Ash Ketchum": [
+          { nome: "Pikachu", golpes: ["Choque do Trovão"], nota: "Libertou o Totodile roubado." }
+        ],
+        "Jessie": [ { nome: "Arbok" } ],
+        "James": [ { nome: "Weezing" } ]
+      },
+      lendarios: [
+        { nome: "Suicune", nota: "Dissipou uma névoa espessa no caminho para New Bark." }
+      ],
+      conquistas: [
+        { personagem: "Robson Ketchum", tipo: "outro", nome: "Recebe a Pokédex atualizada e Cyndaquil como Pokémon inicial", local: "Pallet e New Bark" }
+      ],
+      resultados: [
+        { personagem: "Robson Ketchum", evento: "Batalha contra a Equipe Rocket", resultado: "Vitória com a ajuda de Ash: Totodile foi libertado e a Equipe Rocket saiu voando" }
+      ],
+      proximoObjetivo: "Liga Johto (\"Nos vemos na Liga Johto\")",
+      texto: ""
+    },
+    {
+      numero: 5,
+      titulo: "Beleza e Força! O Encanto de Wallace e o Novo Companheiro!",
+      arco: "Johto",
+      local: "Cidade Cerejeira (lago)",
+      resumo: "Cidade Cerejeira se prepara para um Contest com participação especial de Wallace, Campeão de Hoenn e Top Coordenador, mas Robson acha que Contests são \"só um show\" e vai treinar. Em um lago, ele protege um pequeno Dratini atacado por um Gyarados enorme; Riolu e Cyndaquil não conseguem detê-lo, e o Milotic de Wallace afasta o Gyarados com Hidro Bomba. Wallace repreende a imprudência de Robson, admira a sua coragem, explica o valor dos Contests e o convida para assistir. Dratini segue Robson e entra para o time.",
+      eventos: [
+        "Cidade Cerejeira se prepara para um Contest com participação especial de Wallace, Campeão de Hoenn e Top Coordenador.",
+        "Robson acha que Contests são \"só um show\" e vai treinar.",
+        "Em um lago, Robson protege um pequeno Dratini atacado por um Gyarados enorme; Riolu e Cyndaquil não conseguem detê-lo.",
+        "O Milotic de Wallace afasta o Gyarados com Hidro Bomba.",
+        "Wallace repreende Robson pela imprudência, mas admira a sua coragem.",
+        "Wallace explica que os Contests desenvolvem controle, precisão e criatividade, úteis também nas batalhas, e convida Robson para assistir ao Contest.",
+        "Dratini segue Robson e entra para o seu time."
+      ],
+      aparecem: ["Robson Ketchum", "Wallace"],
+      times: {
+        "Robson Ketchum": [
+          { nome: "Riolu", nota: "Não conseguiu deter o Gyarados." },
+          { nome: "Cyndaquil", nota: "Não conseguiu deter o Gyarados." },
+          { nome: "Dratini", nota: "Novo no time! Protegido por Robson do ataque de um Gyarados, seguiu-o e entrou para o time." }
+        ],
+        "Wallace": [
+          { nome: "Milotic", golpes: ["Hidro Bomba"], nota: "Afastou o Gyarados." }
+        ]
+      },
+      conquistas: [],
+      resultados: [],
+      proximoObjetivo: "Assistir ao Contest de Cidade Cerejeira",
+      texto: ""
+    },
+    {
+      numero: 6,
+      titulo: "Rivalidade em Flor! O Surgimento de um Coordenador!",
+      arco: "Johto",
+      local: "Cidade Cerejeira (Contest)",
+      resumo: "No lago, Robson conhece Pedro, um treinador novato da Ilha de Cianwood que sonha ser Top Coordenador, e os dois ficam amigos; o Totodile de Pedro é o mesmo que Robson resgatou em New Bark. A exibição de Wallace com Milotic inspira Robson a querer ser, além de Mestre Pokémon, Top Coordenador. Drew estreia com Beautifly, vence Pedro na semifinal, chamando-o de fraco, e fica com a fita. Quando Robson o confronta, Drew sorri, lhe dá uma rosa e o desafia para o Contest de Violeta.",
+      eventos: [
+        "No lago, Robson conhece Pedro, treinador novato da Ilha de Cianwood que quer ser Top Coordenador e admira Wallace e Juan.",
+        "O Totodile de Pedro é o mesmo que Robson resgatou no Ep. 4: Pedro o recebeu do Professor Elm. Pedro também tem um Ledyba. Os dois ficam amigos.",
+        "A exibição de Wallace com Milotic (Hidro Bomba, Pulso do Dragão, Raio de Gelo, Pulso d'Água) inspira Robson: além de Mestre Pokémon, ele decide se tornar Top Coordenador.",
+        "Pedro se apresenta com Ledyba.",
+        "Drew estreia com Beautifly e domina a apresentação.",
+        "Na semifinal, Drew (Budew) vence Pedro (Totodile) com facilidade e o chama de fraco.",
+        "Drew vence a final e conquista a Fita da Cidade Cerejeira.",
+        "Robson confronta Drew pela atitude; Drew sorri, lhe dá uma rosa e o desafia a se encontrarem no Contest de Cidade Violeta.",
+        "Robson passa a se ver como Coordenador e rival de Drew."
+      ],
+      aparecem: ["Robson Ketchum", "Pedro", "Drew", "Wallace"],
+      times: {
+        "Robson Ketchum": [
+          { nome: "Riolu", usado: false, nota: "Robson não competiu neste Contest." },
+          { nome: "Cyndaquil", usado: false, nota: "Robson não competiu neste Contest." },
+          { nome: "Dratini", usado: false, nota: "Robson não competiu neste Contest." }
+        ],
+        "Pedro": [
+          { nome: "Totodile", nota: "O mesmo Totodile resgatado por Robson no Ep. 4, recebido do Professor Elm. Perdeu a semifinal para o Budew de Drew." },
+          { nome: "Ledyba", nota: "Fase de apresentação." }
+        ],
+        "Drew": [
+          { nome: "Beautifly", nota: "Estreia; dominou a apresentação. (No texto aparece como \"Butterfly\".)" },
+          { nome: "Budew", nota: "Venceu o Totodile de Pedro na semifinal." }
+        ],
+        "Wallace": [
+          { nome: "Milotic", golpes: ["Hidro Bomba", "Pulso do Dragão", "Raio de Gelo", "Pulso d'Água"], nota: "Exibição especial no Contest." }
+        ]
+      },
+      conquistas: [
+        { personagem: "Drew", tipo: "fita", nome: "Fita da Cidade Cerejeira", local: "Cidade Cerejeira" },
+        { personagem: "Robson Ketchum", tipo: "outro", nome: "Decide ser Coordenador", local: "Cidade Cerejeira" }
+      ],
+      resultados: [
+        { personagem: "Drew", evento: "Contest de Cidade Cerejeira", resultado: "Campeão (Fita da Cidade Cerejeira)" },
+        { personagem: "Pedro", evento: "Contest de Cidade Cerejeira", resultado: "Eliminado na semifinal por Drew" }
+      ],
+      proximoObjetivo: "Contest de Cidade Violeta (desafio de Drew)",
+      texto: ""
+    },
+    {
+      numero: 7,
+      titulo: "Aura em Perigo! Um Novo Companheiro de Jornada!",
+      arco: "Johto",
+      local: "Estrada de Johto rumo a Cidade Violeta; depósito abandonado",
+      resumo: "Na estrada para Cidade Violeta, Robson conhece Renato, que viaja para se tornar Médico Pokémon, e os dois começam uma batalha que acaba interrompida. Cassidy e Butch, da Equipe Rocket, capturam Riolu por ele saber usar Aura Esférica; Robson sente Riolu pela Aura e encontra o esconderijo. Cyndaquil e o Oshawott de Renato vencem os agentes, Riolu é resgatado e Renato decide viajar com Robson.",
+      eventos: [
+        "Robson conhece Renato: cabelo escuro, jaleco curto, viajando para se tornar Médico Pokémon.",
+        "Batalha entre Riolu (Ataque Rápido, Palma da Força) e Oshawott (Aqua Míssil, Lâmina de Concha), parceiro de Renato desde o início; a batalha é interrompida, sem resultado.",
+        "Cassidy e Butch, da Equipe Rocket, capturam Riolu porque ele sabe usar Aura Esférica.",
+        "O Natu de Renato procura Riolu, sem sucesso; Robson sente Riolu por meio da Aura e encontra o esconderijo, um depósito abandonado.",
+        "Na batalha de resgate, Cyndaquil (Cortina de Fumaça, Brasas) e Oshawott (Aqua Míssil, Lâmina de Concha) vencem o Hitmontop de Cassidy e o Raticate de Butch.",
+        "Riolu é resgatado, e o laço entre ele e Robson fica mais forte.",
+        "Começam as piadas recorrentes: Renato zoa Pallet como \"roça\" (para ele, o que vale é Celadon, a capital de Kanto), e os dois discutem Futebol Pokémon: Robson torce para o Ninetales, Renato para o Blaziken, e Renato diz que o Ninetales \"roubou o Mandibuzz em 1980\".",
+        "Renato decide viajar com Robson."
+      ],
+      aparecem: ["Robson Ketchum", "Renato", "Cassidy", "Butch"],
+      times: {
+        "Robson Ketchum": [
+          { nome: "Riolu", golpes: ["Ataque Rápido", "Palma da Força"], nota: "Capturado por Cassidy e Butch por saber usar Aura Esférica; resgatado." },
+          { nome: "Cyndaquil", golpes: ["Cortina de Fumaça", "Brasas"], nota: "Venceu os agentes da Equipe Rocket junto com Oshawott." },
+          { nome: "Dratini" }
+        ],
+        "Renato": [
+          { nome: "Oshawott", golpes: ["Aqua Míssil", "Lâmina de Concha"], nota: "Parceiro de Renato desde o início." },
+          { nome: "Natu", nota: "Procurou Riolu, sem sucesso." }
+        ],
+        "Cassidy": [ { nome: "Hitmontop", nota: "Derrotado." } ],
+        "Butch": [ { nome: "Raticate", nota: "Derrotado." } ]
+      },
+      conquistas: [
+        { personagem: "Renato", tipo: "outro", nome: "Entra para o grupo de Robson", local: "Estrada para Cidade Violeta" }
+      ],
+      resultados: [
+        { personagem: "Robson Ketchum", evento: "Batalha contra Renato", resultado: "Interrompida, sem resultado" },
+        { personagem: "Robson Ketchum", evento: "Resgate de Riolu contra Cassidy e Butch (com Renato)", resultado: "Vitória" }
+      ],
+      proximoObjetivo: "Chegar a Cidade Violeta",
+      texto: ""
+    },
+    {
+      numero: 8,
+      titulo: "Uma Nova Companheira! Aipom em Perigo!",
+      arco: "Johto",
+      local: "Floresta na estrada para Cidade Violeta",
+      resumo: "Robson desabafa sobre a pressão de ser irmão de Ash, e Renato responde: \"Você não é o irmão do Ash. Você é o Robson.\" Os dois salvam Eyshila, uma garota que quer ser Professora Pokémon e tem medo de batalhar, e o seu Aipom de um enxame de Beedrill. Cassidy e Butch tentam pegar Riolu, mas capturam Aipom; com o incentivo dos meninos e um resgate em equipe, Aipom é libertado, a dupla sai voando e Eyshila entra para o grupo.",
+      eventos: [
+        "Robson confessa a pressão de ser irmão de Ash; Renato responde: \"Você não é o irmão do Ash. Você é o Robson.\"",
+        "Os dois salvam uma garota, Eyshila, e o seu Aipom de um enxame de Beedrill (Riolu com Ataque Rápido, Oshawott com Aqua Míssil).",
+        "Eyshila tem medo de batalhar e quer se tornar Professora Pokémon.",
+        "Cassidy e Butch (que Renato chama de \"Quessid e Burtic\") tentam capturar Riolu, mas pegam Aipom na rede.",
+        "Eyshila se culpa, e os meninos a encorajam.",
+        "No resgate, Riolu e Oshawott batalham, Cyndaquil usa Cortina de Fumaça para libertar Aipom, e Aura Esférica + Aqua Míssil mandam a dupla da Equipe Rocket pelos ares.",
+        "Eyshila entra para o grupo."
+      ],
+      aparecem: ["Robson Ketchum", "Renato", "Eyshila", "Cassidy", "Butch"],
+      times: {
+        "Robson Ketchum": [
+          { nome: "Riolu", golpes: ["Ataque Rápido", "Aura Esférica"] },
+          { nome: "Cyndaquil", golpes: ["Cortina de Fumaça"], nota: "Ajudou a libertar Aipom." },
+          { nome: "Dratini" }
+        ],
+        "Renato": [
+          { nome: "Oshawott", golpes: ["Aqua Míssil"] },
+          { nome: "Natu" }
+        ],
+        "Eyshila": [
+          { nome: "Aipom", nota: "Capturado por engano na rede de Cassidy e Butch; resgatado." }
+        ]
+      },
+      conquistas: [
+        { personagem: "Eyshila", tipo: "outro", nome: "Entra para o grupo de Robson", local: "Floresta na estrada para Cidade Violeta" }
+      ],
+      resultados: [
+        { personagem: "Robson Ketchum", evento: "Resgate de Aipom contra Cassidy e Butch (com Renato)", resultado: "Vitória" }
+      ],
+      proximoObjetivo: "Chegar a Cidade Violeta",
+      texto: ""
+    },
+    {
+      numero: 9,
+      titulo: "Dúvidas Antes da Batalha! O Conselho de um Amigo!",
+      arco: "Johto",
+      local: "Cidade Violeta (Ginásio de Violeta, Centro Pokémon, lago)",
+      resumo: "O grupo chega a Cidade Violeta e encontra Misty e Brock no ginásio, onde Ash enfrenta o Líder Falkner; o Charizard de Ash vence o Pidgeot de Falkner e Ash conquista a Insígnia Zephyr, a sua primeira de Johto. À noite, ansioso com a própria batalha de ginásio, Robson não consegue dormir, e Renato o aconselha no lago: não dá para controlar o resultado, só dar o seu melhor. Na manhã seguinte, Robson vai ao Ginásio de Violeta em busca da sua primeira insígnia de Johto.",
+      eventos: [
+        "O grupo chega a Cidade Violeta e encontra Misty e Brock no ginásio, onde Ash batalha contra o Líder Falkner.",
+        "Ash usa Chikorita, Pikachu e Charizard; o Pokémon mais forte de Falkner é Pidgeot.",
+        "Charizard vence, e Ash conquista a Insígnia Zephyr, a sua primeira insígnia de Johto.",
+        "Robson apresenta Renato e Eyshila a Ash.",
+        "À noite, Robson não consegue dormir, ansioso com a sua batalha de ginásio.",
+        "Renato o encontra no lago e o aconselha: não dá para controlar o resultado, só dar o seu melhor.",
+        "Na manhã seguinte, Robson segue para o Ginásio de Violeta em busca da sua primeira insígnia de Johto (a batalha acontece no Ep. 10)."
+      ],
+      aparecem: ["Robson Ketchum", "Renato", "Eyshila", "Ash Ketchum", "Misty", "Brock", "Falkner"],
+      times: {
+        "Ash Ketchum": [
+          { nome: "Chikorita" },
+          { nome: "Pikachu" },
+          { nome: "Charizard", nota: "Venceu o Pidgeot de Falkner." }
+        ],
+        "Falkner": [
+          { nome: "Pidgeot", nota: "O Pokémon mais forte de Falkner." }
+        ],
+        "Robson Ketchum": [ "Riolu", "Cyndaquil", "Dratini" ],
+        "Renato": [ "Oshawott", "Natu" ],
+        "Eyshila": [ "Aipom" ]
+      },
+      conquistas: [
+        { personagem: "Ash Ketchum", tipo: "insignia", nome: "Insígnia Zephyr", local: "Ginásio de Cidade Violeta" }
+      ],
+      resultados: [
+        { personagem: "Ash Ketchum", evento: "Batalha de ginásio contra Falkner", resultado: "Vitória (Insígnia Zephyr, 1ª de Johto)" }
+      ],
+      proximoObjetivo: "Batalha de Robson no Ginásio de Violeta pela primeira insígnia de Johto (Ep. 10)",
+      texto: ""
+    },
+    {
+      numero: 10,
+      titulo: "A Aura Contra os Ventos! O Desafio ao Ginásio Violeta!",
+      arco: "Johto",
+      local: "Ginásio de Violeta",
+      resumo: "Diante de Ash, Misty, Brock, Renato, Eyshila, Pedro e Drew, Robson enfrenta o Líder Falkner em uma batalha 3 contra 3. Dratini paralisa Hoothoot antes de cair, Cyndaquil vence Hoothoot e aprende Roda de Fogo contra Dodrio, e Riolu derrota Dodrio, mas, exausto, desaba diante de Pidgeot sem atacar. Robson perde e fica sem a insígnia, mas sorri ao lembrar do conselho de Renato; Falkner o elogia e promete uma revanche quando ele tiver cinco insígnias, e Drew lhe dá outra rosa.",
+      eventos: [
+        "Na plateia: Ash, Brock, Misty, Renato, Eyshila, Pedro (que chega durante a batalha) e Drew (sozinho, com uma rosa).",
+        "Robson enfrenta o Líder Falkner em uma batalha 3 contra 3.",
+        "Dratini (Fúria do Dragão, Twister, Thunder Wave) contra Hoothoot (Investida Aérea, Hipnose): Dratini paralisa Hoothoot, mas desmaia.",
+        "Cyndaquil (Ataque Rápido, Brasas) derrota Hoothoot.",
+        "Cyndaquil contra Dodrio (Cabeçada): usa Cortina de Fumaça e Brasas e aprende Roda de Fogo no meio da batalha, mas desmaia.",
+        "Riolu (Ataque Rápido, Palma da Força, Soco de Gelo, Aura Esférica) derrota Dodrio.",
+        "Falkner envia Pidgeot; exausto, Riolu desaba sem atacar. Falkner vence, e Robson fica sem a insígnia.",
+        "Robson sorri, lembrando do conselho de Renato: \"Dê o seu melhor.\"",
+        "Falkner elogia Robson e diz para ele voltar quando tiver cinco insígnias, que batalhará com ele de novo.",
+        "Drew diz \"Nada mal\", dá outra rosa a Robson e avisa que o Contest de Violeta começa em dois dias."
+      ],
+      aparecem: ["Robson Ketchum", "Falkner", "Ash Ketchum", "Brock", "Misty", "Renato", "Eyshila", "Pedro", "Drew"],
+      times: {
+        "Robson Ketchum": [
+          { nome: "Dratini", golpes: ["Fúria do Dragão", "Twister", "Thunder Wave"], nota: "Paralisou Hoothoot, mas desmaiou." },
+          { nome: "Cyndaquil", golpes: ["Ataque Rápido", "Brasas", "Cortina de Fumaça", "Roda de Fogo"], nota: "Venceu Hoothoot; aprendeu Roda de Fogo contra Dodrio, mas desmaiou." },
+          { nome: "Riolu", golpes: ["Ataque Rápido", "Palma da Força", "Soco de Gelo", "Aura Esférica"], nota: "Venceu Dodrio; exausto, desabou diante de Pidgeot sem atacar." }
+        ],
+        "Falkner": [
+          { nome: "Hoothoot", golpes: ["Investida Aérea", "Hipnose"], nota: "Paralisado por Dratini; derrotado por Cyndaquil." },
+          { nome: "Dodrio", golpes: ["Cabeçada"], nota: "Venceu Cyndaquil; derrotado por Riolu." },
+          { nome: "Pidgeot", nota: "Venceu Riolu, que desabou sem atacar." }
+        ]
+      },
+      novosGolpes: [
+        { pokemon: "Cyndaquil", personagem: "Robson Ketchum", golpe: "Roda de Fogo", nota: "Aprendeu no meio da batalha contra Dodrio." }
+      ],
+      conquistas: [],
+      resultados: [
+        { personagem: "Robson Ketchum", evento: "Batalha de ginásio contra Falkner (3 contra 3)", resultado: "Derrota; ficou sem a insígnia" },
+        { personagem: "Falkner", evento: "Batalha de ginásio contra Robson", resultado: "Vitória" }
+      ],
+      proximoObjetivo: "Contest de Cidade Violeta, em dois dias",
+      texto: ""
+    },
+    {
+      numero: 11,
+      titulo: "A Derrota Mais Difícil! O Que Faz um Verdadeiro Coordenador?",
+      arco: "Johto",
+      local: "Cidade Violeta (Contest)",
+      resumo: "No seu primeiro Contest em Johto, em Cidade Violeta, Robson aposta em uma apresentação cheia de efeitos com Dratini, mas é eliminado na fase de apelação. Drew e Pedro avançam, e na final Pedro, com Totodile, vence o Budew de Drew e conquista a sua primeira fita. Abalado, Robson chora a derrota, até que Wallace, que assistia disfarçado, se revela e lhe ensina que um Contest deve mostrar o coração do Pokémon, e não só os efeitos. Wallace passa a acompanhar Robson até o Contest de Azaleia.",
+      eventos: [
+        "Robson promete a Ash que terá uma fita quando se reencontrarem em Cidade Azaleia, para onde Ash, Misty e Brock seguiram na frente.",
+        "Drew faz uma apresentação elegante com Beautifly, usando Rajada de Vento, Pó Prateado e uma pétala de rosa.",
+        "Pedro se apresenta com Ledyba, usando Supersônico e Reflexo.",
+        "Robson faz uma apresentação espetacular com Dratini, focada nos efeitos: Pulso de Água, Twister, Thunder Wave e Fúria do Dragão.",
+        "Resultado da fase de apelação: Drew (em primeiro lugar) e Pedro avançam; Robson é eliminado.",
+        "Na final, Pedro (Totodile) vence Drew (Budew) e conquista a sua primeira fita: a Fita da Cidade Violeta.",
+        "Robson chora a derrota. Renato, que costuma provocá-lo, fica em silêncio ao seu lado.",
+        "Wallace, que assistia disfarçado, se revela e pergunta: \"Onde estava o Dratini?\". A lição: um Contest deve mostrar o coração do Pokémon, e não só os efeitos.",
+        "Wallace decide acompanhar Robson até o Contest de Azaleia."
+      ],
+      aparecem: ["Robson Ketchum", "Drew", "Pedro", "Renato", "Eyshila", "Wallace", "Ash Ketchum", "Misty", "Brock"],
+      times: {
+        "Robson Ketchum": [
+          { nome: "Dratini", golpes: ["Pulso de Água", "Twister", "Thunder Wave", "Fúria do Dragão"], nota: "Usado na fase de apelação." },
+          { nome: "Cyndaquil", usado: false, nota: "Faz parte do time, mas não participou: assistiu da arquibancada com Renato e Eyshila." }
+        ],
+        "Drew": [
+          { nome: "Beautifly", golpes: ["Rajada de Vento", "Pó Prateado"], nota: "Fase de apelação, com uma pétala de rosa." },
+          { nome: "Budew", nota: "Batalha final (derrota para Pedro)." }
+        ],
+        "Pedro": [
+          { nome: "Ledyba", golpes: ["Supersônico", "Reflexo"], nota: "Fase de apelação." },
+          { nome: "Totodile", nota: "Batalha final (vitória sobre Drew)." }
+        ]
+      },
+      conquistas: [
+        { personagem: "Pedro", tipo: "fita", nome: "Fita da Cidade Violeta", local: "Cidade Violeta" }
+      ],
+      resultados: [
+        { personagem: "Pedro", evento: "Contest de Cidade Violeta", resultado: "Campeão (1ª fita)" },
+        { personagem: "Drew", evento: "Contest de Cidade Violeta", resultado: "Vice-campeão: passou em 1º na apelação e perdeu a final para Pedro" },
+        { personagem: "Robson Ketchum", evento: "Contest de Cidade Violeta", resultado: "Eliminado na fase de apelação" }
+      ],
+      proximoObjetivo: "Contest de Azaleia",
+      texto: ""
+    },
+    {
+      numero: 12,
+      titulo: "O Fantasma Brincalhão! A Primeira Captura em Johto!",
+      arco: "Johto",
+      local: "Estrada para Cidade Azaleia; floresta das ilusões",
+      resumo: "Wallace, disfarçado, agora viaja com Robson, Renato e Eyshila e ensina que o Pokémon é sempre o centro de uma apresentação. Em uma floresta onde Pokémon fantasmas criam ilusões, o grupo encontra Josias, que provoca Robson pelas derrotas para Líderes de Ginásio e vai embora com o seu Hoothoot. O Natu de Renato sente um Gastly escondido, brincalhão e não malvado; Robson entra nas brincadeiras, o desafia com Cyndaquil e o captura, a sua primeira captura em Johto. Wallace elogia Robson por entender a personalidade de Gastly, e o grupo atravessa a floresta.",
+      eventos: [
+        "Wallace, disfarçado, agora viaja com Robson, Renato e Eyshila e ensina que o Pokémon é sempre o centro de uma apresentação.",
+        "Em uma floresta onde Pokémon fantasmas criam ilusões, o grupo encontra Josias Carvalho com um Hoothoot.",
+        "Josias provoca Robson por perder para Líderes de Ginásio, diz que só um Hoothoot consegue atravessar a floresta e que ele capturou o último, e vai embora.",
+        "O Natu de Renato sente um Gastly escondido, que é brincalhão, não malvado.",
+        "Robson entra nas brincadeiras de Gastly e depois o desafia: Cyndaquil (Ataque Rápido, que atravessa o fantasma; Brasas; Cortina de Fumaça) contra Gastly (Lambida, ilusões).",
+        "Robson captura Gastly: a sua primeira captura em Johto.",
+        "Wallace elogia Robson por entender a personalidade de Gastly, o primeiro passo para ser um verdadeiro Coordenador.",
+        "O grupo atravessa a floresta."
+      ],
+      aparecem: ["Robson Ketchum", "Renato", "Eyshila", "Wallace", "Josias Carvalho"],
+      times: {
+        "Robson Ketchum": [
+          { nome: "Riolu" },
+          { nome: "Cyndaquil", golpes: ["Ataque Rápido", "Brasas", "Cortina de Fumaça"], nota: "Batalhou contra Gastly; o Ataque Rápido atravessou o fantasma." },
+          { nome: "Dratini" },
+          { nome: "Gastly", golpes: ["Lambida"], nota: "Novo no time! Brincalhão, não malvado; cria ilusões. Primeira captura de Robson em Johto." }
+        ],
+        "Renato": [
+          { nome: "Oshawott" },
+          { nome: "Natu", nota: "Sentiu o Gastly escondido." }
+        ],
+        "Eyshila": [ "Aipom" ],
+        "Josias Carvalho": [
+          { nome: "Hoothoot", nota: "Segundo Josias, só um Hoothoot consegue atravessar a floresta, e ele capturou o último." }
+        ],
+        "Wallace": [ "Milotic" ]
+      },
+      conquistas: [
+        { personagem: "Robson Ketchum", tipo: "outro", nome: "Primeira captura em Johto: Gastly", local: "Floresta das ilusões, estrada para Cidade Azaleia" }
+      ],
+      resultados: [
+        { personagem: "Robson Ketchum", evento: "Batalha contra Gastly selvagem", resultado: "Captura de Gastly" }
+      ],
+      proximoObjetivo: "Contest de Azaleia",
+      texto: ""
+    },
+    {
+      numero: 13,
+      titulo: "A Essência da Cura! Shuckle e o Medo de Gloom!",
+      arco: "Johto",
+      local: "Bosque perto de Cidade Azaleia",
+      resumo: "Wallace ensina que a essência de um Pokémon é quem ele é: do que gosta, do que tem medo, com o que sonha. Em um bosque, Sentret, Spinarak e Hoppip selvagens aparecem envenenados; Renato passa horas ajudando um Shuckle incansável que faz um suco medicinal com as frutas guardadas no casco. Gastly e Dratini descobrem a causa, um Gloom assustado que solta veneno sem querer, e Eyshila o acalma sem batalhar, entendendo o seu medo. No fim, Renato captura Shuckle e Eyshila captura Gloom.",
+      eventos: [
+        "Wallace ensina que a essência de um Pokémon é quem ele é: do que gosta, do que tem medo, com o que sonha.",
+        "No bosque, Sentret, Spinarak e Hoppip selvagens aparecem envenenados; Renato examina os Pokémon.",
+        "Um Shuckle incansável faz um suco medicinal com as frutas guardadas no casco para curá-los, e Renato o ajuda durante horas.",
+        "Gastly e Dratini rastreiam a causa: um Gloom assustado que solta veneno sem querer; um enxame de Beedrill o assusta ainda mais.",
+        "Eyshila acalma Gloom entendendo o seu medo, sem batalha.",
+        "Wallace: Coordenadores e grandes treinadores precisam entender os seus Pokémon.",
+        "Renato captura Shuckle.",
+        "Eyshila captura Gloom: \"Nunca vou te deixar sozinha.\""
+      ],
+      aparecem: ["Robson Ketchum", "Renato", "Eyshila", "Wallace"],
+      times: {
+        "Robson Ketchum": [
+          { nome: "Riolu" },
+          { nome: "Cyndaquil" },
+          { nome: "Dratini", nota: "Ajudou a rastrear a causa do envenenamento." },
+          { nome: "Gastly", nota: "Ajudou a rastrear a causa do envenenamento." }
+        ],
+        "Renato": [
+          { nome: "Oshawott" },
+          { nome: "Natu" },
+          { nome: "Shuckle", nota: "Novo no time! Faz suco medicinal com as frutas guardadas no casco." }
+        ],
+        "Eyshila": [
+          { nome: "Aipom" },
+          { nome: "Gloom", nota: "Novo no time! Soltava veneno sem querer por estar assustado; acalmado por Eyshila." }
+        ]
+      },
+      conquistas: [],
+      resultados: [
+        { personagem: "Renato", evento: "Captura", resultado: "Capturou Shuckle" },
+        { personagem: "Eyshila", evento: "Captura", resultado: "Capturou Gloom (sem batalha)" }
+      ],
+      proximoObjetivo: "Chegar a Cidade Azaleia",
+      texto: ""
+    },
+    {
+      numero: 14,
+      titulo: "A Última Lição de Wallace! O Verdadeiro Significado de um Coordenador!",
+      arco: "Johto",
+      local: "Última caverna antes de Cidade Azaleia",
+      resumo: "Na lição final, Wallace enfrenta os quatro Pokémon de Robson apenas com Milotic. Gastly, Cyndaquil e Dratini não conseguem nada; Riolu faz Milotic se mexer e aprende Soco do Trovão, empurrando-o para trás, mas Milotic continua de pé e vence todos. Robson descreve a essência de cada um dos seus Pokémon, e Wallace aprova: ele aprendeu a essência de um Coordenador, e o próximo passo, mostrá-la ao mundo, só ele pode descobrir. Wallace se despede: \"Espero encontrar você novamente. Lá no topo.\"",
+      eventos: [
+        "Lição final de Wallace: uma batalha dos quatro Pokémon de Robson contra Milotic sozinho.",
+        "Gastly (Lambida, Raio da Confusão, Sombra Noturna), Cyndaquil (Brasas, Cabeçada, Ataque Rápido, Roda de Fogo) e Dratini (Pulso de Água, Thunder Wave, Twister, Fúria do Dragão) não conseguem nada contra Milotic.",
+        "Riolu (Palma da Força, Soco de Gelo, Aura Esférica) faz Milotic se mexer e aprende Soco do Trovão, empurrando-o para trás.",
+        "Milotic continua de pé, e todos os Pokémon de Robson são derrotados.",
+        "Robson descreve a essência de cada Pokémon: Gastly é agitado, brincalhão e adora pegadinhas; Cyndaquil é direto e quer vencer com fogo; Dratini gosta de aparecer e se destacar com movimentos bonitos; Riolu dá tudo de si, odeia perder, é competitivo e se adapta.",
+        "Wallace aprova: Robson aprendeu a essência de um Coordenador; o próximo passo, mostrá-la ao mundo, só ele pode descobrir.",
+        "Wallace deixa o grupo: \"Espero encontrar você novamente. Lá no topo.\""
+      ],
+      aparecem: ["Robson Ketchum", "Renato", "Eyshila", "Wallace"],
+      times: {
+        "Robson Ketchum": [
+          { nome: "Gastly", golpes: ["Lambida", "Raio da Confusão", "Sombra Noturna"], personalidade: "Agitado, brincalhão, adora pegadinhas.", nota: "Não conseguiu nada contra Milotic." },
+          { nome: "Cyndaquil", golpes: ["Brasas", "Cabeçada", "Ataque Rápido", "Roda de Fogo"], personalidade: "Direto; quer vencer com fogo.", nota: "Não conseguiu nada contra Milotic." },
+          { nome: "Dratini", golpes: ["Pulso de Água", "Thunder Wave", "Twister", "Fúria do Dragão"], personalidade: "Gosta de aparecer e se destacar com movimentos bonitos.", nota: "Não conseguiu nada contra Milotic." },
+          { nome: "Riolu", golpes: ["Palma da Força", "Soco de Gelo", "Aura Esférica", "Soco do Trovão"], personalidade: "Dá tudo de si, odeia perder, é competitivo e se adapta.", nota: "Fez Milotic se mexer e aprendeu Soco do Trovão, empurrando-o para trás." }
+        ],
+        "Wallace": [
+          { nome: "Milotic", nota: "Enfrentou sozinho os quatro Pokémon de Robson e continuou de pé." }
+        ]
+      },
+      novosGolpes: [
+        { pokemon: "Riolu", personagem: "Robson Ketchum", golpe: "Soco do Trovão", nota: "Aprendeu na batalha contra o Milotic de Wallace." }
+      ],
+      conquistas: [
+        { personagem: "Robson Ketchum", tipo: "outro", nome: "Aprovado na lição final de Wallace", local: "Última caverna antes de Cidade Azaleia" }
+      ],
+      resultados: [
+        { personagem: "Robson Ketchum", evento: "Batalha-treino contra o Milotic de Wallace (4 contra 1)", resultado: "Derrota (treino); aprovado por Wallace" }
+      ],
+      proximoObjetivo: "Chegar a Cidade Azaleia",
+      texto: ""
+    },
+    {
+      numero: 15,
+      titulo: "O Poço dos Slowpoke! O Primeiro Grande Feito de Robson!",
+      arco: "Johto",
+      local: "Cidade Azaleia, Poço dos Slowpoke",
+      resumo: "Cidade Azaleia está triste: Kurt explica que a Equipe Rocket sequestrou todos os Slowpoke para o Poço dos Slowpoke. Com Eyshila dando apoio, Robson e Renato abrem caminho entre os recrutas, Riolu fica para trás segurando uns dez sozinho, e Robson vence o Administrador Proton em uma batalha dupla; Proton foge quando a polícia chega. Os Slowpoke são libertados, Ash, Misty e Brock chegam, Ash entrega a Kurt a GS Ball do Professor Carvalho, e os irmãos decidem desafiar o Ginásio de Azaleia, de Bugsy.",
+      eventos: [
+        "Cidade Azaleia está triste: Kurt explica que a Equipe Rocket sequestrou todos os Slowpoke e os levou para o Poço dos Slowpoke.",
+        "Eyshila (com Aipom e Gloom) dá apoio, enquanto Robson e Renato abrem caminho entre os recrutas (Rattata, Zubat, Ekans, Koffing) com Riolu, Oshawott e Gastly.",
+        "Riolu fica para trás para segurar sozinho cerca de dez recrutas.",
+        "Robson enfrenta Proton, Administrador da Equipe Rocket (cabelo roxo), em uma batalha dupla: Gastly e Cyndaquil contra Raticate e Koffing.",
+        "Koffing usa Investida (que atravessa Gastly), Smog e Autodestruição (que não afeta Gastly); Raticate usa Hiper Presa e Investida; Cyndaquil usa Cortina de Fumaça, Roda de Fogo e Brasas; Gastly usa Raio da Confusão e Sombra Noturna.",
+        "Robson vence; a polícia chega e Proton foge: \"Isso não acabou!\"",
+        "Os Slowpoke são libertados, e Kurt agradece a Robson.",
+        "Ash, Misty e Brock chegam; Ash entrega a Kurt a GS Ball enviada pelo Professor Carvalho.",
+        "Os irmãos olham para o Ginásio de Azaleia (Líder Bugsy, especialista em Pokémon do tipo Inseto): os dois vão desafiá-lo.",
+        "Riolu volta depois de vencer os últimos recrutas."
+      ],
+      aparecem: ["Robson Ketchum", "Renato", "Eyshila", "Kurt", "Proton", "Ash Ketchum", "Misty", "Brock"],
+      times: {
+        "Robson Ketchum": [
+          { nome: "Riolu", nota: "Segurou sozinho cerca de dez recrutas e voltou depois de vencer os últimos." },
+          { nome: "Cyndaquil", golpes: ["Cortina de Fumaça", "Roda de Fogo", "Brasas"], nota: "Batalha dupla contra Proton (vitória)." },
+          { nome: "Dratini" },
+          { nome: "Gastly", golpes: ["Raio da Confusão", "Sombra Noturna"], nota: "Batalha dupla contra Proton (vitória); Investida e Autodestruição não o afetaram." }
+        ],
+        "Renato": [
+          { nome: "Oshawott", nota: "Abriu caminho entre os recrutas." },
+          { nome: "Natu" },
+          { nome: "Shuckle" }
+        ],
+        "Eyshila": [ "Aipom", "Gloom" ],
+        "Proton": [
+          { nome: "Raticate", golpes: ["Hiper Presa", "Investida"] },
+          { nome: "Koffing", golpes: ["Investida", "Smog", "Autodestruição"] }
+        ],
+        "Ash Ketchum": [ "Pikachu" ]
+      },
+      itens: [
+        { nome: "GS Ball", descricao: "Enviada pelo Professor Carvalho e entregue por Ash a Kurt.", personagem: "Ash Ketchum" }
+      ],
+      conquistas: [
+        { personagem: "Robson Ketchum", tipo: "desafio", nome: "Salvou os Slowpoke de Azaleia (vitória contra o Administrador Proton)", local: "Poço dos Slowpoke, Cidade Azaleia" }
+      ],
+      resultados: [
+        { personagem: "Robson Ketchum", evento: "Batalha dupla contra o Administrador Proton", resultado: "Vitória; Proton fugiu quando a polícia chegou" }
+      ],
+      proximoObjetivo: "Ginásio de Azaleia (Bugsy) e Contest de Azaleia",
+      texto: ""
+    },
+    {
+      numero: 16,
+      titulo: "A Primeira Insígnia! A Determinação de Robson!",
+      arco: "Johto",
+      local: "Cidade Azaleia (casa de Kurt, Poço dos Slowpoke, Ginásio de Azaleia)",
+      resumo: "À noite, Robson duvida de si mesmo depois das derrotas para Josias e Falkner e da eliminação no Contest, mas Renato e Ash o encorajam. No Ginásio de Azaleia, Cyndaquil vence Ariados e Beedrill, e Riolu derrota o Scyther de Bugsy: Robson conquista a Insígnia Colmeia, a sua primeira de Johto. No dia seguinte, Ash também vence Bugsy e leva a sua segunda insígnia, e os irmãos seguem caminhos separados de novo.",
+      eventos: [
+        "À noite, Robson duvida de si mesmo (derrotas para Josias e Falkner e eliminação no Contest); Renato e Ash o encorajam.",
+        "Batalha de ginásio contra Bugsy, com Ash, Misty, Brock, Renato, Eyshila e Kurt na plateia.",
+        "Gastly (Raio da Confusão, Sombra Noturna) contra Ariados (Teia Venenosa, Mordida): Gastly desmaia.",
+        "Cyndaquil (Brasas, Ataque Rápido, Cabeçada) derrota Ariados.",
+        "Cyndaquil (Cortina de Fumaça, Roda de Fogo, Ataque Rápido) derrota Beedrill (Agulha Míssil, Investida).",
+        "Scyther (Corte X) derrota Cyndaquil.",
+        "Riolu (Ataque Rápido, Soco de Gelo, Soco do Trovão, Palma da Força) derrota Scyther (Corte Furioso, Corte X).",
+        "Vitória! Robson conquista a Insígnia Colmeia, a sua primeira insígnia de Johto.",
+        "No dia seguinte, Ash também vence Bugsy, usando o seu Cyndaquil, Pikachu e outros, e conquista a Insígnia Colmeia, a sua segunda insígnia.",
+        "Os irmãos se separam de novo: Ash parte para a próxima aventura, e Robson para o próximo Contest."
+      ],
+      aparecem: ["Robson Ketchum", "Bugsy", "Ash Ketchum", "Misty", "Brock", "Renato", "Eyshila", "Kurt"],
+      times: {
+        "Robson Ketchum": [
+          { nome: "Gastly", golpes: ["Raio da Confusão", "Sombra Noturna"], nota: "Desmaiou contra Ariados." },
+          { nome: "Cyndaquil", golpes: ["Brasas", "Ataque Rápido", "Cabeçada", "Cortina de Fumaça", "Roda de Fogo"], nota: "Venceu Ariados e Beedrill; perdeu para Scyther." },
+          { nome: "Riolu", golpes: ["Ataque Rápido", "Soco de Gelo", "Soco do Trovão", "Palma da Força"], nota: "Venceu Scyther e garantiu a insígnia." },
+          { nome: "Dratini", usado: false, nota: "Está no time, mas não batalhou." }
+        ],
+        "Bugsy": [
+          { nome: "Ariados", golpes: ["Teia Venenosa", "Mordida"], nota: "Venceu Gastly; derrotado por Cyndaquil." },
+          { nome: "Beedrill", golpes: ["Agulha Míssil", "Investida"], nota: "Derrotado por Cyndaquil." },
+          { nome: "Scyther", golpes: ["Corte X", "Corte Furioso"], nota: "Venceu Cyndaquil; derrotado por Riolu." }
+        ],
+        "Ash Ketchum": [
+          { nome: "Pikachu" },
+          { nome: "Cyndaquil", nota: "Primeira menção no time de Ash. Batalhou contra Bugsy." }
+        ]
+      },
+      conquistas: [
+        { personagem: "Robson Ketchum", tipo: "insignia", nome: "Insígnia Colmeia", local: "Ginásio de Azaleia" },
+        { personagem: "Ash Ketchum", tipo: "insignia", nome: "Insígnia Colmeia", local: "Ginásio de Azaleia" }
+      ],
+      resultados: [
+        { personagem: "Robson Ketchum", evento: "Batalha de ginásio contra Bugsy", resultado: "Vitória (Insígnia Colmeia, 1ª de Johto)" },
+        { personagem: "Ash Ketchum", evento: "Batalha de ginásio contra Bugsy", resultado: "Vitória (Insígnia Colmeia, 2ª insígnia)" }
+      ],
+      proximoObjetivo: "Contest de Azaleia",
+      texto: ""
+    },
+    {
+      numero: 17,
+      titulo: "A Primeira Fita! O Brilho Verdadeiro de Dratini!",
+      arco: "Johto",
+      local: "Contest de Azaleia",
+      resumo: "Drew e Pedro percebem que Robson mudou. Na apresentação, Robson deixa Gastly simplesmente ser ele mesmo e é aplaudido de pé, enquanto Wallace assiste pela TV em Hoenn. Pedro vence Drew na semifinal, e na final Robson deixa Dratini brilhar no centro do seu furacão de água e raios; Dratini aprende Cauda de Água e Robson vence por 89 a 84, conquistando a Fita de Azaleia, a sua primeira. À noite, Wallace o parabeniza: \"Isso é só o começo.\"",
+      eventos: [
+        "Drew e Pedro percebem que Robson mudou.",
+        "Apresentações: Drew com Vulpix (Brasas, Rajada, espiral de fogo); Pedro com Growlithe (Velocidade Extrema, Brasas, Mordida).",
+        "Robson se apresenta com Gastly sendo ele mesmo (ilusões, caretas, piadas) e é aplaudido de pé.",
+        "Wallace assiste pela TV em Hoenn: \"Agora sim. Esse é o Gastly.\"",
+        "Os três avançam.",
+        "Semifinal: Pedro (Totodile: Pistola d'Água, Giro Rápido, mergulho no redemoinho, Cauda de Água) vence Drew (Budew: Folha Mágica, Absorver, Raio Solar).",
+        "Na outra semifinal, o Dratini de Robson (espiral de Twister + Pulso de Água) vence um Poliwag.",
+        "Final: Dratini contra Totodile (Pistola d'Água, Mordida, Cauda de Água). Lembrando de Wallace, Robson deixa Dratini brilhar no centro do seu furacão de água e raios (Pulso de Água, Twister, Thunder Wave).",
+        "Dratini aprende Cauda de Água.",
+        "Placar final: Robson 89, Pedro 84. Robson conquista a Fita de Azaleia, a sua primeira fita.",
+        "À noite, Robson liga para Wallace, que o parabeniza: \"Isso é só o começo.\""
+      ],
+      aparecem: ["Robson Ketchum", "Drew", "Pedro", "Wallace", "Renato", "Eyshila"],
+      times: {
+        "Robson Ketchum": [
+          { nome: "Gastly", nota: "Apresentação sendo ele mesmo: ilusões, caretas e piadas. Aplaudido de pé." },
+          { nome: "Dratini", golpes: ["Twister", "Pulso de Água", "Thunder Wave", "Cauda de Água"], nota: "Venceu a semifinal e a final; aprendeu Cauda de Água." },
+          { nome: "Riolu", usado: false },
+          { nome: "Cyndaquil", usado: false }
+        ],
+        "Drew": [
+          { nome: "Vulpix", golpes: ["Brasas", "Rajada"], nota: "Novo no time! Apresentação com espiral de fogo." },
+          { nome: "Budew", golpes: ["Folha Mágica", "Absorver", "Raio Solar"], nota: "Perdeu a semifinal para o Totodile de Pedro." }
+        ],
+        "Pedro": [
+          { nome: "Growlithe", golpes: ["Velocidade Extrema", "Brasas", "Mordida"], nota: "Novo no time! Fase de apresentação." },
+          { nome: "Totodile", golpes: ["Pistola d'Água", "Giro Rápido", "Cauda de Água", "Mordida"], nota: "Venceu Drew na semifinal; perdeu a final para Dratini." }
+        ]
+      },
+      novosGolpes: [
+        { pokemon: "Dratini", personagem: "Robson Ketchum", golpe: "Cauda de Água", nota: "Aprendeu na final do Contest de Azaleia." }
+      ],
+      conquistas: [
+        { personagem: "Robson Ketchum", tipo: "fita", nome: "Fita de Azaleia", local: "Cidade Azaleia" }
+      ],
+      resultados: [
+        { personagem: "Robson Ketchum", evento: "Contest de Azaleia", resultado: "Campeão (Fita de Azaleia, 1ª fita); final 89 × 84" },
+        { personagem: "Pedro", evento: "Contest de Azaleia", resultado: "Vice-campeão" },
+        { personagem: "Drew", evento: "Contest de Azaleia", resultado: "Eliminado na semifinal por Pedro" }
+      ],
+      proximoObjetivo: "Próximo Contest",
+      texto: ""
+    },
+    {
+      numero: 18,
+      titulo: "A Miltank Furiosa! A Evolução de Oshawott!",
+      arco: "Johto",
+      local: "Estrada de Azaleia para Goldenrod",
+      resumo: "Na estrada, volta a piada de sempre: Pallet é \"roça\", e o que vale é Celadon. Uma Miltank selvagem furiosa sai atacando, e Renato a quer pelo Leite MuMu. Shuckle e Natu perdem, Oshawott apanha muito e então evolui para Dewott, que usa Vingança e Lâmina de Concha e vence; Renato captura Miltank, e o grupo segue para Goldenrod, a maior cidade de Johto.",
+      eventos: [
+        "Piada recorrente: Pallet é \"roça\", e o que vale é Celadon.",
+        "Uma Miltank selvagem furiosa sai atacando; Renato a quer pelo Leite MuMu.",
+        "Shuckle (Constrição) perde para Investida; Natu (Confusão, Poder Oculto) perde para Atropelar.",
+        "Oshawott (Aqua Míssil) apanha muito e então evolui para Dewott.",
+        "Dewott usa Vingança (golpe novo) e Lâmina de Concha e vence.",
+        "Renato captura Miltank.",
+        "O grupo segue para Goldenrod, a maior cidade de Johto."
+      ],
+      aparecem: ["Robson Ketchum", "Renato", "Eyshila"],
+      evolucoes: [
+        { personagem: "Renato", de: "Oshawott", para: "Dewott" }
+      ],
+      times: {
+        "Renato": [
+          { nome: "Dewott", golpes: ["Aqua Míssil", "Vingança", "Lâmina de Concha"], nota: "Evoluiu de Oshawott durante a batalha e venceu Miltank." },
+          { nome: "Natu", golpes: ["Confusão", "Poder Oculto"], nota: "Perdeu para Atropelar." },
+          { nome: "Shuckle", golpes: ["Constrição"], nota: "Perdeu para Investida." },
+          { nome: "Miltank", nota: "Nova no time! Renato a queria pelo Leite MuMu." }
+        ],
+        "Robson Ketchum": [ "Riolu", "Cyndaquil", "Dratini", "Gastly" ],
+        "Eyshila": [ "Aipom", "Gloom" ]
+      },
+      novosGolpes: [
+        { pokemon: "Dewott", personagem: "Renato", golpe: "Vingança", nota: "Logo depois de evoluir." }
+      ],
+      conquistas: [],
+      resultados: [
+        { personagem: "Renato", evento: "Batalha contra Miltank selvagem", resultado: "Vitória e captura de Miltank" }
+      ],
+      proximoObjetivo: "Goldenrod, a maior cidade de Johto",
+      texto: ""
+    },
+    {
+      numero: 19,
+      titulo: "A Luz que Nunca Desiste! A Captura de Mareep!",
+      arco: "Johto",
+      local: "Campos e fazendas a caminho de Goldenrod (região de criação de Pokémon elétricos e rebanhos de Mareep)",
+      resumo: "Durante uma tempestade, Robson sai correndo atrás de um choro fraco e encontra uma pequena Mareep assustada, presa sob galhos caídos, que tem medo da própria eletricidade. Com a ajuda de Renato, Eyshila e do aroma calmante de Gloom, eles a acalmam e a libertam. Quando uma matilha de Houndour agressivos cerca o grupo, Mareep vence o medo e usa Choque do Trovão para afastá-los, e Robson a captura.",
+      eventos: [
+        "Durante uma tempestade, Robson sai correndo atrás de um choro fraco.",
+        "Ele encontra uma pequena Mareep assustada, presa sob galhos caídos; ela tem medo da própria eletricidade e solta faíscas quando fica nervosa.",
+        "Renato e Eyshila chegam; Eyshila e Gloom (com o seu aroma calmante) acalmam Mareep, e eles a libertam.",
+        "Uma matilha de Houndour agressivos ataca; Riolu (Soco de Gelo), Cyndaquil (Roda de Fogo) e Gastly (ilusões) defendem, mas ficam cercados.",
+        "Mareep vence o medo e usa Choque do Trovão, afastando os Houndour.",
+        "Robson captura Mareep."
+      ],
+      aparecem: ["Robson Ketchum", "Renato", "Eyshila"],
+      times: {
+        "Robson Ketchum": [
+          { nome: "Riolu", golpes: ["Soco de Gelo"] },
+          { nome: "Cyndaquil", golpes: ["Roda de Fogo"] },
+          { nome: "Gastly", nota: "Usou ilusões contra os Houndour." },
+          { nome: "Dratini" },
+          { nome: "Mareep", golpes: ["Choque do Trovão"], personalidade: "Medrosa no início, tinha medo da própria eletricidade; enfrentou o medo.", nota: "Nova no time! Venceu o medo e afastou os Houndour." }
+        ],
+        "Eyshila": [
+          { nome: "Gloom", nota: "O seu aroma calmante ajudou a acalmar Mareep." },
+          { nome: "Aipom" }
+        ],
+        "Renato": [ "Dewott", "Natu", "Shuckle", "Miltank" ]
+      },
+      conquistas: [],
+      resultados: [
+        { personagem: "Robson Ketchum", evento: "Defesa contra a matilha de Houndour", resultado: "Houndour afastados por Mareep; captura de Mareep" }
+      ],
+      proximoObjetivo: "Goldenrod",
+      texto: ""
+    },
+    {
+      numero: 20,
+      titulo: "O Vento da Coragem! Eyshila e o Pequeno Hoppip!",
+      arco: "Johto",
+      local: "Colinas e campos floridos a caminho de Goldenrod",
+      resumo: "Uma forte ventania leva um pequeno Hoppip, que fica preso no alto de uma árvore, cercado por Spearow e com medo demais para lutar. Eyshila, que sempre evita batalhas, se vê no Hoppip, sobe na árvore e enfrenta os Spearow com Gloom. Inspirado, Hoppip usa Rajada, e juntos eles afastam os Spearow; Eyshila captura Hoppip. A lição: coragem não é ausência de medo.",
+      eventos: [
+        "Uma forte ventania leva um pequeno Hoppip; Aipom e Gloom (Chicote de Vinhas) não conseguem alcançá-lo.",
+        "Hoppip fica preso em uma árvore alta, cercado por Spearow, com medo demais para lutar.",
+        "Eyshila se vê no Hoppip (ela sempre evita batalhas), sobe na árvore e enfrenta os Spearow com Gloom (Pó do Sono).",
+        "Inspirado, Hoppip usa Rajada; Gloom (Folha Navalha) e Hoppip (Rajada) afastam os Spearow.",
+        "É a primeira vez que Eyshila assume de verdade uma postura de batalha: um momento de crescimento.",
+        "Eyshila captura Hoppip.",
+        "Tema do episódio: coragem não é ausência de medo."
+      ],
+      aparecem: ["Eyshila", "Robson Ketchum"],
+      times: {
+        "Eyshila": [
+          { nome: "Aipom", nota: "Não conseguiu alcançar Hoppip." },
+          { nome: "Gloom", golpes: ["Chicote de Vinhas", "Pó do Sono", "Folha Navalha"], nota: "Enfrentou os Spearow com Eyshila." },
+          { nome: "Hoppip", golpes: ["Rajada"], nota: "Novo no time! Venceu o medo e ajudou a afastar os Spearow." }
+        ],
+        "Robson Ketchum": [ "Riolu", "Cyndaquil", "Gastly", "Dratini", "Mareep" ]
+      },
+      conquistas: [
+        { personagem: "Eyshila", tipo: "outro", nome: "Enfrenta o medo e batalha para salvar Hoppip", local: "Colinas a caminho de Goldenrod" }
+      ],
+      resultados: [
+        { personagem: "Eyshila", evento: "Batalha contra os Spearow", resultado: "Spearow afastados; captura de Hoppip" }
+      ],
+      proximoObjetivo: "Goldenrod",
+      texto: ""
+    },
+    {
+      numero: 21,
+      titulo: "O Terror de Goldenrod! O Treinamento Contra a Miltank!",
+      arco: "Johto",
+      local: "Arredores de Goldenrod",
+      resumo: "Gary chega em um conversível esportivo, pergunta sobre as insígnias e conta que tem 4 e que Josias já tem 3, enquanto Robson tem 1. Ele avisa que poucos treinadores param a Miltank de Whitney e o seu Rolo Compressor, e zomba dos Ketchum como \"especialistas em perder\". Robson treina contra a Miltank de Renato: nenhum dos seus Pokémon consegue parar o Rolo Compressor por completo, mas Mareep enfrenta o medo e evolui para Flaaffy, que segura Miltank por alguns segundos antes de também ser derrotado. O próximo desafio é o Ginásio de Goldenrod, contra Whitney.",
+      eventos: [
+        "Gary chega em um conversível esportivo e pergunta sobre as insígnias: Robson tem 1; Gary diz que tem 4 e que Josias já tem 3.",
+        "Gary avisa que a Miltank de Whitney e o seu Rolo Compressor param poucos treinadores.",
+        "Gary zomba dos Ketchum, chamando-os de \"especialistas em perder\".",
+        "Robson treina contra a Miltank de Renato (Rolo Compressor).",
+        "Gastly (velocidade e teletransporte) não consegue pará-la; Cyndaquil (Brasas, Roda de Fogo) é arremessado.",
+        "Dratini (Thunder Wave, que deixa Miltank mais lenta, Pulso de Água, Fúria do Dragão) também é arremessado.",
+        "Riolu (Soco de Gelo, Palma da Força, Soco do Trovão) para Miltank por um instante, mas é atropelado; continua de pé, exausto.",
+        "Mareep (Choque do Trovão) enfrenta Miltank apesar do medo e evolui para Flaaffy.",
+        "A descarga elétrica mais forte de Flaaffy para Miltank por alguns segundos, mas Flaaffy também é derrotado.",
+        "Ninguém consegue parar o Rolo Compressor por completo. Próximo desafio: o Ginásio de Goldenrod, contra Whitney."
+      ],
+      aparecem: ["Robson Ketchum", "Renato", "Eyshila", "Gary Oak"],
+      evolucoes: [
+        { personagem: "Robson Ketchum", de: "Mareep", para: "Flaaffy" }
+      ],
+      times: {
+        "Robson Ketchum": [
+          { nome: "Gastly", nota: "Velocidade e teletransporte não bastaram para parar Miltank." },
+          { nome: "Cyndaquil", golpes: ["Brasas", "Roda de Fogo"], nota: "Arremessado pelo Rolo Compressor." },
+          { nome: "Dratini", golpes: ["Thunder Wave", "Pulso de Água", "Fúria do Dragão"], nota: "Deixou Miltank mais lenta, mas foi arremessado." },
+          { nome: "Riolu", golpes: ["Soco de Gelo", "Palma da Força", "Soco do Trovão"], nota: "Parou Miltank por um instante, mas foi atropelado; continuou de pé, exausto." },
+          { nome: "Flaaffy", golpes: ["Choque do Trovão"], nota: "Evoluiu de Mareep durante o treino; parou Miltank por alguns segundos, mas foi derrotado." }
+        ],
+        "Renato": [
+          { nome: "Miltank", golpes: ["Rolo Compressor"], nota: "Parceira de treino de Robson." },
+          { nome: "Dewott" },
+          { nome: "Natu" },
+          { nome: "Shuckle" }
+        ]
+      },
+      conquistas: [],
+      resultados: [
+        { personagem: "Robson Ketchum", evento: "Treino contra a Miltank de Renato", resultado: "Ninguém conseguiu parar o Rolo Compressor por completo; Mareep evoluiu para Flaaffy" }
+      ],
+      proximoObjetivo: "Ginásio de Goldenrod (Whitney)",
+      texto: ""
+    }
+  ]
+};
+
+</script>
+  <script>
+/*
+ * pokedex.js — Nomes de todos os Pokémon (Nº 1 a 1025), na ordem da Pokédex Nacional.
+ * Usado apenas para mostrar os sprites (imagens) a partir do número da Pokédex.
+ * Não é preciso editar este arquivo ao adicionar episódios.
+ * Os nomes no Brasil são os mesmos do inglês; a busca ignora maiúsculas, acentos, pontos e hífens.
+ */
+window.POKEDEX_NOMES = ["Bulbasaur", "Ivysaur", "Venusaur", "Charmander", "Charmeleon", "Charizard", "Squirtle", "Wartortle", "Blastoise", "Caterpie", "Metapod", "Butterfree", "Weedle", "Kakuna", "Beedrill", "Pidgey", "Pidgeotto", "Pidgeot", "Rattata", "Raticate", "Spearow", "Fearow", "Ekans", "Arbok", "Pikachu", "Raichu", "Sandshrew", "Sandslash", "Nidoran♀", "Nidorina", "Nidoqueen", "Nidoran♂", "Nidorino", "Nidoking", "Clefairy", "Clefable", "Vulpix", "Ninetales", "Jigglypuff", "Wigglytuff", "Zubat", "Golbat", "Oddish", "Gloom", "Vileplume", "Paras", "Parasect", "Venonat", "Venomoth", "Diglett", "Dugtrio", "Meowth", "Persian", "Psyduck", "Golduck", "Mankey", "Primeape", "Growlithe", "Arcanine", "Poliwag", "Poliwhirl", "Poliwrath", "Abra", "Kadabra", "Alakazam", "Machop", "Machoke", "Machamp", "Bellsprout", "Weepinbell", "Victreebel", "Tentacool", "Tentacruel", "Geodude", "Graveler", "Golem", "Ponyta", "Rapidash", "Slowpoke", "Slowbro", "Magnemite", "Magneton", "Farfetch'd", "Doduo", "Dodrio", "Seel", "Dewgong", "Grimer", "Muk", "Shellder", "Cloyster", "Gastly", "Haunter", "Gengar", "Onix", "Drowzee", "Hypno", "Krabby", "Kingler", "Voltorb", "Electrode", "Exeggcute", "Exeggutor", "Cubone", "Marowak", "Hitmonlee", "Hitmonchan", "Lickitung", "Koffing", "Weezing", "Rhyhorn", "Rhydon", "Chansey", "Tangela", "Kangaskhan", "Horsea", "Seadra", "Goldeen", "Seaking", "Staryu", "Starmie", "Mr. Mime", "Scyther", "Jynx", "Electabuzz", "Magmar", "Pinsir", "Tauros", "Magikarp", "Gyarados", "Lapras", "Ditto", "Eevee", "Vaporeon", "Jolteon", "Flareon", "Porygon", "Omanyte", "Omastar", "Kabuto", "Kabutops", "Aerodactyl", "Snorlax", "Articuno", "Zapdos", "Moltres", "Dratini", "Dragonair", "Dragonite", "Mewtwo", "Mew", "Chikorita", "Bayleef", "Meganium", "Cyndaquil", "Quilava", "Typhlosion", "Totodile", "Croconaw", "Feraligatr", "Sentret", "Furret", "Hoothoot", "Noctowl", "Ledyba", "Ledian", "Spinarak", "Ariados", "Crobat", "Chinchou", "Lanturn", "Pichu", "Cleffa", "Igglybuff", "Togepi", "Togetic", "Natu", "Xatu", "Mareep", "Flaaffy", "Ampharos", "Bellossom", "Marill", "Azumarill", "Sudowoodo", "Politoed", "Hoppip", "Skiploom", "Jumpluff", "Aipom", "Sunkern", "Sunflora", "Yanma", "Wooper", "Quagsire", "Espeon", "Umbreon", "Murkrow", "Slowking", "Misdreavus", "Unown", "Wobbuffet", "Girafarig", "Pineco", "Forretress", "Dunsparce", "Gligar", "Steelix", "Snubbull", "Granbull", "Qwilfish", "Scizor", "Shuckle", "Heracross", "Sneasel", "Teddiursa", "Ursaring", "Slugma", "Magcargo", "Swinub", "Piloswine", "Corsola", "Remoraid", "Octillery", "Delibird", "Mantine", "Skarmory", "Houndour", "Houndoom", "Kingdra", "Phanpy", "Donphan", "Porygon2", "Stantler", "Smeargle", "Tyrogue", "Hitmontop", "Smoochum", "Elekid", "Magby", "Miltank", "Blissey", "Raikou", "Entei", "Suicune", "Larvitar", "Pupitar", "Tyranitar", "Lugia", "Ho-Oh", "Celebi", "Treecko", "Grovyle", "Sceptile", "Torchic", "Combusken", "Blaziken", "Mudkip", "Marshtomp", "Swampert", "Poochyena", "Mightyena", "Zigzagoon", "Linoone", "Wurmple", "Silcoon", "Beautifly", "Cascoon", "Dustox", "Lotad", "Lombre", "Ludicolo", "Seedot", "Nuzleaf", "Shiftry", "Taillow", "Swellow", "Wingull", "Pelipper", "Ralts", "Kirlia", "Gardevoir", "Surskit", "Masquerain", "Shroomish", "Breloom", "Slakoth", "Vigoroth", "Slaking", "Nincada", "Ninjask", "Shedinja", "Whismur", "Loudred", "Exploud", "Makuhita", "Hariyama", "Azurill", "Nosepass", "Skitty", "Delcatty", "Sableye", "Mawile", "Aron", "Lairon", "Aggron", "Meditite", "Medicham", "Electrike", "Manectric", "Plusle", "Minun", "Volbeat", "Illumise", "Roselia", "Gulpin", "Swalot", "Carvanha", "Sharpedo", "Wailmer", "Wailord", "Numel", "Camerupt", "Torkoal", "Spoink", "Grumpig", "Spinda", "Trapinch", "Vibrava", "Flygon", "Cacnea", "Cacturne", "Swablu", "Altaria", "Zangoose", "Seviper", "Lunatone", "Solrock", "Barboach", "Whiscash", "Corphish", "Crawdaunt", "Baltoy", "Claydol", "Lileep", "Cradily", "Anorith", "Armaldo", "Feebas", "Milotic", "Castform", "Kecleon", "Shuppet", "Banette", "Duskull", "Dusclops", "Tropius", "Chimecho", "Absol", "Wynaut", "Snorunt", "Glalie", "Spheal", "Sealeo", "Walrein", "Clamperl", "Huntail", "Gorebyss", "Relicanth", "Luvdisc", "Bagon", "Shelgon", "Salamence", "Beldum", "Metang", "Metagross", "Regirock", "Regice", "Registeel", "Latias", "Latios", "Kyogre", "Groudon", "Rayquaza", "Jirachi", "Deoxys", "Turtwig", "Grotle", "Torterra", "Chimchar", "Monferno", "Infernape", "Piplup", "Prinplup", "Empoleon", "Starly", "Staravia", "Staraptor", "Bidoof", "Bibarel", "Kricketot", "Kricketune", "Shinx", "Luxio", "Luxray", "Budew", "Roserade", "Cranidos", "Rampardos", "Shieldon", "Bastiodon", "Burmy", "Wormadam", "Mothim", "Combee", "Vespiquen", "Pachirisu", "Buizel", "Floatzel", "Cherubi", "Cherrim", "Shellos", "Gastrodon", "Ambipom", "Drifloon", "Drifblim", "Buneary", "Lopunny", "Mismagius", "Honchkrow", "Glameow", "Purugly", "Chingling", "Stunky", "Skuntank", "Bronzor", "Bronzong", "Bonsly", "Mime Jr.", "Happiny", "Chatot", "Spiritomb", "Gible", "Gabite", "Garchomp", "Munchlax", "Riolu", "Lucario", "Hippopotas", "Hippowdon", "Skorupi", "Drapion", "Croagunk", "Toxicroak", "Carnivine", "Finneon", "Lumineon", "Mantyke", "Snover", "Abomasnow", "Weavile", "Magnezone", "Lickilicky", "Rhyperior", "Tangrowth", "Electivire", "Magmortar", "Togekiss", "Yanmega", "Leafeon", "Glaceon", "Gliscor", "Mamoswine", "Porygon-Z", "Gallade", "Probopass", "Dusknoir", "Froslass", "Rotom", "Uxie", "Mesprit", "Azelf", "Dialga", "Palkia", "Heatran", "Regigigas", "Giratina", "Cresselia", "Phione", "Manaphy", "Darkrai", "Shaymin", "Arceus", "Victini", "Snivy", "Servine", "Serperior", "Tepig", "Pignite", "Emboar", "Oshawott", "Dewott", "Samurott", "Patrat", "Watchog", "Lillipup", "Herdier", "Stoutland", "Purrloin", "Liepard", "Pansage", "Simisage", "Pansear", "Simisear", "Panpour", "Simipour", "Munna", "Musharna", "Pidove", "Tranquill", "Unfezant", "Blitzle", "Zebstrika", "Roggenrola", "Boldore", "Gigalith", "Woobat", "Swoobat", "Drilbur", "Excadrill", "Audino", "Timburr", "Gurdurr", "Conkeldurr", "Tympole", "Palpitoad", "Seismitoad", "Throh", "Sawk", "Sewaddle", "Swadloon", "Leavanny", "Venipede", "Whirlipede", "Scolipede", "Cottonee", "Whimsicott", "Petilil", "Lilligant", "Basculin", "Sandile", "Krokorok", "Krookodile", "Darumaka", "Darmanitan", "Maractus", "Dwebble", "Crustle", "Scraggy", "Scrafty", "Sigilyph", "Yamask", "Cofagrigus", "Tirtouga", "Carracosta", "Archen", "Archeops", "Trubbish", "Garbodor", "Zorua", "Zoroark", "Minccino", "Cinccino", "Gothita", "Gothorita", "Gothitelle", "Solosis", "Duosion", "Reuniclus", "Ducklett", "Swanna", "Vanillite", "Vanillish", "Vanilluxe", "Deerling", "Sawsbuck", "Emolga", "Karrablast", "Escavalier", "Foongus", "Amoonguss", "Frillish", "Jellicent", "Alomomola", "Joltik", "Galvantula", "Ferroseed", "Ferrothorn", "Klink", "Klang", "Klinklang", "Tynamo", "Eelektrik", "Eelektross", "Elgyem", "Beheeyem", "Litwick", "Lampent", "Chandelure", "Axew", "Fraxure", "Haxorus", "Cubchoo", "Beartic", "Cryogonal", "Shelmet", "Accelgor", "Stunfisk", "Mienfoo", "Mienshao", "Druddigon", "Golett", "Golurk", "Pawniard", "Bisharp", "Bouffalant", "Rufflet", "Braviary", "Vullaby", "Mandibuzz", "Heatmor", "Durant", "Deino", "Zweilous", "Hydreigon", "Larvesta", "Volcarona", "Cobalion", "Terrakion", "Virizion", "Tornadus", "Thundurus", "Reshiram", "Zekrom", "Landorus", "Kyurem", "Keldeo", "Meloetta", "Genesect", "Chespin", "Quilladin", "Chesnaught", "Fennekin", "Braixen", "Delphox", "Froakie", "Frogadier", "Greninja", "Bunnelby", "Diggersby", "Fletchling", "Fletchinder", "Talonflame", "Scatterbug", "Spewpa", "Vivillon", "Litleo", "Pyroar", "Flabébé", "Floette", "Florges", "Skiddo", "Gogoat", "Pancham", "Pangoro", "Furfrou", "Espurr", "Meowstic", "Honedge", "Doublade", "Aegislash", "Spritzee", "Aromatisse", "Swirlix", "Slurpuff", "Inkay", "Malamar", "Binacle", "Barbaracle", "Skrelp", "Dragalge", "Clauncher", "Clawitzer", "Helioptile", "Heliolisk", "Tyrunt", "Tyrantrum", "Amaura", "Aurorus", "Sylveon", "Hawlucha", "Dedenne", "Carbink", "Goomy", "Sliggoo", "Goodra", "Klefki", "Phantump", "Trevenant", "Pumpkaboo", "Gourgeist", "Bergmite", "Avalugg", "Noibat", "Noivern", "Xerneas", "Yveltal", "Zygarde", "Diancie", "Hoopa", "Volcanion", "Rowlet", "Dartrix", "Decidueye", "Litten", "Torracat", "Incineroar", "Popplio", "Brionne", "Primarina", "Pikipek", "Trumbeak", "Toucannon", "Yungoos", "Gumshoos", "Grubbin", "Charjabug", "Vikavolt", "Crabrawler", "Crabominable", "Oricorio", "Cutiefly", "Ribombee", "Rockruff", "Lycanroc", "Wishiwashi", "Mareanie", "Toxapex", "Mudbray", "Mudsdale", "Dewpider", "Araquanid", "Fomantis", "Lurantis", "Morelull", "Shiinotic", "Salandit", "Salazzle", "Stufful", "Bewear", "Bounsweet", "Steenee", "Tsareena", "Comfey", "Oranguru", "Passimian", "Wimpod", "Golisopod", "Sandygast", "Palossand", "Pyukumuku", "Type: Null", "Silvally", "Minior", "Komala", "Turtonator", "Togedemaru", "Mimikyu", "Bruxish", "Drampa", "Dhelmise", "Jangmo-o", "Hakamo-o", "Kommo-o", "Tapu Koko", "Tapu Lele", "Tapu Bulu", "Tapu Fini", "Cosmog", "Cosmoem", "Solgaleo", "Lunala", "Nihilego", "Buzzwole", "Pheromosa", "Xurkitree", "Celesteela", "Kartana", "Guzzlord", "Necrozma", "Magearna", "Marshadow", "Poipole", "Naganadel", "Stakataka", "Blacephalon", "Zeraora", "Meltan", "Melmetal", "Grookey", "Thwackey", "Rillaboom", "Scorbunny", "Raboot", "Cinderace", "Sobble", "Drizzile", "Inteleon", "Skwovet", "Greedent", "Rookidee", "Corvisquire", "Corviknight", "Blipbug", "Dottler", "Orbeetle", "Nickit", "Thievul", "Gossifleur", "Eldegoss", "Wooloo", "Dubwool", "Chewtle", "Drednaw", "Yamper", "Boltund", "Rolycoly", "Carkol", "Coalossal", "Applin", "Flapple", "Appletun", "Silicobra", "Sandaconda", "Cramorant", "Arrokuda", "Barraskewda", "Toxel", "Toxtricity", "Sizzlipede", "Centiskorch", "Clobbopus", "Grapploct", "Sinistea", "Polteageist", "Hatenna", "Hattrem", "Hatterene", "Impidimp", "Morgrem", "Grimmsnarl", "Obstagoon", "Perrserker", "Cursola", "Sirfetch'd", "Mr. Rime", "Runerigus", "Milcery", "Alcremie", "Falinks", "Pincurchin", "Snom", "Frosmoth", "Stonjourner", "Eiscue", "Indeedee", "Morpeko", "Cufant", "Copperajah", "Dracozolt", "Arctozolt", "Dracovish", "Arctovish", "Duraludon", "Dreepy", "Drakloak", "Dragapult", "Zacian", "Zamazenta", "Eternatus", "Kubfu", "Urshifu", "Zarude", "Regieleki", "Regidrago", "Glastrier", "Spectrier", "Calyrex", "Wyrdeer", "Kleavor", "Ursaluna", "Basculegion", "Sneasler", "Overqwil", "Enamorus", "Sprigatito", "Floragato", "Meowscarada", "Fuecoco", "Crocalor", "Skeledirge", "Quaxly", "Quaxwell", "Quaquaval", "Lechonk", "Oinkologne", "Tarountula", "Spidops", "Nymble", "Lokix", "Pawmi", "Pawmo", "Pawmot", "Tandemaus", "Maushold", "Fidough", "Dachsbun", "Smoliv", "Dolliv", "Arboliva", "Squawkabilly", "Nacli", "Naclstack", "Garganacl", "Charcadet", "Armarouge", "Ceruledge", "Tadbulb", "Bellibolt", "Wattrel", "Kilowattrel", "Maschiff", "Mabosstiff", "Shroodle", "Grafaiai", "Bramblin", "Brambleghast", "Toedscool", "Toedscruel", "Klawf", "Capsakid", "Scovillain", "Rellor", "Rabsca", "Flittle", "Espathra", "Tinkatink", "Tinkatuff", "Tinkaton", "Wiglett", "Wugtrio", "Bombirdier", "Finizen", "Palafin", "Varoom", "Revavroom", "Cyclizar", "Orthworm", "Glimmet", "Glimmora", "Greavard", "Houndstone", "Flamigo", "Cetoddle", "Cetitan", "Veluza", "Dondozo", "Tatsugiri", "Annihilape", "Clodsire", "Farigiraf", "Dudunsparce", "Kingambit", "Great-tusk", "Scream-tail", "Brute-bonnet", "Flutter-mane", "Slither-wing", "Sandy-shocks", "Iron-treads", "Iron-bundle", "Iron-hands", "Iron-jugulis", "Iron-moth", "Iron-thorns", "Frigibax", "Arctibax", "Baxcalibur", "Gimmighoul", "Gholdengo", "Wo-Chien", "Chien-Pao", "Ting-Lu", "Chi-Yu", "Roaring-moon", "Iron-valiant", "Koraidon", "Miraidon", "Walking-wake", "Iron-leaves", "Dipplin", "Poltchageist", "Sinistcha", "Okidogi", "Munkidori", "Fezandipiti", "Ogerpon", "Archaludon", "Hydrapple", "Gouging-fire", "Raging-bolt", "Iron-boulder", "Iron-crown", "Terapagos", "Pecharunt"];
+window.POKEDEX_API = ["bulbasaur", "ivysaur", "venusaur", "charmander", "charmeleon", "charizard", "squirtle", "wartortle", "blastoise", "caterpie", "metapod", "butterfree", "weedle", "kakuna", "beedrill", "pidgey", "pidgeotto", "pidgeot", "rattata", "raticate", "spearow", "fearow", "ekans", "arbok", "pikachu", "raichu", "sandshrew", "sandslash", "nidoran-f", "nidorina", "nidoqueen", "nidoran-m", "nidorino", "nidoking", "clefairy", "clefable", "vulpix", "ninetales", "jigglypuff", "wigglytuff", "zubat", "golbat", "oddish", "gloom", "vileplume", "paras", "parasect", "venonat", "venomoth", "diglett", "dugtrio", "meowth", "persian", "psyduck", "golduck", "mankey", "primeape", "growlithe", "arcanine", "poliwag", "poliwhirl", "poliwrath", "abra", "kadabra", "alakazam", "machop", "machoke", "machamp", "bellsprout", "weepinbell", "victreebel", "tentacool", "tentacruel", "geodude", "graveler", "golem", "ponyta", "rapidash", "slowpoke", "slowbro", "magnemite", "magneton", "farfetchd", "doduo", "dodrio", "seel", "dewgong", "grimer", "muk", "shellder", "cloyster", "gastly", "haunter", "gengar", "onix", "drowzee", "hypno", "krabby", "kingler", "voltorb", "electrode", "exeggcute", "exeggutor", "cubone", "marowak", "hitmonlee", "hitmonchan", "lickitung", "koffing", "weezing", "rhyhorn", "rhydon", "chansey", "tangela", "kangaskhan", "horsea", "seadra", "goldeen", "seaking", "staryu", "starmie", "mr-mime", "scyther", "jynx", "electabuzz", "magmar", "pinsir", "tauros", "magikarp", "gyarados", "lapras", "ditto", "eevee", "vaporeon", "jolteon", "flareon", "porygon", "omanyte", "omastar", "kabuto", "kabutops", "aerodactyl", "snorlax", "articuno", "zapdos", "moltres", "dratini", "dragonair", "dragonite", "mewtwo", "mew", "chikorita", "bayleef", "meganium", "cyndaquil", "quilava", "typhlosion", "totodile", "croconaw", "feraligatr", "sentret", "furret", "hoothoot", "noctowl", "ledyba", "ledian", "spinarak", "ariados", "crobat", "chinchou", "lanturn", "pichu", "cleffa", "igglybuff", "togepi", "togetic", "natu", "xatu", "mareep", "flaaffy", "ampharos", "bellossom", "marill", "azumarill", "sudowoodo", "politoed", "hoppip", "skiploom", "jumpluff", "aipom", "sunkern", "sunflora", "yanma", "wooper", "quagsire", "espeon", "umbreon", "murkrow", "slowking", "misdreavus", "unown", "wobbuffet", "girafarig", "pineco", "forretress", "dunsparce", "gligar", "steelix", "snubbull", "granbull", "qwilfish", "scizor", "shuckle", "heracross", "sneasel", "teddiursa", "ursaring", "slugma", "magcargo", "swinub", "piloswine", "corsola", "remoraid", "octillery", "delibird", "mantine", "skarmory", "houndour", "houndoom", "kingdra", "phanpy", "donphan", "porygon2", "stantler", "smeargle", "tyrogue", "hitmontop", "smoochum", "elekid", "magby", "miltank", "blissey", "raikou", "entei", "suicune", "larvitar", "pupitar", "tyranitar", "lugia", "ho-oh", "celebi", "treecko", "grovyle", "sceptile", "torchic", "combusken", "blaziken", "mudkip", "marshtomp", "swampert", "poochyena", "mightyena", "zigzagoon", "linoone", "wurmple", "silcoon", "beautifly", "cascoon", "dustox", "lotad", "lombre", "ludicolo", "seedot", "nuzleaf", "shiftry", "taillow", "swellow", "wingull", "pelipper", "ralts", "kirlia", "gardevoir", "surskit", "masquerain", "shroomish", "breloom", "slakoth", "vigoroth", "slaking", "nincada", "ninjask", "shedinja", "whismur", "loudred", "exploud", "makuhita", "hariyama", "azurill", "nosepass", "skitty", "delcatty", "sableye", "mawile", "aron", "lairon", "aggron", "meditite", "medicham", "electrike", "manectric", "plusle", "minun", "volbeat", "illumise", "roselia", "gulpin", "swalot", "carvanha", "sharpedo", "wailmer", "wailord", "numel", "camerupt", "torkoal", "spoink", "grumpig", "spinda", "trapinch", "vibrava", "flygon", "cacnea", "cacturne", "swablu", "altaria", "zangoose", "seviper", "lunatone", "solrock", "barboach", "whiscash", "corphish", "crawdaunt", "baltoy", "claydol", "lileep", "cradily", "anorith", "armaldo", "feebas", "milotic", "castform", "kecleon", "shuppet", "banette", "duskull", "dusclops", "tropius", "chimecho", "absol", "wynaut", "snorunt", "glalie", "spheal", "sealeo", "walrein", "clamperl", "huntail", "gorebyss", "relicanth", "luvdisc", "bagon", "shelgon", "salamence", "beldum", "metang", "metagross", "regirock", "regice", "registeel", "latias", "latios", "kyogre", "groudon", "rayquaza", "jirachi", "deoxys", "turtwig", "grotle", "torterra", "chimchar", "monferno", "infernape", "piplup", "prinplup", "empoleon", "starly", "staravia", "staraptor", "bidoof", "bibarel", "kricketot", "kricketune", "shinx", "luxio", "luxray", "budew", "roserade", "cranidos", "rampardos", "shieldon", "bastiodon", "burmy", "wormadam", "mothim", "combee", "vespiquen", "pachirisu", "buizel", "floatzel", "cherubi", "cherrim", "shellos", "gastrodon", "ambipom", "drifloon", "drifblim", "buneary", "lopunny", "mismagius", "honchkrow", "glameow", "purugly", "chingling", "stunky", "skuntank", "bronzor", "bronzong", "bonsly", "mime-jr", "happiny", "chatot", "spiritomb", "gible", "gabite", "garchomp", "munchlax", "riolu", "lucario", "hippopotas", "hippowdon", "skorupi", "drapion", "croagunk", "toxicroak", "carnivine", "finneon", "lumineon", "mantyke", "snover", "abomasnow", "weavile", "magnezone", "lickilicky", "rhyperior", "tangrowth", "electivire", "magmortar", "togekiss", "yanmega", "leafeon", "glaceon", "gliscor", "mamoswine", "porygon-z", "gallade", "probopass", "dusknoir", "froslass", "rotom", "uxie", "mesprit", "azelf", "dialga", "palkia", "heatran", "regigigas", "giratina", "cresselia", "phione", "manaphy", "darkrai", "shaymin", "arceus", "victini", "snivy", "servine", "serperior", "tepig", "pignite", "emboar", "oshawott", "dewott", "samurott", "patrat", "watchog", "lillipup", "herdier", "stoutland", "purrloin", "liepard", "pansage", "simisage", "pansear", "simisear", "panpour", "simipour", "munna", "musharna", "pidove", "tranquill", "unfezant", "blitzle", "zebstrika", "roggenrola", "boldore", "gigalith", "woobat", "swoobat", "drilbur", "excadrill", "audino", "timburr", "gurdurr", "conkeldurr", "tympole", "palpitoad", "seismitoad", "throh", "sawk", "sewaddle", "swadloon", "leavanny", "venipede", "whirlipede", "scolipede", "cottonee", "whimsicott", "petilil", "lilligant", "basculin", "sandile", "krokorok", "krookodile", "darumaka", "darmanitan", "maractus", "dwebble", "crustle", "scraggy", "scrafty", "sigilyph", "yamask", "cofagrigus", "tirtouga", "carracosta", "archen", "archeops", "trubbish", "garbodor", "zorua", "zoroark", "minccino", "cinccino", "gothita", "gothorita", "gothitelle", "solosis", "duosion", "reuniclus", "ducklett", "swanna", "vanillite", "vanillish", "vanilluxe", "deerling", "sawsbuck", "emolga", "karrablast", "escavalier", "foongus", "amoonguss", "frillish", "jellicent", "alomomola", "joltik", "galvantula", "ferroseed", "ferrothorn", "klink", "klang", "klinklang", "tynamo", "eelektrik", "eelektross", "elgyem", "beheeyem", "litwick", "lampent", "chandelure", "axew", "fraxure", "haxorus", "cubchoo", "beartic", "cryogonal", "shelmet", "accelgor", "stunfisk", "mienfoo", "mienshao", "druddigon", "golett", "golurk", "pawniard", "bisharp", "bouffalant", "rufflet", "braviary", "vullaby", "mandibuzz", "heatmor", "durant", "deino", "zweilous", "hydreigon", "larvesta", "volcarona", "cobalion", "terrakion", "virizion", "tornadus", "thundurus", "reshiram", "zekrom", "landorus", "kyurem", "keldeo", "meloetta", "genesect", "chespin", "quilladin", "chesnaught", "fennekin", "braixen", "delphox", "froakie", "frogadier", "greninja", "bunnelby", "diggersby", "fletchling", "fletchinder", "talonflame", "scatterbug", "spewpa", "vivillon", "litleo", "pyroar", "flabebe", "floette", "florges", "skiddo", "gogoat", "pancham", "pangoro", "furfrou", "espurr", "meowstic", "honedge", "doublade", "aegislash", "spritzee", "aromatisse", "swirlix", "slurpuff", "inkay", "malamar", "binacle", "barbaracle", "skrelp", "dragalge", "clauncher", "clawitzer", "helioptile", "heliolisk", "tyrunt", "tyrantrum", "amaura", "aurorus", "sylveon", "hawlucha", "dedenne", "carbink", "goomy", "sliggoo", "goodra", "klefki", "phantump", "trevenant", "pumpkaboo", "gourgeist", "bergmite", "avalugg", "noibat", "noivern", "xerneas", "yveltal", "zygarde", "diancie", "hoopa", "volcanion", "rowlet", "dartrix", "decidueye", "litten", "torracat", "incineroar", "popplio", "brionne", "primarina", "pikipek", "trumbeak", "toucannon", "yungoos", "gumshoos", "grubbin", "charjabug", "vikavolt", "crabrawler", "crabominable", "oricorio", "cutiefly", "ribombee", "rockruff", "lycanroc", "wishiwashi", "mareanie", "toxapex", "mudbray", "mudsdale", "dewpider", "araquanid", "fomantis", "lurantis", "morelull", "shiinotic", "salandit", "salazzle", "stufful", "bewear", "bounsweet", "steenee", "tsareena", "comfey", "oranguru", "passimian", "wimpod", "golisopod", "sandygast", "palossand", "pyukumuku", "type-null", "silvally", "minior", "komala", "turtonator", "togedemaru", "mimikyu", "bruxish", "drampa", "dhelmise", "jangmo-o", "hakamo-o", "kommo-o", "tapu-koko", "tapu-lele", "tapu-bulu", "tapu-fini", "cosmog", "cosmoem", "solgaleo", "lunala", "nihilego", "buzzwole", "pheromosa", "xurkitree", "celesteela", "kartana", "guzzlord", "necrozma", "magearna", "marshadow", "poipole", "naganadel", "stakataka", "blacephalon", "zeraora", "meltan", "melmetal", "grookey", "thwackey", "rillaboom", "scorbunny", "raboot", "cinderace", "sobble", "drizzile", "inteleon", "skwovet", "greedent", "rookidee", "corvisquire", "corviknight", "blipbug", "dottler", "orbeetle", "nickit", "thievul", "gossifleur", "eldegoss", "wooloo", "dubwool", "chewtle", "drednaw", "yamper", "boltund", "rolycoly", "carkol", "coalossal", "applin", "flapple", "appletun", "silicobra", "sandaconda", "cramorant", "arrokuda", "barraskewda", "toxel", "toxtricity", "sizzlipede", "centiskorch", "clobbopus", "grapploct", "sinistea", "polteageist", "hatenna", "hattrem", "hatterene", "impidimp", "morgrem", "grimmsnarl", "obstagoon", "perrserker", "cursola", "sirfetchd", "mr-rime", "runerigus", "milcery", "alcremie", "falinks", "pincurchin", "snom", "frosmoth", "stonjourner", "eiscue", "indeedee", "morpeko", "cufant", "copperajah", "dracozolt", "arctozolt", "dracovish", "arctovish", "duraludon", "dreepy", "drakloak", "dragapult", "zacian", "zamazenta", "eternatus", "kubfu", "urshifu", "zarude", "regieleki", "regidrago", "glastrier", "spectrier", "calyrex", "wyrdeer", "kleavor", "ursaluna", "basculegion", "sneasler", "overqwil", "enamorus", "sprigatito", "floragato", "meowscarada", "fuecoco", "crocalor", "skeledirge", "quaxly", "quaxwell", "quaquaval", "lechonk", "oinkologne", "tarountula", "spidops", "nymble", "lokix", "pawmi", "pawmo", "pawmot", "tandemaus", "maushold", "fidough", "dachsbun", "smoliv", "dolliv", "arboliva", "squawkabilly", "nacli", "naclstack", "garganacl", "charcadet", "armarouge", "ceruledge", "tadbulb", "bellibolt", "wattrel", "kilowattrel", "maschiff", "mabosstiff", "shroodle", "grafaiai", "bramblin", "brambleghast", "toedscool", "toedscruel", "klawf", "capsakid", "scovillain", "rellor", "rabsca", "flittle", "espathra", "tinkatink", "tinkatuff", "tinkaton", "wiglett", "wugtrio", "bombirdier", "finizen", "palafin", "varoom", "revavroom", "cyclizar", "orthworm", "glimmet", "glimmora", "greavard", "houndstone", "flamigo", "cetoddle", "cetitan", "veluza", "dondozo", "tatsugiri", "annihilape", "clodsire", "farigiraf", "dudunsparce", "kingambit", "great-tusk", "scream-tail", "brute-bonnet", "flutter-mane", "slither-wing", "sandy-shocks", "iron-treads", "iron-bundle", "iron-hands", "iron-jugulis", "iron-moth", "iron-thorns", "frigibax", "arctibax", "baxcalibur", "gimmighoul", "gholdengo", "wo-chien", "chien-pao", "ting-lu", "chi-yu", "roaring-moon", "iron-valiant", "koraidon", "miraidon", "walking-wake", "iron-leaves", "dipplin", "poltchageist", "sinistcha", "okidogi", "munkidori", "fezandipiti", "ogerpon", "archaludon", "hydrapple", "gouging-fire", "raging-bolt", "iron-boulder", "iron-crown", "terapagos", "pecharunt"];
+
+</script>
+  <script>
+/* app.js — lógica do site. Normalmente não é preciso editar: os dados ficam em data.js. */
+(function () {
+  "use strict";
+
+  var D = window.STORY_DATA || {};
+  var META = D.meta || {};
+  var EPISODIOS = (D.episodes || []).slice().sort(function (a, b) { return a.numero - b.numero; });
+  var PERSONAGENS = D.personagens || [];
+  var ARCOS = D.arcos || [];
+  var app = document.getElementById("app");
+
+  var PAPEIS = [
+    { chave: "protagonista", titulo: "Protagonista", rotulo: "Protagonista" },
+    { chave: "rival", titulo: "Rivais", rotulo: "Rival" },
+    { chave: "companheiro", titulo: "Companheiros de viagem", rotulo: "Companheiro(a) de viagem" },
+    { chave: "mentor", titulo: "Mentores", rotulo: "Mentor" },
+    { chave: "vilao", titulo: "Vilões", rotulo: "Vilão" },
+    { chave: "familia", titulo: "Família e outros", rotulo: "Família" },
+    { chave: "outro", titulo: "Família e outros", rotulo: "Outro" }
+  ];
+  var TIPOS = [
+    { chave: "insignia", nome: "Insígnias", sing: "Insígnia", cor: "amarelo" },
+    { chave: "fita", nome: "Fitas", sing: "Fita", cor: "vermelho" },
+    { chave: "ilha", nome: "Ilhas", sing: "Ilha", cor: "azul" },
+    { chave: "desafio", nome: "Desafios", sing: "Desafio", cor: "verde" },
+    { chave: "outro", nome: "Outros", sing: "Outro", cor: "" }
+  ];
+
+  /* ---------------- utilitários ---------------- */
+  function esc(s) {
+    return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
+  }
+  function norm(s) {
+    return String(s || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]/g, "");
+  }
+  function iniciais(nome) {
+    var p = String(nome || "?").trim().split(/\s+/);
+    return (p[0][0] + (p.length > 1 ? p[p.length - 1][0] : "")).toUpperCase();
+  }
+  function rotuloPapel(p) {
+    if (p.papel === "rival" && p.rivalDe) return "Rival de " + String(p.rivalDe).split(/\s+/)[0];
+    return papelInfo(p.papel).rotulo;
+  }
+  function papelInfo(chave) {
+    for (var i = 0; i < PAPEIS.length; i++) if (PAPEIS[i].chave === chave) return PAPEIS[i];
+    return PAPEIS[PAPEIS.length - 1];
+  }
+  function tipoInfo(chave) {
+    for (var i = 0; i < TIPOS.length; i++) if (TIPOS[i].chave === norm(chave)) return TIPOS[i];
+    return TIPOS[TIPOS.length - 1];
+  }
+
+  /* ---------------- Pokédex / sprites ---------------- */
+  var DEX = {};
+  (window.POKEDEX_NOMES || []).forEach(function (n, i) { DEX[norm(n)] = i + 1; });
+  (window.POKEDEX_API || []).forEach(function (n, i) { DEX[norm(n)] = i + 1; });
+  DEX["nidoranfemea"] = 29; DEX["nidoranmacho"] = 32;
+  var SPRITE_URL = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/";
+
+  window.__semSprite = function (img) {
+    var box = img.parentNode;
+    if (box) box.classList.add("sem-img");
+    img.remove();
+  };
+  function sprite(nome, mini, extraClasse, titulo) {
+    var id = DEX[norm(nome)];
+    var img = id ? '<img loading="lazy" alt="" src="' + SPRITE_URL + id + '.png" onerror="__semSprite(this)">' : "";
+    return '<div class="poke' + (mini ? " poke-mini" : "") + (extraClasse ? " " + extraClasse : "") + '"' +
+      (titulo ? ' title="' + esc(titulo) + '"' : "") + '>' +
+      '<div class="poke-img' + (id ? "" : " sem-img") + '">' + img +
+      '<span class="fallback">' + esc(String(nome).charAt(0).toUpperCase()) + '</span></div>' +
+      '<div class="poke-nome">' + esc(nome) + '</div></div>';
+  }
+
+  /* ---------------- acesso aos dados ---------------- */
+  function mesmo(ref, pers) {
+    var n = norm(ref);
+    if (!pers) return false;
+    if (n === norm(pers.nome) || (pers.id && n === norm(pers.id))) return true;
+    return (pers.apelidos || []).some(function (a) { return norm(a) === n; });
+  }
+  function acharPersonagem(ref) {
+    for (var i = 0; i < PERSONAGENS.length; i++) if (mesmo(ref, PERSONAGENS[i])) return PERSONAGENS[i];
+    return null;
+  }
+  function textoDeclarado(d) {
+    var ti = tipoInfo(d.tipo);
+    var nome = d.quantidade === 1 ? ti.sing.toLowerCase() : ti.nome.toLowerCase();
+    return d.quantidade + " " + nome + " (segundo " + d.fonte + ", Ep. " + d.episodio + ")";
+  }
+  function declaradoMaisRecente(pers, tipo) {
+    var r = null;
+    (pers.contagemDeclarada || []).forEach(function (d) {
+      if (tipoInfo(d.tipo).chave === tipo && (!r || d.episodio >= r.episodio)) r = d;
+    });
+    return r;
+  }
+  function entradaPoke(p) { return typeof p === "string" ? { nome: p } : (p || {}); }
+  function timeNoEpisodio(ep, pers) {
+    var t = ep.times || {};
+    for (var k in t) if (Object.prototype.hasOwnProperty.call(t, k) && mesmo(k, pers)) return (t[k] || []).map(entradaPoke);
+    return null;
+  }
+  function aparece(ep, pers) {
+    if ((ep.aparecem || []).some(function (r) { return mesmo(r, pers); })) return true;
+    if (timeNoEpisodio(ep, pers)) return true;
+    if ((ep.conquistas || []).some(function (c) { return mesmo(c.personagem, pers); })) return true;
+    if ((ep.resultados || []).some(function (c) { return mesmo(c.personagem, pers); })) return true;
+    return false;
+  }
+  function evolucoesDe(ep, pers) {
+    return (ep.evolucoes || []).filter(function (e) { return mesmo(e.personagem, pers); });
+  }
+  function timeAtual(pers) {
+    // Se "pokemon" estiver preenchido em data.js, ele manda. Senão: todos os Pokémon já vistos
+    // com o personagem, na ordem em que apareceram, menos os marcados com saiu: true.
+    if (pers.pokemon && pers.pokemon.length) return pers.pokemon.map(entradaPoke);
+    var mapa = {}, ordem = [];
+    EPISODIOS.forEach(function (ep) {
+      evolucoesDe(ep, pers).forEach(function (e) {
+        var de = norm(e.de), para = norm(e.para), i = ordem.indexOf(de);
+        if (i >= 0) {
+          ordem[i] = para;
+          mapa[para] = { nome: e.para, nota: "Evoluiu de " + e.de + " no Ep. " + ep.numero, personalidade: mapa[de] && mapa[de].personalidade };
+          delete mapa[de];
+        }
+      });
+      (timeNoEpisodio(ep, pers) || []).forEach(function (p) {
+        var k = norm(p.nome);
+        if (p.saiu) { delete mapa[k]; return; }
+        if (!mapa[k]) ordem.push(k);
+        var pers0 = mapa[k] && mapa[k].personalidade;
+        mapa[k] = { nome: p.nome, nota: "Visto pela última vez no Ep. " + ep.numero, personalidade: p.personalidade || pers0 };
+      });
+    });
+    return ordem.filter(function (k) { return mapa[k]; }).map(function (k) { return mapa[k]; });
+  }
+  function historicoTime(pers) {
+    var mapa = {}, ordem = [];
+    EPISODIOS.forEach(function (ep) {
+      evolucoesDe(ep, pers).forEach(function (e) {
+        var de = norm(e.de), para = norm(e.para);
+        if (mapa[de]) mapa[de].evo = "evoluiu para " + e.para + " no Ep. " + ep.numero;
+        if (!mapa[para]) { mapa[para] = { nome: e.para, eps: [] }; ordem.splice(ordem.indexOf(de) + 1, 0, para); }
+        mapa[para].origem = "evoluiu de " + e.de;
+      });
+      (timeNoEpisodio(ep, pers) || []).forEach(function (p) {
+        var k = norm(p.nome);
+        if (!mapa[k]) { mapa[k] = { nome: p.nome, eps: [] }; ordem.push(k); }
+        mapa[k].eps.push(ep.numero);
+      });
+    });
+    return ordem.map(function (k) { return mapa[k]; });
+  }
+  var ANTES = { numero: null, titulo: "Antes da história" };
+  function todasConquistas() {
+    var lista = (D.conquistasAnteriores || []).map(function (c) { return { c: c, ep: ANTES }; });
+    EPISODIOS.forEach(function (ep) { (ep.conquistas || []).forEach(function (c) { lista.push({ c: c, ep: ep }); }); });
+    return lista;
+  }
+  function linkEp(ep) {
+    return ep.numero == null ? '<span class="chip">Antes da história</span>' :
+      '<a href="#episodios/' + ep.numero + '">Ep. ' + ep.numero + "</a>";
+  }
+  function conquistasDe(pers) {
+    var lista = (D.conquistasAnteriores || []).filter(function (c) { return mesmo(c.personagem, pers); })
+      .map(function (c) { return { c: c, ep: ANTES }; });
+    EPISODIOS.forEach(function (ep) {
+      (ep.conquistas || []).forEach(function (c) {
+        if (mesmo(c.personagem, pers)) lista.push({ c: c, ep: ep });
+      });
+    });
+    return lista;
+  }
+  function contagem(pers) {
+    var r = { insignia: 0, fita: 0, ilha: 0, desafio: 0, outro: 0, total: 0 };
+    conquistasDe(pers).forEach(function (x) { r[tipoInfo(x.c.tipo).chave]++; r.total++; });
+    return r;
+  }
+  function primeiroRegistro(pers) {
+    for (var i = 0; i < EPISODIOS.length; i++) if (aparece(EPISODIOS[i], pers)) return EPISODIOS[i].numero;
+    return null;
+  }
+  function textoPrimeiraAparicao(pers) {
+    if (pers.primeiraAparicao) return "Ep. " + pers.primeiraAparicao;
+    var r = primeiroRegistro(pers);
+    return "ainda não informada" + (r ? " (1º registro no site: Ep. " + r + ")" : "");
+  }
+  function episodiosDoArco(arco) {
+    return EPISODIOS.filter(function (e) { return norm(e.arco) === norm(arco.nome); });
+  }
+  function faixaArco(arco) {
+    var eps = episodiosDoArco(arco).map(function (e) { return e.numero; });
+    var ini = arco.episodios && arco.episodios.inicio;
+    var fim = arco.episodios && arco.episodios.fim;
+    var a = ini != null ? ini : "?";
+    var b = fim != null ? fim : (eps.length ? Math.max.apply(null, eps) + "+" : "?");
+    return a + " – " + b;
+  }
+  function arcoAtual() {
+    var ult = EPISODIOS[EPISODIOS.length - 1];
+    if (!ult) return ARCOS[ARCOS.length - 1] || null;
+    for (var i = 0; i < ARCOS.length; i++) if (norm(ARCOS[i].nome) === norm(ult.arco)) return ARCOS[i];
+    return { nome: ult.arco, regiao: "", episodios: {}, descricao: "" };
+  }
+  function acharEpisodio(n) {
+    for (var i = 0; i < EPISODIOS.length; i++) if (String(EPISODIOS[i].numero) === String(n)) return i;
+    return -1;
+  }
+  var PROTAGONISTA = acharPersonagem(META.protagonista) ||
+    PERSONAGENS.filter(function (p) { return p.papel === "protagonista"; })[0] || PERSONAGENS[0] || { nome: "?" };
+
+  /* ---------------- pedaços reutilizáveis ---------------- */
+  function faixas(nums) {
+    var r = [], i = 0;
+    while (i < nums.length) {
+      var j = i;
+      while (j + 1 < nums.length && nums[j + 1] === nums[j] + 1) j++;
+      r.push(i === j ? String(nums[i]) : nums[i] + "–" + nums[j]);
+      i = j + 1;
+    }
+    return r.join(", ");
+  }
+  function faltando() {
+    var nums = EPISODIOS.map(function (e) { return e.numero; }), falta = [];
+    if (!nums.length) return [];
+    for (var n = 1; n < nums[nums.length - 1]; n++) if (nums.indexOf(n) < 0) falta.push(n);
+    return falta;
+  }
+  function aviso() {
+    var nums = EPISODIOS.map(function (e) { return e.numero; }), falta = faltando();
+    return '<div class="aviso"><span class="aviso-icone">📝</span><div>' +
+      esc(META.nota || "Os dados estão sendo preenchidos aos poucos, conforme os episódios chegam.") +
+      (nums.length ? " <strong>Episódios registrados: " + esc(faixas(nums)) + ".</strong>" : "") +
+      (falta.length ? " Ainda não enviados: " + esc(faixas(falta)) + "." : "") + "</div></div>";
+  }
+  function cardFaltando(n) {
+    return '<div class="card ep-card ep-faltando"><div class="ep-num"><small>EP</small>' + n + "</div><div>" +
+      "<h3>Episódio ainda não enviado</h3><p>Assim que o episódio " + n + " chegar, ele aparece aqui.</p></div></div>";
+  }
+  function listaTime(time, mini) {
+    if (!time.length) return '<p class="suave pequeno">Time ainda não revelado.</p>';
+    return '<div class="time">' + time.map(function (p) {
+      return sprite(p.nome, mini, p.usado === false ? "nao-usado" : "", p.nota);
+    }).join("") + "</div>";
+  }
+  function cardEpisodio(ep) {
+    return '<a class="card ep-card" href="#episodios/' + encodeURIComponent(ep.numero) + '">' +
+      '<div class="ep-num"><small>EP</small>' + esc(ep.numero) + "</div><div>" +
+      "<h3>" + esc(ep.titulo) + "</h3>" +
+      '<div class="chips"><span class="chip vermelho">Arco: ' + esc(ep.arco) + '</span><span class="chip">📍 ' + esc(ep.local) + "</span></div>" +
+      "<p>" + esc(ep.resumo) + "</p></div></a>";
+  }
+  function numero(n) { return n === 0 ? '<span class="zero">0</span>' : n; }
+
+  /* ---------------- páginas ---------------- */
+  function paginaInicio() {
+    var c = contagem(PROTAGONISTA);
+    var arco = arcoAtual();
+    var ult = EPISODIOS[EPISODIOS.length - 1];
+    var h = '<section class="hero"><h1>' + esc(META.titulo || "Minha história Pokémon") + "</h1>" +
+      "<p>" + esc(META.subtitulo || "") + "</p>" +
+      '<div class="chips"><span class="chip">⭐ Protagonista: ' + esc(PROTAGONISTA.nome) + (PROTAGONISTA.idade ? ", " + esc(PROTAGONISTA.idade) + " anos" : "") + "</span>" +
+      (arco ? '<span class="chip">🗺️ Arco atual: ' + esc(arco.nome) + "</span>" : "") +
+      (ult && ult.proximoObjetivo ? '<span class="chip">🎯 Próximo objetivo: ' + esc(ult.proximoObjetivo) + "</span>" : "") +
+      "</div></section>";
+    h += aviso();
+    h += '<section class="secao"><h2 class="secao-titulo">Números de ' + esc(PROTAGONISTA.nome) + "</h2>" +
+      '<div class="contadores">' +
+      '<div class="contador escuro"><div class="num">' + EPISODIOS.length + '</div><div class="rot">Episódios registrados</div></div>' +
+      '<div class="contador amarelo"><div class="num">' + numero(c.insignia) + '</div><div class="rot">Insígnias</div></div>' +
+      '<div class="contador"><div class="num">' + numero(c.fita) + '</div><div class="rot">Fitas de Contest</div></div>' +
+      '<div class="contador azul"><div class="num">' + numero(c.ilha) + '</div><div class="rot">Ilhas</div></div>' +
+      '<div class="contador verde"><div class="num">' + numero(c.desafio) + '</div><div class="rot">Desafios</div></div>' +
+      '<div class="contador escuro"><div class="num">' + numero(c.outro) + '</div><div class="rot">Outras conquistas</div></div>' +
+      "</div><p class=\"suave pequeno\">Os números contam só o que já foi registrado no site (a história tem cerca de 160 episódios).</p></section>";
+
+    h += '<div class="grade grade-2">';
+    h += '<section class="card"><h3>🧢 Time atual de ' + esc(PROTAGONISTA.nome) + "</h3>" + listaTime(timeAtual(PROTAGONISTA)) +
+      '<p class="suave pequeno">Todos os Pokémon já vistos com ' + esc(PROTAGONISTA.nome.split(" ")[0]) + " nos episódios registrados.</p>" +
+      "</section>";
+    if (arco) {
+      h += '<section class="card"><h3>🗺️ Arco atual</h3><div class="faixa">' + esc(arco.nome) + "</div>" +
+        '<div class="chips" style="margin:6px 0 8px">' + (arco.regiao ? '<span class="chip azul">Região: ' + esc(arco.regiao) + "</span>" : "") +
+        '<span class="chip">Episódios ' + esc(faixaArco(arco)) + "</span>" +
+        (arco.provisorio ? '<span class="chip amarelo">Provisório</span>' : "") + "</div>" +
+        '<p class="pequeno">' + esc(arco.descricao || "") + "</p></section>";
+    }
+    h += "</div>";
+    var objs = (D.objetivos || []).filter(function (o) { return o.status !== "concluido"; });
+    var feitos = (D.objetivos || []).filter(function (o) { return o.status === "concluido"; });
+    if (objs.length || feitos.length) {
+      h += '<section class="card" style="margin-top:14px"><h3>🎯 Objetivos pendentes</h3><ul class="objetivos">' +
+        objs.map(function (o) {
+          return "<li><span class=\"marca-obj\">○</span><div>" + esc(o.descricao) +
+            (o.origem ? ' <a class="chip" href="#episodios/' + o.origem + '">desde o Ep. ' + o.origem + "</a>" : "") + "</div></li>";
+        }).join("") +
+        feitos.map(function (o) {
+          return "<li class=\"feito\"><span class=\"marca-obj\">✔</span><div>" + esc(o.descricao) +
+            (o.concluidoEm ? ' <a class="chip verde" href="#episodios/' + o.concluidoEm + '">Ep. ' + o.concluidoEm + "</a>" : "") + "</div></li>";
+        }).join("") + "</ul></section>";
+    }
+    var lend = [];
+    EPISODIOS.forEach(function (ep) {
+      (ep.lendarios || []).forEach(function (l) {
+        var nome = typeof l === "string" ? l : l.nome;
+        if (!lend.some(function (x) { return norm(x.nome) === norm(nome); })) lend.push({ nome: nome, nota: "Avistado no Ep. " + ep.numero });
+      });
+    });
+    if (lend.length) {
+      h += '<section class="card" style="margin-top:14px"><h3>✨ Lendários avistados</h3>' + listaTime(lend, true) + "</section>";
+    }
+    if (ult) {
+      h += '<section class="secao" style="margin-top:22px"><h2 class="secao-titulo">Último episódio registrado</h2>' + cardEpisodio(ult) + "</section>";
+    }
+    return h;
+  }
+
+  var filtros = { texto: "", arco: "", personagem: "" };
+  function paginaEpisodios() {
+    var h = '<h2 class="secao-titulo">Episódios</h2>' + aviso();
+    h += '<div class="filtros">' +
+      '<label class="campo">Buscar<input id="f-texto" type="search" placeholder="Título, local, Pokémon, acontecimento..." value="' + esc(filtros.texto) + '"></label>' +
+      '<label class="campo">Arco<select id="f-arco"><option value="">Todos os arcos</option>' +
+      ARCOS.map(function (a) { return '<option' + (filtros.arco === a.nome ? " selected" : "") + ">" + esc(a.nome) + "</option>"; }).join("") +
+      "</select></label>" +
+      '<label class="campo">Personagem<select id="f-pers"><option value="">Todos os personagens</option>' +
+      PERSONAGENS.map(function (p) { return '<option' + (filtros.personagem === p.nome ? " selected" : "") + ">" + esc(p.nome) + "</option>"; }).join("") +
+      "</select></label></div>";
+    h += '<p class="suave pequeno" id="ep-contagem"></p><div class="grade" id="ep-lista"></div>';
+    return h;
+  }
+  function textoBusca(ep) {
+    var partes = [ep.numero, ep.titulo, ep.arco, ep.local, ep.resumo, ep.proximoObjetivo].concat(ep.eventos || [], ep.aparecem || []);
+    var t = ep.times || {};
+    Object.keys(t).forEach(function (k) {
+      partes.push(k);
+      (t[k] || []).map(entradaPoke).forEach(function (p) { partes.push(p.nome, p.nota); partes = partes.concat(p.golpes || []); });
+    });
+    (ep.conquistas || []).forEach(function (c) { partes.push(c.personagem, c.nome, c.local); });
+    (ep.lendarios || []).map(entradaPoke).forEach(function (l) { partes.push(l.nome, l.nota); });
+    (ep.novosGolpes || []).forEach(function (g) { partes.push(g.pokemon, g.golpe, g.nota); });
+    (ep.itens || []).forEach(function (it) { partes.push(it.nome, it.descricao, it.personagem); });
+    (ep.evolucoes || []).forEach(function (e) { partes.push(e.personagem, e.de, e.para, "evolucao evolui"); });
+    (ep.resultados || []).forEach(function (c) { partes.push(c.personagem, c.evento, c.resultado); });
+    return partes.filter(Boolean).join(" ").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  }
+  function atualizarListaEpisodios() {
+    var q = filtros.texto.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim();
+    var pers = filtros.personagem ? acharPersonagem(filtros.personagem) : null;
+    var lista = EPISODIOS.filter(function (ep) {
+      if (filtros.arco && norm(ep.arco) !== norm(filtros.arco)) return false;
+      if (pers && !aparece(ep, pers)) return false;
+      if (q && q.split(/\s+/).some(function (w) { return textoBusca(ep).indexOf(w) === -1; })) return false;
+      return true;
+    });
+    document.getElementById("ep-contagem").textContent =
+      lista.length + (lista.length === 1 ? " episódio encontrado" : " episódios encontrados") + " (de " + EPISODIOS.length + " registrados)";
+    var semFiltro = !q && !filtros.arco && !filtros.personagem;
+    var falta = faltando();
+    var itens = lista.map(function (ep) { return { n: ep.numero, html: cardEpisodio(ep) }; });
+    if (semFiltro) {
+      falta.forEach(function (n) { itens.push({ n: n, html: cardFaltando(n) }); });
+      itens.sort(function (a, b) { return a.n - b.n; });
+    }
+    if (falta.length) document.getElementById("ep-contagem").textContent += " · Ainda não enviados: " + faixas(falta);
+    document.getElementById("ep-lista").innerHTML = lista.length ? itens.map(function (x) { return x.html; }).join("") :
+      '<div class="card vazio">Nenhum episódio encontrado com esses filtros.</div>';
+  }
+  function ligarFiltros() {
+    var t = document.getElementById("f-texto"), a = document.getElementById("f-arco"), p = document.getElementById("f-pers");
+    t.addEventListener("input", function () { filtros.texto = t.value; atualizarListaEpisodios(); });
+    a.addEventListener("change", function () { filtros.arco = a.value; atualizarListaEpisodios(); });
+    p.addEventListener("change", function () { filtros.personagem = p.value; atualizarListaEpisodios(); });
+    atualizarListaEpisodios();
+  }
+
+  function paginaEpisodio(num) {
+    var i = acharEpisodio(num);
+    if (i < 0) return '<a class="voltar" href="#episodios">← Voltar aos episódios</a><div class="card vazio">Episódio ' + esc(num) + " ainda não registrado.</div>";
+    var ep = EPISODIOS[i], ant = EPISODIOS[i - 1], prox = EPISODIOS[i + 1];
+    var h = '<a class="voltar" href="#episodios">← Voltar aos episódios</a>';
+    h += '<div class="ep-topo"><div class="ep-num"><small>EP</small>' + esc(ep.numero) + "</div><div><h1>" + esc(ep.titulo) + "</h1>" +
+      '<div class="chips"><a class="chip vermelho" href="#arcos">Arco: ' + esc(ep.arco) + '</a><span class="chip">📍 ' + esc(ep.local) + "</span>" +
+      (ep.proximoObjetivo ? '<span class="chip amarelo">🎯 Próximo objetivo: ' + esc(ep.proximoObjetivo) + "</span>" : "") + "</div></div></div>";
+    h += '<div class="grade grade-2">';
+    h += '<section class="card"><h3>Resumo</h3><p>' + esc(ep.resumo) + "</p></section>";
+    h += '<section class="card"><h3>Principais acontecimentos</h3><ol class="eventos">' +
+      (ep.eventos || []).map(function (e) { return "<li>" + esc(e) + "</li>"; }).join("") + "</ol></section>";
+    h += "</div>";
+
+    if ((ep.evolucoes || []).length) {
+      h += '<section class="card" style="margin-top:14px"><h3>⬆️ Evoluções</h3>' + ep.evolucoes.map(function (e) {
+        return '<div class="evolucao">' + sprite(e.de, true) + '<span class="seta">➜</span>' + sprite(e.para, true) +
+          '<span class="pequeno suave">' + esc(e.personagem) + "</span></div>";
+      }).join("") + "</section>";
+    }
+    if ((ep.novosGolpes || []).length) {
+      h += '<section class="card" style="margin-top:14px"><h3>💥 Golpes novos</h3><ul class="eventos">' +
+        ep.novosGolpes.map(function (g) {
+          return "<li><strong>" + esc(g.pokemon) + "</strong>" + (g.personagem ? " (" + esc(g.personagem) + ")" : "") +
+            ' aprendeu <span class="chip azul">' + esc(g.golpe) + "</span>" + (g.nota ? ' <span class="suave pequeno">' + esc(g.nota) + "</span>" : "") + "</li>";
+        }).join("") + "</ul></section>";
+    }
+    if ((ep.itens || []).length) {
+      h += '<section class="card" style="margin-top:14px"><h3>🎁 Itens importantes</h3><ul class="eventos">' +
+        ep.itens.map(function (it) {
+          return "<li><strong>" + esc(it.nome) + "</strong>" + (it.descricao ? " — " + esc(it.descricao) : "") + "</li>";
+        }).join("") + "</ul></section>";
+    }
+    if ((ep.lendarios || []).length) {
+      h += '<section class="card" style="margin-top:14px"><h3>✨ Lendários avistados</h3>' +
+        listaTime(ep.lendarios.map(entradaPoke), true) +
+        ep.lendarios.map(entradaPoke).filter(function (l) { return l.nota; }).map(function (l) {
+          return '<p class="pequeno suave" style="margin:6px 0 0"><strong>' + esc(l.nome) + ":</strong> " + esc(l.nota) + "</p>";
+        }).join("") + "</section>";
+    }
+    if (ep.texto && String(ep.texto).trim()) {
+      h += '<details class="card texto-ep" style="margin-top:14px"><summary>📖 Ler o episódio completo</summary>' +
+        String(ep.texto).trim().split(/\n\s*\n/).map(function (par) {
+          return "<p>" + esc(par.trim()).replace(/\n/g, "<br>") + "</p>";
+        }).join("") + "</details>";
+    }
+
+    // Times
+    var t = ep.times || {};
+    var comTime = Object.keys(t);
+    h += '<section class="card" style="margin-top:14px"><h3>Times neste episódio</h3>';
+    h += comTime.map(function (k) {
+      var pers = acharPersonagem(k);
+      return '<div class="time-bloco"><div class="sub">' + esc(pers ? pers.nome : k) +
+        (pers ? " · " + esc(rotuloPapel(pers)) : "") + "</div>" +
+        (t[k] || []).map(entradaPoke).map(function (p) {
+          return '<div class="poke-detalhe">' + sprite(p.nome, true, p.usado === false ? "nao-usado" : "") +
+            '<div class="info"><strong>' + esc(p.nome) + (p.usado === false ? ' <span class="chip">não batalhou</span>' : "") + "</strong>" +
+            (p.nota ? '<span class="pequeno suave">' + esc(p.nota) + "</span>" : "") +
+            (p.personalidade ? '<div class="pequeno"><em>Essência:</em> ' + esc(p.personalidade) + "</div>" : "") +
+            (p.golpes && p.golpes.length ? '<div class="chips">' + p.golpes.map(function (g) { return '<span class="chip azul">' + esc(g) + "</span>"; }).join("") + "</div>" : "") +
+            "</div></div>";
+        }).join("") + "</div>";
+    }).join("");
+    var semTime = (ep.aparecem || []).filter(function (r) {
+      return !comTime.some(function (k) { return norm(k) === norm(r) || (acharPersonagem(r) && mesmo(k, acharPersonagem(r))); });
+    });
+    if (semTime.length) {
+      h += '<div class="time-bloco"><div class="sub">Também aparecem (time ainda não revelado)</div><div class="chips">' +
+        semTime.map(function (r) { return '<span class="chip">' + esc(r) + "</span>"; }).join("") + "</div></div>";
+    }
+    h += "</section>";
+
+    // Conquistas e resultados
+    h += '<div class="grade grade-2" style="margin-top:14px">';
+    h += '<section class="card"><h3>🏅 Conquistas</h3>' + ((ep.conquistas || []).length ?
+      '<ul class="eventos">' + ep.conquistas.map(function (c) {
+        var ti = tipoInfo(c.tipo);
+        return '<li><span class="chip ' + ti.cor + '">' + esc(ti.sing) + "</span> <strong>" + esc(c.nome) + "</strong> — " +
+          esc(c.personagem) + (c.local ? " (" + esc(c.local) + ")" : "") + "</li>";
+      }).join("") + "</ul>" : '<p class="suave">Nenhuma conquista neste episódio.</p>') + "</section>";
+    if ((ep.resultados || []).length) {
+      h += '<section class="card"><h3>📋 Resultados</h3><ul class="eventos">' + ep.resultados.map(function (r) {
+        return "<li><strong>" + esc(r.personagem) + "</strong> — " + esc(r.evento ? r.evento + ": " : "") + esc(r.resultado) + "</li>";
+      }).join("") + "</ul></section>";
+    }
+    h += "</div>";
+
+    h += '<div class="nav-ep"><a class="botao' + (ant ? "" : " desativado") + '" href="#episodios/' + (ant ? ant.numero : "") + '">← ' +
+      (ant ? "Ep. " + ant.numero : "Anterior") + '</a><a class="botao' + (prox ? "" : " desativado") + '" href="#episodios/' +
+      (prox ? prox.numero : "") + '">' + (prox ? "Ep. " + prox.numero : "Próximo") + " →</a></div>";
+    return h;
+  }
+
+  function cardPersonagem(p) {
+    var atual = timeAtual(p), hist = historicoTime(p), c = contagem(p);
+    var h = '<article class="card pers-card papel-' + esc(p.papel) + (p === PROTAGONISTA ? " destaque" : "") + '">' +
+      '<div class="pers-topo"><div class="avatar">' + esc(iniciais(p.nome)) + "</div><div><h3>" + esc(p.nome) + "</h3>" +
+      '<div class="chips"><span class="chip">' + esc(rotuloPapel(p)) + "</span>" +
+      (p.idade ? '<span class="chip azul">' + esc(p.idade) + " anos</span>" : "") +
+      (c.total ? '<span class="chip amarelo">🏅 ' + c.total + (c.total === 1 ? " conquista" : " conquistas") + "</span>" : "") +
+      "</div></div></div>" +
+      (p.apelidos && p.apelidos.length ? '<p class="pequeno suave">Também chamado de: ' + esc(p.apelidos.join(", ")) + "</p>" : "") +
+      "<p>" + esc(p.descricao) + "</p>" +
+      ((p.contagemDeclarada || []).length ? '<div class="chips">' + p.contagemDeclarada.map(function (d) {
+        return '<span class="chip amarelo">🏅 ' + esc(textoDeclarado(d)) + "</span>";
+      }).join("") + "</div>" : "") +
+      (p.observacoes ? '<p class="pequeno suave">' + esc(p.observacoes) + "</p>" : "") +
+      '<p class="pequeno suave">Primeira aparição: ' + esc(textoPrimeiraAparicao(p)) + "</p>" +
+      '<div><div class="sub">Time atual</div>' + listaTime(atual, true) + "</div>";
+    var ess = atual.filter(function (x) { return x.personalidade; });
+    if (ess.length) {
+      h += '<div><div class="sub">Essência de cada Pokémon</div><table class="historico">' + ess.map(function (x) {
+        return "<tr><td>" + esc(x.nome) + '</td><td class="pequeno">' + esc(x.personalidade) + "</td></tr>";
+      }).join("") + "</table></div>";
+    }
+    if (hist.length) {
+      h += '<div><div class="sub">Histórico do time</div><table class="historico">' + hist.map(function (x) {
+        return "<tr><td>" + esc(x.nome) + '</td><td><div class="chips">' + x.eps.map(function (n) {
+          return '<a class="chip vermelho" href="#episodios/' + n + '">Ep. ' + n + "</a>";
+        }).join("") + (x.origem ? '<span class="chip verde">⬆ ' + esc(x.origem) + "</span>" : "") +
+          (x.evo ? '<span class="chip verde">⬆ ' + esc(x.evo) + "</span>" : "") + "</div></td></tr>";
+      }).join("") + "</table></div>";
+    }
+    return h + "</article>";
+  }
+  function paginaGrupos() {
+    var grupos = D.grupos || [];
+    if (!grupos.length) return "";
+    return '<section class="secao"><h3 class="secao-titulo">Grupos de viagem</h3><div class="grade grade-2">' +
+      grupos.map(function (g) {
+        return '<article class="card grupo"><h3>🎒 ' + esc(g.nome) + "</h3>" + (g.descricao ? '<p class="pequeno suave">' + esc(g.descricao) + "</p>" : "") +
+          '<ul class="membros">' + (g.membros || []).map(function (m) {
+            var pers = acharPersonagem(m.nome) || { nome: m.nome, papel: "outro" };
+            var periodo = [];
+            if (m.desde != null) periodo.push("desde o Ep. " + m.desde);
+            if (m.ate != null) periodo.push("até " + (typeof m.ate === "number" ? "o Ep. " + m.ate : m.ate));
+            return '<li class="papel-' + esc(pers.papel) + '"><div class="avatar">' + esc(iniciais(pers.nome)) + "</div><div><strong>" + esc(pers.nome) + "</strong>" +
+              '<div class="pequeno suave">' + esc(m.funcao || rotuloPapel(pers)) + (periodo.length ? " · " + esc(periodo.join(", ")) : "") + "</div>" +
+              (m.obs ? '<div class="pequeno suave"><em>' + esc(m.obs) + "</em></div>" : "") +
+              '<div class="time" style="margin-top:4px">' + timeAtual(pers).map(function (p) { return sprite(p.nome, true, "poke-micro", p.nota); }).join("") + "</div>" +
+              "</div></li>";
+          }).join("") + "</ul></article>";
+      }).join("") + "</div></section>";
+  }
+  function paginaPersonagens() {
+    var h = '<h2 class="secao-titulo">Personagens</h2>' + aviso() + paginaGrupos();
+    var grupos = [
+      { titulo: "Protagonista", papeis: ["protagonista"] },
+      { titulo: "Rivais", papeis: ["rival"] },
+      { titulo: "Companheiros de viagem", papeis: ["companheiro"] },
+      { titulo: "Mentores", papeis: ["mentor"] },
+      { titulo: "Vilões", papeis: ["vilao"] },
+      { titulo: "Família e outros", papeis: ["familia", "outro"] }
+    ];
+    var conhecidos = ["protagonista", "rival", "companheiro", "mentor", "vilao", "familia", "outro"];
+    grupos.forEach(function (g) {
+      var lista = PERSONAGENS.filter(function (p) {
+        return g.papeis.indexOf(p.papel) >= 0 || (g.papeis.indexOf("outro") >= 0 && conhecidos.indexOf(p.papel) < 0);
+      });
+      if (!lista.length) return;
+      lista = lista.slice().sort(function (a, b) {
+        var ra = a.rivalDe && !mesmo(a.rivalDe, PROTAGONISTA) ? 1 : 0, rb = b.rivalDe && !mesmo(b.rivalDe, PROTAGONISTA) ? 1 : 0;
+        return ra - rb;
+      });
+      h += '<section class="secao"><h3 class="secao-titulo">' + esc(g.titulo) + '</h3><div class="grade grade-3">' +
+        lista.map(cardPersonagem).join("") + "</div></section>";
+    });
+    return h;
+  }
+
+  function paginaConquistas() {
+    var h = '<h2 class="secao-titulo">Conquistas</h2>' + aviso();
+    var p = PROTAGONISTA, c = contagem(p), lista = conquistasDe(p);
+    h += '<section class="card destaque secao"><div class="pers-topo papel-protagonista" style="margin-bottom:12px"><div class="avatar">' +
+      esc(iniciais(p.nome)) + "</div><div><h3 style=\"margin:0\">" + esc(p.nome) + '</h3><span class="suave pequeno">Protagonista</span></div></div>' +
+      '<div class="contadores">' + TIPOS.map(function (t) {
+        var cor = { insignia: "amarelo", fita: "", ilha: "azul", desafio: "verde", outro: "escuro" }[t.chave];
+        return '<div class="contador ' + cor + '"><div class="num">' + numero(c[t.chave]) + '</div><div class="rot">' + t.nome + "</div></div>";
+      }).join("") + "</div>" +
+      (lista.length ? tabelaConquistas(lista, false) : '<p class="suave">Nenhuma conquista registrada ainda. A primeira meta é conseguir uma fita no Contest de Azaleia!</p>') +
+      "</section>";
+
+    var outros = PERSONAGENS.filter(function (x) { return x !== p; });
+    var ordem = ["rival", "companheiro", "mentor", "familia", "outro", "vilao"];
+    outros.sort(function (a, b) {
+      var ia = ordem.indexOf(a.papel), ib = ordem.indexOf(b.papel);
+      return (ia < 0 ? 9 : ia) - (ib < 0 ? 9 : ib);
+    });
+    h += '<section class="secao"><h3 class="secao-titulo">Rivais, companheiros e outros</h3><div class="tabela-wrap"><table class="tabela"><thead><tr>' +
+      '<th>Personagem</th><th>Papel</th>' + TIPOS.map(function (t) { return '<th class="n">' + t.nome + "</th>"; }).join("") + '<th class="n">Total</th></tr></thead><tbody>' +
+      outros.map(function (x) {
+        var cx = contagem(x);
+        return "<tr><td><strong>" + esc(x.nome) + "</strong></td><td>" + esc(rotuloPapel(x)) + "</td>" +
+          TIPOS.map(function (t) {
+            var d = declaradoMaisRecente(x, t.chave);
+            if (d && d.quantidade > cx[t.chave]) {
+              return '<td class="n" title="' + esc(textoDeclarado(d)) + '">' + d.quantidade + '<sup>*</sup></td>';
+            }
+            return '<td class="n">' + numero(cx[t.chave]) + "</td>";
+          }).join("") +
+          '<td class="n">' + numero(cx.total) + "</td></tr>";
+      }).join("") + "</tbody></table></div>" +
+      '<p class="suave pequeno">Um 0 significa "nenhuma conquista registrada até agora", não necessariamente que o personagem não tenha nenhuma.' +
+      ' * = número dito em diálogo, sem os nomes das conquistas.</p>' + listaDeclarados() + "</section>";
+
+    var todas = todasConquistas();
+    h += '<section class="secao"><h3 class="secao-titulo">Todas as conquistas registradas</h3>' +
+      (todas.length ? tabelaConquistas(todas, true) : '<div class="card vazio">Nenhuma conquista registrada ainda.</div>') + "</section>";
+
+    var res = [];
+    EPISODIOS.forEach(function (ep) { (ep.resultados || []).forEach(function (r) { res.push({ r: r, ep: ep }); }); });
+    if (res.length) {
+      h += '<section class="secao"><h3 class="secao-titulo">Resultados em competições</h3><div class="tabela-wrap"><table class="tabela"><thead><tr>' +
+        "<th>Ep.</th><th>Personagem</th><th>Competição</th><th>Resultado</th></tr></thead><tbody>" +
+        res.map(function (x) {
+          return '<tr><td><a href="#episodios/' + x.ep.numero + '">' + x.ep.numero + "</a></td><td><strong>" + esc(x.r.personagem) + "</strong></td><td>" +
+            esc(x.r.evento || "") + "</td><td>" + esc(x.r.resultado) + "</td></tr>";
+        }).join("") + "</tbody></table></div></section>";
+    }
+    return h;
+  }
+  function listaDeclarados() {
+    var itens = [];
+    PERSONAGENS.forEach(function (p) {
+      (p.contagemDeclarada || []).forEach(function (d) { itens.push({ p: p, d: d }); });
+    });
+    if (!itens.length) return "";
+    return '<div class="card" style="margin-top:12px"><h3>🗣️ Contagens ditas em diálogo</h3><ul class="eventos">' +
+      itens.map(function (x) {
+        return "<li><strong>" + esc(x.p.nome) + "</strong>: " + esc(textoDeclarado(x.d)) +
+          ' <a class="chip" href="#episodios/' + x.d.episodio + '">Ep. ' + x.d.episodio + "</a></li>";
+      }).join("") + "</ul></div>";
+  }
+  function tabelaConquistas(lista, comPersonagem) {
+    return '<div class="tabela-wrap"><table class="tabela"><thead><tr>' + (comPersonagem ? "<th>Personagem</th>" : "") +
+      "<th>Tipo</th><th>Conquista</th><th>Local</th><th>Episódio</th></tr></thead><tbody>" +
+      lista.map(function (x) {
+        var ti = tipoInfo(x.c.tipo);
+        return "<tr>" + (comPersonagem ? "<td><strong>" + esc(x.c.personagem) + "</strong></td>" : "") +
+          '<td><span class="chip ' + ti.cor + '">' + esc(ti.sing) + "</span></td><td>" + esc(x.c.nome) +
+          (x.c.observacao ? '<br><span class="suave pequeno">' + esc(x.c.observacao) + "</span>" : "") +
+          "</td><td>" + esc(x.c.local || "—") + "</td><td>" + linkEp(x.ep) + "</td></tr>";
+      }).join("") + "</tbody></table></div>";
+  }
+
+  function chipsArco(a, eps) {
+    var nums = eps.map(function (e) { return e.numero; });
+    var ini = a.episodios && a.episodios.inicio != null ? a.episodios.inicio : Math.min.apply(null, nums);
+    var fim = a.episodios && a.episodios.fim != null ? a.episodios.fim : Math.max.apply(null, nums);
+    var h = "";
+    for (var n = ini; n <= fim; n++) {
+      var e = eps.filter(function (x) { return x.numero === n; })[0];
+      h += e ? '<a class="chip vermelho" href="#episodios/' + n + '" title="' + esc(e.titulo) + '">Ep. ' + n + "</a>" :
+        '<span class="chip faltando" title="Episódio ainda não enviado">Ep. ' + n + "</span>";
+    }
+    return h;
+  }
+  function paginaArcos() {
+    var atual = arcoAtual();
+    var h = '<h2 class="secao-titulo">Arcos da história</h2>' + aviso();
+    if (!ARCOS.length) return h + '<div class="card vazio">Nenhum arco registrado ainda.</div>';
+    h += '<div class="linha-tempo">' + ARCOS.map(function (a) {
+      var eps = episodiosDoArco(a);
+      return '<article class="card arco' + (atual && atual.nome === a.nome ? " atual" : "") + '">' +
+        '<div class="chips" style="margin-bottom:6px">' + (atual && atual.nome === a.nome ? '<span class="chip vermelho">Arco atual</span>' : "") +
+        (a.regiao ? '<span class="chip azul">Região: ' + esc(a.regiao) + "</span>" : "") +
+        (a.provisorio ? '<span class="chip amarelo">Provisório</span>' : "") + "</div>" +
+        "<h3>" + esc(a.nome) + '</h3><div class="faixa">Episódios ' + esc(faixaArco(a)) + "</div>" +
+        '<p class="pequeno">' + esc(a.descricao || "") + "</p>" +
+        '<div class="sub">Episódios registrados (' + eps.length + ")</div>" +
+        (eps.length ? '<div class="chips">' + chipsArco(a, eps) + "</div>" : '<p class="suave pequeno">Nenhum ainda.</p>') + "</article>";
+    }).join("") + "</div>";
+    return h;
+  }
+
+  /* ---------------- roteamento ---------------- */
+  function rota() {
+    var hash = decodeURIComponent((location.hash || "#inicio").slice(1));
+    var partes = hash.split("/");
+    var aba = partes[0] || "inicio";
+    var html;
+    switch (aba) {
+      case "episodios": html = partes[1] ? paginaEpisodio(partes[1]) : paginaEpisodios(); break;
+      case "personagens": html = paginaPersonagens(); break;
+      case "conquistas": html = paginaConquistas(); break;
+      case "arcos": html = paginaArcos(); break;
+      default: aba = "inicio"; html = paginaInicio();
+    }
+    app.innerHTML = html;
+    if (aba === "episodios" && !partes[1]) ligarFiltros();
+    var links = document.querySelectorAll("#abas a");
+    for (var i = 0; i < links.length; i++) links[i].classList.toggle("ativa", links[i].getAttribute("data-aba") === aba);
+    window.scrollTo(0, 0);
+  }
+
+  document.title = META.titulo || document.title;
+  var tituloEl = document.getElementById("titulo-site");
+  if (tituloEl) tituloEl.textContent = META.titulo || tituloEl.textContent;
+  var rod = document.getElementById("rodape");
+  if (rod) rod.innerHTML = esc(EPISODIOS.length + (EPISODIOS.length === 1 ? " episódio registrado" : " episódios registrados") + " de ~160") +
+    (META.atualizadoEm ? " · Atualizado em " + esc(META.atualizadoEm) : "") + "<br>Fã-ficção original de Robson. Pokémon é marca da Nintendo, Game Freak e The Pokémon Company.";
+  window.addEventListener("hashchange", rota);
+  rota();
+})();
+
+</script>
+</body>
+</html>

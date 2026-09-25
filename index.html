@@ -1844,12 +1844,13 @@ window.STORY_DATA = {
       titulo: "A Batalha dos Irmãos! Ash vs Robson!",
       arco: "Johto: Rumo a Ecruteak",
       local: "Estrada para Ecruteak",
-      resumo: "Na estrada para Ecruteak, Ash e Robson fazem a sua primeira batalha oficial, 3 contra 3, com Brock como juiz e Misty e Renato assistindo. O Cyndaquil de Ash vence o de Robson, Flaaffy cai diante de Cyndaquil e Bulbasaur, Riolu derrota Bulbasaur com Soco do Trovão, mas o Pikachu de Ash vence Riolu com Cauda de Ferro. Ash vence, Pikachu e Riolu demonstram respeito um pelo outro, e Robson promete: \"Da próxima vez vai ser batalha completa, e eu não vou perder.\"",
+      resumo: "Na estrada para Ecruteak, Ash e Robson fazem a sua primeira batalha oficial, 3 contra 3, com Brock como juiz e Misty e Renato assistindo. O Cyndaquil de Ash vence o de Robson, mas Flaaffy aguenta uma Investida e o derruba com Choque do Trovão; o Bulbasaur de Ash vence a Flaaffy já cansada, Riolu derrota Bulbasaur com Soco do Trovão, mas o Pikachu de Ash vence Riolu com Cauda de Ferro. Ash vence, Pikachu e Riolu demonstram respeito um pelo outro, e Robson promete: \"Da próxima vez vai ser batalha completa, e eu não vou perder.\"",
       eventos: [
         "Primeira batalha oficial entre os irmãos, 3 contra 3; Brock é o juiz, Misty e Renato assistem.",
         "O Cyndaquil de Ash (Investida, Brasas, Velocidade Total) vence o Cyndaquil de Robson (Ataque Rápido, Roda de Fogo).",
-        "Flaaffy (Choque do Trovão) enfrenta o Cyndaquil (Investida) e o Bulbasaur (Chicote de Vinha, Folha Navalha) de Ash e acaba derrotado.",
-        "Riolu (Soco de Gelo, Aura Esférica, Soco do Trovão) derrota Bulbasaur com Soco do Trovão.",
+        "Flaaffy aguenta a Investida do Cyndaquil de Ash e o derrota com Choque do Trovão (2 contra 2).",
+        "O Bulbasaur de Ash (Chicote de Vinha, Folha Navalha) derrota Flaaffy, que já estava cansada da luta anterior.",
+        "Riolu (Soco de Gelo, Aura Esférica, Soco do Trovão) derrota Bulbasaur com Soco do Trovão (1 contra 1).",
         "Pikachu (Choque do Trovão, Ataque Rápido, Cauda de Ferro) derrota Riolu com Cauda de Ferro.",
         "Ash vence a primeira batalha entre os irmãos.",
         "Pikachu e Riolu demonstram respeito um pelo outro.",
@@ -1859,19 +1860,19 @@ window.STORY_DATA = {
       times: {
         "Robson Ketchum": [
           { nome: "Cyndaquil", golpes: ["Ataque Rápido", "Roda de Fogo"], nota: "Derrotado pelo Cyndaquil de Ash." },
-          { nome: "Flaaffy", golpes: ["Choque do Trovão"], nota: "Derrotado depois de enfrentar Cyndaquil e Bulbasaur." },
+          { nome: "Flaaffy", golpes: ["Choque do Trovão"], nota: "Aguentou uma Investida e venceu o Cyndaquil de Ash; depois, já cansada, foi derrotada por Bulbasaur." },
           { nome: "Riolu", golpes: ["Soco de Gelo", "Aura Esférica", "Soco do Trovão"], nota: "Venceu Bulbasaur; derrotado por Pikachu." }
         ],
         "Ash Ketchum": [
-          { nome: "Cyndaquil", golpes: ["Investida", "Brasas", "Velocidade Total"], nota: "Venceu o Cyndaquil de Robson." },
-          { nome: "Bulbasaur", golpes: ["Chicote de Vinha", "Folha Navalha"], nota: "Derrotado por Riolu." },
+          { nome: "Cyndaquil", golpes: ["Investida", "Brasas", "Velocidade Total"], nota: "Venceu o Cyndaquil de Robson; derrotado por Flaaffy." },
+          { nome: "Bulbasaur", golpes: ["Chicote de Vinha", "Folha Navalha"], nota: "Venceu Flaaffy; derrotado por Riolu." },
           { nome: "Pikachu", golpes: ["Choque do Trovão", "Ataque Rápido", "Cauda de Ferro"], nota: "Venceu Riolu." }
         ]
       },
       conquistas: [],
       resultados: [
-        { personagem: "Ash Ketchum", evento: "Primeira batalha entre os irmãos (3 contra 3)", resultado: "Vitória" },
-        { personagem: "Robson Ketchum", evento: "Primeira batalha entre os irmãos (3 contra 3)", resultado: "Derrota" }
+        { personagem: "Ash Ketchum", evento: "Primeira batalha entre os irmãos (3 contra 3)", resultado: "Vitória (Pikachu venceu Riolu no 1 contra 1)" },
+        { personagem: "Robson Ketchum", evento: "Primeira batalha entre os irmãos (3 contra 3)", resultado: "Derrota (Flaaffy e Riolu venceram um Pokémon cada)" }
       ],
       proximoObjetivo: "Ecruteak",
       texto: ""

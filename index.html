@@ -363,9 +363,16 @@ window.STORY_DATA = {
     {
       nome: "Greenfield: O Castelo de Entei",
       regiao: "Johto",
-      episodios: { inicio: 26, fim: null },
+      episodios: { inicio: 26, fim: 29 },
       provisorio: true,
-      descricao: "Em Greenfield, os Unown realizam os desejos de Molly Hale depois do desaparecimento do pai dela: a mansão vira um castelo de cristal, Entei aparece e sequestra Delia. Ash e Robson invadem o castelo para resgatar a mãe."
+      descricao: "Em Greenfield, os Unown realizam os desejos de Molly Hale depois do desaparecimento do pai dela: a mansão vira um castelo de cristal, Entei aparece e sequestra Delia. Ash e Robson invadem o castelo para resgatar a mãe. No fim, Molly desiste das ilusões, Entei se despede, Spencer Hale volta e Delia é resgatada."
+    },
+    {
+      nome: "Johto: Rumo a Ecruteak",
+      regiao: "Johto",
+      episodios: { inicio: 30, fim: null },
+      provisorio: true,
+      descricao: "Depois de Greenfield, a jornada por Johto continua em direção a Ecruteak, começando pela primeira batalha oficial entre Ash e Robson."
     }
   ],
 
@@ -461,7 +468,8 @@ window.STORY_DATA = {
     {
       nome: "Ash Ketchum",
       papel: "familia",
-      descricao: "Irmão mais velho de Robson e rival amigável. Voltou das Ilhas Laranja como campeão da Liga Laranja. Ao ver Ho-Oh voando para Johto, decidiu disputar a Liga Johto. Em New Bark, ele e Robson se declararam rivais: \"Nos vemos na Liga Johto.\" Conquistou a Insígnia Zephyr em Cidade Violeta e seguiu na frente com Misty e Brock para Cidade Azaleia, onde reencontrou Robson e entregou a Kurt a GS Ball do Professor Carvalho. Venceu Bugsy, também com o seu Cyndaquil, e ganhou a Insígnia Colmeia, a sua segunda. Em Goldenrod, perdeu para Whitney, mas na revanche venceu com Pikachu, Totodile e Cyndaquil e ganhou a Insígnia Planície, a sua terceira. Também salvou os Pokémon de todos da Equipe Rocket na Fazenda Moomoo. Em Greenfield, jurou com Robson resgatar a mãe e enfrentou Entei com todo o time, incluindo Bulbasaur, Noctowl e o seu Charizard, que veio do Vale dos Charizard.",
+      rivalDe: "Robson Ketchum",
+      descricao: "Irmão mais velho de Robson e rival amigável. Voltou das Ilhas Laranja como campeão da Liga Laranja. Ao ver Ho-Oh voando para Johto, decidiu disputar a Liga Johto. Em New Bark, ele e Robson se declararam rivais: \"Nos vemos na Liga Johto.\" Conquistou a Insígnia Zephyr em Cidade Violeta e seguiu na frente com Misty e Brock para Cidade Azaleia, onde reencontrou Robson e entregou a Kurt a GS Ball do Professor Carvalho. Venceu Bugsy, também com o seu Cyndaquil, e ganhou a Insígnia Colmeia, a sua segunda. Em Goldenrod, perdeu para Whitney, mas na revanche venceu com Pikachu, Totodile e Cyndaquil e ganhou a Insígnia Planície, a sua terceira. Também salvou os Pokémon de todos da Equipe Rocket na Fazenda Moomoo. Em Greenfield, jurou com Robson resgatar a mãe e enfrentou Entei com todo o time, incluindo Bulbasaur, Noctowl e o seu Charizard, que veio do Vale dos Charizard. Na estrada para Ecruteak, venceu Robson na primeira batalha oficial entre os irmãos (3 contra 3); desde então, além de irmão, é um rival de verdade de Robson.",
       pokemon: [],
       primeiraAparicao: 2
     },
@@ -552,14 +560,14 @@ window.STORY_DATA = {
     {
       nome: "Molly Hale",
       papel: "outro",
-      descricao: "Menina de Greenfield, filha de Spencer Hale. Depois que o pai desapareceu, os Unown tornaram os seus desejos reais: a mansão virou um castelo de cristal e Entei apareceu. Desejou uma mãe, e Entei sequestrou Delia; no castelo, apareceu como treinadora com Pokémon dos sonhos.",
+      descricao: "Menina de Greenfield, filha de Spencer Hale. Depois que o pai desapareceu, os Unown tornaram os seus desejos reais: a mansão virou um castelo de cristal e Entei apareceu. Desejou uma mãe, e Entei sequestrou Delia; no castelo, apareceu como treinadora com Pokémon dos sonhos. No fim, pediu a Entei que parasse de lutar, recebeu a sua despedida (\"Eu sempre estarei com você\") e reencontrou o pai.",
       pokemon: [],
       primeiraAparicao: 26
     },
     {
       nome: "Spencer Hale",
       papel: "outro",
-      descricao: "Pesquisador Pokémon, pai de Molly. Desapareceu ao estudar placas antigas com símbolos de Unown.",
+      descricao: "Pesquisador Pokémon, pai de Molly. Desapareceu ao estudar placas antigas com símbolos de Unown e voltou da energia dos Unown depois que Entei se despediu de Molly.",
       pokemon: [],
       primeiraAparicao: 26
     },
@@ -613,7 +621,8 @@ window.STORY_DATA = {
   ],
 
   objetivos: [
-    { descricao: "Resgatar Delia e deter Entei em Greenfield", personagem: "Robson Ketchum", origem: 26, status: "pendente" },
+    { descricao: "Revanche contra Ash em batalha completa", personagem: "Robson Ketchum", origem: 30, status: "pendente" },
+    { descricao: "Resgatar Delia e deter Entei em Greenfield", personagem: "Robson Ketchum", origem: 26, status: "concluido", concluidoEm: 29 },
     { descricao: "Aprender sincronia para Contests em dupla", personagem: "Robson Ketchum", origem: 25, status: "pendente" },
     { descricao: "Conquistar a primeira fita no Contest de Azaleia", personagem: "Robson Ketchum", origem: 11, status: "concluido", concluidoEm: 17 },
     { descricao: "Vencer o Ginásio de Azaleia (Líder Bugsy)", personagem: "Robson Ketchum", origem: 15, status: "concluido", concluidoEm: 16 },
@@ -1796,6 +1805,76 @@ window.STORY_DATA = {
       ],
       proximoObjetivo: "Resgatar Delia e deter Entei em Greenfield",
       texto: ""
+    },
+    {
+      numero: 29,
+      titulo: "O Coração dos Desejos! O Adeus de Entei!",
+      arco: "Greenfield: O Castelo de Entei",
+      local: "Castelo de cristal em Greenfield (desabando)",
+      resumo: "Molly pede a Entei que pare de lutar, porque aquilo não é a sua família de verdade, e Delia lhe diz que o pai queria vê-la feliz de verdade, não em um mundo de ilusões. Com os Unown fora de controle e o castelo desabando, Entei se acalma e guia todos para fora com uma energia dourada. Entei se despede de Molly (\"Eu sempre estarei com você\") e desaparece em luz, Spencer Hale volta e abraça a filha, e Delia volta para casa. Na estrada, os irmãos combinam de se ver em Ecruteak, e Ash propõe a primeira batalha entre eles.",
+      eventos: [
+        "Molly pede a Entei que pare de lutar: \"Isso não é minha família de verdade.\"",
+        "Delia diz a Molly que o pai dela queria vê-la feliz de verdade, não em um mundo de ilusões.",
+        "Os Unown perdem o controle e os cristais se espalham, com Brock, Misty e Renato lá dentro; Renato carrega Pokémon feridos.",
+        "Entei se acalma, diz a Molly que ela não precisa mais desejar sozinha e guia todos para fora do castelo que desaba com uma energia dourada.",
+        "Na fuga, Ash segura Delia, Robson ajuda Eyshila, e Riolu e Pikachu guiam o caminho.",
+        "Entei se despede de Molly (\"Eu sempre estarei com você\"), toca a testa dela e desaparece em luz.",
+        "Spencer Hale volta da energia dos Unown e abraça Molly.",
+        "Delia se despede dos filhos e volta para casa.",
+        "Na estrada, Robson diz: \"A gente se vê em Ecruteak\"; Ash propõe a primeira batalha entre os dois."
+      ],
+      aparecem: ["Molly Hale", "Delia Ketchum", "Spencer Hale", "Ash Ketchum", "Robson Ketchum", "Eyshila", "Renato", "Brock", "Misty"],
+      times: {
+        "Robson Ketchum": [ { nome: "Riolu", nota: "Guiou o grupo para fora do castelo." } ],
+        "Ash Ketchum": [ { nome: "Pikachu", nota: "Guiou o grupo para fora do castelo." } ]
+      },
+      lendarios: [
+        { nome: "Entei", nota: "Acalmou-se, guiou todos para fora do castelo e se despediu de Molly." },
+        { nome: "Unown", nota: "Perderam o controle; Spencer Hale voltou da energia deles." }
+      ],
+      conquistas: [],
+      resultados: [
+        { personagem: "Robson Ketchum", evento: "Crise do castelo de cristal", resultado: "Delia resgatada; Entei se acalmou e Spencer Hale voltou" }
+      ],
+      proximoObjetivo: "Batalha entre os irmãos; depois, Ecruteak",
+      texto: ""
+    },
+    {
+      numero: 30,
+      titulo: "A Batalha dos Irmãos! Ash vs Robson!",
+      arco: "Johto: Rumo a Ecruteak",
+      local: "Estrada para Ecruteak",
+      resumo: "Na estrada para Ecruteak, Ash e Robson fazem a sua primeira batalha oficial, 3 contra 3, com Brock como juiz e Misty e Renato assistindo. O Cyndaquil de Ash vence o de Robson, Flaaffy cai diante de Cyndaquil e Bulbasaur, Riolu derrota Bulbasaur com Soco do Trovão, mas o Pikachu de Ash vence Riolu com Cauda de Ferro. Ash vence, Pikachu e Riolu demonstram respeito um pelo outro, e Robson promete: \"Da próxima vez vai ser batalha completa, e eu não vou perder.\"",
+      eventos: [
+        "Primeira batalha oficial entre os irmãos, 3 contra 3; Brock é o juiz, Misty e Renato assistem.",
+        "O Cyndaquil de Ash (Investida, Brasas, Velocidade Total) vence o Cyndaquil de Robson (Ataque Rápido, Roda de Fogo).",
+        "Flaaffy (Choque do Trovão) enfrenta o Cyndaquil (Investida) e o Bulbasaur (Chicote de Vinha, Folha Navalha) de Ash e acaba derrotado.",
+        "Riolu (Soco de Gelo, Aura Esférica, Soco do Trovão) derrota Bulbasaur com Soco do Trovão.",
+        "Pikachu (Choque do Trovão, Ataque Rápido, Cauda de Ferro) derrota Riolu com Cauda de Ferro.",
+        "Ash vence a primeira batalha entre os irmãos.",
+        "Pikachu e Riolu demonstram respeito um pelo outro.",
+        "Robson: \"Da próxima vez vai ser batalha completa, e eu não vou perder.\" Começa uma rivalidade de verdade."
+      ],
+      aparecem: ["Robson Ketchum", "Ash Ketchum", "Brock", "Misty", "Renato"],
+      times: {
+        "Robson Ketchum": [
+          { nome: "Cyndaquil", golpes: ["Ataque Rápido", "Roda de Fogo"], nota: "Derrotado pelo Cyndaquil de Ash." },
+          { nome: "Flaaffy", golpes: ["Choque do Trovão"], nota: "Derrotado depois de enfrentar Cyndaquil e Bulbasaur." },
+          { nome: "Riolu", golpes: ["Soco de Gelo", "Aura Esférica", "Soco do Trovão"], nota: "Venceu Bulbasaur; derrotado por Pikachu." }
+        ],
+        "Ash Ketchum": [
+          { nome: "Cyndaquil", golpes: ["Investida", "Brasas", "Velocidade Total"], nota: "Venceu o Cyndaquil de Robson." },
+          { nome: "Bulbasaur", golpes: ["Chicote de Vinha", "Folha Navalha"], nota: "Derrotado por Riolu." },
+          { nome: "Pikachu", golpes: ["Choque do Trovão", "Ataque Rápido", "Cauda de Ferro"], nota: "Venceu Riolu." }
+        ]
+      },
+      conquistas: [],
+      resultados: [
+        { personagem: "Ash Ketchum", evento: "Primeira batalha entre os irmãos (3 contra 3)", resultado: "Vitória" },
+        { personagem: "Robson Ketchum", evento: "Primeira batalha entre os irmãos (3 contra 3)", resultado: "Derrota" }
+      ],
+      proximoObjetivo: "Ecruteak",
+      texto: ""
     }
   ]
 };
@@ -2292,6 +2371,7 @@ window.POKEDEX_API = ["bulbasaur", "ivysaur", "venusaur", "charmander", "charmel
       '<div class="pers-topo"><div class="avatar">' + esc(iniciais(p.nome)) + "</div><div><h3>" + esc(p.nome) + "</h3>" +
       '<div class="chips"><span class="chip">' + esc(rotuloPapel(p)) + "</span>" +
       (p.idade ? '<span class="chip azul">' + esc(p.idade) + " anos</span>" : "") +
+      (p.rivalDe && p.papel !== "rival" ? '<span class="chip vermelho">Rival de ' + esc(String(p.rivalDe).split(/\s+/)[0]) + "</span>" : "") +
       (c.total ? '<span class="chip amarelo">🏅 ' + c.total + (c.total === 1 ? " conquista" : " conquistas") + "</span>" : "") +
       "</div></div></div>" +
       (p.apelidos && p.apelidos.length ? '<p class="pequeno suave">Também chamado de: ' + esc(p.apelidos.join(", ")) + "</p>" : "") +

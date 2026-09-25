@@ -273,6 +273,9 @@ table.tabela { width: 100%; border-collapse: collapse; font-size: .9rem; min-wid
 .objetivos li.feito .marca-obj { color: var(--verde); }
 .evolucao { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
 .evolucao .seta { font-size: 1.4rem; color: var(--verde); font-weight: 800; }
+.partes { display: grid; gap: 10px; }
+.parte { border: 1px solid var(--borda); border-radius: 12px; padding: 10px 12px; background: #fafbfc; }
+.parte-topo { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-bottom: 6px; flex-wrap: wrap; }
 
 </style>
 </head>
@@ -304,7 +307,9 @@ table.tabela { width: 100%; border-collapse: collapse; font-size: .9rem; min-wid
  *
  * ESQUEMA
  * meta:        { titulo, subtitulo, protagonista (nome exato do personagem), atualizadoEm, nota }
- * arcos:       [{ nome, regiao, episodios: { inicio, fim }, provisorio?: true, descricao }]
+ * arcos:       [{ nome, regiao, episodios: { inicio, fim }, provisorio?: true, descricao, partes?: [{ nome, episodios: { inicio, fim } }] }]
+ *                - partes: divisões internas opcionais do arco (aparecem na aba Arcos).
+ *                - Episódio com "arco" vazio ou ainda não cadastrado aparece como "Arco a definir".
  *                - inicio/fim podem ser null (desconhecido/em andamento). Ex.: { inicio: 4, fim: null } aparece como "4 – 11+".
  * grupos:      [{ nome, descricao?, membros: [{ nome, funcao, desde?, ate? }] }]
  *                - grupos de viagem. desde = nº do episódio em que entrou; ate = até quando (texto ou nº); obs? = observação.
@@ -342,37 +347,22 @@ window.STORY_DATA = {
     subtitulo: "O acompanhamento da história, episódio por episódio",
     protagonista: "Robson Ketchum",
     atualizadoEm: "24/09/2026",
-    nota: "Os dados estão sendo preenchidos aos poucos, conforme os episódios chegam. Arcos e números ainda são provisórios."
+    nota: "Os dados estão sendo preenchidos aos poucos, conforme os episódios chegam."
   },
 
   arcos: [
     {
-      nome: "Prólogo: Sinnoh e Pallet",
-      regiao: "Sinnoh e Kanto",
-      episodios: { inicio: 1, fim: 3 },
-      provisorio: true,
-      descricao: "A formatura de Robson na Academia Pokémon de Sinnoh, o nascimento de Riolu, a volta para casa em Pallet, o reencontro com Ash e a derrota para o rival Josias, que leva os irmãos a partirem para Johto."
-    },
-    {
-      nome: "Johto",
-      regiao: "Johto",
-      episodios: { inicio: 4, fim: 25 },
-      provisorio: true,
-      descricao: "Robson recebe Cyndaquil em New Bark, ganha Dratini, conhece Wallace, decide se tornar Coordenador e forma o seu grupo com Renato e Eyshila. Perde para Falkner e é eliminado no Contest de Violeta, mas, com as lições de Wallace, captura Gastly, salva os Slowpoke de Azaleia e conquista a Insígnia Colmeia e a sua primeira fita. A caminho de Goldenrod, captura Mareep, que evolui para Flaaffy, e, depois da derrota de Ash, vence Whitney e ganha a Insígnia Planície. No Contest em Duplas, chega à final, mas perde para Drew por falta de sincronia."
-    },
-    {
-      nome: "Greenfield: O Castelo de Entei",
-      regiao: "Johto",
-      episodios: { inicio: 26, fim: 29 },
-      provisorio: true,
-      descricao: "Em Greenfield, os Unown realizam os desejos de Molly Hale depois do desaparecimento do pai dela: a mansão vira um castelo de cristal, Entei aparece e sequestra Delia. Ash e Robson invadem o castelo para resgatar a mãe. No fim, Molly desiste das ilusões, Entei se despede, Spencer Hale volta e Delia é resgatada."
-    },
-    {
-      nome: "Johto: Rumo a Ecruteak",
-      regiao: "Johto",
-      episodios: { inicio: 30, fim: null },
-      provisorio: true,
-      descricao: "Depois de Greenfield, a jornada por Johto continua em direção a Ecruteak, começando pela primeira batalha oficial entre Ash e Robson."
+      nome: "Ventos do Recomeço",
+      regiao: "Sinnoh, Kanto e Johto",
+      episodios: { inicio: 1, fim: 30 },
+      provisorio: false,
+      descricao: "Robson se forma na Academia Pokémon de Sinnoh, onde Riolu nasce ao ressoar com a sua aura, volta para Pallet, reencontra Ash e perde para o rival Josias, o que leva os irmãos a partirem para Johto. Em Johto, recebe Cyndaquil, ganha Dratini, forma o seu grupo com Renato e Eyshila e sofre derrotas duras: contra Falkner e no Contest de Violeta. Com as lições de Wallace, aprende a mostrar a essência dos seus Pokémon, captura Gastly e Mareep (que evolui para Flaaffy), salva os Slowpoke de Azaleia e conquista as Insígnias Colmeia e Planície (contra Bugsy e Whitney) e a sua primeira fita, em Azaleia. Perde para Drew no Contest em Duplas, resgata Delia com Ash do castelo de cristal de Entei em Greenfield e, no Ep. 30, enfrenta Ash na primeira batalha oficial entre os irmãos.",
+      partes: [
+        { nome: "Sinnoh e Pallet", episodios: { inicio: 1, fim: 3 } },
+        { nome: "Johto", episodios: { inicio: 4, fim: 25 } },
+        { nome: "Greenfield: O Castelo de Entei", episodios: { inicio: 26, fim: 29 } },
+        { nome: "A Batalha dos Irmãos", episodios: { inicio: 30, fim: 30 } }
+      ]
     }
   ],
 
@@ -637,7 +627,7 @@ window.STORY_DATA = {
     {
       numero: 1,
       titulo: "O Despertar da Aura! O Primeiro Passo de Robson",
-      arco: "Prólogo: Sinnoh e Pallet",
+      arco: "Ventos do Recomeço",
       local: "Academia Pokémon, Sinnoh",
       resumo: "Na sua formatura, Robson Ketchum, estudioso, estratégico e quieto, bem diferente do irmão Ash, conhece a Campeã Cynthia e o Professor Daniel. Cynthia traz um ovo que não chocava; quando Robson o toca, as auras dos dois ressoam e dele nasce um Riolu. Robson desafia Cynthia e perde com um único golpe do Garchomp dela, mas a Campeã reconhece o seu talento e promete uma revanche. Formado, Robson embarca para Kanto, rumo a Pallet.",
       eventos: [
@@ -673,7 +663,7 @@ window.STORY_DATA = {
     {
       numero: 2,
       titulo: "Reencontro em Pallet! Irmãos, Rivais e Promessas!",
-      arco: "Prólogo: Sinnoh e Pallet",
+      arco: "Ventos do Recomeço",
       local: "Pallet / Laboratório do Professor Carvalho",
       resumo: "Robson volta para casa, conhece Brock e é recebido pela mãe, Delia, com lasanha; Brock passa a noite contando as aventuras de Ash. Ash volta das Ilhas Laranja como campeão da Liga Laranja, Pikachu e Riolu se veem como rivais, e Robson declara que vai ser Mestre Pokémon primeiro. Gary Oak chega com Josias Carvalho, rival de infância de Robson; Gary vence Ash e parte para Johto, e Josias desafia Robson.",
       eventos: [
@@ -709,7 +699,7 @@ window.STORY_DATA = {
     {
       numero: 3,
       titulo: "Derrota e Destino! O Chamado de Johto!",
-      arco: "Prólogo: Sinnoh e Pallet",
+      arco: "Ventos do Recomeço",
       local: "Laboratório do Professor Carvalho, Pallet",
       resumo: "Robson e Riolu perdem para Josias e seu Abra; Josias diz que sempre será o número 1 e parte para Johto para se tornar campeão. Ash e Robson ficam abalados, e à noite os irmãos prometem ficar mais fortes e vencer os seus rivais. Na manhã seguinte, Robson vê Lugia e Ash vê Ho-Oh voando em direção a Johto, e os dois decidem partir para lá; Ash vai disputar a Liga Johto.",
       eventos: [
@@ -747,7 +737,7 @@ window.STORY_DATA = {
     {
       numero: 4,
       titulo: "Novos Começos! Cyndaquil, Eu Escolho Você!",
-      arco: "Johto",
+      arco: "Ventos do Recomeço",
       local: "Pallet (Laboratório do Prof. Carvalho) e New Bark (Laboratório do Professor Elm)",
       resumo: "O Professor Carvalho entrega a Ash e Robson Pokédex atualizadas e avisa que o Professor Elm vai oferecer um Pokémon inicial a Robson. Em New Bark, o Totodile do laboratório foi roubado e só resta Cyndaquil, que cria um laço com Robson e rastreia os ladrões: a Equipe Rocket. Com a ajuda de Ash e Pikachu, Totodile é libertado, Robson escolhe Cyndaquil como inicial e os irmãos se declaram rivais antes de seguirem caminhos separados.",
       eventos: [
@@ -787,7 +777,7 @@ window.STORY_DATA = {
     {
       numero: 5,
       titulo: "Beleza e Força! O Encanto de Wallace e o Novo Companheiro!",
-      arco: "Johto",
+      arco: "Ventos do Recomeço",
       local: "Cidade Cerejeira (lago)",
       resumo: "Cidade Cerejeira se prepara para um Contest com participação especial de Wallace, Campeão de Hoenn e Top Coordenador, mas Robson acha que Contests são \"só um show\" e vai treinar. Em um lago, ele protege um pequeno Dratini atacado por um Gyarados enorme; Riolu e Cyndaquil não conseguem detê-lo, e o Milotic de Wallace afasta o Gyarados com Hidro Bomba. Wallace repreende a imprudência de Robson, admira a sua coragem, explica o valor dos Contests e o convida para assistir. Dratini segue Robson e entra para o time.",
       eventos: [
@@ -818,7 +808,7 @@ window.STORY_DATA = {
     {
       numero: 6,
       titulo: "Rivalidade em Flor! O Surgimento de um Coordenador!",
-      arco: "Johto",
+      arco: "Ventos do Recomeço",
       local: "Cidade Cerejeira (Contest)",
       resumo: "No lago, Robson conhece Pedro, um treinador novato da Ilha de Cianwood que sonha ser Top Coordenador, e os dois ficam amigos; o Totodile de Pedro é o mesmo que Robson resgatou em New Bark. A exibição de Wallace com Milotic inspira Robson a querer ser, além de Mestre Pokémon, Top Coordenador. Drew estreia com Beautifly, vence Pedro na semifinal, chamando-o de fraco, e fica com a fita. Quando Robson o confronta, Drew sorri, lhe dá uma rosa e o desafia para o Contest de Violeta.",
       eventos: [
@@ -865,7 +855,7 @@ window.STORY_DATA = {
     {
       numero: 7,
       titulo: "Aura em Perigo! Um Novo Companheiro de Jornada!",
-      arco: "Johto",
+      arco: "Ventos do Recomeço",
       local: "Estrada de Johto rumo a Cidade Violeta; depósito abandonado",
       resumo: "Na estrada para Cidade Violeta, Robson conhece Renato, que viaja para se tornar Médico Pokémon, e os dois começam uma batalha que acaba interrompida. Cassidy e Butch, da Equipe Rocket, capturam Riolu por ele saber usar Aura Esférica; Robson sente Riolu pela Aura e encontra o esconderijo. Cyndaquil e o Oshawott de Renato vencem os agentes, Riolu é resgatado e Renato decide viajar com Robson.",
       eventos: [
@@ -905,7 +895,7 @@ window.STORY_DATA = {
     {
       numero: 8,
       titulo: "Uma Nova Companheira! Aipom em Perigo!",
-      arco: "Johto",
+      arco: "Ventos do Recomeço",
       local: "Floresta na estrada para Cidade Violeta",
       resumo: "Robson desabafa sobre a pressão de ser irmão de Ash, e Renato responde: \"Você não é o irmão do Ash. Você é o Robson.\" Os dois salvam Eyshila, uma garota que quer ser Professora Pokémon e tem medo de batalhar, e o seu Aipom de um enxame de Beedrill. Cassidy e Butch tentam pegar Riolu, mas capturam Aipom; com o incentivo dos meninos e um resgate em equipe, Aipom é libertado, a dupla sai voando e Eyshila entra para o grupo.",
       eventos: [
@@ -944,7 +934,7 @@ window.STORY_DATA = {
     {
       numero: 9,
       titulo: "Dúvidas Antes da Batalha! O Conselho de um Amigo!",
-      arco: "Johto",
+      arco: "Ventos do Recomeço",
       local: "Cidade Violeta (Ginásio de Violeta, Centro Pokémon, lago)",
       resumo: "O grupo chega a Cidade Violeta e encontra Misty e Brock no ginásio, onde Ash enfrenta o Líder Falkner; o Charizard de Ash vence o Pidgeot de Falkner e Ash conquista a Insígnia Zephyr, a sua primeira de Johto. À noite, ansioso com a própria batalha de ginásio, Robson não consegue dormir, e Renato o aconselha no lago: não dá para controlar o resultado, só dar o seu melhor. Na manhã seguinte, Robson vai ao Ginásio de Violeta em busca da sua primeira insígnia de Johto.",
       eventos: [
@@ -982,7 +972,7 @@ window.STORY_DATA = {
     {
       numero: 10,
       titulo: "A Aura Contra os Ventos! O Desafio ao Ginásio Violeta!",
-      arco: "Johto",
+      arco: "Ventos do Recomeço",
       local: "Ginásio de Violeta",
       resumo: "Diante de Ash, Misty, Brock, Renato, Eyshila, Pedro e Drew, Robson enfrenta o Líder Falkner em uma batalha 3 contra 3. Dratini paralisa Hoothoot antes de cair, Cyndaquil vence Hoothoot e aprende Roda de Fogo contra Dodrio, e Riolu derrota Dodrio, mas, exausto, desaba diante de Pidgeot sem atacar. Robson perde e fica sem a insígnia, mas sorri ao lembrar do conselho de Renato; Falkner o elogia e promete uma revanche quando ele tiver cinco insígnias, e Drew lhe dá outra rosa.",
       eventos: [
@@ -1024,7 +1014,7 @@ window.STORY_DATA = {
     {
       numero: 11,
       titulo: "A Derrota Mais Difícil! O Que Faz um Verdadeiro Coordenador?",
-      arco: "Johto",
+      arco: "Ventos do Recomeço",
       local: "Cidade Violeta (Contest)",
       resumo: "No seu primeiro Contest em Johto, em Cidade Violeta, Robson aposta em uma apresentação cheia de efeitos com Dratini, mas é eliminado na fase de apelação. Drew e Pedro avançam, e na final Pedro, com Totodile, vence o Budew de Drew e conquista a sua primeira fita. Abalado, Robson chora a derrota, até que Wallace, que assistia disfarçado, se revela e lhe ensina que um Contest deve mostrar o coração do Pokémon, e não só os efeitos. Wallace passa a acompanhar Robson até o Contest de Azaleia.",
       eventos: [
@@ -1067,7 +1057,7 @@ window.STORY_DATA = {
     {
       numero: 12,
       titulo: "O Fantasma Brincalhão! A Primeira Captura em Johto!",
-      arco: "Johto",
+      arco: "Ventos do Recomeço",
       local: "Estrada para Cidade Azaleia; floresta das ilusões",
       resumo: "Wallace, disfarçado, agora viaja com Robson, Renato e Eyshila e ensina que o Pokémon é sempre o centro de uma apresentação. Em uma floresta onde Pokémon fantasmas criam ilusões, o grupo encontra Josias, que provoca Robson pelas derrotas para Líderes de Ginásio e vai embora com o seu Hoothoot. O Natu de Renato sente um Gastly escondido, brincalhão e não malvado; Robson entra nas brincadeiras, o desafia com Cyndaquil e o captura, a sua primeira captura em Johto. Wallace elogia Robson por entender a personalidade de Gastly, e o grupo atravessa a floresta.",
       eventos: [
@@ -1110,7 +1100,7 @@ window.STORY_DATA = {
     {
       numero: 13,
       titulo: "A Essência da Cura! Shuckle e o Medo de Gloom!",
-      arco: "Johto",
+      arco: "Ventos do Recomeço",
       local: "Bosque perto de Cidade Azaleia",
       resumo: "Wallace ensina que a essência de um Pokémon é quem ele é: do que gosta, do que tem medo, com o que sonha. Em um bosque, Sentret, Spinarak e Hoppip selvagens aparecem envenenados; Renato passa horas ajudando um Shuckle incansável que faz um suco medicinal com as frutas guardadas no casco. Gastly e Dratini descobrem a causa, um Gloom assustado que solta veneno sem querer, e Eyshila o acalma sem batalhar, entendendo o seu medo. No fim, Renato captura Shuckle e Eyshila captura Gloom.",
       eventos: [
@@ -1152,7 +1142,7 @@ window.STORY_DATA = {
     {
       numero: 14,
       titulo: "A Última Lição de Wallace! O Verdadeiro Significado de um Coordenador!",
-      arco: "Johto",
+      arco: "Ventos do Recomeço",
       local: "Última caverna antes de Cidade Azaleia",
       resumo: "Na lição final, Wallace enfrenta os quatro Pokémon de Robson apenas com Milotic. Gastly, Cyndaquil e Dratini não conseguem nada; Riolu faz Milotic se mexer e aprende Soco do Trovão, empurrando-o para trás, mas Milotic continua de pé e vence todos. Robson descreve a essência de cada um dos seus Pokémon, e Wallace aprova: ele aprendeu a essência de um Coordenador, e o próximo passo, mostrá-la ao mundo, só ele pode descobrir. Wallace se despede: \"Espero encontrar você novamente. Lá no topo.\"",
       eventos: [
@@ -1191,7 +1181,7 @@ window.STORY_DATA = {
     {
       numero: 15,
       titulo: "O Poço dos Slowpoke! O Primeiro Grande Feito de Robson!",
-      arco: "Johto",
+      arco: "Ventos do Recomeço",
       local: "Cidade Azaleia, Poço dos Slowpoke",
       resumo: "Cidade Azaleia está triste: Kurt explica que a Equipe Rocket sequestrou todos os Slowpoke para o Poço dos Slowpoke. Com Eyshila dando apoio, Robson e Renato abrem caminho entre os recrutas, Riolu fica para trás segurando uns dez sozinho, e Robson vence o Administrador Proton em uma batalha dupla; Proton foge quando a polícia chega. Os Slowpoke são libertados, Ash, Misty e Brock chegam, Ash entrega a Kurt a GS Ball do Professor Carvalho, e os irmãos decidem desafiar o Ginásio de Azaleia, de Bugsy.",
       eventos: [
@@ -1241,7 +1231,7 @@ window.STORY_DATA = {
     {
       numero: 16,
       titulo: "A Primeira Insígnia! A Determinação de Robson!",
-      arco: "Johto",
+      arco: "Ventos do Recomeço",
       local: "Cidade Azaleia (casa de Kurt, Poço dos Slowpoke, Ginásio de Azaleia)",
       resumo: "À noite, Robson duvida de si mesmo depois das derrotas para Josias e Falkner e da eliminação no Contest, mas Renato e Ash o encorajam. No Ginásio de Azaleia, Cyndaquil vence Ariados e Beedrill, e Riolu derrota o Scyther de Bugsy: Robson conquista a Insígnia Colmeia, a sua primeira de Johto. No dia seguinte, Ash também vence Bugsy e leva a sua segunda insígnia, e os irmãos seguem caminhos separados de novo.",
       eventos: [
@@ -1288,7 +1278,7 @@ window.STORY_DATA = {
     {
       numero: 17,
       titulo: "A Primeira Fita! O Brilho Verdadeiro de Dratini!",
-      arco: "Johto",
+      arco: "Ventos do Recomeço",
       local: "Contest de Azaleia",
       resumo: "Drew e Pedro percebem que Robson mudou. Na apresentação, Robson deixa Gastly simplesmente ser ele mesmo e é aplaudido de pé, enquanto Wallace assiste pela TV em Hoenn. Pedro vence Drew na semifinal, e na final Robson deixa Dratini brilhar no centro do seu furacão de água e raios; Dratini aprende Cauda de Água e Robson vence por 89 a 84, conquistando a Fita de Azaleia, a sua primeira. À noite, Wallace o parabeniza: \"Isso é só o começo.\"",
       eventos: [
@@ -1338,7 +1328,7 @@ window.STORY_DATA = {
     {
       numero: 18,
       titulo: "A Miltank Furiosa! A Evolução de Oshawott!",
-      arco: "Johto",
+      arco: "Ventos do Recomeço",
       local: "Estrada de Azaleia para Goldenrod",
       resumo: "Na estrada, volta a piada de sempre: Pallet é \"roça\", e o que vale é Celadon. Uma Miltank selvagem furiosa sai atacando, e Renato a quer pelo Leite MuMu. Shuckle e Natu perdem, Oshawott apanha muito e então evolui para Dewott, que usa Vingança e Lâmina de Concha e vence; Renato captura Miltank, e o grupo segue para Goldenrod, a maior cidade de Johto.",
       eventos: [
@@ -1377,7 +1367,7 @@ window.STORY_DATA = {
     {
       numero: 19,
       titulo: "A Luz que Nunca Desiste! A Captura de Mareep!",
-      arco: "Johto",
+      arco: "Ventos do Recomeço",
       local: "Campos e fazendas a caminho de Goldenrod (região de criação de Pokémon elétricos e rebanhos de Mareep)",
       resumo: "Durante uma tempestade, Robson sai correndo atrás de um choro fraco e encontra uma pequena Mareep assustada, presa sob galhos caídos, que tem medo da própria eletricidade. Com a ajuda de Renato, Eyshila e do aroma calmante de Gloom, eles a acalmam e a libertam. Quando uma matilha de Houndour agressivos cerca o grupo, Mareep vence o medo e usa Choque do Trovão para afastá-los, e Robson a captura.",
       eventos: [
@@ -1413,7 +1403,7 @@ window.STORY_DATA = {
     {
       numero: 20,
       titulo: "O Vento da Coragem! Eyshila e o Pequeno Hoppip!",
-      arco: "Johto",
+      arco: "Ventos do Recomeço",
       local: "Colinas e campos floridos a caminho de Goldenrod",
       resumo: "Uma forte ventania leva um pequeno Hoppip, que fica preso no alto de uma árvore, cercado por Spearow e com medo demais para lutar. Eyshila, que sempre evita batalhas, se vê no Hoppip, sobe na árvore e enfrenta os Spearow com Gloom. Inspirado, Hoppip usa Rajada, e juntos eles afastam os Spearow; Eyshila captura Hoppip. A lição: coragem não é ausência de medo.",
       eventos: [
@@ -1446,7 +1436,7 @@ window.STORY_DATA = {
     {
       numero: 21,
       titulo: "O Terror de Goldenrod! O Treinamento Contra a Miltank!",
-      arco: "Johto",
+      arco: "Ventos do Recomeço",
       local: "Arredores de Goldenrod",
       resumo: "Gary chega em um conversível esportivo, pergunta sobre as insígnias e conta que tem 4 e que Josias já tem 3, enquanto Robson tem 1. Ele avisa que poucos treinadores param a Miltank de Whitney e o seu Rolo Compressor, e zomba dos Ketchum como \"especialistas em perder\". Robson treina contra a Miltank de Renato: nenhum dos seus Pokémon consegue parar o Rolo Compressor por completo, mas Mareep enfrenta o medo e evolui para Flaaffy, que segura Miltank por alguns segundos antes de também ser derrotado. O próximo desafio é o Ginásio de Goldenrod, contra Whitney.",
       eventos: [
@@ -1490,7 +1480,7 @@ window.STORY_DATA = {
     {
       numero: 22,
       titulo: "Uma Oportunidade Dourada! O Pesadelo Chamado Miltank!",
-      arco: "Johto",
+      arco: "Ventos do Recomeço",
       local: "Goldenrod",
       resumo: "Robson chega a Goldenrod assombrado pelo aviso de Gary e pelo treino fracassado, e liga para Delia por videofone para avisar Ash que está esperando por ele: desde Azaleia, os irmãos prometeram que nenhum enfrentaria um ginásio importante sem o outro assistindo. Ash, Misty e Brock chegam, o grupo conhece Whitney em um grande shopping de Goldenrod e ajuda a recuperar o Clefairy dela da Equipe Rocket. Ash desafia Whitney primeiro e perde para o Rolo Compressor de Miltank; pela primeira vez em Johto, Robson duvida de si e passa a noite revendo a gravação.",
       eventos: [
@@ -1524,7 +1514,7 @@ window.STORY_DATA = {
     {
       numero: 23,
       titulo: "A Quebra do Pesadelo! O Golpe Final contra a Miltank!",
-      arco: "Johto",
+      arco: "Ventos do Recomeço",
       local: "Ginásio de Goldenrod",
       resumo: "Sem descansar, Robson desafia Whitney na manhã seguinte, e ela usa só Miltank. Dratini faz Miltank recuar pela primeira vez antes de cair, e Flaaffy a paralisa antes de também ser derrotado. Riolu racha o chão e, quando a paralisia trava Miltank por uma fração de segundo, uma Aura Esférica muito maior a nocauteia: Robson vence e conquista a sua segunda insígnia. Whitney deixa a lição: a persistência separa os bons dos grandes treinadores.",
       eventos: [
@@ -1561,7 +1551,7 @@ window.STORY_DATA = {
     {
       numero: 24,
       titulo: "O Segredo do Leite MuMu! A Revanche de Ash!",
-      arco: "Johto",
+      arco: "Ventos do Recomeço",
       local: "Fazenda Moomoo e Ginásio de Goldenrod",
       resumo: "Whitney leva todos à Fazenda Moomoo, do seu tio Milton, onde Renato se empolga ao aprender sobre o Leite MuMu. A Equipe Rocket, em um robô em forma de Miltank, rouba o leite e captura os Pokémon de Robson, Renato e Eyshila; só Ash, que treinava longe, ainda tem Pokémon, e Pikachu, Totodile e Cyndaquil destroem o robô e devolvem todos os Pokémon. Na revanche, Ash vence Whitney com Pikachu atacando Miltank de baixo, de dentro de um buraco, e conquista a Insígnia Planície.",
       eventos: [
@@ -1619,7 +1609,7 @@ window.STORY_DATA = {
     {
       numero: 25,
       titulo: "O Contest em Dupla! A Lição da Sincronia!",
-      arco: "Johto",
+      arco: "Ventos do Recomeço",
       local: "Pequena cidade depois de Goldenrod (nome não citado), Contest em Duplas",
       resumo: "Em um Contest em Duplas, em que cada Coordenador usa dois Pokémon ao mesmo tempo, Drew volta e Pedro não aparece. Robson passa pelas apresentações, quartas e semifinal, mas na final contra Drew os seus comandos se atrapalham e a Roda de Fogo de Cyndaquil desfaz a própria Sombra Noturna de Gastly. Drew vence por 91 a 76 e conquista a sua segunda fita, mas não zomba: \"Você está aprendendo, e isso é perigoso para quem está na sua frente.\"",
       eventos: [
@@ -1663,7 +1653,7 @@ window.STORY_DATA = {
     {
       numero: 26,
       titulo: "O Castelo dos Sonhos! O Retorno de Entei!",
-      arco: "Greenfield: O Castelo de Entei",
+      arco: "Ventos do Recomeço",
       local: "Greenfield",
       resumo: "Em Greenfield, o pesquisador Spencer Hale desaparece ao estudar placas antigas com símbolos de Unown. Chorando, a sua filha Molly deseja o pai de volta: os Unown transformam a mansão em um castelo de cristal, e Entei aparece. Robson, Renato e Eyshila reencontram Ash, Misty e Brock perto da cidade, o Professor Carvalho e Delia chegam para investigar os cristais, e Entei hipnotiza e sequestra Delia porque \"Molly deseja uma mãe\". Ash e Robson juram trazê-la de volta.",
       eventos: [
@@ -1695,7 +1685,7 @@ window.STORY_DATA = {
     {
       numero: 27,
       titulo: "O Coração de Molly! A Fúria de Entei!",
-      arco: "Greenfield: O Castelo de Entei",
+      arco: "Ventos do Recomeço",
       local: "Castelo de cristal em Greenfield",
       resumo: "O grupo invade o castelo de cristal, cheio de corredores impossíveis criados pelos Unown, e cada Pokémon ajuda a abrir caminho. Molly aparece como treinadora com Pokémon dos sonhos, e os amigos ficam para trás um a um para batalhar. Ash e Robson chegam ao topo, Delia desperta da influência, abraça os filhos e diz a Molly: \"Eu não sou sua mãe.\" Molly se desespera, os Unown enlouquecem e Entei avança contra os irmãos.",
       eventos: [
@@ -1757,7 +1747,7 @@ window.STORY_DATA = {
     {
       numero: 28,
       titulo: "A Fúria de Entei! A União dos Pokémons!",
-      arco: "Greenfield: O Castelo de Entei",
+      arco: "Ventos do Recomeço",
       local: "Castelo de cristal em Greenfield",
       resumo: "O Charizard de Ash chega e intercepta o ataque de Entei com Lança Chamas, e os times dos dois irmãos lutam juntos; Dratini, Gastly e o Cyndaquil de Robson aprendem golpes novos, e os dois Cyndaquil lutam em sincronia. Mesmo assim, Entei derrota todos com uma esfera de fogo gigante, o castelo desaba e Ash e Robson caem. A Equipe Rocket resgata Ash, Robson, Delia e Pikachu, mas Entei salta das ruínas e prepara outro ataque.",
       eventos: [
@@ -1809,7 +1799,7 @@ window.STORY_DATA = {
     {
       numero: 29,
       titulo: "O Coração dos Desejos! O Adeus de Entei!",
-      arco: "Greenfield: O Castelo de Entei",
+      arco: "Ventos do Recomeço",
       local: "Castelo de cristal em Greenfield (desabando)",
       resumo: "Molly pede a Entei que pare de lutar, porque aquilo não é a sua família de verdade, e Delia lhe diz que o pai queria vê-la feliz de verdade, não em um mundo de ilusões. Com os Unown fora de controle e o castelo desabando, Entei se acalma e guia todos para fora com uma energia dourada. Entei se despede de Molly (\"Eu sempre estarei com você\") e desaparece em luz, Spencer Hale volta e abraça a filha, e Delia volta para casa. Na estrada, os irmãos combinam de se ver em Ecruteak, e Ash propõe a primeira batalha entre eles.",
       eventos: [
@@ -1842,7 +1832,7 @@ window.STORY_DATA = {
     {
       numero: 30,
       titulo: "A Batalha dos Irmãos! Ash vs Robson!",
-      arco: "Johto: Rumo a Ecruteak",
+      arco: "Ventos do Recomeço",
       local: "Estrada para Ecruteak",
       resumo: "Na estrada para Ecruteak, Ash e Robson fazem a sua primeira batalha oficial, 3 contra 3, com Brock como juiz e Misty e Renato assistindo. O Cyndaquil de Ash vence o de Robson, mas Flaaffy aguenta uma Investida e o derruba com Choque do Trovão; o Bulbasaur de Ash vence a Flaaffy já cansada, Riolu derrota Bulbasaur com Soco do Trovão, mas o Pikachu de Ash vence Riolu com Cauda de Ferro. Ash vence, Pikachu e Riolu demonstram respeito um pelo outro, e Robson promete: \"Da próxima vez vai ser batalha completa, e eu não vou perder.\"",
       eventos: [
@@ -1901,7 +1891,25 @@ window.POKEDEX_API = ["bulbasaur", "ivysaur", "venusaur", "charmander", "charmel
   var META = D.meta || {};
   var EPISODIOS = (D.episodes || []).slice().sort(function (a, b) { return a.numero - b.numero; });
   var PERSONAGENS = D.personagens || [];
-  var ARCOS = D.arcos || [];
+  var ARCOS = (D.arcos || []).slice();
+  // Episódios sem arco (ou com um arco ainda não cadastrado) viram "Arco a definir".
+  var ARCO_INDEFINIDO = "Arco a definir";
+  (function () {
+    function normA(x) { return String(x || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]/g, ""); }
+    EPISODIOS.forEach(function (ep) {
+      var nome = String(ep.arco || "").trim();
+      var existe = nome && ARCOS.some(function (a) { return normA(a.nome) === normA(nome); });
+      if (existe) return;
+      ep.arco = nome || ARCO_INDEFINIDO;
+      var virtual = ARCOS.filter(function (a) { return a.virtual && normA(a.nome) === normA(ep.arco); })[0];
+      if (!virtual) {
+        virtual = { nome: ep.arco, regiao: "", episodios: { inicio: ep.numero, fim: null }, provisorio: true, virtual: true,
+          descricao: "Arco ainda não definido pelo autor. Os episódios aparecem aqui até o arco ganhar nome." };
+        ARCOS.push(virtual);
+      }
+      if (ep.numero < virtual.episodios.inicio) virtual.episodios.inicio = ep.numero;
+    });
+  })();
   var app = document.getElementById("app");
 
   var PAPEIS = [
@@ -2543,8 +2551,16 @@ window.POKEDEX_API = ["bulbasaur", "ivysaur", "venusaur", "charmander", "charmel
         (a.provisorio ? '<span class="chip amarelo">Provisório</span>' : "") + "</div>" +
         "<h3>" + esc(a.nome) + '</h3><div class="faixa">Episódios ' + esc(faixaArco(a)) + "</div>" +
         '<p class="pequeno">' + esc(a.descricao || "") + "</p>" +
+        ((a.partes || []).length ? '<div class="sub">Partes do arco</div><div class="partes">' + a.partes.map(function (pt) {
+          var ini = pt.episodios && pt.episodios.inicio, fim = pt.episodios && pt.episodios.fim;
+          var epsP = eps.filter(function (e) { return (ini == null || e.numero >= ini) && (fim == null || e.numero <= fim); });
+          var faixa = (ini != null ? ini : "?") + (fim === ini ? "" : " – " + (fim != null ? fim : "…"));
+          return '<div class="parte"><div class="parte-topo"><strong>' + esc(pt.nome) + '</strong><span class="chip">' +
+            (fim === ini ? "Ep. " : "Eps. ") + esc(faixa) + "</span></div>" +
+            (epsP.length ? '<div class="chips">' + chipsArco({ episodios: pt.episodios }, epsP) + "</div>" : "") + "</div>";
+        }).join("") + "</div>" :
         '<div class="sub">Episódios registrados (' + eps.length + ")</div>" +
-        (eps.length ? '<div class="chips">' + chipsArco(a, eps) + "</div>" : '<p class="suave pequeno">Nenhum ainda.</p>') + "</article>";
+        (eps.length ? '<div class="chips">' + chipsArco(a, eps) + "</div>" : '<p class="suave pequeno">Nenhum ainda.</p>')) + "</article>";
     }).join("") + "</div>";
     return h;
   }

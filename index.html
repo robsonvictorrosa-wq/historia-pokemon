@@ -407,6 +407,15 @@ table.tabela { width: 100%; border-collapse: collapse; font-size: .9rem; min-wid
   .saga-info .faixa { font-size: 1.15rem; }
 }
 
+/* Estado da história no episódio que se está lendo */
+.estado-ep { margin: 12px 0 16px; }
+.estado-ep h3 { margin: 0 0 4px; }
+.estado-ep > .suave { margin: 0 0 8px; }
+.estado-linha { margin-top: 10px; }
+.estado-linha .rotulo { font-size: .72rem; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; color: var(--suave); margin-bottom: 4px; }
+.estado-quem { font-weight: 700; font-size: .9rem; margin: 8px 0 2px; }
+.estado-ep .time { gap: 6px; }
+
 </style>
 </head>
 <body>
@@ -6054,6 +6063,108 @@ window.STORY_IMAGES = {"imagens/poster-saga-hoenn.jpg": "data:image/jpeg;base64,
     atualizarListaEpisodios();
   }
 
+
+  function timeAte(pers, n) {
+    // Time na mão NO FIM deste episódio: só o que já foi registrado até aqui.
+    // Evoluções posteriores não entram. saiu/treinando não contam como "na mão".
+    if (!pers) return null;
+    var mapa = {}, ordem = [], viu = false;
+    EPISODIOS.forEach(function (ep) {
+      if (ep.numero > n) return;
+      evolucoesDe(ep, pers).forEach(function (e) {
+        var de = norm(e.de), para = norm(e.para), i = ordem.indexOf(de);
+        if (i >= 0) {
+          ordem[i] = para;
+          mapa[para] = { nome: e.para, personalidade: mapa[de] && mapa[de].personalidade };
+          delete mapa[de];
+        }
+      });
+      var lista = timeNoEpisodio(ep, pers);
+      if (lista) viu = true;
+      (lista || []).forEach(function (pk) {
+        var k = norm(pk.nome);
+        if (pk.saiu || pk.treinando) { delete mapa[k]; return; }
+        if (!mapa[k]) ordem.push(k);
+        mapa[k] = { nome: pk.nome, personalidade: pk.personalidade || (mapa[k] && mapa[k].personalidade) };
+      });
+    });
+    if (!viu) return null;
+    return ordem.filter(function (k) { return mapa[k]; }).map(function (k) { return mapa[k]; });
+  }
+  function conquistasAte(pers, n) {
+    return conquistasDe(pers).filter(function (x) { return x.ep.numero == null || x.ep.numero <= n; });
+  }
+  function parteDoEpisodio(ep) {
+    var arco = null;
+    for (var i = 0; i < ARCOS.length; i++) if (norm(ARCOS[i].nome) === norm(ep.arco)) arco = ARCOS[i];
+    if (!arco) return { arco: ep.arco || "", parte: "" };
+    var parte = "";
+    (arco.partes || []).forEach(function (pt) {
+      var ini = pt.episodios && pt.episodios.inicio, fim = pt.episodios && pt.episodios.fim;
+      if (ini != null && ep.numero >= ini && (fim == null || ep.numero <= fim)) parte = pt.nome;
+    });
+    return { arco: arco.nome, parte: parte };
+  }
+  function membroNaEpoca(m, n) {
+    if (m.desde != null && typeof m.desde === "number" && n < m.desde) return false;
+    if (m.desde != null && typeof m.desde !== "number") return false;
+    if (m.ate != null && typeof m.ate === "number" && n > m.ate) return false;
+    return true;
+  }
+  function companheirosNoEpisodio(ep) {
+    var vistos = {}, lista = [];
+    (D.grupos || []).forEach(function (g) {
+      (g.membros || []).forEach(function (m) {
+        if (!membroNaEpoca(m, ep.numero)) return;
+        var pers = acharPersonagem(m.nome);
+        if (!pers || pers === PROTAGONISTA) return;
+        var id = norm(pers.nome);
+        if (vistos[id] || !aparece(ep, pers)) return;
+        var time = timeAte(pers, ep.numero);
+        if (!time || !time.length) return;
+        vistos[id] = true;
+        lista.push({ pers: pers, time: time });
+      });
+    });
+    return lista;
+  }
+  function blocoEstado(ep) {
+    var info = parteDoEpisodio(ep);
+    var rob = PROTAGONISTA;
+    var time = rob ? timeAte(rob, ep.numero) : null;
+    var conq = rob ? conquistasAte(rob, ep.numero) : [];
+    var ins = conq.filter(function (x) { return tipoInfo(x.c.tipo).chave === "insignia"; });
+    var fit = conq.filter(function (x) { return tipoInfo(x.c.tipo).chave === "fita"; });
+    var comps = companheirosNoEpisodio(ep);
+    var h = '<section class="card estado-ep"><h3>Neste episódio</h3>' +
+      '<p class="suave pequeno">Como estavam neste ponto da história, não mais adiante.</p>';
+    if (info.arco) {
+      h += '<div class="estado-linha"><div class="rotulo">Arco</div><div class="chips"><span class="chip vermelho">' + esc(info.arco) + "</span>" +
+        (info.parte ? '<span class="chip">' + esc(info.parte) + "</span>" : "") + "</div></div>";
+    }
+    if (time && time.length) {
+      h += '<div class="estado-linha"><div class="rotulo">Na mão de ' + esc(rob.nome) + "</div>" + listaTime(time, true) + "</div>";
+    }
+    if (ins.length) {
+      h += '<div class="estado-linha"><div class="rotulo">Insígnias (' + ins.length + ')</div><div class="chips">' +
+        ins.map(function (x) { return '<span class="chip amarelo">' + esc(x.c.nome) + "</span>"; }).join("") + "</div></div>";
+    }
+    if (fit.length) {
+      h += '<div class="estado-linha"><div class="rotulo">Fitas (' + fit.length + ')</div><div class="chips">' +
+        fit.map(function (x) { return '<span class="chip vermelho">' + esc(x.c.nome) + "</span>"; }).join("") + "</div></div>";
+    }
+    if (!ins.length && !fit.length) {
+      h += '<p class="suave pequeno">Nenhuma insígnia ou fita registrada até este episódio.</p>';
+    }
+    if (comps.length) {
+      h += '<div class="estado-linha"><div class="rotulo">Quem viaja junto</div>' +
+        comps.map(function (c) {
+          return '<div class="estado-quem">' + esc(c.pers.nome) + "</div>" + listaTime(c.time, true);
+        }).join("") + "</div>";
+    }
+    return h + "</section>";
+  }
+
   function abasEpisodio(ep, ativa) {
     var temTexto = !!textoCompleto(ep);
     return '<div class="abas-ep" role="tablist">' +
@@ -6103,6 +6214,7 @@ window.STORY_IMAGES = {"imagens/poster-saga-hoenn.jpg": "data:image/jpeg;base64,
     h += '<div class="ep-topo"><div class="ep-num"><small>EP</small>' + esc(ep.numero) + "</div><div><h1>" + esc(ep.titulo) + "</h1>" +
       '<div class="chips"><span class="chip vermelho">Arco: ' + esc(ep.arco) + '</span><span class="chip">📍 ' + esc(ep.local) + "</span></div></div></div>";
     h += abasEpisodio(ep, "ler");
+    h += blocoEstado(ep);
     h += '<article class="leitura">' + (texto ? renderizarTexto(texto) :
       '<p class="suave">📖 Texto completo em breve! Enquanto isso, veja o <a href="#episodios/' + ep.numero + '">resumo e os dados do episódio</a>.</p>') +
       "</article>";
@@ -6120,6 +6232,7 @@ window.STORY_IMAGES = {"imagens/poster-saga-hoenn.jpg": "data:image/jpeg;base64,
       '<div class="chips"><a class="chip vermelho" href="#arcos">Arco: ' + esc(ep.arco) + '</a><span class="chip">📍 ' + esc(ep.local) + "</span>" +
       (ep.proximoObjetivo ? '<span class="chip amarelo">🎯 Próximo objetivo: ' + esc(ep.proximoObjetivo) + "</span>" : "") + "</div></div></div>";
     h += abasEpisodio(ep, "resumo");
+    h += blocoEstado(ep);
     h += '<div class="grade grade-2">';
     h += '<section class="card"><h3>Resumo</h3><p>' + esc(ep.resumo) + "</p></section>";
     h += '<section class="card"><h3>Principais acontecimentos</h3><ol class="eventos">' +

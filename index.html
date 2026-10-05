@@ -621,6 +621,29 @@ window.STORY_DATA = {
         { nome: "Petalburg / Rustboro", episodios: { inicio: 101, fim: 110 } },
         { nome: "Dewford / Slateport", episodios: { inicio: 111, fim: 120 } }
       ]
+    },
+    {
+      nome: "Além do céu azul",
+      regiao: "Hoenn",
+      episodios: { inicio: 131, fim: 150 },
+      provisorio: true,
+      descricao: "Segundo arco de Hoenn. Robson, Renato e Wally seguem sozinhos após o Festival do Milênio. Azurill vira Marill; Vulpix Shiny entra no time; Meteor Falls e Mightyena; derrota para Maxie no Monte Chimney; Insígnia Calor com Swampert; Contest de Lavaridge (2ª fita); empate com Augusto e Raio de Gelo; deserto (Trapinch/Cacnea); torneio (Dawn Stone, ovo, Pedra do Fogo); Vibrava em Mauville; Ninetales e Blaziken empatam; Insígnia Equilíbrio com Norman; Gallade nasce; 3ª fita contra Drew e Snorunt; crise de LaRousse com Deoxys/Rayquaza; Steven e Latias pedem ajuda por Latios.",
+      partes: [
+        {
+          "nome": "Lavaridge / Monte Chimney",
+          "episodios": {
+            "inicio": 131,
+            "fim": 140
+          }
+        },
+        {
+          "nome": "Petalburg / LaRousse / Latias",
+          "episodios": {
+            "inicio": 141,
+            "fim": 150
+          }
+        }
+      ]
     }
   ],
 
@@ -1329,6 +1352,62 @@ window.STORY_DATA = {
       descricao: "Pokémon Estrela do Festival do Milênio. Apegou-se a Max (Eps. 128–130), concedeu desejos e voltou a dormir por mil anos.",
       pokemon: [],
       primeiraAparicao: 128
+    },
+    {
+      "nome": "Flannery",
+      "imagem": "",
+      "papel": "outro",
+      "descricao": "Líder do Ginásio de Lavaridge. Aparece na trilha do Monte Chimney (Ep. 134) e entrega a Insígnia Calor a Robson após Marshtomp evoluir para Swampert (Ep. 136).",
+      "pokemon": [],
+      "primeiraAparicao": 134
+    },
+    {
+      "nome": "Tory",
+      "imagem": "",
+      "papel": "outro",
+      "descricao": "Menino de LaRousse com medo de Pokémon desde um incidente no gelo. Salva Minun, ajuda a carregar o cristal verde e começa a superar o medo (Eps. 147–149).",
+      "pokemon": [],
+      "primeiraAparicao": 147
+    },
+    {
+      "nome": "Yuko",
+      "imagem": "",
+      "papel": "outro",
+      "descricao": "Pesquisadora em LaRousse ligada ao pai de Tory e ao cristal verde de Deoxys (Eps. 147–149).",
+      "pokemon": [],
+      "primeiraAparicao": 147
+    },
+    {
+      "nome": "Latias",
+      "imagem": "",
+      "papel": "outro",
+      "descricao": "Pokémon lendário. No Ep. 150 pede ajuda a Steven e ao grupo para salvar Latios sequestrado.",
+      "pokemon": [],
+      "primeiraAparicao": 150
+    },
+    {
+      "nome": "Latios",
+      "imagem": "",
+      "papel": "outro",
+      "descricao": "Irmão de Latias; sequestrado por caçadores. O resgate começa no Ep. 150 (cliffhanger) e segue no 151.",
+      "pokemon": [],
+      "primeiraAparicao": 150
+    },
+    {
+      "nome": "Deoxys",
+      "imagem": "",
+      "papel": "outro",
+      "descricao": "Pokémon extraterrestre. Em LaRousse (147–149) ergue barreira buscando seu par; o Deoxys verde desperta do cristal.",
+      "pokemon": [],
+      "primeiraAparicao": 147
+    },
+    {
+      "nome": "Rayquaza",
+      "imagem": "",
+      "papel": "outro",
+      "descricao": "Lendário do ozônio. Desce a LaRousse para enfrentar Deoxys e parte em paz após o Deoxys verde intervir (148–149).",
+      "pokemon": [],
+      "primeiraAparicao": 148
     }
   ],
 
@@ -1348,17 +1427,22 @@ window.STORY_DATA = {
   ],
 
   objetivos: [
+    {"descricao":"Salvar Latios com Steven e Latias","personagem":"Robson Ketchum","origem":150,"status":"pendente"},
+    {"descricao":"Vibrava → Flygon no resgate de Latios","personagem":"Robson Ketchum","origem":150,"status":"pendente"},
+    {"descricao":"Continuar Contests rumo ao Grande Festival (3 fitas)","personagem":"Robson Ketchum","origem":146,"status":"pendente"},
+    {"descricao":"Recuperar Electrike do Prof. Birch e decidir evolução","personagem":"Robson Ketchum","origem":140,"status":"pendente"},
+    {"descricao":"Ginásio de Fortree","personagem":"Robson Ketchum","origem":150,"status":"pendente"},
     { descricao: "Levar a mensagem de Steven ao Capitão Stern em Slateport", personagem: "Robson Ketchum", origem: 113, status: "concluido", concluidoEm: 119 },
     { descricao: "Revanche contra Brawly no Ginásio de Dewford", personagem: "Robson Ketchum", origem: 112, status: "concluido", concluidoEm: 117 },
     { descricao: "Revanche contra Brawly no Ginásio de Dewford", personagem: "Ash Ketchum", origem: 112, status: "pendente" },
-    { descricao: "Revanche / próximo confronto com Augusto", personagem: "Robson Ketchum", origem: 115, status: "pendente" },
+    { descricao: "Revanche / próximo confronto com Augusto", personagem: "Robson Ketchum", origem: 115, status: "concluido", concluidoEm: 139 },
     { descricao: "Levar a carta do Sr. Stone até Steven em Dewford (ele está na Caverna de Granito)", personagem: "Robson Ketchum", origem: 109, status: "concluido", concluidoEm: 113 },
     { descricao: "Provar a Drew que chega ao Grande Festival sem Lucario (\"Sem Lucario você não vai chegar no Grande Festival\")", personagem: "Robson Ketchum", origem: 110, status: "pendente" },
     { descricao: "Disputar o Contest de Rustboro", personagem: "Robson Ketchum", origem: 109, status: "concluido", concluidoEm: 110 },
     { descricao: "Desafiar Roxanne no Ginásio de Rustboro (sem Lucario)", personagem: "Robson Ketchum", origem: 106, status: "concluido", concluidoEm: 107 },
     { descricao: "Tornar-se coordenadora Pokémon e rival de Robson nos Contests", personagem: "May", origem: 106, status: "pendente" },
     { descricao: "Conquistar a primeira fita", personagem: "May", origem: 119, status: "concluido", concluidoEm: 125 },
-    { descricao: "Voltar a Petalburg com 4 insígnias para enfrentar Norman", personagem: "Robson Ketchum", origem: 103, status: "pendente" },
+    { descricao: "Voltar a Petalburg com 4 insígnias para enfrentar Norman", personagem: "Robson Ketchum", origem: 103, status: "concluido", concluidoEm: 144 },
     { descricao: "Pacto com o pai de Wally: chegar à Liga Pokémon e ao Grande Festival sem usar Lucario em Ginásios e Contests", personagem: "Robson Ketchum", origem: 103, status: "pendente" },
     { descricao: "Descobrir qual é o seu sonho", personagem: "Wally", origem: 103, status: "pendente" },
     { descricao: "Liga Hoenn (\"Nos vemos na Liga Hoenn\")", personagem: "Robson Ketchum", origem: 101, status: "pendente" },
@@ -6713,6 +6797,2463 @@ window.STORY_DATA = {
       resultados: [],
       proximoObjetivo: "Arco Além do céu azul (Ep. 131+); quarta insígnia para Norman",
       texto: ""
+    },
+    {
+      "numero": 131,
+      "titulo": "Além do Céu Azul! Azurill Vira Marill!",
+      "arco": "Além do céu azul",
+      "local": "Rota a caminho do Monte Chimney",
+      "resumo": "Só Robson, Renato e Wally seguem. Azurill cai no riacho, Samurott salva, e Azurill evolui para Marill. Começa o arco Além do céu azul.",
+      "eventos": [
+        "Grupo: só Robson, Renato e Wally.",
+        "Azurill em perigo no riacho; Samurott usa Surfar.",
+        "Azurill → Marill.",
+        "Início do arco Além do céu azul."
+      ],
+      "aparecem": [
+        "Robson Ketchum",
+        "Renato",
+        "Wally"
+      ],
+      "times": {
+        "Renato": [
+          {
+            "nome": "Samurott",
+            "golpes": [
+              "Surfar"
+            ],
+            "nota": "Salvou Azurill."
+          },
+          {
+            "nome": "Combusken",
+            "usado": false
+          },
+          {
+            "nome": "Azurill",
+            "saiu": true,
+            "nota": "Evolui."
+          },
+          {
+            "nome": "Marill",
+            "nota": "Evoluiu na rota."
+          }
+        ],
+        "Robson Ketchum": [
+          {
+            "nome": "Lucario",
+            "usado": false
+          },
+          {
+            "nome": "Marshtomp",
+            "usado": false
+          },
+          {
+            "nome": "Kirlia",
+            "usado": false
+          },
+          {
+            "nome": "Poochyena",
+            "usado": false
+          },
+          {
+            "nome": "Electrike",
+            "usado": false
+          }
+        ],
+        "Wally": [
+          {
+            "nome": "Kirlia",
+            "usado": false
+          }
+        ]
+      },
+      "novosGolpes": [],
+      "evolucoes": [
+        {
+          "personagem": "Renato",
+          "de": "Azurill",
+          "para": "Marill",
+          "local": "Rota"
+        }
+      ],
+      "conquistas": [],
+      "marcos": [
+        {
+          "personagem": "Renato",
+          "descricao": "Azurill → Marill",
+          "local": "Rota"
+        },
+        {
+          "personagem": "Robson Ketchum",
+          "descricao": "Arco Além do céu azul começa; grupo trio",
+          "local": "Rota"
+        }
+      ],
+      "resultados": [],
+      "proximoObjetivo": "Meteor Falls / Monte Chimney; 4ª insígnia",
+      "texto": ""
+    },
+    {
+      "numero": 132,
+      "titulo": "Fogo Azul! Vulpix Shiny!",
+      "arco": "Além do céu azul",
+      "local": "Rota seca",
+      "resumo": "Robson salva e captura Vulpix Shiny de pelo azul-claro. Time na mão: 6/6. Renato apelida de Cruzeiro.",
+      "eventos": [
+        "Vulpix Shiny perseguida por Houndour.",
+        "Poochyena usa Presa de Gelo.",
+        "Captura de Vulpix Shiny.",
+        "Apelido Cruzeiro (Renato)."
+      ],
+      "aparecem": [
+        "Robson Ketchum",
+        "Renato",
+        "Wally"
+      ],
+      "times": {
+        "Robson Ketchum": [
+          {
+            "nome": "Poochyena",
+            "golpes": [
+              "Presa de Gelo"
+            ]
+          },
+          {
+            "nome": "Lucario",
+            "usado": false
+          },
+          {
+            "nome": "Marshtomp",
+            "usado": false
+          },
+          {
+            "nome": "Kirlia",
+            "usado": false
+          },
+          {
+            "nome": "Electrike",
+            "usado": false
+          },
+          {
+            "nome": "Vulpix",
+            "golpes": [
+              "Brasa"
+            ],
+            "nota": "Shiny; capturada."
+          }
+        ],
+        "Renato": [
+          {
+            "nome": "Samurott",
+            "usado": false
+          },
+          {
+            "nome": "Combusken",
+            "usado": false
+          },
+          {
+            "nome": "Marill",
+            "usado": false
+          }
+        ],
+        "Wally": [
+          {
+            "nome": "Kirlia",
+            "usado": false
+          }
+        ]
+      },
+      "novosGolpes": [],
+      "evolucoes": [],
+      "conquistas": [],
+      "marcos": [
+        {
+          "personagem": "Robson Ketchum",
+          "descricao": "Captura Vulpix Shiny (Cruzeiro)",
+          "local": "Rota"
+        }
+      ],
+      "resultados": [],
+      "proximoObjetivo": "Meteor Falls",
+      "texto": ""
+    },
+    {
+      "numero": 133,
+      "titulo": "Queda de Meteoros! Mightyena Acorda!",
+      "arco": "Além do céu azul",
+      "local": "Meteor Falls",
+      "resumo": "Grunts da Magma em Meteor Falls. Poochyena evolui para Mightyena. Magma mira o Monte Chimney.",
+      "eventos": [
+        "Magma em Meteor Falls.",
+        "Batalha com Grunts.",
+        "Poochyena → Mightyena.",
+        "Menção ao Monte Chimney."
+      ],
+      "aparecem": [
+        "Robson Ketchum",
+        "Renato",
+        "Wally"
+      ],
+      "times": {
+        "Robson Ketchum": [
+          {
+            "nome": "Poochyena",
+            "golpes": [
+              "Uivo",
+              "Presa de Gelo"
+            ],
+            "saiu": true
+          },
+          {
+            "nome": "Mightyena",
+            "golpes": [
+              "Uivo",
+              "Presa de Gelo"
+            ],
+            "nota": "Evoluiu."
+          },
+          {
+            "nome": "Marshtomp",
+            "golpes": [
+              "Tapa de Lama",
+              "Revólver d'Água"
+            ]
+          },
+          {
+            "nome": "Lucario",
+            "usado": false
+          },
+          {
+            "nome": "Kirlia",
+            "usado": false
+          },
+          {
+            "nome": "Electrike",
+            "usado": false
+          },
+          {
+            "nome": "Vulpix",
+            "usado": false,
+            "nota": "Shiny."
+          }
+        ],
+        "Renato": [
+          {
+            "nome": "Samurott",
+            "golpes": [
+              "Surfar"
+            ]
+          },
+          {
+            "nome": "Combusken",
+            "usado": false
+          },
+          {
+            "nome": "Marill",
+            "usado": false
+          }
+        ],
+        "Wally": [
+          {
+            "nome": "Kirlia",
+            "golpes": [
+              "Confusão"
+            ]
+          }
+        ]
+      },
+      "novosGolpes": [],
+      "evolucoes": [
+        {
+          "personagem": "Robson Ketchum",
+          "de": "Poochyena",
+          "para": "Mightyena",
+          "local": "Meteor Falls"
+        }
+      ],
+      "conquistas": [],
+      "marcos": [
+        {
+          "personagem": "Robson Ketchum",
+          "descricao": "Poochyena → Mightyena",
+          "local": "Meteor Falls"
+        }
+      ],
+      "resultados": [
+        {
+          "personagem": "Robson Ketchum",
+          "evento": "Grunts Magma",
+          "resultado": "Vitória (fuga dos Grunts)"
+        }
+      ],
+      "proximoObjetivo": "Subir Monte Chimney",
+      "texto": ""
+    },
+    {
+      "numero": 134,
+      "titulo": "Subida! Monte Chimney!",
+      "arco": "Além do céu azul",
+      "local": "Monte Chimney",
+      "resumo": "Subida do Monte Chimney com emboscadas Magma. Flannery aparece na trilha e cita Lavaridge. Lucario se prepara para Maxie.",
+      "eventos": [
+        "Subida do Monte Chimney.",
+        "Emboscada Magma.",
+        "Flannery na trilha.",
+        "Preparação para Maxie."
+      ],
+      "aparecem": [
+        "Robson Ketchum",
+        "Renato",
+        "Wally",
+        "Flannery"
+      ],
+      "times": {
+        "Robson Ketchum": [
+          {
+            "nome": "Mightyena",
+            "golpes": [
+              "Presa de Gelo"
+            ]
+          },
+          {
+            "nome": "Vulpix",
+            "golpes": [
+              "Brasa"
+            ],
+            "nota": "Shiny."
+          },
+          {
+            "nome": "Electrike",
+            "golpes": [
+              "Faísca",
+              "Rajada de Chamas"
+            ]
+          },
+          {
+            "nome": "Lucario",
+            "usado": false
+          },
+          {
+            "nome": "Marshtomp",
+            "usado": false
+          },
+          {
+            "nome": "Kirlia",
+            "usado": false
+          }
+        ],
+        "Renato": [
+          {
+            "nome": "Samurott",
+            "golpes": [
+              "Hidro Canhão"
+            ]
+          },
+          {
+            "nome": "Combusken",
+            "usado": false
+          },
+          {
+            "nome": "Marill",
+            "usado": false
+          }
+        ],
+        "Wally": [
+          {
+            "nome": "Kirlia",
+            "golpes": [
+              "Confusão"
+            ]
+          }
+        ]
+      },
+      "novosGolpes": [],
+      "evolucoes": [],
+      "conquistas": [],
+      "marcos": [
+        {
+          "personagem": "Flannery",
+          "descricao": "Primeira aparição na trilha",
+          "local": "Monte Chimney"
+        }
+      ],
+      "resultados": [],
+      "proximoObjetivo": "Maxie no pico",
+      "texto": ""
+    },
+    {
+      "numero": 135,
+      "titulo": "Maxie! Derrota no Pico!",
+      "arco": "Além do céu azul",
+      "local": "Monte Chimney (platô)",
+      "resumo": "Derrota para Maxie. Lucario (liberado vs vilão) cai ante Camerupt, junto de Mightyena, Electrike e Marshtomp. Grupo desce a Lavaridge.",
+      "eventos": [
+        "Maxie e Camerupt.",
+        "Lucario derrotado (pacto permite).",
+        "Time de Robson cai.",
+        "Descida a Lavaridge."
+      ],
+      "aparecem": [
+        "Robson Ketchum",
+        "Renato",
+        "Wally",
+        "Maxie"
+      ],
+      "times": {
+        "Maxie": [
+          {
+            "nome": "Camerupt",
+            "golpes": [
+              "Lança-Chamas",
+              "Terremoto",
+              "Superpoder",
+              "Explosão de Lava"
+            ]
+          }
+        ],
+        "Robson Ketchum": [
+          {
+            "nome": "Lucario",
+            "golpes": [
+              "Aura Esférica",
+              "Velocidade Extrema",
+              "Soco Relâmpago"
+            ],
+            "nota": "Derrotado."
+          },
+          {
+            "nome": "Mightyena",
+            "golpes": [
+              "Presa de Gelo"
+            ],
+            "nota": "Fora."
+          },
+          {
+            "nome": "Electrike",
+            "golpes": [
+              "Faísca",
+              "Rajada de Chamas"
+            ],
+            "nota": "Fora."
+          },
+          {
+            "nome": "Marshtomp",
+            "golpes": [
+              "Tapa de Lama",
+              "Revólver d'Água"
+            ],
+            "nota": "Fora."
+          },
+          {
+            "nome": "Vulpix",
+            "usado": false
+          },
+          {
+            "nome": "Kirlia",
+            "usado": false
+          }
+        ],
+        "Renato": [
+          {
+            "nome": "Samurott",
+            "nota": "Grunts."
+          },
+          {
+            "nome": "Combusken",
+            "nota": "Grunts."
+          },
+          {
+            "nome": "Marill",
+            "usado": false
+          }
+        ],
+        "Wally": [
+          {
+            "nome": "Kirlia",
+            "golpes": [
+              "Confusão"
+            ]
+          }
+        ]
+      },
+      "novosGolpes": [],
+      "evolucoes": [],
+      "conquistas": [],
+      "marcos": [
+        {
+          "personagem": "Robson Ketchum",
+          "descricao": "Derrota para Maxie",
+          "local": "Monte Chimney"
+        }
+      ],
+      "resultados": [
+        {
+          "personagem": "Robson Ketchum",
+          "evento": "Maxie",
+          "resultado": "Derrota"
+        }
+      ],
+      "proximoObjetivo": "Ginásio de Lavaridge",
+      "texto": ""
+    },
+    {
+      "numero": 136,
+      "titulo": "Ginásio de Lavaridge! Swampert e a Insígnia Calor!",
+      "arco": "Além do céu azul",
+      "local": "Lavaridge (Ginásio)",
+      "resumo": "Ash aparece no ginásio (batalha dele outro dia). Robson vence Flannery: Vulpix, Mightyena e Marshtomp→Swampert. Insígnia Calor (4ª). Norman pode ser desafiado.",
+      "eventos": [
+        "Ash no ginásio; batalha dele outro dia.",
+        "Vulpix vence Slugma; Mightyena vence Numel e cai em Torkoal.",
+        "Marshtomp → Swampert; vence Torkoal.",
+        "Insígnia Calor (4ª de Hoenn)."
+      ],
+      "aparecem": [
+        "Robson Ketchum",
+        "Renato",
+        "Wally",
+        "Flannery",
+        "Ash Ketchum",
+        "May",
+        "Max",
+        "Brock"
+      ],
+      "times": {
+        "Flannery": [
+          {
+            "nome": "Slugma",
+            "nota": "Caiu para Vulpix."
+          },
+          {
+            "nome": "Numel",
+            "nota": "Caiu para Mightyena."
+          },
+          {
+            "nome": "Torkoal",
+            "golpes": [
+              "Lança-Chamas",
+              "Retirada",
+              "Fumaça"
+            ],
+            "nota": "Caiu para Swampert."
+          }
+        ],
+        "Robson Ketchum": [
+          {
+            "nome": "Vulpix",
+            "golpes": [
+              "Brasa",
+              "Golpe de Cauda",
+              "Investida"
+            ],
+            "nota": "Shiny; venceu Slugma."
+          },
+          {
+            "nome": "Mightyena",
+            "golpes": [
+              "Presa de Gelo",
+              "Uivo"
+            ],
+            "nota": "Venceu Numel; fora vs Torkoal."
+          },
+          {
+            "nome": "Marshtomp",
+            "golpes": [
+              "Tapa de Lama",
+              "Revólver d'Água"
+            ],
+            "saiu": true,
+            "nota": "Evolui."
+          },
+          {
+            "nome": "Swampert",
+            "golpes": [
+              "Tapa de Lama",
+              "Revólver d'Água",
+              "Martelo de Lama"
+            ],
+            "nota": "Evoluiu; venceu Torkoal."
+          },
+          {
+            "nome": "Lucario",
+            "usado": false,
+            "nota": "Pacto: fora do ginásio."
+          },
+          {
+            "nome": "Kirlia",
+            "usado": false
+          },
+          {
+            "nome": "Electrike",
+            "usado": false
+          }
+        ],
+        "Ash Ketchum": [
+          {
+            "nome": "Pikachu",
+            "usado": false,
+            "nota": "Assistiu; batalha de Ash outro dia."
+          }
+        ],
+        "Renato": [
+          {
+            "nome": "Samurott",
+            "usado": false
+          },
+          {
+            "nome": "Combusken",
+            "usado": false
+          },
+          {
+            "nome": "Marill",
+            "usado": false
+          }
+        ],
+        "Wally": [
+          {
+            "nome": "Kirlia",
+            "usado": false
+          }
+        ]
+      },
+      "novosGolpes": [
+        {
+          "personagem": "Robson Ketchum",
+          "pokemon": "Swampert",
+          "golpe": "Martelo de Lama"
+        }
+      ],
+      "evolucoes": [
+        {
+          "personagem": "Robson Ketchum",
+          "de": "Marshtomp",
+          "para": "Swampert",
+          "local": "Ginásio de Lavaridge"
+        }
+      ],
+      "conquistas": [
+        {
+          "personagem": "Robson Ketchum",
+          "tipo": "insignia",
+          "nome": "Insígnia Calor",
+          "local": "Ginásio de Lavaridge"
+        }
+      ],
+      "marcos": [
+        {
+          "personagem": "Robson Ketchum",
+          "descricao": "Marshtomp → Swampert; Insígnia Calor (4ª)",
+          "local": "Lavaridge"
+        },
+        {
+          "personagem": "Ash Ketchum",
+          "descricao": "Presente no ginásio; batalha com Flannery em outro dia",
+          "local": "Lavaridge"
+        }
+      ],
+      "resultados": [
+        {
+          "personagem": "Robson Ketchum",
+          "evento": "Ginásio Flannery",
+          "resultado": "Vitória"
+        }
+      ],
+      "proximoObjetivo": "Contest de Lavaridge; revanche Augusto",
+      "texto": ""
+    },
+    {
+      "numero": 137,
+      "titulo": "Medicham! Foco na Fonte Quente!",
+      "arco": "Além do céu azul",
+      "local": "Lavaridge (fontes)",
+      "resumo": "Renato desafia e captura Medicham nas fontes quentes. Time: Samurott, Combusken, Marill, Medicham.",
+      "eventos": [
+        "Ash marca ginásio com Flannery para outro dia.",
+        "Renato batalha Medicham (Samurott, Combusken).",
+        "Captura de Medicham.",
+        "Treino de foco com o grupo."
+      ],
+      "aparecem": [
+        "Robson Ketchum",
+        "Renato",
+        "Wally",
+        "Ash Ketchum"
+      ],
+      "times": {
+        "Renato": [
+          {
+            "nome": "Samurott",
+            "golpes": [
+              "Hidro Canhão",
+              "Lâmina de Concha"
+            ],
+            "nota": "Caiu."
+          },
+          {
+            "nome": "Combusken",
+            "golpes": [
+              "Brasa",
+              "Chute Duplo"
+            ],
+            "nota": "Cansou Medicham."
+          },
+          {
+            "nome": "Medicham",
+            "golpes": [
+              "Detectar",
+              "Contador",
+              "Chute Alto"
+            ],
+            "nota": "Capturado."
+          },
+          {
+            "nome": "Marill",
+            "usado": false
+          }
+        ],
+        "Robson Ketchum": [
+          {
+            "nome": "Lucario",
+            "usado": false
+          },
+          {
+            "nome": "Swampert",
+            "usado": false
+          },
+          {
+            "nome": "Kirlia",
+            "usado": false
+          },
+          {
+            "nome": "Mightyena",
+            "usado": false
+          },
+          {
+            "nome": "Electrike",
+            "usado": false
+          },
+          {
+            "nome": "Vulpix",
+            "usado": false,
+            "nota": "Shiny."
+          }
+        ],
+        "Wally": [
+          {
+            "nome": "Kirlia",
+            "usado": false
+          }
+        ]
+      },
+      "novosGolpes": [],
+      "evolucoes": [],
+      "conquistas": [],
+      "marcos": [
+        {
+          "personagem": "Renato",
+          "descricao": "Captura Medicham",
+          "local": "Lavaridge"
+        }
+      ],
+      "resultados": [],
+      "proximoObjetivo": "Contest de Lavaridge",
+      "texto": ""
+    },
+    {
+      "numero": 138,
+      "titulo": "Contest de Lavaridge! Segunda Fita!",
+      "arco": "Além do céu azul",
+      "local": "Lavaridge (Contest)",
+      "resumo": "Robson vence May na final do Contest de Lavaridge com Vulpix Shiny × Beautifly. Segunda fita de Hoenn. Drew observa.",
+      "eventos": [
+        "Apresentação com Vulpix Shiny.",
+        "Final: Vulpix × Beautifly (May).",
+        "Vitória de Robson; Fita de Lavaridge (2ª).",
+        "Drew e Ash comentam."
+      ],
+      "aparecem": [
+        "Robson Ketchum",
+        "Renato",
+        "Wally",
+        "May",
+        "Drew",
+        "Ash Ketchum",
+        "Max",
+        "Brock"
+      ],
+      "times": {
+        "Robson Ketchum": [
+          {
+            "nome": "Vulpix",
+            "golpes": [
+              "Brasa",
+              "Golpe de Cauda",
+              "Investida"
+            ],
+            "nota": "Shiny; venceu o Contest."
+          },
+          {
+            "nome": "Lucario",
+            "usado": false,
+            "nota": "Pacto: fora."
+          },
+          {
+            "nome": "Swampert",
+            "usado": false
+          },
+          {
+            "nome": "Kirlia",
+            "usado": false
+          },
+          {
+            "nome": "Mightyena",
+            "usado": false
+          },
+          {
+            "nome": "Electrike",
+            "usado": false
+          }
+        ],
+        "May": [
+          {
+            "nome": "Beautifly",
+            "golpes": [
+              "Pó Prateado",
+              "Vendaval",
+              "Raio Solar"
+            ],
+            "nota": "Finalista."
+          }
+        ],
+        "Drew": [
+          {
+            "nome": "Butterfree",
+            "usado": false
+          },
+          {
+            "nome": "Roselia",
+            "usado": false
+          }
+        ],
+        "Renato": [
+          {
+            "nome": "Samurott",
+            "usado": false
+          },
+          {
+            "nome": "Combusken",
+            "usado": false
+          },
+          {
+            "nome": "Marill",
+            "usado": false
+          },
+          {
+            "nome": "Medicham",
+            "usado": false
+          }
+        ],
+        "Wally": [
+          {
+            "nome": "Kirlia",
+            "usado": false
+          }
+        ]
+      },
+      "novosGolpes": [],
+      "evolucoes": [],
+      "conquistas": [
+        {
+          "personagem": "Robson Ketchum",
+          "tipo": "fita",
+          "nome": "Fita de Lavaridge",
+          "local": "Contest de Lavaridge"
+        }
+      ],
+      "marcos": [
+        {
+          "personagem": "Robson Ketchum",
+          "descricao": "2ª fita de Hoenn (Vulpix × Beautifly)",
+          "local": "Lavaridge"
+        }
+      ],
+      "resultados": [
+        {
+          "personagem": "Robson Ketchum",
+          "evento": "Contest Lavaridge final vs May",
+          "resultado": "Vitória"
+        },
+        {
+          "personagem": "May",
+          "evento": "Contest Lavaridge final",
+          "resultado": "Derrota"
+        }
+      ],
+      "proximoObjetivo": "Revanche contra Augusto",
+      "texto": ""
+    },
+    {
+      "numero": 139,
+      "titulo": "Revanche! Swampert, Grovyle e Raio de Gelo!",
+      "arco": "Além do céu azul",
+      "local": "Rota após Lavaridge",
+      "resumo": "Revanche 3×3 contra Augusto. No clímax, Swampert × Grovyle: Swampert aprende Raio de Gelo e a luta termina em empate. Augusto promete Sceptile.",
+      "eventos": [
+        "Augusto desafia 3×3.",
+        "Confrontos iniciais (Electrike, Kirlia).",
+        "Swampert × Grovyle; Raio de Gelo.",
+        "Empate; Augusto parte."
+      ],
+      "aparecem": [
+        "Robson Ketchum",
+        "Renato",
+        "Wally",
+        "Augusto"
+      ],
+      "times": {
+        "Augusto": [
+          {
+            "nome": "Loudred",
+            "nota": "Venceu Electrike."
+          },
+          {
+            "nome": "Makuhita",
+            "nota": "Trocado/auxiliar."
+          },
+          {
+            "nome": "Grovyle",
+            "golpes": [
+              "Folha Mágica",
+              "Lâmina de Folha",
+              "Detectar",
+              "Agilidade",
+              "Sombra Fugaz"
+            ],
+            "nota": "Empatou com Swampert."
+          }
+        ],
+        "Robson Ketchum": [
+          {
+            "nome": "Electrike",
+            "golpes": [
+              "Faísca"
+            ],
+            "nota": "Caiu."
+          },
+          {
+            "nome": "Kirlia",
+            "golpes": [
+              "Confusão"
+            ],
+            "nota": "Tirou Loudred; caiu."
+          },
+          {
+            "nome": "Swampert",
+            "golpes": [
+              "Tapa de Lama",
+              "Martelo de Lama",
+              "Revólver d'Água",
+              "Raio de Gelo"
+            ],
+            "nota": "Aprendeu Raio de Gelo; empate."
+          },
+          {
+            "nome": "Lucario",
+            "usado": false,
+            "nota": "Robson optou por não usar."
+          },
+          {
+            "nome": "Mightyena",
+            "usado": false
+          },
+          {
+            "nome": "Vulpix",
+            "usado": false
+          }
+        ],
+        "Renato": [
+          {
+            "nome": "Samurott",
+            "usado": false
+          },
+          {
+            "nome": "Combusken",
+            "usado": false
+          },
+          {
+            "nome": "Marill",
+            "usado": false
+          },
+          {
+            "nome": "Medicham",
+            "usado": false
+          }
+        ],
+        "Wally": [
+          {
+            "nome": "Kirlia",
+            "usado": false
+          }
+        ]
+      },
+      "novosGolpes": [
+        {
+          "personagem": "Robson Ketchum",
+          "pokemon": "Swampert",
+          "golpe": "Raio de Gelo"
+        }
+      ],
+      "evolucoes": [],
+      "conquistas": [],
+      "marcos": [
+        {
+          "personagem": "Robson Ketchum",
+          "descricao": "Swampert aprende Raio de Gelo; empate com Augusto/Grovyle",
+          "local": "Rota"
+        }
+      ],
+      "resultados": [
+        {
+          "personagem": "Robson Ketchum",
+          "evento": "Revanche Augusto 3×3",
+          "resultado": "Empate"
+        }
+      ],
+      "proximoObjetivo": "Deserto; capturas",
+      "texto": ""
+    },
+    {
+      "numero": 140,
+      "titulo": "Deserto! Trapinch e Cacnea!",
+      "arco": "Além do céu azul",
+      "local": "Deserto de Hoenn",
+      "resumo": "Robson deposita Electrike com o Prof. Birch (limite 6) e captura Trapinch. Renato captura Cacnea. Rumores de torneio em equipe.",
+      "eventos": [
+        "Electrike transferido ao Prof. Birch.",
+        "Captura de Trapinch (Robson).",
+        "Captura de Cacnea (Renato).",
+        "Rumores do torneio e Dawn Stone."
+      ],
+      "aparecem": [
+        "Robson Ketchum",
+        "Renato",
+        "Wally"
+      ],
+      "times": {
+        "Robson Ketchum": [
+          {
+            "nome": "Electrike",
+            "saiu": true,
+            "nota": "Depositado com Prof. Birch (slot)."
+          },
+          {
+            "nome": "Swampert",
+            "golpes": [
+              "Martelo de Lama"
+            ]
+          },
+          {
+            "nome": "Mightyena",
+            "golpes": [
+              "Uivo",
+              "Presa de Gelo"
+            ]
+          },
+          {
+            "nome": "Trapinch",
+            "golpes": [
+              "Mordida"
+            ],
+            "nota": "Capturado."
+          },
+          {
+            "nome": "Lucario",
+            "usado": false
+          },
+          {
+            "nome": "Kirlia",
+            "usado": false
+          },
+          {
+            "nome": "Vulpix",
+            "usado": false,
+            "nota": "Shiny."
+          }
+        ],
+        "Renato": [
+          {
+            "nome": "Samurott",
+            "golpes": [
+              "Surfar"
+            ]
+          },
+          {
+            "nome": "Combusken",
+            "golpes": [
+              "Chute Duplo"
+            ]
+          },
+          {
+            "nome": "Medicham",
+            "golpes": [
+              "Detectar",
+              "Contador"
+            ]
+          },
+          {
+            "nome": "Cacnea",
+            "golpes": [
+              "Projétil de Semente"
+            ],
+            "nota": "Capturado."
+          },
+          {
+            "nome": "Marill",
+            "usado": false
+          }
+        ],
+        "Wally": [
+          {
+            "nome": "Kirlia",
+            "usado": false
+          }
+        ]
+      },
+      "novosGolpes": [],
+      "evolucoes": [],
+      "conquistas": [],
+      "marcos": [
+        {
+          "personagem": "Robson Ketchum",
+          "descricao": "Deposita Electrike com Birch; captura Trapinch",
+          "local": "Deserto"
+        },
+        {
+          "personagem": "Renato",
+          "descricao": "Captura Cacnea",
+          "local": "Deserto"
+        }
+      ],
+      "resultados": [],
+      "proximoObjetivo": "Torneio em equipe",
+      "texto": ""
+    },
+    {
+      "numero": 141,
+      "titulo": "Torneio em Equipe! Pedra da Aurora!",
+      "arco": "Além do céu azul",
+      "local": "Cidade na beira do deserto",
+      "resumo": "Torneio em equipe: Wally (MVP) ganha Dawn Stone; Renato, ovo; Robson, Pedra do Fogo. Equipe Rota Azul campeã.",
+      "eventos": [
+        "Inscrição da equipe Rota Azul.",
+        "Final tripla vencida.",
+        "Wally: Dawn Stone; Renato: ovo; Robson: Pedra do Fogo."
+      ],
+      "aparecem": [
+        "Robson Ketchum",
+        "Renato",
+        "Wally"
+      ],
+      "times": {
+        "Robson Ketchum": [
+          {
+            "nome": "Swampert",
+            "golpes": [
+              "Martelo de Lama"
+            ]
+          },
+          {
+            "nome": "Vulpix",
+            "nota": "Shiny; semi."
+          },
+          {
+            "nome": "Trapinch",
+            "golpes": [
+              "Mordida"
+            ],
+            "nota": "Final."
+          },
+          {
+            "nome": "Lucario",
+            "usado": false
+          },
+          {
+            "nome": "Kirlia",
+            "usado": false
+          },
+          {
+            "nome": "Mightyena",
+            "usado": false
+          }
+        ],
+        "Renato": [
+          {
+            "nome": "Samurott",
+            "golpes": [
+              "Hidro Canhão"
+            ]
+          },
+          {
+            "nome": "Medicham",
+            "golpes": [
+              "Contador"
+            ]
+          },
+          {
+            "nome": "Cacnea",
+            "nota": "Semi."
+          },
+          {
+            "nome": "Combusken",
+            "usado": false
+          },
+          {
+            "nome": "Marill",
+            "usado": false
+          }
+        ],
+        "Wally": [
+          {
+            "nome": "Kirlia",
+            "golpes": [
+              "Confusão",
+              "Teleporte"
+            ],
+            "nota": "MVP da final."
+          }
+        ]
+      },
+      "novosGolpes": [],
+      "evolucoes": [],
+      "conquistas": [],
+      "marcos": [
+        {
+          "personagem": "Wally",
+          "descricao": "Vence torneio (MVP); recebe Dawn Stone",
+          "local": "Torneio"
+        },
+        {
+          "personagem": "Renato",
+          "descricao": "2º prêmio: ovo Pokémon",
+          "local": "Torneio"
+        },
+        {
+          "personagem": "Robson Ketchum",
+          "descricao": "3º prêmio: Pedra do Fogo",
+          "local": "Torneio"
+        }
+      ],
+      "resultados": [
+        {
+          "personagem": "Wally",
+          "evento": "Torneio em equipe",
+          "resultado": "1º (Dawn Stone)"
+        },
+        {
+          "personagem": "Renato",
+          "evento": "Torneio em equipe",
+          "resultado": "2º (ovo)"
+        },
+        {
+          "personagem": "Robson Ketchum",
+          "evento": "Torneio em equipe",
+          "resultado": "3º (Pedra do Fogo)"
+        }
+      ],
+      "proximoObjetivo": "Revanche Wattson em Mauville",
+      "texto": ""
+    },
+    {
+      "numero": 142,
+      "titulo": "Revanche em Mauville! Vibrava!",
+      "arco": "Além do céu azul",
+      "local": "Mauville (Ginásio)",
+      "resumo": "Revanche 1×1: Trapinch evolui para Vibrava e vence o Manectric de Wattson. Ash cita Insígnia Calor conquistada noutro dia. Sem nova insígnia.",
+      "eventos": [
+        "Wattson topa 1×1.",
+        "Trapinch × Manectric.",
+        "Trapinch → Vibrava; vitória.",
+        "Ash menciona própria Insígnia Calor."
+      ],
+      "aparecem": [
+        "Robson Ketchum",
+        "Renato",
+        "Wally",
+        "Wattson",
+        "Ash Ketchum"
+      ],
+      "times": {
+        "Wattson": [
+          {
+            "nome": "Manectric",
+            "golpes": [
+              "Faísca",
+              "Presa Elétrica",
+              "Onda de Trovoada",
+              "Trovão"
+            ],
+            "nota": "Derrotado."
+          }
+        ],
+        "Robson Ketchum": [
+          {
+            "nome": "Trapinch",
+            "golpes": [
+              "Mordida",
+              "Areia",
+              "Investida"
+            ],
+            "saiu": true
+          },
+          {
+            "nome": "Vibrava",
+            "golpes": [
+              "Ultrassom",
+              "Mordida",
+              "Areia"
+            ],
+            "nota": "Evoluiu; venceu."
+          },
+          {
+            "nome": "Lucario",
+            "usado": false
+          },
+          {
+            "nome": "Swampert",
+            "usado": false
+          },
+          {
+            "nome": "Kirlia",
+            "usado": false
+          },
+          {
+            "nome": "Mightyena",
+            "usado": false
+          },
+          {
+            "nome": "Vulpix",
+            "usado": false,
+            "nota": "Shiny."
+          }
+        ],
+        "Renato": [
+          {
+            "nome": "Samurott",
+            "usado": false
+          },
+          {
+            "nome": "Combusken",
+            "usado": false
+          },
+          {
+            "nome": "Marill",
+            "usado": false
+          },
+          {
+            "nome": "Medicham",
+            "usado": false
+          },
+          {
+            "nome": "Cacnea",
+            "usado": false
+          }
+        ],
+        "Wally": [
+          {
+            "nome": "Kirlia",
+            "usado": false
+          }
+        ],
+        "Ash Ketchum": [
+          {
+            "nome": "Pikachu",
+            "usado": false
+          }
+        ]
+      },
+      "novosGolpes": [
+        {
+          "personagem": "Robson Ketchum",
+          "pokemon": "Vibrava",
+          "golpe": "Ultrassom"
+        }
+      ],
+      "evolucoes": [
+        {
+          "personagem": "Robson Ketchum",
+          "de": "Trapinch",
+          "para": "Vibrava",
+          "local": "Ginásio de Mauville"
+        }
+      ],
+      "conquistas": [],
+      "marcos": [
+        {
+          "personagem": "Robson Ketchum",
+          "descricao": "Trapinch → Vibrava; vence Manectric de Wattson",
+          "local": "Mauville"
+        },
+        {
+          "personagem": "Ash Ketchum",
+          "descricao": "Cita Insígnia Calor (batalha noutro dia)",
+          "local": "Mauville"
+        }
+      ],
+      "resultados": [
+        {
+          "personagem": "Robson Ketchum",
+          "evento": "Revanche Wattson 1×1",
+          "resultado": "Vitória"
+        }
+      ],
+      "proximoObjetivo": "Evoluir Vulpix; Petalburg/Norman",
+      "texto": ""
+    },
+    {
+      "numero": 143,
+      "titulo": "Ninetales e Blaziken! Clássico Mineiro!",
+      "arco": "Além do céu azul",
+      "local": "Rota a Petalburg",
+      "resumo": "Robson evolui Vulpix com Pedra do Fogo → Ninetales Shiny. Renato desafia com Combusken, que evolui a Blaziken no meio da luta. Empate. Banter Cruzeiro × Atlético.",
+      "eventos": [
+        "Vulpix → Ninetales Shiny (Pedra do Fogo).",
+        "Combusken → Blaziken durante a batalha.",
+        "Empate Ninetales × Blaziken.",
+        "Diálogo Cruzeiro/Atlético e 'só é legal por ser Shiny'."
+      ],
+      "aparecem": [
+        "Robson Ketchum",
+        "Renato",
+        "Wally"
+      ],
+      "times": {
+        "Robson Ketchum": [
+          {
+            "nome": "Vulpix",
+            "saiu": true,
+            "nota": "Shiny; evolui."
+          },
+          {
+            "nome": "Ninetales",
+            "golpes": [
+              "Brasa",
+              "Esfera de Sombra",
+              "Hipnose"
+            ],
+            "nota": "Shiny; empate."
+          },
+          {
+            "nome": "Lucario",
+            "usado": false
+          },
+          {
+            "nome": "Swampert",
+            "usado": false
+          },
+          {
+            "nome": "Kirlia",
+            "usado": false
+          },
+          {
+            "nome": "Mightyena",
+            "usado": false
+          },
+          {
+            "nome": "Vibrava",
+            "usado": false
+          }
+        ],
+        "Renato": [
+          {
+            "nome": "Combusken",
+            "golpes": [
+              "Brasa",
+              "Chute Duplo"
+            ],
+            "saiu": true
+          },
+          {
+            "nome": "Blaziken",
+            "golpes": [
+              "Chute Incendiário",
+              "Chute Duplo"
+            ],
+            "nota": "Evoluiu; empate."
+          },
+          {
+            "nome": "Samurott",
+            "usado": false
+          },
+          {
+            "nome": "Marill",
+            "usado": false
+          },
+          {
+            "nome": "Medicham",
+            "usado": false
+          },
+          {
+            "nome": "Cacnea",
+            "usado": false
+          }
+        ],
+        "Wally": [
+          {
+            "nome": "Kirlia",
+            "usado": false
+          }
+        ]
+      },
+      "novosGolpes": [],
+      "evolucoes": [
+        {
+          "personagem": "Robson Ketchum",
+          "de": "Vulpix",
+          "para": "Ninetales",
+          "local": "Rota",
+          "nota": "Shiny; Pedra do Fogo"
+        },
+        {
+          "personagem": "Renato",
+          "de": "Combusken",
+          "para": "Blaziken",
+          "local": "Rota"
+        }
+      ],
+      "conquistas": [],
+      "marcos": [
+        {
+          "personagem": "Robson Ketchum",
+          "descricao": "Vulpix Shiny → Ninetales Shiny (Pedra do Fogo)",
+          "local": "Rota"
+        },
+        {
+          "personagem": "Renato",
+          "descricao": "Combusken → Blaziken",
+          "local": "Rota"
+        }
+      ],
+      "resultados": [
+        {
+          "personagem": "Robson Ketchum",
+          "evento": "Ninetales × Blaziken",
+          "resultado": "Empate"
+        },
+        {
+          "personagem": "Renato",
+          "evento": "Blaziken × Ninetales",
+          "resultado": "Empate"
+        }
+      ],
+      "proximoObjetivo": "Ginásio de Norman",
+      "texto": ""
+    },
+    {
+      "numero": 144,
+      "titulo": "Norman! Insígnia Equilíbrio!",
+      "arco": "Além do céu azul",
+      "local": "Petalburg (Ginásio)",
+      "resumo": "Robson desafia Norman com Mightyena, Vibrava e Ninetales (Lucario no banco). Vence e recebe a Insígnia Equilíbrio (5ª). Ash no ginásio; batalha dele outro dia. Norman avisa sobre o pai de Wally.",
+      "eventos": [
+        "Ash presente; luta dele outro dia.",
+        "Mightyena × Slaking; Vibrava; Ninetales fecha.",
+        "Insígnia Equilíbrio.",
+        "Aviso: pai de Wally quer batalhar."
+      ],
+      "aparecem": [
+        "Robson Ketchum",
+        "Renato",
+        "Wally",
+        "Norman",
+        "Ash Ketchum",
+        "May",
+        "Max",
+        "Brock"
+      ],
+      "times": {
+        "Norman": [
+          {
+            "nome": "Slaking",
+            "golpes": [
+              "Pancada Giga"
+            ],
+            "nota": "Venceu Mightyena."
+          },
+          {
+            "nome": "Vigoroth",
+            "nota": "Caiu para Ninetales."
+          },
+          {
+            "nome": "Spinda",
+            "nota": "Caiu para Ninetales."
+          }
+        ],
+        "Robson Ketchum": [
+          {
+            "nome": "Mightyena",
+            "golpes": [
+              "Presa de Gelo",
+              "Uivo"
+            ],
+            "nota": "Caiu."
+          },
+          {
+            "nome": "Vibrava",
+            "golpes": [
+              "Ultrassom",
+              "Mordida",
+              "Areia"
+            ],
+            "nota": "Caiu vs Vigoroth."
+          },
+          {
+            "nome": "Ninetales",
+            "golpes": [
+              "Esfera de Sombra",
+              "Hipnose",
+              "Brasa"
+            ],
+            "nota": "Shiny; fechou."
+          },
+          {
+            "nome": "Lucario",
+            "usado": false,
+            "nota": "Pacto: banco."
+          },
+          {
+            "nome": "Swampert",
+            "usado": false
+          },
+          {
+            "nome": "Kirlia",
+            "usado": false
+          }
+        ],
+        "Ash Ketchum": [
+          {
+            "nome": "Pikachu",
+            "usado": false
+          }
+        ],
+        "Renato": [
+          {
+            "nome": "Samurott",
+            "usado": false
+          },
+          {
+            "nome": "Blaziken",
+            "usado": false
+          },
+          {
+            "nome": "Marill",
+            "usado": false
+          },
+          {
+            "nome": "Medicham",
+            "usado": false
+          },
+          {
+            "nome": "Cacnea",
+            "usado": false
+          }
+        ],
+        "Wally": [
+          {
+            "nome": "Kirlia",
+            "usado": false
+          }
+        ]
+      },
+      "novosGolpes": [],
+      "evolucoes": [],
+      "conquistas": [
+        {
+          "personagem": "Robson Ketchum",
+          "tipo": "insignia",
+          "nome": "Insígnia Equilíbrio",
+          "local": "Ginásio de Petalburg"
+        }
+      ],
+      "marcos": [
+        {
+          "personagem": "Robson Ketchum",
+          "descricao": "Insígnia Equilíbrio (5ª); Norman cumprido",
+          "local": "Petalburg"
+        }
+      ],
+      "resultados": [
+        {
+          "personagem": "Robson Ketchum",
+          "evento": "Ginásio Norman",
+          "resultado": "Vitória"
+        }
+      ],
+      "proximoObjetivo": "Pai de Wally; Contest Petalburg",
+      "texto": ""
+    },
+    {
+      "numero": 145,
+      "titulo": "Gallade! O Pai de Wally!",
+      "arco": "Além do céu azul",
+      "local": "Petalburg (praça)",
+      "resumo": "O pai de Wally desafia o filho. Robson tenta intervir; Wally insiste em lutar sozinho. Kirlia pede a Dawn Stone e vira Gallade; vence Zangoose.",
+      "eventos": [
+        "Pai de Wally desafia.",
+        "Robson recua a pedido de Wally.",
+        "Kirlia → Gallade (Dawn Stone).",
+        "Gallade vence Zangoose; pai aceita a jornada."
+      ],
+      "aparecem": [
+        "Robson Ketchum",
+        "Renato",
+        "Wally",
+        "Pai de Wally"
+      ],
+      "times": {
+        "Pai de Wally": [
+          {
+            "nome": "Zangoose",
+            "golpes": [
+              "Garra",
+              "Fúria"
+            ],
+            "nota": "Derrotado."
+          }
+        ],
+        "Wally": [
+          {
+            "nome": "Kirlia",
+            "saiu": true,
+            "nota": "Evolui."
+          },
+          {
+            "nome": "Gallade",
+            "golpes": [
+              "Corte-Psíquico",
+              "Finta",
+              "Detectar",
+              "Golpe Focalizado"
+            ],
+            "nota": "Evoluiu com Dawn Stone; venceu."
+          }
+        ],
+        "Robson Ketchum": [
+          {
+            "nome": "Lucario",
+            "usado": false,
+            "nota": "Assistiu."
+          },
+          {
+            "nome": "Swampert",
+            "usado": false
+          },
+          {
+            "nome": "Kirlia",
+            "usado": false
+          },
+          {
+            "nome": "Mightyena",
+            "usado": false
+          },
+          {
+            "nome": "Vibrava",
+            "usado": false
+          },
+          {
+            "nome": "Ninetales",
+            "usado": false
+          }
+        ],
+        "Renato": [
+          {
+            "nome": "Samurott",
+            "usado": false
+          },
+          {
+            "nome": "Blaziken",
+            "usado": false
+          },
+          {
+            "nome": "Marill",
+            "usado": false
+          },
+          {
+            "nome": "Medicham",
+            "usado": false
+          },
+          {
+            "nome": "Cacnea",
+            "usado": false
+          }
+        ]
+      },
+      "novosGolpes": [],
+      "evolucoes": [
+        {
+          "personagem": "Wally",
+          "de": "Kirlia",
+          "para": "Gallade",
+          "local": "Petalburg",
+          "nota": "Dawn Stone"
+        }
+      ],
+      "conquistas": [],
+      "marcos": [
+        {
+          "personagem": "Wally",
+          "descricao": "Kirlia → Gallade (Dawn Stone); vence o pai",
+          "local": "Petalburg"
+        }
+      ],
+      "resultados": [
+        {
+          "personagem": "Wally",
+          "evento": "Batalha vs pai (Zangoose)",
+          "resultado": "Vitória"
+        }
+      ],
+      "proximoObjetivo": "Contest de Petalburg vs Drew",
+      "texto": ""
+    },
+    {
+      "numero": 146,
+      "titulo": "Terceira Fita! Vibrava Contra Drew!",
+      "arco": "Além do céu azul",
+      "local": "Petalburg (Contest)",
+      "resumo": "Vibrava derrota Roselia de Drew na final: 3ª fita de Robson. O ovo de Renato choca → Snorunt. Kirlia de Robson permanece Kirlia.",
+      "eventos": [
+        "Contest Petalburg; Vibrava no palco.",
+        "Final Vibrava × Roselia (Drew); vitória.",
+        "Fita de Petalburg (3ª).",
+        "Ovo → Snorunt (Renato)."
+      ],
+      "aparecem": [
+        "Robson Ketchum",
+        "Renato",
+        "Wally",
+        "Drew",
+        "May",
+        "Ash Ketchum",
+        "Max",
+        "Brock"
+      ],
+      "times": {
+        "Robson Ketchum": [
+          {
+            "nome": "Vibrava",
+            "golpes": [
+              "Ultrassom",
+              "Areia",
+              "Mordida"
+            ],
+            "nota": "Venceu o Contest."
+          },
+          {
+            "nome": "Lucario",
+            "usado": false,
+            "nota": "Pacto."
+          },
+          {
+            "nome": "Swampert",
+            "usado": false
+          },
+          {
+            "nome": "Kirlia",
+            "usado": false,
+            "nota": "Continua Kirlia."
+          },
+          {
+            "nome": "Mightyena",
+            "usado": false
+          },
+          {
+            "nome": "Ninetales",
+            "usado": false,
+            "nota": "Shiny."
+          }
+        ],
+        "Drew": [
+          {
+            "nome": "Roselia",
+            "golpes": [
+              "Pó Venenoso",
+              "Folha Mágica",
+              "Dança das Pétalas",
+              "Raio Solar"
+            ],
+            "nota": "Finalista."
+          },
+          {
+            "nome": "Butterfree",
+            "usado": false
+          }
+        ],
+        "Renato": [
+          {
+            "nome": "Samurott",
+            "usado": false
+          },
+          {
+            "nome": "Blaziken",
+            "usado": false
+          },
+          {
+            "nome": "Marill",
+            "usado": false
+          },
+          {
+            "nome": "Medicham",
+            "usado": false
+          },
+          {
+            "nome": "Cacnea",
+            "usado": false
+          },
+          {
+            "nome": "Snorunt",
+            "nota": "Nasceu do ovo."
+          }
+        ],
+        "Wally": [
+          {
+            "nome": "Gallade",
+            "usado": false
+          }
+        ],
+        "May": [
+          {
+            "nome": "Beautifly",
+            "usado": false
+          }
+        ],
+        "Ash Ketchum": [
+          {
+            "nome": "Pikachu",
+            "usado": false
+          }
+        ]
+      },
+      "novosGolpes": [],
+      "evolucoes": [],
+      "conquistas": [
+        {
+          "personagem": "Robson Ketchum",
+          "tipo": "fita",
+          "nome": "Fita de Petalburg",
+          "local": "Contest de Petalburg"
+        }
+      ],
+      "marcos": [
+        {
+          "personagem": "Robson Ketchum",
+          "descricao": "3ª fita (Vibrava × Drew/Roselia)",
+          "local": "Petalburg"
+        },
+        {
+          "personagem": "Renato",
+          "descricao": "Ovo choca → Snorunt",
+          "local": "Petalburg"
+        }
+      ],
+      "resultados": [
+        {
+          "personagem": "Robson Ketchum",
+          "evento": "Contest Petalburg vs Drew",
+          "resultado": "Vitória"
+        },
+        {
+          "personagem": "Drew",
+          "evento": "Contest Petalburg final",
+          "resultado": "Derrota"
+        }
+      ],
+      "proximoObjetivo": "LaRousse / fenômeno no céu",
+      "texto": ""
+    },
+    {
+      "numero": 147,
+      "titulo": "LaRousse! O Menino que Tinha Medo!",
+      "arco": "Além do céu azul",
+      "local": "LaRousse",
+      "resumo": "O elenco chega a LaRousse e conhece Tory, menino com medo de Pokémon. Batalha na Torre; Minun salvo. Aurora roxa anuncia Deoxys. Ash presente.",
+      "eventos": [
+        "Chegada a LaRousse; reencontro com Ash/May/Max/Brock.",
+        "Encontro com Tory.",
+        "Torre de Batalha; Tory salva Minun.",
+        "Aurora roxa; Deoxys se aproxima."
+      ],
+      "aparecem": [
+        "Robson Ketchum",
+        "Renato",
+        "Wally",
+        "Ash Ketchum",
+        "May",
+        "Max",
+        "Brock",
+        "Tory",
+        "Yuko"
+      ],
+      "times": {
+        "Ash Ketchum": [
+          {
+            "nome": "Pikachu",
+            "usado": false
+          },
+          {
+            "nome": "Torkoal",
+            "nota": "Usado por Tory na Torre."
+          }
+        ],
+        "Robson Ketchum": [
+          {
+            "nome": "Lucario",
+            "usado": false
+          },
+          {
+            "nome": "Swampert",
+            "usado": false
+          },
+          {
+            "nome": "Kirlia",
+            "usado": false
+          },
+          {
+            "nome": "Mightyena",
+            "usado": false
+          },
+          {
+            "nome": "Vibrava",
+            "usado": false
+          },
+          {
+            "nome": "Ninetales",
+            "usado": false
+          }
+        ],
+        "Renato": [
+          {
+            "nome": "Samurott",
+            "usado": false
+          },
+          {
+            "nome": "Blaziken",
+            "usado": false
+          },
+          {
+            "nome": "Marill",
+            "usado": false
+          },
+          {
+            "nome": "Medicham",
+            "usado": false
+          },
+          {
+            "nome": "Cacnea",
+            "usado": false
+          },
+          {
+            "nome": "Snorunt",
+            "usado": false
+          }
+        ],
+        "Wally": [
+          {
+            "nome": "Gallade",
+            "usado": false
+          }
+        ],
+        "Brock": [
+          {
+            "nome": "Forretress",
+            "usado": false
+          },
+          {
+            "nome": "Mudkip",
+            "usado": false
+          },
+          {
+            "nome": "Lombre",
+            "usado": false
+          }
+        ]
+      },
+      "novosGolpes": [],
+      "evolucoes": [],
+      "conquistas": [],
+      "marcos": [
+        {
+          "personagem": "Tory",
+          "descricao": "Primeira aparição; medo de Pokémon; salva Minun",
+          "local": "LaRousse"
+        }
+      ],
+      "resultados": [],
+      "proximoObjetivo": "Conter Deoxys / proteger LaRousse",
+      "texto": ""
+    },
+    {
+      "numero": 148,
+      "titulo": "Deoxys! A Cidade em Barreira!",
+      "arco": "Além do céu azul",
+      "local": "LaRousse",
+      "resumo": "Deoxys ergue barreira e move cidadãos. Robôs falham. Rayquaza desce. O grupo luta no chão enquanto o cristal verde reage no laboratório.",
+      "eventos": [
+        "Deoxys e barreira.",
+        "Robôs fora de controle.",
+        "Rayquaza vs Deoxys.",
+        "Grupo protege civis; cristal verde no lab."
+      ],
+      "aparecem": [
+        "Robson Ketchum",
+        "Renato",
+        "Wally",
+        "Ash Ketchum",
+        "May",
+        "Max",
+        "Brock",
+        "Tory",
+        "Yuko",
+        "Deoxys",
+        "Rayquaza"
+      ],
+      "times": {
+        "Robson Ketchum": [
+          {
+            "nome": "Lucario",
+            "golpes": [
+              "Aura Esférica"
+            ]
+          },
+          {
+            "nome": "Swampert",
+            "golpes": [
+              "Martelo de Lama"
+            ]
+          },
+          {
+            "nome": "Vibrava",
+            "nota": "Alertas."
+          },
+          {
+            "nome": "Ninetales",
+            "golpes": [
+              "Brasa"
+            ],
+            "nota": "Shiny; rotas de fuga."
+          },
+          {
+            "nome": "Mightyena",
+            "usado": false
+          },
+          {
+            "nome": "Kirlia",
+            "usado": false
+          }
+        ],
+        "Ash Ketchum": [
+          {
+            "nome": "Pikachu",
+            "golpes": [
+              "Raio"
+            ]
+          }
+        ],
+        "Renato": [
+          {
+            "nome": "Blaziken",
+            "golpes": [
+              "Chute Incendiário"
+            ]
+          },
+          {
+            "nome": "Samurott",
+            "nota": "Laterais."
+          },
+          {
+            "nome": "Snorunt",
+            "usado": false
+          }
+        ],
+        "Wally": [
+          {
+            "nome": "Gallade",
+            "golpes": [
+              "Corte-Psíquico"
+            ]
+          }
+        ],
+        "Brock": [
+          {
+            "nome": "Forretress",
+            "golpes": [
+              "Espinhos"
+            ]
+          }
+        ]
+      },
+      "novosGolpes": [],
+      "evolucoes": [],
+      "conquistas": [],
+      "marcos": [
+        {
+          "personagem": "Deoxys",
+          "descricao": "Aparece em LaRousse; barreira",
+          "local": "LaRousse"
+        },
+        {
+          "personagem": "Rayquaza",
+          "descricao": "Desce para enfrentar Deoxys",
+          "local": "LaRousse"
+        }
+      ],
+      "resultados": [],
+      "proximoObjetivo": "Despertar o segundo Deoxys; salvar a cidade",
+      "texto": ""
+    },
+    {
+      "numero": 149,
+      "titulo": "Aurora Verde! Adeus, Deoxys!",
+      "arco": "Além do céu azul",
+      "local": "LaRousse",
+      "resumo": "Pikachu, Plusle e Minun carregam o cristal; o Deoxys verde desperta e protege. Tory supera parte do medo. Rayquaza parte; Deoxys se despedem. O grupo se separa de novo; Steven marca encontro.",
+      "eventos": [
+        "Carga do cristal verde.",
+        "Deoxys verde (defesa) protege.",
+        "Torre de robôs derrotada.",
+        "Rayquaza e Deoxys partem; Tory melhora; Steven cita próximo pedido."
+      ],
+      "aparecem": [
+        "Robson Ketchum",
+        "Renato",
+        "Wally",
+        "Ash Ketchum",
+        "May",
+        "Max",
+        "Brock",
+        "Tory",
+        "Yuko",
+        "Steven",
+        "Deoxys",
+        "Rayquaza"
+      ],
+      "times": {
+        "Ash Ketchum": [
+          {
+            "nome": "Pikachu",
+            "golpes": [
+              "Raio"
+            ],
+            "nota": "Carregou o cristal com Plusle/Minun."
+          }
+        ],
+        "Robson Ketchum": [
+          {
+            "nome": "Lucario",
+            "golpes": [
+              "Aura Esférica"
+            ]
+          },
+          {
+            "nome": "Swampert",
+            "golpes": [
+              "Martelo de Lama"
+            ]
+          },
+          {
+            "nome": "Mightyena",
+            "nota": "Flanco."
+          },
+          {
+            "nome": "Ninetales",
+            "nota": "Shiny; flanco."
+          },
+          {
+            "nome": "Vibrava",
+            "nota": "Guiou civis."
+          },
+          {
+            "nome": "Kirlia",
+            "usado": false
+          }
+        ],
+        "Renato": [
+          {
+            "nome": "Blaziken",
+            "golpes": [
+              "Chute Incendiário"
+            ]
+          },
+          {
+            "nome": "Samurott",
+            "golpes": [
+              "Surfar"
+            ]
+          }
+        ],
+        "Wally": [
+          {
+            "nome": "Gallade",
+            "golpes": [
+              "Corte-Psíquico"
+            ]
+          }
+        ],
+        "Brock": [
+          {
+            "nome": "Forretress"
+          },
+          {
+            "nome": "Mudkip"
+          }
+        ]
+      },
+      "novosGolpes": [],
+      "evolucoes": [],
+      "conquistas": [],
+      "marcos": [
+        {
+          "personagem": "Tory",
+          "descricao": "Supera parte do medo; agradece Deoxys verde",
+          "local": "LaRousse"
+        },
+        {
+          "personagem": "Steven",
+          "descricao": "Marca encontro futuro (pedido de asas vermelhas)",
+          "local": "LaRousse"
+        }
+      ],
+      "resultados": [
+        {
+          "personagem": "Robson Ketchum",
+          "evento": "Crise de LaRousse",
+          "resultado": "Cidade salva"
+        }
+      ],
+      "proximoObjetivo": "Encontro com Steven; Latias",
+      "texto": ""
+    },
+    {
+      "numero": 150,
+      "titulo": "Steven e Latias! O Pedido!",
+      "arco": "Além do céu azul",
+      "local": "Costa / depósito dos caçadores",
+      "resumo": "Steven e Latias pedem ajuda para salvar Latios sequestrado. O trio enfrenta Grunts em massa. Cliffhanger na porta do depósito; Vibrava à beira de evoluir (evolução no 151).",
+      "eventos": [
+        "Encontro com Steven e Latias.",
+        "Pedido: salvar Latios.",
+        "Luta contra muitos Grunts.",
+        "Cliffhanger na porta; Vibrava quase evolui (não neste ep)."
+      ],
+      "aparecem": [
+        "Robson Ketchum",
+        "Renato",
+        "Wally",
+        "Steven",
+        "Latias",
+        "Latios"
+      ],
+      "times": {
+        "Steven": [
+          {
+            "nome": "Metagross",
+            "nota": "Shiny; linha de frente."
+          }
+        ],
+        "Robson Ketchum": [
+          {
+            "nome": "Lucario",
+            "golpes": [
+              "Aura Esférica"
+            ]
+          },
+          {
+            "nome": "Swampert",
+            "golpes": [
+              "Martelo de Lama"
+            ]
+          },
+          {
+            "nome": "Vibrava",
+            "nota": "À beira de evolução (151)."
+          },
+          {
+            "nome": "Mightyena",
+            "golpes": [
+              "Presa de Gelo"
+            ]
+          },
+          {
+            "nome": "Ninetales",
+            "golpes": [
+              "Brasa"
+            ],
+            "nota": "Shiny."
+          },
+          {
+            "nome": "Kirlia",
+            "usado": false
+          }
+        ],
+        "Renato": [
+          {
+            "nome": "Blaziken",
+            "golpes": [
+              "Chute Incendiário"
+            ]
+          },
+          {
+            "nome": "Samurott",
+            "golpes": [
+              "Hidro Canhão"
+            ]
+          },
+          {
+            "nome": "Snorunt",
+            "golpes": [
+              "Ventania de Gelo"
+            ],
+            "nota": "Primeira luta."
+          },
+          {
+            "nome": "Marill",
+            "usado": false
+          },
+          {
+            "nome": "Medicham",
+            "usado": false
+          },
+          {
+            "nome": "Cacnea",
+            "usado": false
+          }
+        ],
+        "Wally": [
+          {
+            "nome": "Gallade",
+            "golpes": [
+              "Corte-Psíquico"
+            ]
+          }
+        ]
+      },
+      "novosGolpes": [],
+      "evolucoes": [],
+      "conquistas": [],
+      "marcos": [
+        {
+          "personagem": "Latias",
+          "descricao": "Pede ajuda para salvar Latios",
+          "local": "Costa"
+        },
+        {
+          "personagem": "Robson Ketchum",
+          "descricao": "Inicia resgate de Latios com Steven (cliffhanger)",
+          "local": "Depósito"
+        }
+      ],
+      "resultados": [],
+      "proximoObjetivo": "Salvar Latios; Vibrava → Flygon (Ep. 151)",
+      "texto": ""
     }
 
 
@@ -6869,7 +9410,27 @@ window.STORY_TEXTS = {
 "127": "EPISÓDIO 127\nPikachu × Lucario! Empate entre Irmãos!\n\nA Poké Bola girou no ar.\n\nAsh preparou o Pikachu.\n\nEntão Robson moveu a mão.\n\nRecolheu a bola antes do estalo de abertura.\n\n— Espera.\n\nAsh piscou.\n\n— O quê?\n\nRobson se virou para Eyshila.\n\n— Segura ele.\n\nJogou a Poké Bola do Electrike.\n\nEyshila pegou com as duas mãos.\n\n— Quero que você veja um Pokémon elétrico de verdade.\n\n— Em batalha.\n\n— Lucario.\n\nLucario entrou no claro.\n\nPikachu eriçou o pelo.\n\nAsh entendeu.\n\nSorriu largo.\n\n— Agora sim.\n\nRenato assobiou.\n\n— O pacto liberado. Fora de ginásio. Fora de Contest.\n\n— Vale.\n\n## Pikachu × Lucario\n\n— Raio!\n\n— Velocidade Extrema!\n\nLucario atravessou o raio como um traço azul.\n\n— Aura Esférica!\n\n— Esfera Elétrica!\n\nAs duas esferas se chocaram no meio.\n\nO estrondo espantou pássaros da copa.\n\nMay deu um passo atrás.\n\n— Cauda de Ferro!\n\n— Soco de Gelo!\n\nGelo e metal no mesmo instante.\n\nFaíscas no chão.\n\n— Palma da Força!\n\nPikachu rolou, ainda de pé, orelhas para trás.\n\n— Trovão!\n\nO céu da clareira respondeu mesmo sem nuvem forte.\n\nLucario plantou os pés.\n\nAguentou o impacto.\n\nJoelho no chão um segundo.\n\nLevantou.\n\n— Aura Esférica! De perto!\n\nPikachu avançou no meio do brilho.\n\nOs dois golpes saíram juntos.\n\nQuando a fumaça baixou, Pikachu e Lucario estavam caídos.\n\nJoelho no chão.\n\nRespiração igual.\n\nSilêncio.\n\n— Empate... — murmurou Max.\n\nAsh riu, suado.\n\n— Empate.\n\nRobson assentiu.\n\n— Empate.\n\nOs dois se levantaram.\n\nApertaram as mãos no meio da clareira.\n\nPikachu e Lucario se encostaram a testa.\n\nUma faísca.\n\nUma Aura.\n\n## Depois\n\nEyshila devolveu Electrike com cuidado.\n\n— Eu vi.\n\n— Os dois.\n\n— O elétrico e a Aura.\n\n— Obrigada por lembrar de mim no meio disso.\n\nRobson corou de leve.\n\n— Você voltou. Eu queria que visse.\n\nRenato:\n\n— Pipoca acabou. Almas lavadas. Podemos ir ao festival?\n\nMay ainda tremia, Beautifly no ombro.\n\n— Vocês são malucos.\n\n— Vocês são incríveis — corrigiu Wally.\n\nBrock guardou os lanches.\n\n— Próxima vez, avisem antes. Eu preparo mais.\n\nAsh olhou o irmão.\n\n— Um dia a gente termina sem empate.\n\n— Um dia — disse Robson. — Sem pressa. Sem onda adiantada.\n\nLucario falou por Aura:\n\n— A Aura dele e a do Pikachu... iguais em força hoje.\n\n— Diferentes em caminho.\n\n## Cena Final\n\nO grupo retomou a trilha.\n\nO Festival do Milênio esperava além das árvores.\n\nCartazes.\n\nMúsica distante.\n\nUma estrela desenhada em toda bandeira.\n\nEyshila andava no meio, Ambipom batendo palmas.\n\nRobson contou as insígnias no bolso.\n\nTrês.\n\nFaltava uma para Norman.\n\nMas o peito estava leve.\n\nAsh falava do festival sem parar.\n\nE, em algum lugar à frente, um homem chamado Butler já preparava um desejo grande demais para caber numa estrela.\n\n## CONTINUA…\n",
 "128": "EPISÓDIO 128\nFestival do Milênio! O Desejo de Jirachi!\n\nO Festival do Milênio ocupava o vale inteiro.\n\nBarracas.\n\nLuzes.\n\nUma torre com um cristal no topo.\n\nButler, de terno e sorriso ensaiado, falava no microfone.\n\n— Bem-vindos! Façam desejos! O milênio escuta!\n\nMax já lia o panfleto em voz alta.\n\nMay puxava Beautifly para longe de doces demais.\n\nAsh queria todas as atrações.\n\nRobson sentiu a Aura do lugar.\n\nAlgo dormia no centro.\n\nAlgo puro.\n\nE algo faminto ao redor.\n\n## Max e a estrela\n\nPerto do palco, uma cápsula antiga se abriu com a música.\n\nUma estrela pequena.\n\nOlhos grandes.\n\n— Jirachi... — sussurrou Max.\n\nJirachi voou até ele.\n\nTochou a testa do menino.\n\nMax riu, hipnotizado de alegria.\n\n— Ele me escolheu!\n\nMay ficou tensa.\n\n— Max, cuidado.\n\nButler se aproximou rápido demais.\n\n— Que encontro maravilhoso. Tragam a estrela para o centro. Para o ritual.\n\nLucario rosnou baixo.\n\n— Aura doce. Mentira por baixo — disse a Robson.\n\nRobson assentiu.\n\n— Fiquem perto do Max.\n\n## Desejos\n\nJirachi atendeu pequenos desejos no caminho.\n\nUma criança ganhou um balão que não furava.\n\nAzurill ganhou uma fruta do tamanho dele.\n\nSkwovet tentou desejar um banquete; Eyshila puxou a orelha dele.\n\nAsh desejou baixo:\n\n— Quero continuar viajando com meu irmão.\n\nRobson ouviu.\n\nNão comentou.\n\nDesejou sem voz:\n\n— Quero ficar mais forte. Do jeito certo.\n\nJirachi piscou, como quem anotava.\n\n## Butler\n\nÀ noite, Butler levou Max e Jirachi à torre.\n\nO grupo seguiu.\n\nAbsol de Butler bloqueou o corredor.\n\n— Absol! — May.\n\nRenato mandou Combusken.\n\nAsh, Pikachu.\n\nRobson, Lucario — liberado, fora de ginásio.\n\nA luta abriu caminho.\n\nNo alto, Butler falava de um Deus do milênio.\n\nDe energia.\n\nDe forçar o despertar.\n\nJirachi chorava luz.\n\nMax segurava a mãozinha dele.\n\n— Eu não deixo!\n\n## Noites de festival\n\nBrock cozinhou para o grupo numa barraca emprestada.\n\nForretress serviu de mesa.\n\nRenato reclamou da comida e pediu segundo prato.\n\nEyshila falou de Galar para May: estádios, torcida, Dynamax como conto distante.\n\nWally perguntou se Jirachi era lendário de verdade.\n\nMax respondeu que sim, com três páginas de livro.\n\nRobson olhou a torre.\n\nA Aura ruim crescia com a noite.\n\n— Amanhã a gente não larga o Max — disse a Lucario.\n\n— Amanhã — concordou a Aura.\n\n## Cena Final\n\nA torre tremeu.\n\nO cristal engoliu luz demais.\n\nUma sombra antiga mexeu no fundo do ritual.\n\nFora do festival, as barracas ainda cantavam.\n\nNinguém lá embaixo sabia.\n\nRobson olhou Lucario.\n\n— Isso não é desejo.\n\n— É fome.\n\nButler sorriu no alto da torre.\n\n— Milênio... me atenda.\n\n## CONTINUA…\n",
 "129": "EPISÓDIO 129\nA Sombra do Milênio! Proteger Jirachi!\n\nA torre arrebentou luz negra.\n\nDo ritual forçado, uma forma antiga cresceu.\n\nMeta Groudon — não o verdadeiro.\n\nUma cópia faminta feita de desejo torto.\n\nO chão rachou.\n\nBarracas caíram.\n\nO público gritou.\n\nButler recuou, pálido.\n\n— Isso... não era o plano.\n\nAbsol uivou, traído pelo próprio treinador.\n\n## O grupo\n\n— Max! — May correu.\n\nMax não largava Jirachi.\n\n— Ele dói! A Aura dele dói!\n\nLucario confirmou.\n\n— O milênio está sendo comido.\n\nAsh:\n\n— Pikachu! Raio!\n\nRenato:\n\n— Samurott! Surfar! Combusken, Chute!\n\nEyshila:\n\n— Ambipom, Duplo Golpe! Gossifleur, atrapalha a visão!\n\nBrock:\n\n— Forretress, Espinhos! Segura a linha!\n\nWally:\n\n— Kirlia, Confusão! Ajuda o Max!\n\nRobson:\n\n— Marshtomp, lama no chão! Electrike, faísca! Poochyena, uivo! Kirlia, com o Wally!\n\nO vale virou campo de guerra.\n\nA sombra engolia energia de tudo.\n\n## Butler e Absol\n\nButler caiu de joelhos.\n\n— Eu só queria... poder.\n\nAbsol o encarou.\n\nDepois se virou contra a sombra.\n\nLutou ao lado do grupo.\n\nMay notou.\n\n— Até o Absol!\n\nDiane — uma mulher do passado de Butler — apareceu entre a fumaça, puxando-o para fora do pior.\n\n— Acaba com isso. Antes que mate a estrela.\n\n## Jirachi\n\nMax falou com Jirachi testa com testa.\n\n— Você pode dormir de novo.\n\n— A gente segura.\n\nJirachi chorou luz limpa.\n\nRobson e Lucario abriram caminho na Aura.\n\nAsh e Pikachu abriram caminho no raio.\n\nOs dois irmãos, lado a lado, sem duelo.\n\nSó proteção.\n\nA sombra gritou.\n\nEncolheu.\n\n## Cansaço\n\nEntre um ataque e outro, Combusken caiu de joelhos e levantou.\n\nPikachu falhou um Raio e acertou o seguinte.\n\nKirlia de Wally sangrou luz e mesmo assim segurou Max com Teleporte curto.\n\nRobson gritou ordens sem pressa falsa.\n\n— Cresce primeiro. Depois bate.\n\nMarshtomp fez lama.\n\nElectrike fez faísca.\n\nA sombra escorregou.\n\nButler gritou desculpas que ninguém tinha tempo de ouvir.\n\nSó Absol ouviu.\n\nE escolheu o lado certo.\n\n## Cena Final\n\nO cristal da torre rachou.\n\nA cópia faminta perdeu forma.\n\nButler, preso à própria ambição, estendeu a mão demais.\n\nA sombra puxou.\n\nDiane gritou o nome dele.\n\nAbsol avançou.\n\nO vale encheu de poeira branca.\n\nQuando baixou, Jirachi ainda brilhava no colo de Max.\n\nFraco.\n\nVivo.\n\nE o festival estava em ruínas silenciosas.\n\n## CONTINUA…\n",
-"130": "EPISÓDIO 130\nAté Logo, Estrela! Fim de um Desejo!\n\nA manhã depois do desastre era quieta demais.\n\nVoluntários recolhiam barracas.\n\nButler, vivo por pouco, falava baixo com Diane e Absol.\n\nSem microfone.\n\nSem sorriso ensaiado.\n\n— Eu errei.\n\nMax sentou com Jirachi numa pedra.\n\n— Você precisa dormir mil anos de novo, né?\n\nJirachi assentiu com a luz.\n\nMay chorou sem esconder.\n\n— Obrigada por escolher o Max.\n\n## O último desejo\n\nJirachi tocou a testa de cada um.\n\nAsh: uma imagem de estrada sem fim.\n\nRobson: uma Aura firme, sem pressa.\n\nRenato: Samurott e Combusken lado a lado.\n\nEyshila: um laboratório e um campo, os dois possíveis.\n\nMay: um palco cheio.\n\nWally: um Kirlia no Grande Festival.\n\nBrock: uma panela fumegando, amigos em volta.\n\nMax: a estrela dormindo em paz.\n\nJirachi voou para o céu claro.\n\nVirou luz.\n\nSumiu.\n\nO vale ficou sem música.\n\nMas com silêncio bom.\n\n## Separações\n\nNa estrada de terra, as mochilas estavam prontas.\n\nEyshila abraçou Renato, depois Ash, depois Robson.\n\n— Eu volto pra Galar.\n\n— A Magnolia me chamou de novo.\n\n— Mas eu volto. Sempre.\n\nAmbipom bateu palmas tristes.\n\nSkwovet escondeu um pão na mochila de Max — presente.\n\nHatenna se escondeu na sombra de Lucario um segundo, depois voltou.\n\n— Cuida dele — disse Eyshila a Lucario.\n\nLucario assentiu.\n\nAsh e Robson se encararam.\n\n— Eu sigo com May, Max e Brock — disse Ash. — Mais um pouco.\n\n— Eu sigo com Renato e Wally — disse Robson. — Mais um pouco.\n\n— Depois a gente se encontra.\n\n— Sempre.\n\nApertaram as mãos.\n\nDepois se abraçaram de verdade.\n\nMay:\n\n— Eu ainda te derroto no próximo Contest.\n\nRobson:\n\n— Eu espero.\n\nWally tossiu de emoção.\n\nRenato:\n\n— Chega. Antes que eu também chore. Não vou.\n\nChorou um pouco do mesmo jeito.\n\n## Fim do arco\n\nNo horizonte, dois caminhos.\n\nUm para o norte elétrico.\n\nUm para as montanhas.\n\nO arco que começara em Littleroot com um Mudkip escolhendo Robson terminava ali.\n\nNão com uma insígnia.\n\nCom um desejo cumprido: terem ficado mais fortes juntos.\n\nE terem aprendido a se separar sem se perder.\n\nRobson olhou a Insígnia Pedra, a Soco, a Dínamo.\n\nTrês.\n\nNorman pedira quatro.\n\nA quarta viria.\n\nMas não naquele dia.\n\nLucario falou por Aura:\n\n— O desejo dele... era você continuar.\n\n— Eu também.\n\nRobson sorriu.\n\n— Então vamos.\n\n## Cena Final\n\nMax olhou o céu pela última vez.\n\n— Até daqui a mil anos, Jirachi.\n\nAsh partiu num caminho.\n\nRobson no outro.\n\nEyshila no terceiro, de volta ao barco para Galar.\n\nO vento levou o pó do festival.\n\nE, em algum lugar acima das nuvens, uma estrela dormia em paz.\n\nFIM DO ARCO \"DESEJO DE SE TORNAR O MAIS FORTE\"\n\n## CONTINUA…\n"
+"130": "EPISÓDIO 130\nAté Logo, Estrela! Fim de um Desejo!\n\nA manhã depois do desastre era quieta demais.\n\nVoluntários recolhiam barracas.\n\nButler, vivo por pouco, falava baixo com Diane e Absol.\n\nSem microfone.\n\nSem sorriso ensaiado.\n\n— Eu errei.\n\nMax sentou com Jirachi numa pedra.\n\n— Você precisa dormir mil anos de novo, né?\n\nJirachi assentiu com a luz.\n\nMay chorou sem esconder.\n\n— Obrigada por escolher o Max.\n\n## O último desejo\n\nJirachi tocou a testa de cada um.\n\nAsh: uma imagem de estrada sem fim.\n\nRobson: uma Aura firme, sem pressa.\n\nRenato: Samurott e Combusken lado a lado.\n\nEyshila: um laboratório e um campo, os dois possíveis.\n\nMay: um palco cheio.\n\nWally: um Kirlia no Grande Festival.\n\nBrock: uma panela fumegando, amigos em volta.\n\nMax: a estrela dormindo em paz.\n\nJirachi voou para o céu claro.\n\nVirou luz.\n\nSumiu.\n\nO vale ficou sem música.\n\nMas com silêncio bom.\n\n## Separações\n\nNa estrada de terra, as mochilas estavam prontas.\n\nEyshila abraçou Renato, depois Ash, depois Robson.\n\n— Eu volto pra Galar.\n\n— A Magnolia me chamou de novo.\n\n— Mas eu volto. Sempre.\n\nAmbipom bateu palmas tristes.\n\nSkwovet escondeu um pão na mochila de Max — presente.\n\nHatenna se escondeu na sombra de Lucario um segundo, depois voltou.\n\n— Cuida dele — disse Eyshila a Lucario.\n\nLucario assentiu.\n\nAsh e Robson se encararam.\n\n— Eu sigo com May, Max e Brock — disse Ash. — Mais um pouco.\n\n— Eu sigo com Renato e Wally — disse Robson. — Mais um pouco.\n\n— Depois a gente se encontra.\n\n— Sempre.\n\nApertaram as mãos.\n\nDepois se abraçaram de verdade.\n\nMay:\n\n— Eu ainda te derroto no próximo Contest.\n\nRobson:\n\n— Eu espero.\n\nWally tossiu de emoção.\n\nRenato:\n\n— Chega. Antes que eu também chore. Não vou.\n\nChorou um pouco do mesmo jeito.\n\n## Fim do arco\n\nNo horizonte, dois caminhos.\n\nUm para o norte elétrico.\n\nUm para as montanhas.\n\nO arco que começara em Littleroot com um Mudkip escolhendo Robson terminava ali.\n\nNão com uma insígnia.\n\nCom um desejo cumprido: terem ficado mais fortes juntos.\n\nE terem aprendido a se separar sem se perder.\n\nRobson olhou a Insígnia Pedra, a Soco, a Dínamo.\n\nTrês.\n\nNorman pedira quatro.\n\nA quarta viria.\n\nMas não naquele dia.\n\nLucario falou por Aura:\n\n— O desejo dele... era você continuar.\n\n— Eu também.\n\nRobson sorriu.\n\n— Então vamos.\n\n## Cena Final\n\nMax olhou o céu pela última vez.\n\n— Até daqui a mil anos, Jirachi.\n\nAsh partiu num caminho.\n\nRobson no outro.\n\nEyshila no terceiro, de volta ao barco para Galar.\n\nO vento levou o pó do festival.\n\nE, em algum lugar acima das nuvens, uma estrela dormia em paz.\n\nFIM DO ARCO \"DESEJO DE SE TORNAR O MAIS FORTE\"\n\n## CONTINUA…\n",
+"131": "EPISÓDIO 131\nAlém do Céu Azul! Azurill Vira Marill!\n\nO caminho para as montanhas começou quieto.\n\nSó três mochilas.\n\nRobson.\n\nRenato.\n\nWally.\n\nAsh e May tinham seguido outra estrada no dia anterior.\n\nEyshila, o barco de volta a Galar.\n\nLucario caminhava à frente, Aura aberta ao vento seco.\n\n— Espaço demais — murmurou Renato. — Sem Max perguntando o nome de cada pedra. Sem May brigando por ordem de Contest.\n\n— A gente ainda é barulhento o bastante — respondeu Robson.\n\nWally sorriu pequeno, a mão no cinto onde a Poké Bola do Kirlia batia no passo.\n\nOs dois Kirlia — o dele e o de Robson — andavam lado a lado, espelhos tímidos.\n\nAzurill saltava entre as pedras da rota, a bola da cauda batendo no chão como tambor.\n\n## A água da rota\n\nUm riacho cortava o caminho depois da terceira curva.\n\nAzurill entrou na água sem pedir licença.\n\nRenato correu.\n\n— Sai daí, seu...!\n\nA corrente, mais forte do que parecia, puxou o corpo redondo.\n\nAzurill girou a bola, assustado, e sumiu um instante sob a espuma.\n\nSamurott saiu da Poké Bola sozinho.\n\nSurfar.\n\nA onda curta e disciplinada trouxe Azurill de volta à margem pedregosa.\n\nMas o brilho não parou na água.\n\nAzurill tremeu do focinho à cauda.\n\nA luz subiu, limpa, sem pressa.\n\n## Evolução\n\nQuando a luz baixou, não era mais tão pequeno.\n\nOrelhas longas.\n\nCorpo redondo e azul, firme.\n\n— Marill... — Wally sussurrou.\n\nRenato ajoelhou na lama da beira.\n\n— Você... cresceu.\n\nMarill bateu a orelha nele, orgulhoso, e depois olhou o riacho como quem agora o respeitava de igual para igual.\n\nRobson riu baixo.\n\n— Primeiro do caminho novo.\n\nLucario falou por Aura, voz seca e clara:\n\n— A água dele ficou firme.\n\nSamurott assentiu com o focinho, como um veterano aprovando o novato.\n\nCombusken, do ombro de Renato, soltou um grito curto de torcida.\n\n## Três só\n\nNa sombra de uma árvore torta, montaram um almoço simples.\n\nPão.\n\nFrutas.\n\nO resto do leite MuMu que Renato jurava ser o último — mentira, sempre havia outro.\n\nRenato ainda olhava Marill.\n\n— Sem Eyshila zombando do meu leite.\n\n— Você sente falta — disse Robson, sem provocação.\n\n— Sinto falta do barulho. Não de você.\n\n— Aceito.\n\nWally falou, quase sem voz, olhando o próprio joelho:\n\n— Eu... gosto assim. Só a gente. Posso treinar sem vergonha de errar na frente do Ash.\n\nKirlia dele pousou a mão aberta sobre os dedos do menino.\n\nRobson assentiu.\n\n— Então treinamos. Monte Chimney ainda está longe. Norman pediu quatro insígnias. Eu tenho três.\n\n— E eu tenho um Marill novo — Renato ergueu o queixo. — Vamos ver quem chega primeiro em alguma coisa que preste.\n\nMightyena ainda não existia naquele cinto.\n\nPoochyena lateu da grama, teimoso, como quem lembrava que a fila de evoluções não tinha acabado.\n\n## Céu\n\nO céu acima da rota era limpo demais.\n\nAzul sem nuvem.\n\nRobson lembrou do desejo que Ash tinha murmurado no Festival: continuar viajando com o irmão.\n\nAgora os caminhos eram dois.\n\nMas a estrada ainda ia para o mesmo horizonte de Hoenn.\n\n— Além do céu azul — murmurou.\n\n— Que nome bonito de viagem — zoou Renato. — Você inventou agora?\n\n— Não. Só... senti.\n\nWally olhou para cima, a sombra do cansaço antigo um pouco mais longe dos olhos.\n\n— Gosto.\n\nLucario fechou os olhos um segundo.\n\nA Aura da montanha, longe, latejava quente.\n\nE algo vermelho, mais longe ainda, latejava com raiva organizada.\n\n## Cena Final\n\nMarill dormiu no colo de Renato, orelhas tremendo a cada respiração.\n\nSamurott e Combusken vigiavam o fogo baixo.\n\nOs dois Kirlia refletiram a lua na água parada do riacho.\n\nRobson guardou a Insígnia Dínamo no bolso interno, junto da Pedra e da Soco.\n\nA quarta viria.\n\nMas primeiro, a rota.\n\nO vento trouxe cheiro de terra seca e, por um instante, de fumaça distante.\n\nNinguém falou o nome Maxie ainda.\n\nA montanha falaria por eles.\n\n## CONTINUA…\n",
+"132": "EPISÓDIO 132\nFogo Azul! Vulpix Shiny!\n\nA rota subia em curvas secas depois do riacho.\n\nO mato amarelava.\n\nO ar mudava de úmido para quente, aviso do Monte Chimney ainda fora de vista.\n\nCombusken treinava Chute Duplo contra pedras, soltando faíscas de esforço.\n\nMarill torcia na margem de um fio d'água, já sem medo da correntezinha.\n\nWally e o Kirlia dele repetiam Confusão em folhas caídas, empilhando e derrubando com cuidado.\n\nRobson sentiu um cheiro doce de fogo.\n\nNão de queimada feia.\n\nDe chama limpa, quase fria por fora.\n\n— Para.\n\nO grupo parou.\n\nLucario já tinha erguido o focinho.\n\n## O brilho\n\nEntre as pedras claras, uma Vulpix.\n\nMas o pelo não era vermelho.\n\nEra azul-claro.\n\nQuase prata quando o sol batia de lado.\n\nSeis caudas pequenas, agitadas.\n\nShiny.\n\nRenato engasgou alto demais para quem queria parecer calmo.\n\n— Isso é... Cruzeiro puro.\n\n— Cala a boca — Robson não tirou os olhos dela.\n\nVulpix olhou o grupo.\n\nAssustada.\n\nO mato ao lado estava marcado por Presa de Fogo recente — outro Pokémon tinha caçado ali.\n\nEla fugia.\n\nNão caçava.\n\nPoochyena farejou e lateu baixo, teimoso, sem avançar.\n\n## Ajuda\n\nDo mato saiu um Houndour selvagem, focinho sujo de fuligem.\n\nAvançou contra a Vulpix azulada.\n\nRobson:\n\n— Poochyena! Presa de Gelo!\n\nO gelo fechou o focinho do Houndour com um estalo seco.\n\nEle urrou, recuou, tropeçou e sumiu entre as pedras altas.\n\nVulpix ainda tremia, caudas enroladas no corpo.\n\nRobson ajoelhou, sem estender a mão rápido demais.\n\n— Não vou te forçar.\n\n— Mas se quiser... viaja conosco.\n\nAs caudas azuladas se mexeram uma vez.\n\nLucario assentiu pela Aura:\n\n— Fogo frio por fora. Quente por dentro. Parece com você.\n\nRenato resmungou:\n\n— Não transforma isso em poesia agora.\n\n## A captura\n\nVulpix deu um passo.\n\nDepois outro.\n\nAceitou a mão de Robson no focinho, quente e leve.\n\nEle ergueu a Poké Bola.\n\n— Quer?\n\nEla tocou a bola com o nariz.\n\nUma balançada.\n\nDuas.\n\nTrês.\n\nCLICK!\n\nCapturada.\n\nWally bateu palmas baixas, como num Contest sem plateia.\n\n— É linda.\n\nRenato cruzou os braços.\n\n— Shiny. Quase no primeiro dia do arco novo. Típico de quem nasceu em Pallet com sorte demais.\n\n— Ela não é troféu — disse Robson, guardando a bola com cuidado. — É parceira.\n\n— Eu sei. Só tô com inveja civilizada.\n\n## Seis\n\nNo acampamento, Robson olhou o cinto antes de soltar todo mundo.\n\nLucario. Marshtomp. Kirlia. Poochyena. Electrike. Vulpix.\n\nSeis.\n\nCheio.\n\nVulpix saiu e sentou longe do fogo de lenha — preferia o calor próprio.\n\nElectrike cheirou as caudas e levou um tapinha leve, educativo.\n\nMarshtomp trouxe água numa folha larga.\n\nKirlia acenou, elegante.\n\nPoochyena lateu aprovação teimosa, como quem aceitava mais um no bando.\n\nLucario apenas observou, braços cruzados.\n\n— Bem-vinda — disse Robson.\n\nMarill se aproximou, curioso; Vulpix cheirou e não atacou.\n\nRenato murmurou para o próprio ombro:\n\n— Se ele ganhar um Blaziken Shiny eu desisto da vida e viro juiz de Contest.\n\n## Treino curto\n\nAntes de dormir, Robson pediu Brasa a Vulpix — só um sopro.\n\nA chama saiu azulada, limpa, sem fumaça suja.\n\nMarshtomp apagou o excesso com um fio de Revólver d'Água, e os dois se olharam sem briga.\n\nElectrike tentou imitar com Faísca; Vulpix desviou o focinho, elegante.\n\n— Ela tem estilo de Contest — Wally notou.\n\n— Ela tem estilo de quem sobreviveu sozinha — Robson corrigiu, sem dureza.\n\nRenato, deitado, ergueu o polegar sem abrir os olhos:\n\n— Cruzeiro. Tô batizando. Aceita.\n\n— Depois a gente vê o nome — Robson. — Hoje ela só precisa descansar.\n\n## Cena Final\n\nA noite na rota era limpa.\n\nSem Max contando lendas.\n\nSem May ensaiando poses.\n\nSó o crepitar baixo e o brilho azulado das caudas quando Vulpix se virava no sono.\n\nRobson escreveu no caderno do PokéNav, sem mostrar a ninguém:\n\n\"Captura: Vulpix Shiny. Nome na cabeça do Renato: Cruzeiro. O meu ainda não.\"\n\nO céu, acima, continuava azul mesmo de noite — estrelas demais.\n\nAlém dele, a montanha fumegava sem pressa.\n\n## CONTINUA…\n",
+"133": "EPISÓDIO 133\nQueda de Meteoros! Mightyena Acorda!\n\nMeteor Falls abria a boca na pedra úmida.\n\nÁgua caindo em cortina constante.\n\nEcos de gota e de asa.\n\nO grupo entrou com lanternas e passo curto.\n\nWally tossiu o pó fino que subia do chão molhado.\n\n— Cuidado. Escorrega.\n\nRenato:\n\n— Se eu cair, Marill me salva. De novo. Contrato vitalício.\n\nDentro, vozes humanas demais para uma caverna de lenda.\n\nBotas.\n\nTecido grosso.\n\nBandanas vermelhas.\n\nEquipe Magma.\n\n## Invasão\n\nGrunts empurravam caixas marcadas com o símbolo do vulcão.\n\nUm falava alto demais para quem queria sigilo:\n\n— O chefe quer o Monte Chimney limpo! Aqui é só passagem e mapa!\n\nRobson puxou o grupo atrás de uma coluna antiga, coberta de desenhos de meteoros e serpentes do céu.\n\nLucario:\n\n— Aura quente. Muita raiva. Pouca dúvida.\n\nPoochyena lateu baixo, teimoso.\n\nQueria ir.\n\n— Espera — Robson segurou o ar. — Sem herói solo.\n\nDois Grunts viraram no mesmo instante.\n\n— Olha só! Mirins perdidos!\n\n## Batalha na caverna\n\n— Poochyena! Uivo!\n\nO uivo ecoou nas paredes, desorientando o primeiro Mightyena alugado da Magma.\n\n— Presa de Gelo!\n\nO gelo cravou; o Pokémon adversário caiu de joelhos, vapor subindo.\n\nO segundo Grunt mandou Numel.\n\n— Marshtomp! Tapa de Lama! Revólver d'Água!\n\nA lama apagou a Brasa no ar.\n\nNumel escorregou, patas abertas, e Marshtomp fechou com um segundo jato.\n\nSamurott de Renato bloqueou o corredor com um Surfar curto e controlado — água demais ali seria desastre; ele mediu.\n\nWally, voz tremendo menos que antes:\n\n— Kirlia! Confusão! Segura a caixa! Não deixa levar!\n\nA caixa flutuou um metro e bateu no chão, lacre rachado.\n\nOs Grunts recuaram gritando ordens sem comando de verdade.\n\n— Avisa o Maxie! Tem um Lucario com eles!\n\nSumiram pela saída alta, onde a luz do lado de fora cortava a sombra.\n\n## O brilho\n\nPoochyena ainda tremia de adrenalina.\n\nOlhou Robson.\n\nLateu fundo, do peito.\n\nA luz começou nos ombros, escura e limpa ao mesmo tempo.\n\nRobson não pediu.\n\nSó assentiu.\n\nA luz subiu até o teto úmido da caverna.\n\nQuando baixou, o corpo era maior.\n\nJuba escura.\n\nOlhos afiados.\n\nPatas firmes na pedra molhada.\n\n— Mightyena — disse Wally, quase reverente.\n\nMightyena sacudiu o pelo, borrifando os três.\n\nRosnou, satisfeito.\n\nTeimoso como sempre.\n\nSó maior.\n\nRenato assobiou.\n\n— Agora sim parece o bando do Robson. Antes era cachorrinho bravo. Agora é... cachorrão bravo.\n\n— Continua teimoso — Robson tocou a cabeça dele. — Isso não muda.\n\n## Depois\n\nFora da queda d'água, o grupo respirou o ar mais aberto.\n\nNas paredes, ao sair, Wally leu baixo o que os desenhos sugeriam:\n\n— Dizem que o céu e o chão já brigaram aqui. Meteoros. Dragões.\n\nRenato:\n\n— Perfeito. A gente entra no meio da briga de novo.\n\nRobson olhou o pico distante, agora visível entre as árvores.\n\nFumaça constante.\n\nMonte Chimney.\n\n— A Magma falou do vulcão. A gente sobe.\n\nLucario:\n\n— O vermelho que eu senti na rota... está lá. Organizado.\n\nMightyena andou à frente, farejando o vento quente que já descia a encosta.\n\nMarshtomp ficou perto de Robson, pronto para lama e água quando o calor pedisse.\n\n## Combinado\n\nAntes do sono, combinaram a ordem do dia seguinte:\n\nMightyena na frente.\n\nLucario medindo Aura.\n\nMarshtomp pronto para calor seco.\n\nVulpix só se o terreno pedisse fogo limpo.\n\nWally e Kirlia no meio, não na retaguarda esquecida — Robson insistiu nisso.\n\n— Você não fica para trás.\n\n— Eu... obrigado.\n\nRenato:\n\n— E eu fico onde tiver Grunt para empurrar. Óbvio.\n\n## Cena Final\n\nNo caderno, Robson anotou só uma linha:\n\n\"Poochyena → Mightyena. Meteor Falls. Magma em movimento.\"\n\nÀ noite, Mightyena deitou de guarda na entrada do acampamento.\n\nVulpix Shiny aquecia uma pedra redonda sem queimar o saco de dormir de Wally.\n\nA quarta insígnia ficava do outro lado daquele calor.\n\nE Maxie também.\n\nO céu acima da queda d'água continuava azul no alto, indiferente à fumaça.\n\nAlém dele, a montanha esperava.\n\n## CONTINUA…\n",
+"134": "EPISÓDIO 134\nSubida! Monte Chimney!\n\nA trilha do Monte Chimney queimava as solas.\n\nPedra quente.\n\nAr seco que raspava a garganta.\n\nMarill pediu para voltar à Poké Bola; Renato obedeceu sem zoar.\n\nCombusken, ao contrário, vibrava feliz, penas erguidas no calor.\n\nVulpix Shiny caminhava fora, caudas erguidas, em casa naquele fogo de montanha.\n\nMightyena farejava à frente, juba sacudindo cinza fina.\n\nWally suava, mas não pedia pausa.\n\n— Eu aguento.\n\nRobson mediu o passo dele e igualou o próprio, sem anunciar.\n\n## A cordilheira\n\nCabos de teleférico cruzavam o abismo.\n\nEmbaixo, o vale verde ainda.\n\nEm cima, a cratera fumegante, branca e suja ao mesmo tempo.\n\nRobson:\n\n— Sem pressa. Passo firme. Quem corre aqui cai.\n\nLucario media a Aura da montanha em silêncio longo.\n\n— Muitos humanos. Magma. E outra coisa... água? Longe. Irritada.\n\n— Aqua também mira aqui — murmurou Robson. — Os dois sempre brigam pelo mesmo lugar.\n\nRenato:\n\n— Para de narrar o óbvio. Sobe.\n\nUm grupo de turistas descia, pálido.\n\n— Tem gente de bandana vermelha fechando a estação alta — avisou uma mulher. — Não vão.\n\nRobson agradeceu e continuou.\n\n## Emboscada\n\nNo meio da trilha estreita, Grunts da Magma bloquearam com Numel e Poochyena alugados.\n\n— Voltem! Área restrita do Maxie!\n\n— Samurott! — Renato. — Hidro Canhão!\n\nO jato abriu caminho na poeira quente, sem derrubar a encosta.\n\nMightyena derrubou o Poochyena adversário com Presa de Gelo, teimoso e preciso.\n\nKirlia de Wally empurrou um Numel com Confusão até o Pokémon sentar, confuso.\n\nRobson:\n\n— Vulpix! Brasa! Só aviso!\n\nA Brasa azulada — mais clara que o fogo comum — fez os Grunts recuarem dois passos.\n\n— Shiny?! — um gritou. — Ordem do chefe: captura o que brilha!\n\n— Nem pensar — Robson recolheu Vulpix a tempo e mandou Electrike. — Faísca! Rajada de Chamas no chão, fumaça!\n\nO estalo elétrico e a chama curta cobriram a retirada do grupo para a curva seguinte.\n\nOs Grunts não perseguiram: tinham ordem de guardar o platô, não de caçar mirins.\n\n## Quase no topo\n\nPerto da estação alta, o vento vinha quente demais para conversa longa.\n\nUma mulher de cabelo vermelho passou correndo com treinadores locais — Flannery, ainda sem se apresentar de formal, só um olhar rápido e uma frase jogada:\n\n— Se vão enfrentar a Magma, não morram na trilha. O ginásio fica embaixo, em Lavaridge. Eu espero quem chegar vivo.\n\nSumiu na descida oposta.\n\nAsh não estava ali naquele instante.\n\nMas Robson lembrou a regra que a jornada já tinha ensinado: quando chegasse ao ginásio, Ash apareceria. A batalha do irmão seria em outro dia — sempre citada, sempre verdade.\n\nWally parou, ofegante, e riu sem ar.\n\n— A vista...\n\nO céu, do alto, era maior.\n\nAlém do azul, a fumaça do vulcão riscando branco como um risco de lápis furioso.\n\n## Acampamento na pedra\n\nÀ noite, acamparam numa plataforma larga o bastante para três sacos e um fogo baixo controlado por Vulpix.\n\nMightyena deitou de guarda, focinho para a trilha de cima.\n\nLucario falou baixo, só para Robson:\n\n— Amanhã. Maxie. Eu lutarei se precisar.\n\n— Pode. Não é ginásio.\n\n— Não é Contest.\n\n— É vilão.\n\nO pacto permitia — e Lucario já tinha pago caro demais para ficar de fora de novo.\n\nRenato roncava cedo, Combusken de sentinela no ombro do saco.\n\nWally olhava as estrelas, Kirlia no colo, murmurando golpes como oração prática.\n\n## Combinado da madrugada\n\nRobson repartiu água e pediu silêncio de verdade por uma hora.\n\n— Amanhã não é Contest. Não é ginásio. É Maxie.\n\n— Eu sei o que é vilão — Renato. — Eu só não gosto de perder.\n\n— Então não perde o foco.\n\nWally murmurou:\n\n— Se eu tremer... alguém me empurra?\n\n— Eu empurro — disse Robson. — Sem vergonha.\n\nMightyena lateu baixo, como quem assinava a lista.\n\n## Cena Final\n\nA montanha latejava sob eles.\n\nComo um coração irritado.\n\nRobson tocou a Poké Bola de Lucario e depois a de Mightyena.\n\n— Amanhã a gente atrapalha.\n\nO vento respondeu com cinza.\n\nLonge, na cratera, luzes vermelhas de lanternas da Magma se moviam em fila.\n\nMaxie já estava no pico.\n\n## CONTINUA…\n",
+"135": "EPISÓDIO 135\nMaxie! Derrota no Pico!\n\nNo platô alto do Monte Chimney, Maxie esperava como quem marca reunião.\n\nCabelo vermelho preso.\n\nOlhar de quem já tinha decidido o formato do mundo.\n\nAo lado, Camerupt, vapor saindo das costas.\n\nGrunts em fila, silenciosos demais.\n\n— Crianças — disse Maxie. — O vulcão vai acordar do nosso jeito. Vocês só atrapalham o calendário.\n\nRobson deu um passo à frente, Lucario já fora da bola.\n\n— Vocês machucam a montanha. E quem vive nela.\n\n— Idealismo de Pallet — Maxie riu seco. — Ouvi falar do Lucario. Do pacto besta. Mostre o que sobra quando não é ginásio.\n\n## Lucario no campo\n\nO pacto não barrava vilão.\n\n— Lucario! Vamos!\n\nAura Esférica cruzou o calor.\n\nCamerupt respondeu com Lança-Chamas largo.\n\nO ar dobrou.\n\nLucario desviou com Velocidade Extrema e cravou Soco Relâmpago no flanco.\n\nCamerupt mal recuou um passo.\n\nMaxie:\n\n— Terremoto!\n\nO chão do platô abriu em rachaduras.\n\nLucario caiu de joelhos, Aura piscando.\n\nRobson sentiu o impacto no peito.\n\n— Levanta!\n\n## O segundo round\n\nMightyena entrou sem esperar ordem completa — teimoso.\n\nPresa de Gelo no Camerupt.\n\nVapor alto.\n\nCamerupt rugiu e usou Superpoder.\n\nMightyena voou para trás, rolou, ficou fora.\n\nElectrike tentou Faísca e Rajada de Chamas — o calor seco engolia parte da faísca.\n\nMarshtomp aguentou Tapa de Lama e Revólver d'Água, apagando chama, até um Lança-Chamas cruzado o derrubar de lado.\n\nNas laterais, Renato e Wally seguravam Grunts:\n\nSamurott e Combusken suavam.\n\nKirlia de Wally tremia e mesmo assim empurrava um Numel com Confusão.\n\n— Eu não fujo! — Wally gritou pela primeira vez com raiva limpa.\n\n## Queda\n\nLucario voltou ao centro, mancando.\n\nÚltima Aura Esférica, concentrada.\n\nAcertou o peito de Camerupt.\n\nMaxie mal piscou.\n\n— Explosão de Lava.\n\nA onda vermelha engoliu o platô.\n\nQuando a fumaça baixou, Lucario estava no chão.\n\nOlhos abertos.\n\nDerrotado.\n\nRobson correu, joelhos na pedra quente.\n\n— Lucario!\n\nMaxie recolheu Camerupt com gesto curto.\n\n— Aprendam. Paixão sem poder é só barulho de rota.\n\nOs Grunts cobriram a retirada com bombas de fumaça.\n\nSumiram rumo à boca interna da cratera, onde máquinas vermelhas já piscavam.\n\n## Silêncio\n\nRenato ajoelhou ao lado de Robson.\n\n— Ele...\n\n— Vai ficar — a voz de Robson falhou um segundo e voltou. — Vai.\n\nLucario falou por Aura, fraco, sem drama:\n\n— Eu perdi. Você não.\n\n— A gente perdeu junto.\n\nWally chorou sem barulho, punho fechado na roupa do Kirlia.\n\n— Desculpa. Eu não ajudei o bastante.\n\n— Você ajudou — Robson. — Amanhã a gente desce para Lavaridge. Centro Pokémon. Ginásio. Depois a gente volta a atrapalhar eles — mais fortes.\n\nMightyena uivou baixo, furioso com a derrota, focinho em Lucario.\n\nVulpix encostou o focinho azulada nele, calor miúdo e constante.\n\n## Descida\n\nA descida foi mais longa que a subida.\n\nCada passo doía no ombro onde Lucario ia carregado até aceitar voltar à Poké Bola, já estável.\n\nNo Centro Pokémon provisório da estação baixa, a enfermeira Joy não fez perguntas demais — só olhou as bandanas rasgadas e balançou a cabeça.\n\n— Lavaridge fica a meia hora. Flannery odeia a Magma tanto quanto vocês.\n\nRenato soltou o ar.\n\n— Ótimo. Ginásio com raiva. Combina com a gente.\n\n## Cena Final\n\nDo pico, Lavaridge brilhava embaixo — luzes quentes de cidade pequena.\n\nA Insígnia Calor esperava.\n\nMas o peito de Robson pesava mais que qualquer medalha.\n\nMaxie tinha vencido.\n\nA montanha ainda fumegava, indiferente ao orgulho humano.\n\nRobson carregou Lucario até a descida, passo a passo.\n\nNinguém zoou.\n\nNem Renato.\n\nO vento de Lavaridge trouxe cheiro de fonte e de pão doce.\n\nNinguém falou de Maxie naquela hora — o nome ficaria para quando as forças voltassem.\n\nPor enquanto, o que importava era o próximo passo na frente dos pés.\n\nNa descida final, Renato quebrou o silêncio só uma vez:\n\n— A gente vai cobrar essa dívida. Não amanhã. Mas vai.\n\nRobson assentiu.\n\nWally repetiu, para si:\n\n— Não fugir. Não fugir.\n\n## CONTINUA…\n",
+"136": "EPISÓDIO 136\nGinásio de Lavaridge! Swampert e a Insígnia Calor!\n\nLavaridge cheirava a enxofre bom e comida quente.\n\nO Centro Pokémon devolveu Lucario inteiro — quieto, orgulhoso ferido, vivo.\n\nRobson não o levaria ao ginásio.\n\nO pacto continuava.\n\nNa porta do Ginásio de Lavaridge, Ash já estava encostado na parede, Pikachu no ombro.\n\n— Demorou — disse o irmão, sorrindo de lado. — Eu batalho com a Flannery outro dia. Hoje eu assisto você.\n\nMay, Max e Brock acenaram de longe: caminhos cruzados de novo por um dia, sem refazer o grupo do 130.\n\n— Quatro insígnias — lembrou Ash. — Norman está contando.\n\n— Eu sei.\n\n## Flannery\n\nDentro, o calor era de sauna e de lapinha.\n\nFlannery, cabelo vermelho, nervoso e honesto:\n\n— Eu sou nova no posto. Mas não vou facilitar. Três contra três!\n\nRobson:\n\n— Vulpix! Vamos!\n\nA Vulpix Shiny entrou sob aplausos surpresos.\n\nFlannery mandou Slugma.\n\n— Brasa!\n\n— Lança-Chamas!\n\nFogo contra fogo.\n\nVulpix dançou, rápida, e um Golpe de Cauda no chão quente levantou fuligem nos olhos de Slugma — Slugma.\n\n— Investida!\n\nSlugma caiu.\n\nFlannery: — Numel!\n\nVulpix aguentou Magnitudo pela metade e saiu; Robson trocou.\n\n## Mightyena\n\n— Mightyena!\n\nPresa de Gelo estalou no ar seco.\n\nNumel tropeçou.\n\n— Uivo!\n\nO Uivo baixou a guarda do adversário.\n\n— Presa de novo!\n\nNumel fora.\n\nFlannery apertou o punho, sorrindo apesar de tudo.\n\n— Torkoal! Agora!\n\nMightyena levou Fumaça densa e um Investida que o tirou do campo.\n\nRobson respirou.\n\n— Marshtomp!\n\n## Marshtomp → Swampert\n\nO chão do ginásio era seco demais para água fácil — e mesmo assim Marshtomp plantou os pés.\n\n— Tapa de Lama!\n\nA lama grudou em Torkoal.\n\n— Revólver d'Água!\n\nVapor cobriu tudo.\n\nTorkoal usou Retirada e Lança-Chamas em cone.\n\nMarshtomp rolou, queimado, teimoso como o amigo de juba.\n\nRobson sentiu a Aura do parceiro pedir mais.\n\n— Você aguenta!\n\nA luz começou nos ombros largos.\n\nÁgua e terra juntas.\n\nQuando baixou, Swampert rugiu, maior, braços pesados.\n\n— Superpoder! — Flannery.\n\n— Martelo de Lama! — Robson.\n\nO choque abriu rachadura na pista.\n\n— Revólver d'Água! Tudo!\n\nO jato final apagou a chama de Torkoal.\n\nQuando o vapor baixou, Torkoal estava de lado.\n\n— Torkoal fora! Vitória de Robson Ketchum! — o juiz.\n\n## Insígnia\n\nFlannery entregou a Insígnia Calor com as duas mãos.\n\n— Você lutou sujo de lama e limpo de intenção. Gostei.\n\nAsh gritou da arquibancada:\n\n— Quatro! Agora é o pai da May!\n\nMay cobriu o rosto.\n\n— Ash!\n\nRobson olhou a insígnia quente na palma.\n\nPedra. Soco. Dínamo. Calor.\n\nNorman podia ser desafiado.\n\nLucario, fora do campo, falou por Aura:\n\n— Eu vi. Mesmo sem entrar.\n\n— Eu sei.\n\n## Cena Final\n\nNa saída, Ash apertou o ombro do irmão.\n\n— Eu pego a minha com ela amanhã. Ou depois. Não estraga o seu dia.\n\n— Não estrago.\n\nRenato já falava em Contest e em captura nova.\n\nWally só olhava Swampert, boquiaberto.\n\n— Ele... ficou enorme.\n\nSwampert grunhiu, satisfeito, e derrubou um balde de água em si mesmo de propósito.\n\nLavaridge inteira riu.\n\nO pico do Monte Chimney ainda fumegava ao fundo.\n\nMaxie não tinha sumido do mapa.\n\nMas, por aquela tarde, a Insígnia Calor pesava certo no bolso.\n\nO vento de Lavaridge trouxe cheiro de fonte e de pão doce.\n\nNinguém falou de Maxie naquela hora — o nome ficaria para quando as forças voltassem.\n\nPor enquanto, o que importava era o próximo passo na frente dos pés.\n\nNo Centro, depois, Swampert derrubou três baldes seguidos e só então dormiu.\n\nAsh mandou mensagem no PokéNav:\n\n\"Amanhã eu pego a minha. Cuidado com o pai.\"\n\nRobson respondeu só:\n\n\"Cuidado você.\"\n\nMay apareceu na porta só para ver a Insígnia Calor de longe e fazer careta de orgulho disfarçado.\n\n— Não se acostuma. Contest é outro jogo.\n\n— Eu sei — Robson mostrou a caixa vazia da futura fita. — Eu sei.\n\n## CONTINUA…\n",
+"137": "EPISÓDIO 137\nMedicham! Foco na Fonte Quente!\n\nNo dia seguinte ao ginásio, Lavaridge acordou em vapor de fonte.\n\nAsh tinha ido marcar a batalha com Flannery para outro dia — como sempre, presente no ginásio, luta dele depois.\n\nRobson deixou Swampert treinar Revólver d'Água na piscina externa do Centro.\n\nRenato sumiu cedo.\n\n— Vou comer. E pensar. Separado.\n\nWally:\n\n— Ele nunca pensa separado. Ele pensa com fome.\n\n## O encontro\n\nNa trilha atrás das fontes, Renato achou um círculo de pedras.\n\nUm Medicham meditava ali, sozinho, respiração marcada.\n\nOlhos fechados.\n\nQuando Combusken se aproximou demais, Medicham abriu os olhos e desviou o Chute Duplo com a palma, limpo.\n\n— Forte — Renato assobiou. — Quer luta de verdade?\n\nMedicham assentiu uma vez.\n\nSamurott entrou.\n\nHidro Canhão.\n\nMedicham usou Detectar e Contador, devolvendo parte do impacto.\n\nSamurott segurou.\n\n— Lâmina de Concha!\n\nO corte raspou o ar; Medicham girou com Chute Alto e derrubou Samurott de joelho.\n\nRenato recolheu, suando.\n\n— Combusken!\n\nBrasa.\n\nChute Duplo.\n\nMedicham desviava, mas o calor do Combusken era insistente — fogo de quem queria evoluir um dia e ainda não tinha pedido luz.\n\n## A captura\n\nMedicham cansou o bastante para ouvir.\n\nRenato ajoelhou, jaleco curto sujo de enxofre.\n\n— Eu quero ser Médico Pokémon. Mas antes eu preciso entender corpo e foco. Você... ensina isso só de existir.\n\nMedicham inclinou a cabeça.\n\n— Viaja comigo?\n\nA Poké Bola bateu no peito do lutador.\n\nUma balançada.\n\nDuas.\n\nTrês.\n\nCLICK!\n\nCapturada.\n\nRenato gritou baixo para não acordar a fonte inteira.\n\n— SIM!\n\n## Apresentação\n\nNo acampamento da tarde, Robson e Wally viram Medicham sair.\n\nPostura perfeita.\n\nMarill bateu palmas; Combusken bufou, rivalidade amigável.\n\n— Time de médico com chute na cara — zoou Robson.\n\n— Medicina preventiva — Renato. — Às vezes o paciente precisa de Contador.\n\nWally riu de verdade.\n\n— Você está ficando estranho. No bom sentido.\n\nMightyena farejou Medicham e aceitou com um resmungo.\n\nVulpix Shiny imitou a pose de meditação por três segundos e desistiu, caudas inquietas.\n\nLucario observou o novo foco na Aura de Renato.\n\n— Ele ficou menos barulhento por dentro.\n\n— Não conta pra ele — Robson. — Ele usa isso em discurso.\n\n## Treino\n\nÀ noite, Medicham guiou um exercício curto: respirar com o golpe, não depois.\n\nCombusken acertou Chute Duplo mais limpo.\n\nSwampert plantou os pés e soltou Martelo de Lama sem perder o eixo.\n\nKirlia de Wally manteve Confusão estável por mais tempo.\n\nRenato anotou num caderno de bolso — letra feia, método sério.\n\n— Amanhã tem Contest em Lavaridge. Você vai?\n\nRobson:\n\n— Vou. May também. Ela avisou por PokéNav.\n\n— Então não perde de propósito só pra ficar bonito.\n\n— Eu nunca perco de propósito.\n\n## Fonte e foco\n\nNa fonte quente reservada a treinadores, Medicham guiou Robson por três respirações antes de um golpe.\n\nSwampert acertou Martelo de Lama sem escorregar no azulejo molhado.\n\n— Medicina aplicada — Renato anotou. — Taxa de sucesso: alta. Taxa de zoeira: controlada.\n\nWally perguntou se Medicham podia ensinar Gallade... um dia.\n\n— Um dia — Renato. — Primeiro ele me ensina a calar a boca no momento certo.\n\n## Cena Final\n\nMedicham meditou sob a lanterna.\n\nRenato, pela primeira vez em muitos dias, não falou de Atlético nem de leite MuMu antes de dormir.\n\nSó murmurou:\n\n— Quatro no time. Samurott, Combusken, Marill, Medicham. Ainda cabe.\n\nRobson, deitado, olhou a Insígnia Calor e a Vulpix azulada enrolada.\n\nO Contest viria.\n\nE May.\n\nE a segunda fita, se a apresentação e a batalha coubessem no peito sem Lucario no campo.\n\nO pacto seguia.\n\nO foco, agora, também.\n\nO vento de Lavaridge trouxe cheiro de fonte e de pão doce.\n\nNinguém falou de Maxie naquela hora — o nome ficaria para quando as forças voltassem.\n\nPor enquanto, o que importava era o próximo passo na frente dos pés.\n\nAntes de dormir, Medicham corrigiu a postura de Wally com um toque no ombro.\n\nWally corou.\n\n— Obrigado.\n\nRenato:\n\n— Viu? Medicina. Quase.\n\nRobson riu, pela primeira vez solta desde a derrota no pico.\n\nO som fez Lucario abrir um olho e fechar de novo, satisfeito.\n\n## CONTINUA…\n",
+"138": "EPISÓDIO 138\nContest de Lavaridge! Segunda Fita!\n\nO hall do Contest de Lavaridge era quente como o ginásio, só que com luzes e música.\n\nMay apareceu com Beautifly no ombro, cabelo preso, olho de rival.\n\n— Eu te avisei na separação. Hoje eu te derroto.\n\nRobson:\n\n— Eu espero. Sem Lucario no campo. Como sempre.\n\nDrew observava do corrimão, rosa na lapela, Butterfree à mostra.\n\n— Sem Lucario você ainda precisa provar muita coisa — sussurrou ao passar, ecoando a frase antiga sem a repetir inteira.\n\nWally apertava as mãos.\n\nRenato:\n\n— Vai com a Vulpix. Shiny não ganha sozinha, mas ajuda o juiz a acordar.\n\n## Primeira fase — Apresentações\n\nRobson só usou Vulpix.\n\nPedido claro: mostrar quem ela era, não o brilho.\n\n— Brasa! Em círculo!\n\nAs chamas azuladas desenharam um anel no chão.\n\n— Golpe de Cauda! Espalha a fuligem clara!\n\nA fuligem virou glitter de cinza fina sob os holofotes.\n\n— Agora... quieta. Só o brilho do pelo.\n\nVulpix parou no centro, caudas abertas, respiração marcada.\n\nSilêncio.\n\nDepois aplausos.\n\nMay com Beautifly fez um arco de Pó Prateado e Vendaval curto — bonito, clássico, dela.\n\nOs dois passaram.\n\n## Quartas e semifinal\n\nRobson venceu um coordenador local com combinação de Brasa e Investida cronometrada — pontos do rival caíram no último meio minuto.\n\nNa semifinal, um Masquerain adversário quase levou no belo; Vulpix virou o placar com um Golpe de Cauda que desviou Água suja sem perder elegância.\n\nMay chegou à final como prometido.\n\nBeautifly × Vulpix.\n\n## A Grande Final\n\nCronômetro andando.\n\nMay:\n\n— Beautifly! Pó Prateado! Vendaval!\n\nRobson:\n\n— Vulpix! Brasa no chão! Sobe com o ar quente!\n\nA Vulpix Shiny rodeou o Vendaval por baixo, chama clara desenhando espiral.\n\nPontos de May tremeram.\n\n— Cauda! Queria luz, não queda!\n\nO golpe raspou a asa de Beautifly com precisão de Contest — impacto baixo, imagem alta.\n\nFaltava vinte segundos.\n\nMay arriscou:\n\n— Raio Solar!\n\nRobson:\n\n— Desvia e Brasa curta no reflexo do chão!\n\nO reflexo azulado ofuscou a mira.\n\nO cronômetro zerou.\n\nPlacar:\n\nRobson — 78 pontos\n\nMay — 74 pontos\n\n## Resultado\n\n— Vencedor: Robson Ketchum! — o mestre de cerimônias.\n\nA Fita de Lavaridge veio azul-quente na caixa.\n\nSegunda fita de Hoenn.\n\nMay apertou a mão dele, olhos molhados de raiva boa.\n\n— Da próxima vez...\n\n— Eu estarei esperando — Robson completou, e os dois riram do clichê verdadeiro.\n\nDrew, na saída:\n\n— Uma fita não cala o Festival. Mas a Vulpix... tem presença.\n\nAsh, que tinha aparecido no ginásio no dia anterior e voltara só para ver o Contest, gritou:\n\n— Boa, irmão!\n\nBrock acenou com uma marmita.\n\nMax anotava placar.\n\nO reencontro durou o tempo da fita e de um lanche — depois o grupo de Ash seguiria outra estrada de novo.\n\n## Bastidores\n\nNos bastidores, Vulpix bebeu água e recusou comida doce demais.\n\nMay ofereceu poção ao Beautifly em silêncio de respeito.\n\n— Você lutou limpo — ela disse a Robson.\n\n— Você também.\n\nMax queria saber se Shiny dava ponto extra; Brock respondeu que juiz bom não conta tinta, conta intenção.\n\nRenato guardou um panfleto do próximo Contest só para irritar Robson depois.\n\n## Cena Final\n\nRenato cutucou Robson.\n\n— Duas fitas. Quatro insígnias. Tá ficando chato de tão eficiente.\n\n— Augusto ainda me deve uma revanche.\n\n— Aí fica interessante.\n\nWally segurou a fita um segundo, com permissão, e devolveu.\n\n— Um dia eu entro num palco desses.\n\n— Um dia — Robson.\n\nVulpix dormiu no colo dele, caudas azuladas cobrindo a caixa da fita.\n\nLavaridge aplaudia outra apresentação ao fundo.\n\nO caminho, agora, apontava para rematches e deserto.\n\nNa entrevista rápida depois do Contest, um juiz perguntou por que Vulpix e não Mightyena.\n\nRobson:\n\n— Porque ela pediu o palco. Eu só escutei.\n\nMay, ao lado, resmungou:\n\n— Que resposta chata e perfeita.\n\nDrew anotou algo num caderno e foi embora sem aplaudir — o que, para Drew, já era quase elogio.\n\n## CONTINUA…\n",
+"139": "EPISÓDIO 139\nRevanche! Swampert, Grovyle e Raio de Gelo!\n\nNa rota depois de Lavaridge, Augusto apareceu como sempre: sem aviso, com desprezo educado.\n\nTreecko já não era Treecko.\n\nGrovyle, lâminas verdes no braço, olho afiado.\n\n— Ouvi que você ganhou da Flannery. E uma fitinha. Que fofo.\n\n— Quatro insígnias — Robson. — E você?\n\n— Eu não coleciono. Eu testo. Três contra três. Agora.\n\nRenato abriu espaço.\n\nWally segurou a bolsa.\n\nLucario ficou fora — não era ginásio, mas Robson escolheu não abrir com ele: queria a revanche no mesmo espírito da derrota antiga, sem atalho de Aura.\n\n## Primeiros confrontos\n\nO começo foi rápido e sujo de mato.\n\nElectrike de Robson trocou Faíscas com um Loudred de Augusto; o som derrubou Electrike.\n\nKirlia entrou, Confusão firme, e tirou Loudred antes de cair para um Golpe de Karatê de um Makuhita emprestado do rival — troca mínima, só para abrir o campo.\n\nPlacar torto, respiração curta.\n\nAugusto sorriu.\n\n— Agora o que importa.\n\n— Grovyle!\n\nRobson:\n\n— Swampert!\n\n## Swampert × Grovyle\n\nGrovyle usou Folha Mágica e Ataque Rápido, cortando o ar.\n\nSwampert plantou.\n\n— Tapa de Lama!\n\nGrovyle desviou.\n\n— Detectar! — Augusto. — Agora Lâmina de Folha!\n\nO corte abriu no peito de Swampert.\n\nRobson:\n\n— Martelo de Lama!\n\nO chão tremeu; Grovyle rolou, lâminas cravadas na terra.\n\n— Revólver d'Água!\n\nGrovyle usou Agilidade e subiu numa árvore torta da arena improvisada.\n\nAugusto:\n\n— Pulo! Sombra Fugaz!\n\nO golpe sombrio acertou.\n\nSwampert caiu de joelho, vapor de dor.\n\n## O gelo novo\n\nRobson sentiu a Aura de Swampert procurar algo além de água e terra.\n\nFrio.\n\nLimpo.\n\n— Confia!\n\nSwampert encheu o peito.\n\nO ar gelou na rota quente.\n\n— Raio de Gelo!\n\nO feixe branco-azul atravessou o peito de Grovyle no meio do segundo Pulo.\n\nGelo grudou nas lâminas.\n\nAugusto abriu os olhos de verdade pela primeira vez.\n\n— O quê...\n\n— Martelo de Lama! Agora!\n\nO martelo e o gelo juntos derrubaram Grovyle.\n\nMas Swampert também caiu, exausto, no mesmo instante.\n\nSilêncio.\n\nOs dois Pokémon no chão.\n\n## Empate\n\nAugusto recolheu Grovyle com cuidado atípico.\n\n— Empate. Que nojo.\n\n— Aceito — Robson, no chão ao lado de Swampert.\n\nRenato:\n\n— Raio de Gelo. No meio da luta. Claro. Típico.\n\nAugusto apontou o dedo.\n\n— Da próxima vez eu trago o Sceptile que ele vai virar. E aí não tem gelo que salve.\n\n— Eu espero — Robson.\n\nAugusto foi embora sem olhar para trás, como sempre.\n\nWally ajudou a limpar o gelo derretido do focinho de Swampert.\n\n— Você empatou com ele. Isso... é vitória pra quem perdeu feio antes?\n\n— É caminho — Robson.\n\n## Feridas e respeito\n\nNo Centro, a Joy comentou o gelo novo com curiosidade profissional.\n\n— Raio de Gelo em Swampert não é comum tão cedo.\n\n— Ele pediu — Robson. — Eu só dei o nome.\n\nAugusto, na rede do PokéNav da região, postou só uma linha que Renato caçou:\n\n\"Empate. Temporário.\"\n\n— Ele está obcecado — Renato.\n\n— Eu também — Robson admitiu.\n\n## Cena Final\n\nÀ noite, Swampert praticou o Raio de Gelo curto, sem alvo, só para lembrar o corpo.\n\nLucario:\n\n— Você não me usou.\n\n— Não precisava. Precisava dele.\n\nMightyena lateu aprovação.\n\nVulpix aquecia o outro lado do acampamento, contraste proposital.\n\nRenato:\n\n— Deserto amanhã. Trapinch. Cacnea. Eu sinto no joelho.\n\n— Seu joelho mente.\n\n— Meu joelho é atlético. Mentir é de cruzeirense.\n\nRobson não respondeu.\n\nGuardou o placar mental: Augusto, empate.\n\nA rivalidade continuava viva, sem vencedor fácil.\n\nSwampert, no Centro da rota, repetiu o Raio de Gelo três vezes sob supervisão da Joy.\n\nNa terceira, o feixe saiu limpo, sem tremor.\n\nRobson anotou no PokéNav: \"Gelo novo. Empate com Augusto. Não é fim.\"\n\nAugusto, longe, na própria barraca, olhava Grovyle dormindo e murmurava:\n\n— Sceptile. Logo.\n\nNa barraca, Swampert depositou a cabeça no colo de Robson pela primeira vez desde Marshtomp.\n\n— Descansamos. Depois o deserto.\n\n## CONTINUA…\n",
+"140": "EPISÓDIO 140\nDeserto! Trapinch e Cacnea!\n\nO deserto de Hoenn começou onde a grama desistiu.\n\nAreia.\n\nCalor seco diferente do vulcão — mais largo, mais mentiroso.\n\nRobson parou no Centro Pokémon avançado da beira.\n\nSeis Poké Bolas no cinto.\n\nPara capturar, precisava de espaço.\n\n— Electrike — disse baixo, na caixa de transferência do Professor Birch. — Descansa um pouco com ele. Eu te chamo.\n\nElectrike lambeu a mão e foi.\n\nO cinto ficou com cinco: Lucario, Swampert, Kirlia, Mightyena, Vulpix.\n\nRenato:\n\n— Sentimental demais.\n\n— Prático.\n\n## Areia\n\nHoras depois, a areia engolia pegadas.\n\nWally cobria a boca com o lenço.\n\nMarill odiava; voltou à bola.\n\nMedicham andava fora, passo medido, sem reclamar.\n\nDe repente o chão cedeu num funil.\n\n— Trapinch! — Wally reconheceu do livro.\n\nAs mandíbulas do Pokémon-terra surgiram, famintas.\n\nRobson:\n\n— Swampert! Fora da areia! Martelo de Lama na borda, não nele!\n\nO martelo compactou a parede do funil; Trapinch ficou exposto, irritado.\n\n— Mightyena! Uivo! Presa de Gelo só de aviso!\n\nO gelo no ar seco estalou.\n\nTrapinch hesitou.\n\nRobson ajoelhou na areia quente.\n\n— Força bruta sem caminho cansa. Quer caminho?\n\nA Poké Bola voou.\n\nUma balançada.\n\nDuas.\n\nTrês.\n\nCLICK!\n\nTrapinch capturado.\n\n## Cacnea\n\nMais adiante, Renato gritou.\n\n— ACHEI MINHA AGULHA!\n\nUm Cacnea rodava no vento, disparando Projétil de Semente em tudo.\n\nCombusken desviou; Medicham usou Detectar e se aproximou.\n\n— Contador!\n\nO impacto devolveu a semente.\n\nCacnea girou mais rápido, confuso.\n\nSamurott:\n\n— Surfar! Só um fio! Molha a areia aos pés dele!\n\nA areia virou lama curta; Cacnea escorregou.\n\nRenato:\n\n— Viaja comigo. Eu não te transformo em sofá.\n\nA bola bateu.\n\nCLICK!\n\nCacnea capturado no segundo balanço longo — Renato jurou que foi estilo, não sorte.\n\n## Acampamento\n\nÀ noite, Trapinch saiu e mordeu de leve a bota de Robson — carinho perigoso.\n\nVulpix cheirou e manteve distância educada.\n\nMightyena rosnou hierarquia; Trapinch baixou a cabeça, aceitando.\n\nDo lado de Renato, Cacnea abraçou a perna dele sem pedir — agulhas contadas, sem furar de verdade.\n\n— Ele me ama — Renato.\n\n— Ele te usa de poste — Robson.\n\nWally riu até tossir areia.\n\nTime na mão de Robson: Lucario, Swampert, Kirlia, Mightyena, Vulpix, Trapinch.\n\nRenato: Samurott, Combusken, Marill, Medicham, Cacnea.\n\nWally: Kirlia.\n\nElectrike, com Birch, treinando trovão longe da areia.\n\n## Mapa na areia\n\nWally desenhou no chão o caminho até a cidade do torneio.\n\nGallade ainda não existia; Kirlia dele apontou o traço com o pé.\n\nTrapinch enterrou o desenho sem querer.\n\n— Metáfora — Renato. — A gente enterra plano e cava de novo.\n\nRobson transferiu mentalmente a lista do cinto: sem Electrike, com Trapinch, seis fechados.\n\nO deserto, à noite, devolveu o eco de um uivo distante — não era Mightyena.\n\nNinguém foi checar.\n\nAmanhã havia inscrição.\n\n## Cena Final\n\nO deserto à noite esfriou demais.\n\nLucario:\n\n— Tem torneio falado na cidade à frente. Equipes. Prêmios estranhos.\n\n— Dawn Stone? — Wally ergueu a cabeça rápido demais.\n\n— Rumores — Lucario. — Aura de expectativa humana.\n\nRobson olhou Trapinch dormindo com a boca aberta.\n\n— Então a gente se inscreve. Três. Juntos.\n\nO céu do deserto era o mais azul-escuro que já tinham visto.\n\nAlém dele, sem fumaça de vulcão, só estrelas.\n\nAntes de apagar a lanterna, Robson checou a transferência:\n\nElectrike bem. Birch respondeu com um áudio curto: \"Faísca firme. Sem pressa de devolver.\"\n\nTrapinch mordeu a barraca de leve; Mightyena o puxou pela nuca com cuidado de irmão mais velho.\n\nRenato:\n\n— Se Cacnea abraçar você de madrugada, não grita. É carinho.\n\n— Se furar, eu jogo no Samurott.\n\n— Traição.\n\nLucario mediu a Aura do deserto: vazios e focos vivos.\n\n— Trapinch era fome. Cacnea era solidão com agulha. Os dois cabem em vocês.\n\n— Que diagnóstico — Renato. — Quase médico.\n\n## CONTINUA…\n",
+"141": "EPISÓDIO 141\nTorneio em Equipe! Pedra da Aurora!\n\nA cidade na beira do deserto tinha arena improvisada e cartaz alto:\n\nTORNEIO EM EQUIPE — TRÊS TREINADORES\n\nPrêmios estranhos, como Lucario tinha pressentido.\n\nPrimeiro lugar: Dawn Stone — Pedra da Aurora, rara em Hoenn.\n\nSegundo: ovo Pokémon.\n\nTerceiro: Pedra do Fogo.\n\nWally leu o primeiro prêmio três vezes.\n\n— Eu... preciso.\n\nRobson:\n\n— Então a gente ganha. Ou chega perto o bastante para você sorrir.\n\nRenato:\n\n— Eu quero o ovo. Só avisando. Metas claras.\n\n## Inscrição\n\nO juiz aceitou a equipe \"Rota Azul\" — nome que Wally inventou e Renato odiou em voz alta.\n\nRegras: batalhas em dupla rotativa, um fica de reserva por rodada; final em triplo livre.\n\nOutras equipes: mercadores, irmãos gêmeos, um trio da Magma disfarçado mal (expulsos na primeira falta).\n\nAsh não estava — mensagem no PokéNav: \"Ginásio com Flannery hoje. Depois a gente se fala.\"\n\n## Chave\n\nNas oitavas, Robson e Renato abriram com Swampert e Samurott: água e lama engoliram um Electrike e um Sandshrew adversários.\n\nNas quartas, Wally entrou com Kirlia ao lado de Medicham: Confusão e Contador sincronizados — a plateia murmurando o nome do menino.\n\nNa semi, Vulpix Shiny e Cacnea fizeram um show estranho de fogo azulado e agulha; venceram por pontos de pressão, não por nocaute limpo.\n\nFinal: contra o trio mais forte da cidade, veteranos de rota.\n\n## Final\n\nTriplo.\n\nSwampert, Samurott, Kirlia de Wally.\n\nContra Aggron, Manectric e Expensive — Hariyama.\n\nO chão tremeu.\n\nWally errou a primeira ordem; Kirlia olhou para ele e esperou.\n\n— Confusão no Hariyama! Agora!\n\nO timing voltou.\n\nRobson:\n\n— Martelo de Lama no Aggron!\n\nRenato:\n\n— Hidro Canhão no Manectric!\n\nA combinação abriu a defesa.\n\nO Manectric adversário caiu.\n\nAggron derrubou Samurott com Megachifre.\n\nSwampert segurou.\n\nKirlia, no fim, com um Teleporte e Confusão empilhados, tirou Hariyama.\n\nAggron ainda de pé — até Trapinch entrar na reserva liberada do regulamento final e cravar Mordida na junta da perna metálica.\n\nAggron caiu.\n\nVitória de Rota Azul.\n\n## Prêmios\n\nO juiz entregou na ordem da contribuição votada pela mesa — surpresa:\n\nWally, MVP da final pelo crescimento sob pressão: Pedra da Aurora.\n\nRenato, segundo na contagem auxiliar: o ovo, branco-azulado, quente.\n\nRobson, terceiro: Pedra do Fogo.\n\nRenato abriu a boca.\n\n— Eu queria o ovo e ganhei o ovo. O universo gosta de mim.\n\nRobson olhou a Pedra do Fogo e depois a Poké Bola de Vulpix.\n\n— Eu sei para quem é.\n\nWally segurou a Dawn Stone com as duas mãos, branco demais nos nós dos dedos.\n\n— Eu não uso agora. Eu... guardo até ele pedir.\n\nKirlia dele tocou a pedra e recuou, como quem dizia \"ainda não\".\n\n## Depois dos holofotes\n\nNo corredor, um veterano cumprimentou Wally pelo nome.\n\n— Você não congelou na final. Isso vale pedra nenhuma. A pedra é bônus.\n\nWally quase deixou cair a Dawn Stone.\n\nRobson segurou o pulso dele.\n\n— Guarda. Até o pedido.\n\nO ovo, no colo de Renato, latejou calor diferente do deserto.\n\nSnorunt ainda sem nome no mundo, mas já com caminho.\n\n## Cena Final\n\nNo hotel barato, o ovo ganhou um ninho de toalhas.\n\nCacnea tentou abraçar o ovo; Renato desviou a tempo.\n\n— Não.\n\nRobson girou a Pedra do Fogo sob a lanterna.\n\n— Vulpix. Quando a gente estiver pronto.\n\nLucario:\n\n— O fogo dela já está pronto. Você que está medindo o momento.\n\nMightyena lateu, concordando com Lucario — raro.\n\nFora, o deserto esfriava.\n\nMauville ficava no mapa de volta, com uma revanche elétrica esperando Trapinch.\n\nAntes de dormir, a equipe Rota Azul jurou não brigar pelo placar interno.\n\nBrigaram mesmo assim — sobre quem carregava o ovo na manhã seguinte.\n\nWally ganhou a discussão por ser o mais quieto. Renato carregou o ovo do mesmo jeito.\n\n## CONTINUA…\n",
+"142": "EPISÓDIO 142\nRevanche em Mauville! Vibrava!\n\nVoltar a Mauville foi estranho.\n\nAs luzes, o ginásio elétrico, o parque do Raikou de metal.\n\nWattson esperava na porta com o mesmo riso de trovão.\n\n— O menino do Electrike! Ouvi que você depositou o seu com o Birch. Que pena. Eu queria revanche com ele.\n\nRobson mostrou a Poké Bola de Trapinch.\n\n— Hoje é outro. Se topa.\n\n— Topo. Um contra um. Como da outra vez. Sem plateia enorme. Só verdade.\n\nAsh apareceu atrasado, cabelo bagunçado.\n\n— Perdi o começo? Flannery me cansou ontem. Eu ganhei — Insígnia Calor. Só pra constar.\n\n— Constado — Robson sorriu. — Agora assiste.\n\n## O campo\n\nWattson mandou Manectric — não mais o Electrike amigo.\n\nPelo eriçado.\n\nOlho sério.\n\n— Ele cresceu comigo depois daquele empate — explicou Wattson. — Você também cresceu, espero.\n\n— Trapinch!\n\nA plateia pequena riu: terra contra elétrico no ginásio de fios.\n\nWattson:\n\n— Faísca! Presa Elétrica!\n\nTrapinch enterrou, Mandíbula no cabo do chão — curto perigoso; Joy na arquibancada já franzia a testa.\n\nRobson:\n\n— Sai! Mordida no ar! Agora Areia!\n\nA areia levantada ofuscou Manectric.\n\n— Investida!\n\nO choque foi bruto.\n\nManectric usou Onda de Trovoada; Trapinch tremeu, paralisia rastejando.\n\n## Evolução\n\nNo meio do tremor, Trapinch olhou Robson.\n\nA luz veio sem pedido em voz alta.\n\nAs mandíbulas se abriram em asas novas.\n\nCorpo alongado.\n\nVerde de dragão jovem.\n\n— Vibrava! — Wally gritou.\n\nVibrava voou baixo, asas zumbindo, cancelando parte da paralisia no movimento.\n\nWattson gargalhou:\n\n— ISSO! ASILO DE EVOLUÇÃO NO MEU GINÁSIO!\n\n— Ultrassom! — Robson.\n\nO zumbido confuso Manectric.\n\n— Dragão de novo — pensou Robson. — Mordida!\n\nVibrava cravou.\n\nManectric descarregou Trovão ponto-a-ponto.\n\nVibrava caiu, subiu, não desistiu.\n\n— Areia! E fecha!\n\nA areia e a Mordida finais derrubaram Manectric de lado.\n\n— Manectric fora! Vitória de Robson!\n\n## Depois\n\nWattson apertou a mão dele com aperto de choque leve — brincadeira.\n\n— Sem insígnia extra. Você já tem a minha. Mas tem meu respeito de novo. Vibrava... cuida. Ele vai querer o céu inteiro.\n\nAsh:\n\n— Flygon um dia. Vai ficar insuportável.\n\n— Vai — Robson.\n\nRenato ergueu o ovo.\n\n— Meu ovo não evoluiu. Ainda.\n\n— Ovo não evolui no colo gritando — Wally.\n\nElectrike, ainda com Birch, mandou \"status bem\" no app — Robson leu e sorriu sem devolver ainda: Vibrava ocupava o sexto slot com Lucario, Swampert, Kirlia, Mightyena, Vulpix.\n\nSeis de novo.\n\n## Rua elétrica\n\nNas ruas de Mauville, Vibrava assustou um Magnemite selvagem sem querer.\n\nRobson pediu desculpas ao ar.\n\nWattson mandou um Electrike de presente simbólico — não captura, só foto junta — e riu:\n\n— Quando o seu voltar do Birch, marca treino. Manectric gosta de rival.\n\nAsh partiu de novo com May e o resto.\n\n— Petalburg te espera — disse. — O pai também.\n\nA Pedra do Fogo pesou no bolso como promessa pronta.\n\n## Cena Final\n\nNa saída de Mauville, a Pedra do Fogo batia no bolso.\n\nVulpix saiu e olhou a pedra, depois Robson.\n\n— Logo — ele prometeu. — Quase.\n\nVibrava zumbia em círculos, testando asas.\n\nO céu de Mauville era elétrico e azul.\n\nAlém dele, Petalburg esperava — e Norman.\n\nE um dia, a Pedra da Aurora no bolso de Wally deixaria de ser só peso.\n\nVibrava treinou Ultrassom até os Magnemite da rua reclamarem em coro.\n\nRobson recolheu o parceiro, rindo.\n\n— Amanhã, fogo. Pedra. Ninetales.\n\nA rota para Petalburg começou no passo seguinte.\n\nNa praça elétrica, Renato exibiu o ovo como troféu móvel.\n\n— Segundo lugar com futuro dentro.\n\nWally:\n\n— Primeiro lugar com pedra no bolso. Empate moral.\n\nRobson riu e guardou a Pedra do Fogo junto do mapa de Petalburg.\n\n## CONTINUA…\n",
+"143": "EPISÓDIO 143\nNinetales e Blaziken! Clássico Mineiro!\n\nNa rota de volta a Petalburg, Robson parou sob uma árvore larga.\n\nTirou a Pedra do Fogo.\n\nVulpix já esperava fora da bola, caudas agitadas.\n\n— Pronto?\n\nEla encostou o focinho na pedra.\n\nA luz foi alta e limpa.\n\nQuando baixou, nove caudas azuladas varreram o chão.\n\nNinetales Shiny.\n\nOlhos antigos em corpo novo.\n\nRenato assobiou, depois torceu o nariz.\n\n— Bonita. Admito. Só porque é Shiny.\n\n— Ela era boa antes — Robson.\n\n— Sei. Mas Shiny ajuda o ego.\n\n## O desafio\n\nCombusken saltou do ombro de Renato sem ordem.\n\n— Eu desafio. Agora. Combusken contra essa raposa de torcida.\n\n— Ninetales — corrigiu Robson. — Topo.\n\nWally afastou Marill e o ovo para a sombra segura.\n\nLucario mediou o campo com o olhar.\n\n— Sem me chamar. Empate ou não, eu só assisto.\n\n## Batalha\n\n— Brasa!\n\n— Chute Duplo!\n\nFogo contra fogo.\n\nNinetales girou, caudas desenhando círculo; Combusken atravessou com velocidade de quem estava à beira de algo.\n\nRenato sentiu.\n\n— Vai! Você pediu isso!\n\nA luz pegou Combusken no meio de um chute.\n\nPenas viraram chamas altas.\n\nPés no chão como pilares.\n\n— Blaziken!\n\nO grito de Renato foi puro Atlético em dia de clássico.\n\nBlaziken rugiu e lançou Chute Incendiário — calor pesado.\n\nNinetales respondeu com Esfera de Sombra e Brasa afiada.\n\nOs dois acertaram.\n\nOs dois cambalearam.\n\n## Empate\n\nBlaziken caiu de joelho.\n\nNinetales sentou, nove caudas no pó, sem força para o próximo golpe.\n\nSilêncio.\n\n— Empate — decretou Wally, juiz improvisado sério.\n\nRenato riu sem ar.\n\n— Clássico mineiro. Em Hoenn. Com Pokémon.\n\nRobson ofereceu a mão.\n\n— Blaziken é maneiro. Um dia eu quero ter um. Pra provar que um cruzeirense treina melhor que qualquer atleticano.\n\nRenato apertou a mão e puxou, provocando:\n\n— Eu duvido. E a sua Ninetales só é legal porque é Shiny.\n\n— Continua — Robson não soltou o sorriso. — Ela ouve.\n\nNinetales ergueu o focinho, ofendida com elegância.\n\nBlaziken bufou fuligem no cabelo de Renato — carinho agressivo.\n\n## Conversa de rota\n\nMais tarde, andando:\n\n— Você falou sério? Quer um Blaziken? — Renato.\n\n— Um dia. Não hoje. Hoje eu tenho ela.\n\n— E Swampert. E Vibrava. E o resto. Ganancioso.\n\n— Você tem Samurott e Blaziken. Cala a boca.\n\nWally, atrás:\n\n— Vocês dois são iguais. Só o uniforme muda.\n\nOs dois:\n\n— Não.\n\nDepois riram, porque era verdade pela metade.\n\n## Uniformes invisíveis\n\nWally confessou:\n\n— Eu torço para os dois quando vocês brigam assim. É menos assustador que Magma.\n\nBlaziken e Ninetales treinaram de leve ao amanhecer, sem ordens: respeito de empate.\n\nRenato:\n\n— Cruzeiro e Galo empatados. Notícia rara.\n\n— Guarda a manchete — Robson. — Norman não liga para futebol.\n\n— Norman liga para três Pokémon bem treinados. Vai ver os seus.\n\n## Cena Final\n\nÀ noite, Ninetales iluminou o acampamento sem fogueira.\n\nBlaziken dormiu de pé, como sentinela.\n\nO ovo de Renato tremeu uma vez — quase.\n\n— Logo — Renato tocou a casca. — Espera o Contest do Drew acabar pra nascer com drama.\n\nRobson olhou Petalburg no mapa.\n\nNorman.\n\nQuatro insígnias cumpridas.\n\nInsígnia Equilíbrio pela frente.\n\nLucario:\n\n— Eu fico fora. Você sabe.\n\n— Eu sei.\n\nO céu estava limpo.\n\nAzul-escuro.\n\nAlém dele, o ginásio do pai da May — e do juiz das quatro insígnias — esperava.\n\nNinetales andou na frente o resto do dia, nove caudas como bandeira sem hastes.\n\nBlaziken ficou atrás, medindo distância de rival.\n\nEmpate também é promessa de revanche — os dois sabiam.\n\n## CONTINUA…\n",
+"144": "EPISÓDIO 144\nNorman! Insígnia Equilíbrio!\n\nPetalburg parecia menor e maior ao mesmo tempo.\n\nA casa de May ao longe.\n\nO ginásio no centro.\n\nAsh já estava na porta, Insígnia Calor nova no estojo.\n\n— Eu batalho com o Norman outro dia — disse, como ritual. — Hoje é você. Quatro insígnias. Ele vai cobrar.\n\nMay e Max acenaram da arquibancada interna.\n\nBrock com marmita.\n\nO grupo antigo assistia; o grupo novo lutava.\n\nRobson entrou sem Lucario no cinto de batalha — a Poké Bola do Lucario ficou com Renato, à vista, pacto visível.\n\n## O desafio\n\nNorman cruzou os braços.\n\n— Quatro insígnias. Cumpriu. Três contra três. Sem atalhos.\n\n— Mightyena! — Robson.\n\nNorman: — Slaking!\n\nO gigante preguiçoso abriu um olho.\n\nMightyena uivou e usou Presa de Gelo; Slaking respondeu com Pancada Giga brutal.\n\nMightyena rolou, teimoso, cravou ainda assim uma Presa na perna — dano, não nocaute.\n\nSlaking usou Pancada Giga e tirou Mightyena.\n\n— Vibrava!\n\n## Vibrava\n\nVibrava zumbia, Ultrassom irritando Slaking no turno lento de descanso.\n\n— Mordida! Areia!\n\nSlaking errou o golpe seguinte, confuso, e Vibrava aproveitou para Dragão? — ainda jovem demais; manteve Mordida e investir.\n\nNorman trocou para Vigoroth.\n\nRápido.\n\nFurioso.\n\nVibrava levou Cortador e caiu.\n\n— Ninetales!\n\n## Ninetales fecha\n\nNove caudas azuladas abriram.\n\nVigoroth avançou; Ninetales usou Esfera de Sombra e depois Hipnose curta.\n\nVigoroth cambaleou.\n\n— Brasa! caudas em sequência!\n\nO fogo azulado fechou.\n\nVigoroth fora.\n\nNorman: — Spinda!\n\nA dança confusa desviou a primeira Brasa.\n\nRobson:\n\n— Para. Observa. Agora cauda no chão — poeira! Brasa no meio!\n\nO ritmo de Spinda quebrou.\n\nBrasa final.\n\nSpinda fora.\n\nNorman não sorriu logo — mediu.\n\nDepois sorriu de verdade.\n\n— Vitória de Robson. Insígnia Equilíbrio.\n\n## Insígnia\n\nA Insígnia Equilíbrio veio fria na palma, contraste com a Calor.\n\nCinco de Hoenn.\n\nNorman:\n\n— Você voltou sem o Lucario no campo. Isso vale mais que o placar.\n\nLucario, do corrimão, falou só para Robson:\n\n— Ele viu.\n\nAsh gritou.\n\nMay torceu contra a vontade.\n\nMax explicou a alguém o tipo de cada golpe.\n\nRenato:\n\n— Cinco. Tá ficando sério.\n\nWally olhava Norman como quem media o próprio pai, em silêncio.\n\n## Arquibancada\n\nMay desceu só para ver a Insígnia Equilíbrio de perto.\n\n— Papai sorriu. Ele quase não sorri no ginásio.\n\n— Eu vi.\n\nMax: — Slaking é injusto.\n\n— Por isso existe Vibrava — Robson.\n\nBrock ofereceu sopa. Lucario aceitou o cheiro e recusou a colher.\n\nFora, o pai de Wally já era assunto de telefonema — Norman não mentia.\n\n## Cena Final\n\nFora do ginásio, Norman falou baixo:\n\n— Seu amigo Wally... o pai dele me ligou. Quer ver o menino batalhar.\n\nRobson endureceu.\n\n— Se for pra humilhar...\n\n— Não sei a intenção. Só aviso.\n\nNinetales caminhou ao lado de Robson, caudas no vento de Petalburg.\n\nO equilíbrio da insígnia não era só metal.\n\nEra o pacto cumprido mais um dia.\n\nE a próxima luta, talvez, não fosse dele.\n\nNo jardim do ginásio, Norman falou de May sem pieguice:\n\n— Ela vai cobrar você no Contest mais do que eu cobrei aqui.\n\n— Eu conto com isso.\n\nA Insígnia Equilíbrio bateu no estojo com as outras quatro. Cinco.\n\nFora, Gallade ainda não existia, mas o Kirlia de Wally tremeu como quem sentia o pai no ar da cidade.\n\nRobson:\n\n— Se ele aparecer, a escolha é sua.\n\n— Eu sei.\n\n## CONTINUA…\n",
+"145": "EPISÓDIO 145\nGallade! O Pai de Wally!\n\nO pai de Wally apareceu na praça de Petalburg no fim da tarde.\n\nMesmo casaco.\n\nMesmo Zangoose no ombro da memória — agora fora da bola, atento.\n\n— Eu quero ver o quanto você cresceu — disse, sem abraço. — Batalha. Um contra um. Depois eu decido se essa viagem continua fazendo sentido.\n\nRobson deu um passo à frente.\n\n— Ele não precisa provar...\n\nWally ergueu a mão, tremendo e firme.\n\n— Robson. Eu preciso fazer isso eu mesmo.\n\nO silêncio do grupo respeitou.\n\nRenato puxou Robson pelo braço para trás.\n\n— Deixa. É dele.\n\n## A batalha\n\n— Kirlia! — Wally.\n\nO pai: — Zangoose!\n\nGarra. Fúria.\n\nKirlia Teleportou, Confusão, quase caiu no segundo golpe.\n\nWally ajoelhou no nível do parceiro.\n\n— Eu te ouço. Se você pedir...\n\nNo meio do campo, Kirlia olhou a Dawn Stone no bolso de Wally — o menino sentiu o pedido na pele, como Robson sente Aura.\n\n— Você quer?\n\nKirlia assentiu.\n\nWally ergueu a Pedra da Aurora.\n\nA luz foi branca e verde.\n\nQuando baixou, lâminas nos braços.\n\nPostura de cavalheiro guerreiro.\n\n— Gallade!\n\n## Vitória\n\nGallade cruzou as lâminas.\n\nZangoose avançou; Gallade usou Corte-Psíquico e depois Finta limpa.\n\nO pai ordenou Fúria Máxima; Gallade aguardou, Detectou, e fechou com um Golpe Focalizado que derrubou Zangoose de costas.\n\n— Zangoose fora — murmurou Renato, juiz oficioso.\n\nO pai ficou em silêncio longo.\n\nDepois recolheu Zangoose com cuidado que Wally nunca tinha visto na praça.\n\n— Você... não é o menino que eu deixei.\n\n— Eu ainda canso. Ainda tremo. Mas eu não volto atrás.\n\nO pai pôs a mão na cabeça dele, breve.\n\n— Continua. E me manda notícia. Sem mentira.\n\nFoi embora antes do abraço completo — orgulho antigo demais para aprender em um dia.\n\n## Depois\n\nGallade ajoelhou diante de Wally, lâminas recolhidas.\n\nWally chorou rindo.\n\n— Obrigado.\n\nRobson apertou o ombro do amigo.\n\n— Você fez sozinho.\n\n— Vocês me trouxeram até aqui. Isso não é sozinho.\n\nLucario:\n\n— A Aura dele abriu. De verdade.\n\nNinetales observou Gallade com respeito de quem reconhece outra elegância.\n\nBlaziken grudou o ombro em Samurott, como quem dizia que o time de Renato também precisava evoluir emoção.\n\n## Telefone\n\nRobson ligou para Norman depois, curto:\n\n— Ele venceu. O pai viu.\n\n— Eu soube — Norman. — Obrigado por não entrar no meio.\n\nGallade, ao fundo, cortava folhas à altura exata.\n\nRenato:\n\n— Agora falta você nascer, ovo. Pressão boa.\n\nO ovo não respondeu.\n\nPetalburg preparava luzes de Contest.\n\n## Cena Final\n\nÀ noite, Gallade treinou cortes no ar sem acertar nenhuma folha — precisão.\n\nWally dormiu cedo, exausto de coragem.\n\nRobson olhou a Insígnia Equilíbrio e a próxima fita no mapa: Contest em Petalburg, Drew no caminho.\n\n— Vibrava — murmurou. — Quer palco?\n\nVibrava zumbiu do lado de fora da barraca, acordado, pronto.\n\nO pai de Wally já era só luz de janela distante.\n\nA viagem, agora, tinha um guerreiro a mais.\n\nGallade e o Kirlia de Robson treinaram lado a lado ao crepúsculo — lâmina e confusão, sem ciúme.\n\nWally:\n\n— Um dia a sua também escolhe forma.\n\n— Um dia — Robson. — Sem pressa.\n\nMay mandou mensagem:\n\n\"Soube do Gallade. Conta depois. Pai está orgulhoso de você também, Robson — ele não fala, mas eu traduzi.\"\n\nRobson não respondeu com texto. Só com um polegar no PokéNav.\n\n## CONTINUA…\n",
+"146": "EPISÓDIO 146\nTerceira Fita! Vibrava Contra Drew!\n\nO Contest de Petalburg encheu o teatro da cidade.\n\nDrew no corredor, Butterfree e Roselia prontos, cabelo impecável.\n\n— Sem Lucario. Sem Kirlia no palco? Vai de inseto de areia?\n\n— Vibrava — Robson. — E ele não é inseto.\n\n— Dragão jovem. Veremos.\n\nMay na arquibancada, já fora da chave daquele dia — veio torcer e espionar.\n\nAsh e Brock também; Max com placa feita à mão.\n\nWally com Gallade fora, os dois aprendendo a ser vistos.\n\n## Apresentação\n\nVibrava no holofote.\n\n— Ultrassom! Desenha!\n\nO som virou ondas visíveis na fumaça leve do palco.\n\n— Areia! Em espiral!\n\n— Mordida no ar — estalo de ritmo!\n\nA plateia sentiu no peito o zumbido.\n\nDrew, na apresentação dele, fez Roselia chover Pétalas e Raio Solar em vitral — belo, clássico, ameaçador.\n\nOs dois nas semifinais sem susto.\n\n## Semifinal e final\n\nRobson passou por um coordenador de Slaking dançante — Vibrava não deixou o ritmo inimigo colar.\n\nFinal: Drew.\n\nRoselia × Vibrava.\n\nCronômetro.\n\nDrew:\n\n— Pó Venenoso! Folha Mágica!\n\nRobson:\n\n— Ultrassom! Quebra o ritmo! Areia pra cima!\n\nAs folhas mágicas perderam curva.\n\n— Mordida!\n\nRoselia usou Dança das Pétalas e recuperou pontos de imagem.\n\nFaltava meio minuto.\n\nDrew:\n\n— Raio Solar!\n\nRobson:\n\n— Vibrava! Sobe! Zumbido no ouvido do golpe!\n\nO Raio Solar saiu torto um palmo.\n\nVibrava cruzou o feixe com Areia brilhante — imagem alta, impacto controlado.\n\nCronômetro zero.\n\nPlacar:\n\nRobson — 81\n\nDrew — 79\n\n## Terceira fita\n\n— Vencedor: Robson Ketchum!\n\nA Fita de Petalburg.\n\nTerceira de Hoenn.\n\nDrew apertou a mão, aperto frio.\n\n— Sem Lucario. Uma vitória. O Festival ainda é meu horizonte.\n\n— O meu também — Robson.\n\nMay gritou o nome dele sem disfarçar.\n\nAsh: — Três fitas! Cinco insígnias! Monstro!\n\nRenato não ouviu o fim do elogio.\n\n— O ovo! O ovo está rachando!\n\n## Snorunt\n\nNo corredor de atletas, o ovo abriu sob a toalha.\n\nLuz fria.\n\nUm Snorunt piscou, redondo, tímido, e abraçou a canela de Renato.\n\n— Snorunt! — Wally.\n\nRenato ajoelhou, voz grossa de emoção mal escondida:\n\n— Ei. Você atrasou o discurso do Drew. Eu aprovo.\n\nSnorunt balançou o corpo.\n\nCacnea quis abraçar; Medicham desviou as agulhas a tempo.\n\nTime de Renato: Samurott, Blaziken, Marill, Medicham, Cacnea, Snorunt.\n\nSeis.\n\nCheio.\n\n## Contagem\n\nNo hotel, Robson alinhou fitas: Dewford, Lavaridge, Petalburg.\n\nTrês.\n\nInsígnias: Pedra, Soco, Dínamo, Calor, Equilíbrio.\n\nCinco.\n\nKirlia dele encostou a cabeça na mão dele.\n\n— Eu não te troquei por Vibrava. Eu escolhi o que o palco pediu.\n\nEla fechou os olhos, em paz.\n\nSnorunt aprendeu a dizer não com a cabeça quando Cacnea se aproximava demais — primeiro limite, primeiro carinho.\n\n## Cena Final\n\nRobson guardou a terceira fita ao lado das outras.\n\nKirlia dele — ainda Kirlia — observou Vibrava no colo da vitória sem ciúme: só paciência.\n\n— Sua vez vem — Robson disse a ela.\n\nEla assentiu.\n\nFora, rumores de uma cidade tecnológica no norte — LaRousse — e de luzes estranhas no céu.\n\nAsh já falava em visitar.\n\nO grupo de três olhou o mapa e o céu.\n\nAlém do azul, algo roxo começava a nascer longe.\n\nDrew mandou um bilhete curto no dia seguinte:\n\n\"Três fitas. Ainda sem Lucario. Continue. Eu odeio admitir interesse.\"\n\nRobson guardou o bilhete no mesmo bolso da Pedra do Fogo vazia — já usada.\n\n## CONTINUA…\n",
+"147": "EPISÓDIO 147\nLaRousse! O Menino que Tinha Medo!\n\nA cidade de LaRousse brilhava como máquina viva.\n\nPontes.\n\nRobôs em bloco.\n\nTorre de batalha no centro.\n\nAsh encontrou Robson, Renato e Wally na estação: os caminhos se cruzaram de novo sem desfazer a separação do Festival.\n\n— Vocês vieram! — Ash. — Aqui a gente luta em dupla na torre!\n\nMay, Max e Brock vinham atrás, malas e mapa.\n\nPikachu correu até Lucario; os dois se tocaram de leve, saudação antiga.\n\n## Tory\n\nNa fila da Torre de Batalha, um menino de cabelo claro recuou quando Pikachu se aproximou.\n\n— Não... não chega perto.\n\nAsh:\n\n— Ei, Pokémon não morde de graça.\n\nO menino — Tory — balançou a cabeça.\n\n— Eu... tenho medo. Desde pequeno. Desde a neve. Desde os Walrein correndo.\n\nMax abriu o folheto:\n\n— Quatro anos atrás houve um acidente de pesquisa no gelo. Um meteoro. Um Pokémon do céu.\n\nRobson sentiu a Aura de Tory: nó apertado, não maldade.\n\n— A gente não força — disse. — Mas se quiser, a gente fica perto sem encostar.\n\nTory olhou Ninetales Shiny e quase sorriu — depois recuou do Brilho das caudas.\n\n## Torre\n\nMesmo assim, Ash puxou Tory para uma batalha em dupla contra dois rivais locais.\n\nTory acabou com o Torkoal de Ash nas mãos, sem saber ordem.\n\nPerderam.\n\nTory fugiu correndo.\n\nParou só quando um Minun estava preso numa lata: sem pensar, abriu a lata, salvou o elétrico, e tremeu depois.\n\n— Eu... não sei por que fiz isso.\n\n— Porque você não é só medo — Wally falou, Gallade atrás dele como sombra gentil. — Eu também tremo.\n\n## Aurora roxa\n\nÀ noite, o céu de LaRousse ganhou uma aurora roxa.\n\nNão era festa.\n\nLucario endureceu.\n\n— Algo grande. De fora. Procurando.\n\nSteven não estava ali — ainda.\n\nMas no laboratório alto da cidade, o pai de Tory e a pesquisadora Yuko observavam um cristal verde sob vidro.\n\nDeoxys — ainda sem nome na boca do grupo — já vinha pelo céu.\n\nRenato:\n\n— Eu odeio quando o céu muda de cor sem avisar.\n\nSnorunt escondeu-se atrás da perna dele.\n\nBlaziken abriu o fogo do peito, pronto.\n\n## Noite de chegada\n\nSteven mandou mensagem a Robson sem contexto:\n\n\"Se o céu mudar de cor, não lute sozinho.\"\n\nRobson mostrou a Renato.\n\n— Ele sabe de alguma coisa.\n\n— Ele sempre sabe. Chato.\n\nTory, da janela do hotel, olhou Pikachu de longe e não fechou a cortina.\n\nProgresso miúdo.\n\nA aurora ainda não tinha nascido — mas o ar já coçava.\n\n## Cena Final\n\nRobson olhou as luzes da cidade e o medo de Tory no mesmo quadro.\n\nAsh:\n\n— A gente ajuda ele. E descobre o que é isso.\n\nMay:\n\n— Sem herói solo.\n\nBrock:\n\n— Sem estômago vazio. Comam.\n\nO grupo — misturado de novo por uma emergência — olhou a aurora.\n\nAlém do azul antigo, o violeta novo pulsava como coração alienígena.\n\nNa Torre, antes da aurora, Lucario disse a Pikachu:\n\n— Se o céu quebrar, você ilumina o chão.\n\nPikachu respondeu com um choque miúdo de concordância.\n\nTory ouviu e não entendeu as palavras — só o tom.\n\nRenato, olhando os robôs:\n\n— Se um desses pedir MuMu, eu desisto de Hoenn.\n\nSnorunt gelou o copo dele em resposta. Quase elogio.\n\n## CONTINUA…\n",
+"148": "EPISÓDIO 148\nDeoxys! A Cidade em Barreira!\n\nA aurora roxa desceu.\n\nUma forma abriu asas de cristal e luz: Deoxys.\n\nNão atacou pessoas de imediato — afastou, moveu, carregou cidadãos em bolhas de energia para limpar o caminho da busca.\n\nBusca pelo cristal verde.\n\nRobôs de bloco da cidade falharam o protocolo e começaram a empilhar erros.\n\nBarreira no céu.\n\nLaRousse virou labirinto.\n\n## Separação\n\nMay, Max e Snorunt ficaram com Yuko num abrigo baixo.\n\nAsh, Tory, Robson, Renato, Wally e Brock correram para a torre de controle.\n\nPikachu, Lucario, Swampert, Blaziken, Gallade, Forretress: linha de frente contra robôs enlouquecidos.\n\n— Aura Esférica! — Robson.\n\n— Raio! — Ash.\n\n— Chute de Fogo! — Renato.\n\n— Corte-Psíquico! — Wally.\n\nBrock: — Espinhos! Segura o corredor!\n\nTory, no meio, ainda recuava dos Pokémon — até Plusle e Minun se agarrarem nele pedindo ajuda.\n\nEle não jogou fora.\n\nSegurou.\n\n## Rayquaza\n\nO céu rachou de novo.\n\nVerde.\n\nLongo.\n\nFúria de ozônio.\n\nRayquaza desceu como sentença, vendo Deoxys como invasor.\n\nA luta dos dois lendários quebrou vidros e pontes.\n\nDeoxys clonou imagens de si; Rayquaza varreu com Hiper Raio.\n\nLucario:\n\n— Se eles continuarem, a cidade cai.\n\nRobson:\n\n— Então a gente segura o chão. Eles que fiquem com o céu — por enquanto.\n\nSwampert ergueu muralha de lama nas avenidas rachadas.\n\nVibrava zumbia alertas.\n\nNinetales iluminou rotas de fuga com fogo azulado sem queimar civis.\n\n## O cristal\n\nNo laboratório, o pai de Tory gritou no rádio: o cristal verde reagia à aurora.\n\nEra... outro.\n\nOutro Deoxys, adormecido em gema.\n\nTory ouviu.\n\n— Eu preciso ir. Eu preciso ver.\n\nAsh:\n\n— A gente vai junto.\n\nRenato:\n\n— Claro. Quem fica de fora dessa?\n\nWally:\n\n— Gallade cobre a retaguarda.\n\nA barreira latejou.\n\nRobôs mais agressivos.\n\nA cidade pediu fôlego.\n\n## Abrigo\n\nNo abrigo, May contava histórias baixas para crianças assustadas.\n\nMax corrigia nomes de Pokémon nos desenhos delas.\n\nSnorunt fez gelo no copo de um menino; o menino riu.\n\nRenato, no rádio, coordenava com Steven Stone à distância — o Campeão de metal tinha sentido a barreira e vinha, mas tarde demais para o primeiro impacto.\n\n— A gente segura — Renato. — Vocês chegam e fazem pose.\n\n## Cena Final\n\nDo alto de uma ponte partida, Robson e Ash olharam Deoxys e Rayquaza se chocando.\n\n— Parece a gente — Ash riu sem graça. — Brigando no mesmo céu.\n\n— A gente para — Robson. — Eles ainda não.\n\nTory, atrás, segurou Plusle e Minun com as duas mãos.\n\nO medo continuava.\n\nMas os pés não corriam mais para longe.\n\nCorreram para o laboratório.\n\nRobson gritou para Latias sem a ver ainda — só a Aura:\n\n— Se estiver ouvindo, a gente não é caçador.\n\nA barreira latejou, alheia.\n\nDeoxys passou alto, buscando o verde.\n\nWally cobriu uma criança com o corpo quando um robô caiu perto.\n\nGallade desviou o resto.\n\n— Eu ainda tremo — confessou. — Mas eu fico.\n\nRobson:\n\n— Isso basta.\n\n## CONTINUA…\n",
+"149": "EPISÓDIO 149\nAurora Verde! Adeus, Deoxys!\n\nO laboratório subterrâneo cheirava a ozônio e café frio.\n\nYuko guiou o grupo até o gerador.\n\nO cristal verde pulsava fraco.\n\n— Precisa de carga — ela. — A cidade está sem energia estável.\n\nPikachu, Plusle e Minun se adiantaram.\n\nTory ajoelhou, tremendo.\n\n— Eu... eu seguro os cabos. Vocês... vocês disparam.\n\nAsh:\n\n— Juntos.\n\nRobson pôs a mão no ombro de Tory.\n\n— Medo pode ficar. Só não manda sozinho.\n\nO Raio, as faíscas gêmeas e a vontade do menino encheram o cristal.\n\nLuz verde explodiu — e o segundo Deoxys despertou, forma de defesa larga, escudo vivo.\n\n## Escudo\n\nNo céu, Rayquaza preparava o fim do primeiro Deoxys.\n\nO Deoxys verde subiu e cruzou o corpo no caminho do Hiper Raio.\n\nA cidade inteira sentiu o impacto.\n\nRobôs, sem freio, empilharam-se numa torre agressiva contra tudo que se movia.\n\n— Agora a gente! — Renato.\n\nBlaziken e Lucario abriram furo na torre.\n\nGallade cortou cabos de controle.\n\nSwampert e Samurott alagaram a base dos robôs.\n\nMightyena e Ninetales flanquearam.\n\nVibrava guiou civis pelo zumbido.\n\nForretress e o Mudkip de Brock fecharam buracos.\n\nAsh e Tory subiram a pilha para desligar o núcleo do robô-chefe.\n\nTory escorregou.\n\nO Deoxys verde o segurou no ar, gentil.\n\nTory, pela primeira vez, não gritou de pânico — gritou obrigado.\n\n## Partida\n\nRayquaza, reconhecendo que não havia invasão de ódio, rugiu baixo e subiu ao ozônio.\n\nOs dois Deoxys — roxo e verde — flutuaram sobre LaRousse.\n\nAuroras trocadas.\n\nAdeus sem língua humana.\n\nTory acenou, Plusle e Minun nos ombros, medo ainda ali, mas menor que a mão erguida.\n\n— Eu... quero tentar. Gostar. Um pouco por dia.\n\nAsh:\n\n— Já começou.\n\n## Despedida na estação\n\nNa manhã limpa, May abraçou Robson rápido.\n\n— Até o próximo Contest.\n\nBrock entregou lanches para a estrada.\n\nMax: — Eu vou escrever sobre Deoxys. Sem errar o nome.\n\nAsh e Robson apertaram as mãos.\n\n— A gente se encontra — Ash.\n\n— Sempre — Robson.\n\nRenato:\n\n— Próxima cidade sem aurora alienígena, por favor.\n\nWally e Gallade olharam o céu azul de novo — só azul.\n\n## Manhã depois\n\nLaRousse amanheceu com técnicos em cada ponte.\n\nTory acompanhou Plusle e Minun até o parque e voltou andando, não correndo.\n\nO pai dele agradeceu o grupo com formalidade quebrada de emoção.\n\nSteven, por fim, apareceu no fim da manhã:\n\n— Bom trabalho. Quando saírem da costa, me procurem. Há outro pedido — este de asas vermelhas.\n\nRobson guardou a frase.\n\n## Cena Final\n\nO trem partiu.\n\nLaRousse ficou para trás, robôs em reparo, cristal vazio, menino aprendendo.\n\nLucario:\n\n— A Aura da cidade afrouxou. Bom sinal.\n\nRobson fechou os olhos.\n\nAlém do céu azul, ainda havia caminhos.\n\nUm deles tinha o cheiro de metal fino de Steven Stone — perto.\n\nMuito perto.\n\nNo trem, Renato dormiu com Snorunt no colo e Blaziken de pé no corredor, incomodando o controlador.\n\n— Pokémon de guarda — Renato mentiu sem abrir o olho.\n\nWally riu no vidro do céu azul recuperado.\n\nAsh, na plataforma:\n\n— Quando o Latios aparecer na sua estrada, me chama.\n\n— Se der tempo — Robson. — Steven já está no caminho.\n\nO trem apitou. LaRousse ficou pequena no vidro.\n\n## CONTINUA…\n",
+"150": "EPISÓDIO 150\nSteven e Latias! O Pedido!\n\nNa costa depois de LaRousse, o mar batia branco.\n\nSteven Stone esperava na pedra alta, Metagross Shiny ao lado como mobília viva.\n\n— Robson. Renato. Wally. Ouvi que vocês fecharam o céu de LaRousse sem quebrar a cidade inteira.\n\n— Tentamos — Robson.\n\nSteven sorriu de lado.\n\n— Eu não vim só por educação. Vim porque ela pediu.\n\nUma luz vermelha atravessou a água.\n\nLatias surgiu, olhos largos, urgência sem palavras demais.\n\nRobson sentiu o pedido na Aura: irmão. Preso. Humanos maus. Jaula.\n\n— Latios — murmurou Steven. — Caçadores. Não são Aqua nem Magma limpos — são piores em ganância curta. Eu sei o esconderijo. Preciso de gente que já falhou para Maxie e mesmo assim voltou.\n\nRenato:\n\n— Que elogio horrível. Topo.\n\nWally:\n\n— Gallade e eu vamos.\n\n## O caminho\n\nSteven liderou pela falésia e pelo vale fechado.\n\nGrunts de preto e equipamento de contenção — não bandana clássica, mas o mesmo desprezo.\n\n— Metagross! — Steven abriu.\n\nRobson: — Lucario! Swampert! Vibrava!\n\nRenato: — Blaziken! Samurott!\n\nWally: — Gallade!\n\nA primeira onda de Grunts caiu rápido.\n\nA segunda trouxe redes elétricas e jaulas portáteis.\n\nMightyena rasgou rede.\n\nNinetales queimou o cabo sem queimar a erva seca ao lado.\n\nSnorunt, pela primeira vez em luta, soltou um Ventania de Gelo torto que mesmo assim ajudou.\n\n## Latias à frente\n\nLatias voava baixo, guiando, às vezes cobrindo o grupo com véu psíquico.\n\nSteven:\n\n— O irmão está no depósito do fundo. Muitos ainda.\n\nUm Grunt gritou:\n\n— Segurem o Metagross! O cliente paga o par!\n\nRaiva limpa no peito de Robson.\n\n— Ninguém paga Aura.\n\nLucario: — Concordamos.\n\nA porta de aço do depósito estava à frente.\n\nAtras dela, um grito abafado de Latios.\n\nLatias bateu as asas, súplica.\n\n## Cliffhanger\n\nGrunts restantes formaram muro: dez, doze Pokémon de uma vez.\n\nSteven:\n\n— Em dupla comigo, Robson. O resto abre as laterais.\n\n— Vibrava! — Robson sentiu o parceiro pedir mais, asas tremendo à beira de algo maior. — Ainda não. Aguenta comigo.\n\nVibrava zumbiu, obediente e faminto de evolução.\n\nRenato queimou a esquerda.\n\nWally cortou a direita.\n\nA porta ainda fechada.\n\nLatios ainda preso.\n\nLatias ainda pedindo.\n\nRobson plantou os pés.\n\n— A gente não para aqui.\n\nO muro de Grunts avançou.\n\nO mar ao longe batia.\n\nO céu, acima, era azul outra vez — e mesmo assim insuficiente para conter o que vinha do outro lado da porta.\n\n## Antes da porta\n\nWally perguntou, baixo:\n\n— Se Vibrava evoluir no meio... a gente celebra depois?\n\n— Depois — Robson. — Agora é Latios.\n\nLatias tocou a testa de Lucario; Aura compartilhada, mapa emocional do depósito.\n\nSteven:\n\n— Caçadores fogem se o troféu sangra. Não deixem Latios se machucar só para abrir jaula.\n\nMightyena rosnou concordância.\n\nO muro de Grunts deu o primeiro passo.\n\nO episódio seguinte já puxava a maçaneta — mas este parou no avanço.\n\n## Cena Final\n\nMetagross brilhou.\n\nLucario juntou Aura.\n\nVibrava abriu as asas no limite.\n\nA batalha para salvar Latios começava de verdade — e a luz de uma evolução possível já coçava o ar, sem ainda estourar.\n\nSteven, baixo, só para Robson:\n\n— Cynthia falou de você. Wallace também. Não estrague o elogio morrendo em depósito.\n\n— Não pretendo.\n\nLatias girou no ar, impaciente e grata ao mesmo tempo.\n\nRenato, enquanto corria:\n\n— Se a gente salvar um lendário, o Atlético ganha moral cósmica.\n\n— O Cruzeiro também — Robson. — Depois a gente discute.\n\nLatias olhou os dois como quem não entendia futebol e mesmo assim confiava.\n\n## CONTINUA…\n"
 };
 
 </script>

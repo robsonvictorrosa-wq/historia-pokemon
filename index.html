@@ -630,6 +630,7 @@ window.STORY_DATA = {
         { nome: "Robson Ketchum", funcao: "Protagonista" },
         { nome: "Renato", funcao: "Companheiro de viagem", desde: 7, ate: 99, obs: "Voltou para Celadon no Ep. 99." },
         { nome: "Eyshila", funcao: "Companheira de viagem", desde: 8, ate: 99, obs: "Foi estagiar no laboratório da avó de Sônia, em Galar, no Ep. 99." },
+        { nome: "Eyshila", funcao: "Companheira de viagem", desde: 124, ate: 130, obs: "Volta de Galar no Ep. 124; parte de novo após o Festival do Milênio (Ep. 130)." },
         { nome: "Wallace", funcao: "Mentor", desde: 11, ate: 14, obs: "Deixou o grupo no Ep. 14, antes de Azaleia." },
         { nome: "Pedro", funcao: "Viajou junto por um tempo", desde: 36, ate: 40, obs: "Aparece com o grupo do Ep. 36 ao 40; o texto não diz quando se separou." },
         { nome: "Richie", funcao: "Viajou junto até a revanche contra Falkner", desde: 59, ate: 60 },
@@ -1287,6 +1288,22 @@ window.STORY_DATA = {
       descricao: "Líder da Equipe Aqua. Em Slateport (Ep. 119), invadiu o porto com Maxie; os dois brigaram entre si e recuaram.",
       pokemon: [],
       primeiraAparicao: 119
+    },
+    {
+      nome: "Wattson",
+      imagem: "",
+      papel: "outro",
+      descricao: "Líder do Ginásio de Mauville, especialista em tipo Elétrico. Perdeu para Ash após sobrecarga do Raikou de metal; empatou 1×1 de Electrike com Robson e entregou a Insígnia Dínamo (Ep. 123).",
+      pokemon: [],
+      primeiraAparicao: 123
+    },
+    {
+      nome: "Tio de Wally",
+      imagem: "",
+      papel: "outro",
+      descricao: "Tio protetor de Wally. Em Mauville (Ep. 122), exigiu que o sobrinho voltasse para casa; após ver Ralts evoluir para Kirlia contra seu Lairon, aceitou a jornada.",
+      pokemon: [],
+      primeiraAparicao: 122
     }
   ],
 
@@ -6319,7 +6336,156 @@ window.STORY_DATA = {
       ],
       proximoObjetivo: "Chegar a Mauville; encontrar o tio de Wally",
       texto: ""
+    },
+
+    {
+      numero: 122,
+      titulo: "O Tio de Wally! Ralts Quebra o Medo!",
+      arco: "Desejo de se tornar o mais forte",
+      local: "Mauville",
+      resumo: "Em Mauville, o tio de Wally exige que ele volte para casa, mesmo com a autorização do pai. Abalado por só ter observado em Slateport, Wally decide enfrentá-lo: Ralts × Lairon. Ralts evolui para Kirlia no meio da luta, mas ainda não basta. O tio vê a mudança e aceita a jornada. Os Kirlia de Robson e Wally se encontram no jardim.",
+      eventos: [
+        "Tio de Wally bloqueia a estação e exige o retorno a Verdanturf.",
+        "Wally hesita; o grupo o apoia; ele decide batalhar.",
+        "Ralts × Lairon: Ralts evolui para Kirlia; usa Confusão e Folha Mágica; ainda não derruba Lairon.",
+        "Wally interrompe para proteger Kirlia; o tio reconhece a mudança e aceita a viagem."
+      ],
+      aparecem: ["Robson Ketchum", "Wally", "Tio de Wally", "Ash Ketchum", "May", "Max", "Brock", "Renato"],
+      times: {
+        "Wally": [
+          {"nome": "Ralts", "golpes": ["Folha Mágica", "Investida"], "nota": "Macho. Evolui para Kirlia contra Lairon."},
+          {"nome": "Kirlia", "golpes": ["Confusão", "Folha Mágica"], "nota": "Evoluiu neste episódio; não venceu Lairon, mas impressionou o tio."}
+        ],
+        "Tio de Wally": [
+          {"nome": "Lairon", "golpes": ["Cabeça de Ferro", "Onda de Trovoada"], "nota": "Venceu o Kirlia de Wally; o tio mesmo assim aceitou a jornada."}
+        ],
+        "Robson Ketchum": [
+          {"nome": "Kirlia", "usado": false, "nota": "Encontrou o Kirlia de Wally no jardim."},
+          {"nome": "Lucario", "usado": false, "nota": "Leu a Aura do tio."},
+          {"nome": "Marshtomp", "usado": false, "nota": "Não batalhou."},
+          {"nome": "Poochyena", "usado": false, "nota": "Não batalhou."},
+          {"nome": "Electrike", "usado": false, "nota": "Não batalhou."}
+        ],
+        "Ash Ketchum": [{"nome": "Pikachu", "usado": false, "nota": "Arquibancada."}, {"nome": "Treecko", "usado": false, "nota": "Não batalhou."}, {"nome": "Taillow", "usado": false, "nota": "Não batalhou."}],
+        "May": [{"nome": "Silcoon", "usado": false, "nota": "Ainda Silcoon (evolui no 123)."}, {"nome": "Torchic", "usado": false, "nota": "Não batalhou."}],
+        "Renato": [{"nome": "Samurott", "usado": false, "nota": "Não batalhou."}, {"nome": "Combusken", "usado": false, "nota": "Não batalhou."}, {"nome": "Azurill", "usado": false, "nota": "Não batalhou."}],
+        "Brock": [{"nome": "Forretress", "usado": false, "nota": "Não batalhou."}]
+      },
+      novosGolpes: [],
+      evolucoes: [{"personagem": "Wally", "de": "Ralts", "para": "Kirlia"}],
+      conquistas: [],
+      marcos: [
+        {"personagem": "Wally", "descricao": "Ralts → Kirlia; tio aceita a jornada", "local": "Mauville"}
+      ],
+      resultados: [
+        {"personagem": "Wally", "evento": "Batalha contra o tio", "resultado": "Derrota no placar; vitória moral (permissão para viajar)"}
+      ],
+      proximoObjetivo: "Ginásio de Wattson; Contest de Mauville",
+      texto: ""
+    },
+    {
+      numero: 123,
+      titulo: "Ginásio de Wattson! Empate Elétrico!",
+      arco: "Desejo de se tornar o mais forte",
+      local: "Mauville (Ginásio)",
+      resumo: "Ash vence Wattson com ajuda involuntária da sobrecarga do Raikou de metal do parque; Wattson desanima, faz amizade com um Electrike e recupera o ânimo. Ao saber que Robson também tem Electrike, desafia 1 contra 1: empate. Wattson entrega a Insígnia Dínamo a Robson. No fim, o Silcoon de May evolui para Beautifly.",
+      eventos: [
+        "Ash × Wattson: vitória de Ash após sobrecarga do Raikou de metal.",
+        "Wattson desanima; faz amizade com Electrike; recupera o ânimo ao entender a sobrecarga.",
+        "Wattson × Robson: Electrike × Electrike; empate (Presa de Fogo / Rajada de Chamas × Faísca / Presa Elétrica).",
+        "Wattson entrega a Insígnia Dínamo a Robson.",
+        "Silcoon de May evolui para Beautifly na rua."
+      ],
+      aparecem: ["Robson Ketchum", "Ash Ketchum", "Wattson", "May", "Max", "Brock", "Renato", "Wally"],
+      times: {
+        "Ash Ketchum": [
+          {"nome": "Pikachu", "golpes": ["Raio"], "nota": "Venceu Wattson após absorver sobrecarga do Raikou de metal."},
+          {"nome": "Treecko", "usado": false, "nota": "Usado na batalha de ginásio (detalhe abreviado)."},
+          {"nome": "Taillow", "usado": false, "nota": "Usado na batalha de ginásio (detalhe abreviado)."}
+        ],
+        "Wattson": [
+          {"nome": "Electrike", "golpes": ["Faísca", "Onda de Trovoada", "Presa Elétrica"], "nota": "Empatou com o Electrike de Robson."},
+          {"nome": "Voltorb", "usado": false, "nota": "Usado contra Ash."},
+          {"nome": "Magneton", "usado": false, "nota": "Usado contra Ash; caiu no Raio sobrecarregado."}
+        ],
+        "Robson Ketchum": [
+          {"nome": "Electrike", "golpes": ["Presa de Fogo", "Rajada de Chamas", "Investida"], "nota": "Empatou com o Electrike de Wattson; Insígnia Dínamo."},
+          {"nome": "Lucario", "usado": false, "nota": "Fora do campo."},
+          {"nome": "Marshtomp", "usado": false, "nota": "Não batalhou."},
+          {"nome": "Kirlia", "usado": false, "nota": "Não batalhou."},
+          {"nome": "Poochyena", "usado": false, "nota": "Não batalhou."}
+        ],
+        "May": [
+          {"nome": "Silcoon", "nota": "Evolui para Beautifly no fim do episódio."},
+          {"nome": "Beautifly", "nota": "Evoluiu de Silcoon antes do Contest de Mauville."},
+          {"nome": "Torchic", "usado": false, "nota": "Não batalhou."}
+        ],
+        "Renato": [{"nome": "Samurott", "usado": false, "nota": "Não batalhou."}, {"nome": "Combusken", "usado": false, "nota": "Não batalhou."}, {"nome": "Azurill", "usado": false, "nota": "Não batalhou."}],
+        "Wally": [{"nome": "Kirlia", "usado": false, "nota": "Não batalhou."}],
+        "Brock": [{"nome": "Forretress", "usado": false, "nota": "Não batalhou."}]
+      },
+      novosGolpes: [],
+      evolucoes: [{"personagem": "May", "de": "Silcoon", "para": "Beautifly"}],
+      conquistas: [
+        {"personagem": "Ash Ketchum", "tipo": "insignia", "nome": "Insígnia Dínamo", "local": "Ginásio de Mauville"},
+        {"personagem": "Robson Ketchum", "tipo": "insignia", "nome": "Insígnia Dínamo", "local": "Ginásio de Mauville"}
+      ],
+      marcos: [
+        {"personagem": "Robson Ketchum", "descricao": "Insígnia Dínamo (empate 1×1 Electrike); 3ª insígnia de Hoenn", "local": "Mauville"},
+        {"personagem": "May", "descricao": "Silcoon → Beautifly", "local": "Mauville"}
+      ],
+      resultados: [
+        {"personagem": "Ash Ketchum", "evento": "Ginásio de Wattson", "resultado": "Vitória"},
+        {"personagem": "Robson Ketchum", "evento": "Electrike × Electrike vs Wattson", "resultado": "Empate (recebe Insígnia Dínamo)"}
+      ],
+      proximoObjetivo: "Contest de Mauville; Festival do Milênio",
+      texto: ""
+    },
+    {
+      numero: 124,
+      titulo: "Eyshila de Volta! Convite ao Festival do Milênio!",
+      arco: "Desejo de se tornar o mais forte",
+      local: "Mauville (Centro Pokémon)",
+      resumo: "Eyshila retorna de Galar com Ambipom (evoluída), Skwovet, Gossifleur e Hatenna. Conta experiências no laboratório da Professora Magnolia e convida o grupo ao Festival do Milênio. Conversando com Robson, confirma que a crise passou. O Contest de Mauville e o festival ficam no horizonte; Ash e Robson já trocam o olhar de uma futura batalha.",
+      eventos: [
+        "Eyshila reencontra o grupo em Mauville.",
+        "Mostra Ambipom, Skwovet, Gossifleur e Hatenna; fala de Galar.",
+        "Convida todos ao Festival do Milênio (Butler).",
+        "Conversa com Robson sobre a crise; cutuca: \"idiota certo\".",
+        "Grupo prepara Contest e festival."
+      ],
+      aparecem: ["Eyshila", "Robson Ketchum", "Ash Ketchum", "Renato", "May", "Max", "Brock", "Wally"],
+      times: {
+        "Eyshila": [
+          {"nome": "Ambipom", "usado": false, "nota": "Evoluída de Aipom em Galar (fora de cena)."},
+          {"nome": "Skwovet", "usado": false, "nota": "Novo."},
+          {"nome": "Gossifleur", "usado": false, "nota": "Novo."},
+          {"nome": "Hatenna", "usado": false, "nota": "Novo."}
+        ],
+        "Robson Ketchum": [
+          {"nome": "Lucario", "usado": false, "nota": "Sentiu a Aura de Eyshila."},
+          {"nome": "Marshtomp", "usado": false, "nota": "Não batalhou."},
+          {"nome": "Kirlia", "usado": false, "nota": "Não batalhou."},
+          {"nome": "Poochyena", "usado": false, "nota": "Não batalhou."},
+          {"nome": "Electrike", "usado": false, "nota": "Não batalhou."}
+        ],
+        "Ash Ketchum": [{"nome": "Pikachu", "usado": false, "nota": "Não batalhou."}, {"nome": "Treecko", "usado": false, "nota": "Não batalhou."}, {"nome": "Taillow", "usado": false, "nota": "Não batalhou."}],
+        "May": [{"nome": "Beautifly", "usado": false, "nota": "Apresentada a Eyshila."}, {"nome": "Torchic", "usado": false, "nota": "Não batalhou."}],
+        "Renato": [{"nome": "Azurill", "usado": false, "nota": "Brigou com Skwovet por fruta."}, {"nome": "Samurott", "usado": false, "nota": "Não batalhou."}, {"nome": "Combusken", "usado": false, "nota": "Não batalhou."}],
+        "Wally": [{"nome": "Kirlia", "usado": false, "nota": "Apresentado a Eyshila."}],
+        "Brock": [{"nome": "Forretress", "usado": false, "nota": "Não batalhou."}]
+      },
+      novosGolpes: [],
+      evolucoes: [],
+      conquistas: [],
+      marcos: [
+        {"personagem": "Eyshila", "descricao": "Retorno de Galar; convite ao Festival do Milênio", "local": "Mauville"}
+      ],
+      resultados: [],
+      proximoObjetivo: "Contest de Mauville; seguir ao Festival do Milênio",
+      texto: ""
     }
+
 
 
 
@@ -6463,7 +6629,10 @@ window.STORY_TEXTS = {
 "118": "EPISÓDIO 118\nAzurill na Praia! A Captura de Renato!\n\nNo dia seguinte à Insígnia Soco, o grupo preparava a volta com o Sr. Briney.\n\nPeeko piava no ombro do senhor.\n\n— Slateport, então? — Briney ajeitou o chapéu. — O barco aguenta.\n\nAntes do porto, a praia ainda tinha uma faixa vazia.\n\nUma bola azul rolava na areia.\n\nParava.\n\nRolava de novo.\n\n— O que é isso? — Max correu.\n\nA bola parou de verdade.\n\nOrelhas redondas.\n\nUma cauda de bola.\n\nOlhos grandes.\n\n— Azurill! — Max abriu o livro. — Bebê. Tipo Normal. Evolui para Marill—\n\n— Max — disse May, mas já sorria.\n\n## O encontro\n\nAzurill tentou subir uma pedra lisa.\n\nEscorregou.\n\nChoramingou.\n\nRenato ajoelhou, a camisa do Atlético manchada de areia.\n\n— Ei. Fácil.\n\nOfereceu a mão.\n\nAzurill olhou desconfiado.\n\nSamurott saiu sozinho da Poké Bola e deitou na areia quente.\n\nA cauda enorme fez sombra fria.\n\nAzurill se aproximou passo a passo.\n\nEncostou a bolinha da cauda no focinho do Samurott.\n\nSamurott bufou baixo, aprovando.\n\n— Ele gosta de você — murmurou Wally.\n\nRenato bufou.\n\n— Ou gosta de sombra.\n\nAsh riu.\n\n— Captura!\n\nBrock observava com o Forretress.\n\n— Calma. Ele ainda tem medo da água funda.\n\n## A corrente\n\nAzurill saiu correndo de repente.\n\nEm direção às ondas pequenas.\n\nUma correntezinha puxou a bolinha da cauda.\n\n— Azurill! — May gritou.\n\nRenato não pensou.\n\n— Samurott! Surfar!\n\nSamurott cortou a água com o golpe novo da tempestade.\n\nPegou Azurill pela cauda, com um cuidado que ninguém esperava do Samurott.\n\nVoltou à areia.\n\nAzurill tremia.\n\nDepois, encostou a cabeça na perna de Renato.\n\nO Torchic no ombro piou, curioso.\n\n— Quer vir comigo? — perguntou Renato, sem piada pela primeira vez.\n\nAzurill balançou a bolinha.\n\nUma vez.\n\nDuas.\n\nRenato lançou a Poké Bola.\n\nUma balançada.\n\nDuas.\n\nTrês.\n\nCLICK!\n\n— Capturado!\n\nAsh bateu palmas.\n\n— Renato pegou um bebê!\n\n— Não é bebê — Renato guardou a bola, orelhas vermelhas. — É parceiro.\n\nRobson sorriu de verdade.\n\n— Ficou bem em você.\n\nLucario falou por Aura só para Robson:\n\n— A Aura dele acalmou. Bom encontro.\n\n## No barco\n\nO Sr. Briney soltou as amarras.\n\nPeeko voou à frente, branco contra o azul.\n\nDewford ficou para trás: o ginásio, a praia, a caverna.\n\nA Insígnia Soco no bolso de Robson.\n\nMarshtomp e Kirlia descansavam nas Poké Balls.\n\nPoochyena farejava o convés, teimoso.\n\nLucario na proa, sentindo o mar.\n\nMay olhava Slateport no mapa.\n\n— Contest lá... talvez eu entre.\n\nRobson lembrou: a primeira fita dela ainda não existia.\n\n— Quando quiser. Eu espero.\n\nWally falou baixo para o Ralts:\n\n— Em Slateport eu... eu quero ser útil.\n\nRenato, no convés, deixou Azurill fora da bola.\n\nA bolinha batia no chão de madeira.\n\nSamurott vigiava.\n\nTorchic dormia no ombro.\n\n## Conversa no porão\n\nAbaixo do convés, Wally confessou a Robson:\n\n— Em Dewford eu só assisti.\n\n— No Contest. No ginásio. Na caverna.\n\n— Em Slateport eu quero fazer alguma coisa.\n\nRobson pôs a mão no ombro dele.\n\n— Você já faz. Você está aqui.\n\nO Ralts de Wally brilhou fraco, como quem concordava.\n\nRenato gritou de cima:\n\n— Almoço! E o Azurill roubou meu pão!\n\nRisadas no barco.\n\nAté Robson riu.\n\n## Cena Final\n\nO barco cortou a água azul.\n\nRobson abriu a mochila.\n\nA mensagem de Steven.\n\nO caminho até o Capitão Stern.\n\nAsh encostou no irmão.\n\n— Depois do ginásio... você tá diferente.\n\n— Renato tem um jeito bruto de cuidar — respondeu Robson.\n\nNo horizonte, a cidade portuária crescia.\n\nGalpões.\n\nGuindastes.\n\nE, sem que soubessem, duas equipes já se moviam nas docas.\n\nAzul.\n\nE vermelho.\n\nAzurill espirrou água na bota de Renato.\n\n— Ótimo — murmurou ele. — Começou.\n\n## CONTINUA…\n",
 "119": "EPISÓDIO 119\nInvasão em Slateport! Aqua, Magma e o Capitão Stern!\n\nSlateport cheirava a peixe, óleo e maré baixa.\n\nRobson apertou a mensagem de Steven.\n\nMay segurou a Poké Bola do Silcoon.\n\n— Eu entro no Contest — disse ela. — Hoje.\n\nAsh ergueu o polegar.\n\n— A gente entrega a carta. Você brilha!\n\nO grupo se dividiu na praça.\n\nMay e Max para o hall do Contest.\n\nRobson, Renato, Wally, Ash, Brock e Lucario para o porto.\n\n## Contest e caos\n\nMay subiu ao palco com Silcoon.\n\nA apresentação foi honesta.\n\nTímida.\n\nBonita.\n\nNas batalhas, chegou longe.\n\nNa final, Drew esperava com Roselia.\n\nDança das Pétalas.\n\nPrecisão.\n\nQuando o cronômetro zerou, a fita foi para Drew.\n\nMay desceu com o peito apertado.\n\n— Ainda não — murmurou. — Mas um dia.\n\nMax apertou a mão dela.\n\nDo lado de fora, gritos.\n\nFumaça azul e vermelha nas docas.\n\n## O porto invadido\n\nEquipe Aqua.\n\nEquipe Magma.\n\nGrunts em todo canto.\n\n— O pacote! O submarino! — gritavam.\n\nLucario avançou.\n\n— Aura suja. Muita.\n\n— Samurott! — Renato.\n\nLucario e Samurott abriram caminho entre os Grunts.\n\nAura Esférica.\n\nSurfar nas poças do cais.\n\nAsh e Pikachu cobriam a retaguarda.\n\nBrock e Forretress seguravam um flanco.\n\nWally ficou atrás, Ralts tremendo, observando tudo.\n\n— Eu... — começou.\n\n— Fica — disse Robson. — Guarda a saída.\n\n## Capitão Stern\n\nNo escritório do porto, o Capitão Stern protegia documentos.\n\nDois Grunts arrebentaram a porta.\n\nUm Aqua.\n\nUm Magma.\n\n— Marshtomp! — Robson.\n\n— Torchic! — Renato.\n\nMarshtomp — já evoluído em Dewford — cuspinhou Revólver d'Água.\n\nTorchic lançou Brasa.\n\nOs Grunts responderam com Carvanha e Poochyena.\n\nA luta apertou.\n\nEntão Torchic brilhou.\n\nLuz de fogo.\n\nCombusken.\n\nChute duplo.\n\nGrito agudo.\n\nMarshtomp segurou o chão molhado e fechou com Investida.\n\nOs Grunts caíram.\n\nRobson entregou a mensagem.\n\n— Steven Stone pediu.\n\nStern leu, pálido.\n\n— Obrigado. Vocês chegaram na hora.\n\n## Chefes\n\nA porta tremeu de novo.\n\nMaxie.\n\nArchie.\n\nVermelho e azul.\n\n— Entreguem o que é nosso — rosnou Maxie.\n\n— O mar manda aqui — respondeu Archie.\n\nLucario e Samurott entraram.\n\nCombusken e Marshtomp ainda ofegantes.\n\nRobson sentiu a Aura.\n\nPesada demais.\n\n— A gente não aguenta os dois — murmurou Renato.\n\nEntão Maxie olhou Archie.\n\nArchie olhou Maxie.\n\n— Seu plano é idiota.\n\n— O seu é pior.\n\nComeçaram a brigar entre si.\n\nGritos.\n\nOrdens cruzadas.\n\nPokémon contra Pokémon das duas equipes.\n\nRobson não perdeu tempo.\n\n— Agora! Marshtomp, Revólver! Combusken, Brasa! Lucario, Aura! Samurott, Surfar!\n\nO escritório virou caos útil.\n\nOs chefes, ocupados demais um com o outro, recuaram sob a pressão juntos dos quatro.\n\n— Isso não acabou! — gritou Archie.\n\n— O Monte Chimney é nosso! — Maxie.\n\nSumiram em direções opostas.\n\n## Wally na saída\n\nWally segurou o Ralts com força.\n\nOs Grunts fugiam pelo cais.\n\nEle deu um passo.\n\nDepois outro.\n\n— Folha Mágica! — quase gritou.\n\nO Ralts lançou folhas fracas demais.\n\nUm Grunt nem olhou.\n\nWally corou.\n\n— Eu... ainda não.\n\nRobson passou correndo e tocou o ombro dele.\n\n— Você ficou. Isso já é muito.\n\n— Da próxima, a gente treina juntos.\n\n\n## Cena Final\n\nNo cais, May chegou correndo, ainda com a derrota no rosto.\n\nViu a fumaça.\n\nViu Combusken novo no ombro de Renato.\n\n— Eu... perdi o Contest.\n\n— E vocês salvaram o porto.\n\nRobson assentiu.\n\n— Se fosse luta limpa contra os dois... a gente não tinha chance.\n\nStern apertou a mão dele.\n\n— Mesmo assim, obrigado.\n\nWally olhou as próprias mãos.\n\n— Eu só observei.\n\n— Da próxima, não — disse Robson.\n\nNo bolso, a Insígnia Soco e a Pedra.\n\nSlateport respirava de novo.\n\nMas as equipes tinham falado em monte.\n\nE em mar.\n\n## CONTINUA…\n",
 "120": "EPISÓDIO 120\nElectrike na Rota! Presa de Fogo!\n\nDepois da invasão, Slateport amanheceu calma demais.\n\nO grupo seguiu a rota para Mauville.\n\nMay caminhava quieta, ainda sem fita.\n\nSilcoon no colo.\n\nRenato deixava Combusken e Azurill fora das bolas, um de cada lado.\n\nAsh falava do próximo ginásio.\n\nWattson.\n\nElétrico.\n\nRobson sentiu um estalo na Aura.\n\n— Para.\n\n## O encontro\n\nNo mato seco, um Electrike eriçado.\n\nPelo amarelo e azul.\n\nFaíscas no focinho.\n\nOlhou o grupo.\n\nRosnou.\n\nAvançou contra Poochyena, que farejava à frente.\n\n— Poochyena, atrás!\n\nElectrike lançou uma faísca.\n\nDepois outra.\n\nO ar cheirou a ozônio.\n\nE, de repente, uma bola de fogo curta estourou do focinho.\n\n— Aquilo foi... — Max engasgou. — Rajada de Chamas?\n\n— Electrike não aprende isso — murmurou Brock. — Ou não deveria.\n\nRobson ajoelhou.\n\n— Calma. A gente não quer te machucar.\n\nElectrike atacou de novo.\n\n## A batalha\n\n— Marshtomp! Tapa de Lama!\n\nA lama apagou parte das faíscas.\n\n— Revólver d'Água!\n\nElectrike desviou.\n\nCorreu em círculo.\n\n— Presa de Fogo! — Max gritou, lendo o brilho nos dentes.\n\nOs dentes de Electrike pegaram fogo curto.\n\nMordida quente no ar, de aviso.\n\nMarshtomp aguardou.\n\n— De novo, lama!\n\nElectrike escorregou.\n\nRobson ergueu a Poké Bola.\n\n— Quer viajar conosco?\n\n— Quero ver essa chama de perto.\n\nElectrike hesitou.\n\nOlhou Lucario.\n\nA Aura limpa.\n\nOlhou Marshtomp, firme.\n\nEntão baixou as orelhas.\n\nRobson lançou.\n\nUma balançada.\n\nDuas.\n\nTrês.\n\nCLICK!\n\n— Capturado!\n\nWally bateu palmas o primeiro.\n\n— Ele... ele escolheu você.\n\nAsh bateu palmas.\n\n— Elétrico! Finalmente alguém no time que não é água nem Aura!\n\n— Eu tenho Combusken — Renato.\n\n— Eu disse no time dele.\n\n## Acampamento\n\nÀ noite, Electrike saiu da bola.\n\nFarejou Poochyena.\n\nOs dois rosnaram.\n\nDepois se cheiraram.\n\nKirlia observou de longe.\n\nMarshtomp trouxe água numa folha.\n\nElectrike cheirou e espirrou uma faísca na água.\n\nVapor.\n\nRenato riu.\n\n— Ótimo. Agora temos um isqueiro com patas.\n\nLucario falou por Aura:\n\n— A chama dele não é natural.\n\n— Mas não é má.\n\n— É dele.\n\nRobson assentiu.\n\n— Rajada de Chamas e Presa de Fogo.\n\n— Vamos treinar os dois.\n\nMay falou baixo:\n\n— Em Mauville tem Contest.\n\n— Eu... eu quero de novo.\n\nRobson olhou o Silcoon.\n\nO casulo tremia de leve, como quem escuta.\n\n— Antes disso, ele pode evoluir. Eu sinto.\n\nMay corou.\n\n— Você não pode sentir isso.\n\n— Posso tentar.\n\nAsh deitou na grama.\n\n— Mauville. Wattson. Pikachu. Eu já estou pronto.\n\nBrock jogou lenha na fogueira.\n\n— Descansa. Elétrico cansa quem não respeita.\n\n## Nome e chama\n\nAsh sugeriu nomes.\n\n— Raio! Faísca! Amarelo!\n\n— Ele não é cachorro de circo — disse Renato.\n\nRobson ajoelhou de novo.\n\n— Electrike. Por enquanto é só Electrike.\n\nA faísca no focinho respondeu, curta.\n\nComo um sim.\n\nBrock falou baixo:\n\n— Rajada de Chamas num Electrike... anota. Isso não está nos livros do Max.\n\nMax já anotava, ofendido.\n\n— Estou anotando!\n\n\n## Cena Final\n\nWally escrevia no caderno.\n\n— Electrike. Slateport. Rota.\n\n— Eu também quero capturar um dia.\n\nRenato jogou uma fruta para Azurill.\n\n— Vai com calma, canela.\n\nAsh já sonhava alto com Wattson.\n\n— Ginásio elétrico! Pikachu vai amar!\n\nRobson olhou as Poké Balls.\n\nLucario.\n\nMarshtomp.\n\nKirlia.\n\nPoochyena.\n\nElectrike.\n\nCinco.\n\nAinda cabia um.\n\nNo mapa, Mauville.\n\nE o tio de Wally, sem que Wally soubesse, já esperava na cidade.\n\n## CONTINUA…\n",
-"121": "EPISÓDIO 121\nLucario × Samurott! O Duelo dos Parceiros!\n\nNa clareira a meio caminho de Mauville, Renato parou.\n\n— Chega de marcha.\n\n— Você. Eu.\n\n— Lucario. Samurott.\n\nAsh arregalou os olhos.\n\n— Sério?\n\n— Sério — disse Renato. — Quero ver se a crise passou de verdade.\n\nRobson tirou a jaqueta.\n\n— Sem ginásio. Sem Contest.\n\n— Liberado.\n\nLucario entrou no claro.\n\nSamurott o enfrentou, conchas erguidas.\n\nMay, Max, Brock, Wally e Ash formaram círculo.\n\nAzurill tremeu atrás de Combusken.\n\n## O duelo\n\n— Velocidade Extrema!\n\nLucario virou traço.\n\n— Surfar!\n\nSamurott ergueu uma onda na terra seca — água da cantil e do golpe, absurda e linda.\n\nLucario atravessou a onda.\n\n— Aura Esférica!\n\nSamurott desviou com Lâmina de Concha.\n\nO corte riscou o tronco atrás.\n\n— Megachifre!\n\nLucario segurou com os braços.\n\nEscorregou.\n\n— Soco de Gelo!\n\nO gelo grudou na concha.\n\nSamurott bufou.\n\n— Hidro Canhão!\n\nO jato empurrou Lucario para trás.\n\nRobson limpou o suor.\n\n— De novo! Velocidade e Aura!\n\n## Virada\n\nOs dois golpes saíram juntos.\n\nSamurott plantou as patas.\n\nAguentou.\n\n— Aqua Míssil!\n\nRajadas curtas.\n\nLucario dançou entre elas.\n\nA Aura dele latejou — pulsou — firme.\n\n— Palma da Força!\n\nO soco interno acertou o peito do Samurott.\n\nSamurott cambaleou.\n\n— Lâmina de Concha! Tudo!\n\nA lâmina desceu.\n\nLucario cruzou os braços.\n\nAguentou.\n\nRespondeu com Aura Esférica de perto.\n\nQuando a fumaça baixou, Samurott estava de joelho.\n\nLucario ainda de pé, ofegante.\n\n— Samurott fora!\n\n— Vitória de Robson!\n\n## Depois\n\nRenato recolheu Samurott com um meio sorriso.\n\n— Tá. Passou.\n\n— A crise.\n\nAsh gritou demais.\n\n— Esse duelo foi incrível!\n\nBrock assentiu.\n\n— Os dois estão mais fortes que em Johto.\n\nWally apertou o Ralts.\n\n— Um dia eu também quero um duelo assim.\n\n— Sem medo.\n\nMay olhou Robson.\n\n— Você sorriu no meio da luta.\n\n— Foi? — Robson tocou o peito. — Talvez.\n\nLucario falou só para ele:\n\n— O Samurott respeita você.\n\n— Eu também o respeito.\n\nCombusken trouxe um graveto em chamas para a fogueira nova.\n\nAzurill tentou apagar com a cauda e se molhou inteiro.\n\nRenato jogou uma fruta.\n\n— Menos Aura, mais almoço.\n\n— Mauville tá logo ali.\n\n## Placar interno\n\nRenato falou andando:\n\n— Johto: eu te venci uma vez.\n\n— Hoenn: você me deve essa.\n\n— Próxima é 3 contra 3. Sem desculpa de Aura.\n\nRobson aceitou.\n\n— Combinado.\n\nMay sussurrou para Max:\n\n— Eles são assim desde sempre?\n\n— Desde sempre — confirmou Ash, orgulhoso e cansado.\n\n\n## Respiração\n\nOs dois treinadores se sentaram na raiz da árvore.\n\nSem discurso longo.\n\nSó água.\n\nSó o barulho do bosque.\n\n— Obrigado — disse Robson.\n\n— Pelo quê?\n\n— Por me chamar de idiota na praia.\n\n— E por hoje.\n\nRenato olhou embora.\n\n— Não acostuma.\n\n## Cena Final\n\nNo acampamento, Electrike treinou Presa de Fogo num tronco.\n\nPoochyena imitou, com Presa de Gelo.\n\nOs dois quase brigaram.\n\nKirlia os separou com um olhar.\n\nRobson contou as insígnias.\n\nPedra.\n\nSoco.\n\nFaltavam duas para Norman.\n\nE a mensagem a Stern já estava entregue.\n\nRestava a cidade dos elétricos.\n\nE o Contest que May queria de novo.\n\nNo céu, nuvens baixas.\n\nMauville esperava.\n\nCom um tio teimoso na estação.\n\n## CONTINUA…\n"
+"121": "EPISÓDIO 121\nLucario × Samurott! O Duelo dos Parceiros!\n\nNa clareira a meio caminho de Mauville, Renato parou.\n\n— Chega de marcha.\n\n— Você. Eu.\n\n— Lucario. Samurott.\n\nAsh arregalou os olhos.\n\n— Sério?\n\n— Sério — disse Renato. — Quero ver se a crise passou de verdade.\n\nRobson tirou a jaqueta.\n\n— Sem ginásio. Sem Contest.\n\n— Liberado.\n\nLucario entrou no claro.\n\nSamurott o enfrentou, conchas erguidas.\n\nMay, Max, Brock, Wally e Ash formaram círculo.\n\nAzurill tremeu atrás de Combusken.\n\n## O duelo\n\n— Velocidade Extrema!\n\nLucario virou traço.\n\n— Surfar!\n\nSamurott ergueu uma onda na terra seca — água da cantil e do golpe, absurda e linda.\n\nLucario atravessou a onda.\n\n— Aura Esférica!\n\nSamurott desviou com Lâmina de Concha.\n\nO corte riscou o tronco atrás.\n\n— Megachifre!\n\nLucario segurou com os braços.\n\nEscorregou.\n\n— Soco de Gelo!\n\nO gelo grudou na concha.\n\nSamurott bufou.\n\n— Hidro Canhão!\n\nO jato empurrou Lucario para trás.\n\nRobson limpou o suor.\n\n— De novo! Velocidade e Aura!\n\n## Virada\n\nOs dois golpes saíram juntos.\n\nSamurott plantou as patas.\n\nAguentou.\n\n— Aqua Míssil!\n\nRajadas curtas.\n\nLucario dançou entre elas.\n\nA Aura dele latejou — pulsou — firme.\n\n— Palma da Força!\n\nO soco interno acertou o peito do Samurott.\n\nSamurott cambaleou.\n\n— Lâmina de Concha! Tudo!\n\nA lâmina desceu.\n\nLucario cruzou os braços.\n\nAguentou.\n\nRespondeu com Aura Esférica de perto.\n\nQuando a fumaça baixou, Samurott estava de joelho.\n\nLucario ainda de pé, ofegante.\n\n— Samurott fora!\n\n— Vitória de Robson!\n\n## Depois\n\nRenato recolheu Samurott com um meio sorriso.\n\n— Tá. Passou.\n\n— A crise.\n\nAsh gritou demais.\n\n— Esse duelo foi incrível!\n\nBrock assentiu.\n\n— Os dois estão mais fortes que em Johto.\n\nWally apertou o Ralts.\n\n— Um dia eu também quero um duelo assim.\n\n— Sem medo.\n\nMay olhou Robson.\n\n— Você sorriu no meio da luta.\n\n— Foi? — Robson tocou o peito. — Talvez.\n\nLucario falou só para ele:\n\n— O Samurott respeita você.\n\n— Eu também o respeito.\n\nCombusken trouxe um graveto em chamas para a fogueira nova.\n\nAzurill tentou apagar com a cauda e se molhou inteiro.\n\nRenato jogou uma fruta.\n\n— Menos Aura, mais almoço.\n\n— Mauville tá logo ali.\n\n## Placar interno\n\nRenato falou andando:\n\n— Johto: eu te venci uma vez.\n\n— Hoenn: você me deve essa.\n\n— Próxima é 3 contra 3. Sem desculpa de Aura.\n\nRobson aceitou.\n\n— Combinado.\n\nMay sussurrou para Max:\n\n— Eles são assim desde sempre?\n\n— Desde sempre — confirmou Ash, orgulhoso e cansado.\n\n\n## Respiração\n\nOs dois treinadores se sentaram na raiz da árvore.\n\nSem discurso longo.\n\nSó água.\n\nSó o barulho do bosque.\n\n— Obrigado — disse Robson.\n\n— Pelo quê?\n\n— Por me chamar de idiota na praia.\n\n— E por hoje.\n\nRenato olhou embora.\n\n— Não acostuma.\n\n## Cena Final\n\nNo acampamento, Electrike treinou Presa de Fogo num tronco.\n\nPoochyena imitou, com Presa de Gelo.\n\nOs dois quase brigaram.\n\nKirlia os separou com um olhar.\n\nRobson contou as insígnias.\n\nPedra.\n\nSoco.\n\nFaltavam duas para Norman.\n\nE a mensagem a Stern já estava entregue.\n\nRestava a cidade dos elétricos.\n\nE o Contest que May queria de novo.\n\nNo céu, nuvens baixas.\n\nMauville esperava.\n\nCom um tio teimoso na estação.\n\n## CONTINUA…\n",
+"122": "EPISÓDIO 122\nO Tio de Wally! Ralts Quebra o Medo!\n\nMauville brilhava com fios e placas elétricas.\n\nO grupo desceu na estação, ainda com cheiro de mar de Slateport.\n\nNa saída, um homem de terno curto e expressão fechada bloqueou o caminho.\n\nOlhou só para Wally.\n\n— Você. Para casa.\n\nWally empalideceu.\n\n— Tio...\n\n— Seu pai pode ter aceitado essa viagem absurda.\n\n— Eu não aceito.\n\n— Você é frágil. Não aguenta Hoenn.\n\nAsh deu um passo.\n\n— Ele aguenta sim!\n\nO tio nem olhou.\n\n— Quem pediu opinião?\n\nRobson pôs a mão no ombro de Ash.\n\nLucario sentiu a Aura do homem: dura, assustada, protetora do jeito errado.\n\n## A dúvida\n\nNo hotel, Wally sentou na cama.\n\nO Ralts no colo.\n\n— Em Slateport eu só observei.\n\n— Os Grunts. Os chefes.\n\n— Eu tremi.\n\nMay sentou na ponta da cama.\n\n— Eu também tremi no Contest.\n\n— E mesmo assim subi.\n\nRenato, na porta, seco:\n\n— Para de ensaiar desculpa. Vai lá e luta.\n\nMax abriu a boca.\n\nFechou.\n\nBrock falou baixo:\n\n— Seu tio tem medo. Não de Hoenn. De te perder.\n\nWally olhou o Ralts.\n\nO Ralts olhou de volta.\n\nO chifre brilhou fraco.\n\n— Eu... eu enfrento ele.\n\nRobson assentiu.\n\n— A gente fica na arquibancada. Mas a luta é sua.\n\n## Ralts × Lairon\n\nNa praça sob os fios, o tio lançou a Poké Bola.\n\n— Lairon!\n\nAço e pedra.\n\nPesado.\n\nOlhar de trem.\n\n— Ralts!\n\n— Folha Mágica!\n\nAs folhas bateram no metal.\n\nLairon mal se mexeu.\n\n— Investida!\n\nLairon respondeu com Cabeça de Ferro.\n\nRalts voou para trás.\n\nA plateia improvisada — o grupo inteiro — prendeu a respiração.\n\nWally correu até o parceiro.\n\n— Aguenta. Por favor.\n\n— Eu preciso de você.\n\nRalts levantou.\n\nAs perninhas tremeram.\n\nO chifre brilhou forte.\n\nLuz branca-verde.\n\nQuando baixou, Kirlia.\n\nMacho.\n\nPassos mais longos.\n\nOlhar novo.\n\n— Kirlia! — Max gritou.\n\nAsh bateu palmas.\n\n— Isso!\n\n— Confusão!\n\nO Psíquico prendeu Lairon um instante.\n\n— Folha Mágica!\n\nLairon avançou mesmo assim, metal rangendo.\n\n— Onda de Trovoada! — o tio.\n\nO choque acertou em cheio.\n\nKirlia caiu de joelhos.\n\nAinda não era o suficiente para derrubar Lairon.\n\nWally correu ao campo sem esperar apito.\n\nAbraçou Kirlia.\n\n— Obrigado. Já chega.\n\n— Você foi incrível.\n\n## O tio aceita\n\nO tio recolheu Lairon em silêncio.\n\nOlhou o sobrinho de verdade pela primeira vez.\n\nViu a poeira.\n\nO choro seco.\n\nO Kirlia ofegante que não largava a mão do menino.\n\n— Você... mudou.\n\n— Ainda perde.\n\n— Mas não corre.\n\nSilêncio longo.\n\n— Pode seguir.\n\n— Se machucar de novo, eu mesmo te arrasto pra Verdanturf.\n\nWally chorou rindo.\n\n— Combinado.\n\nRobson apertou o ombro dele.\n\n— Bem-vindo de novo à viagem.\n\nEyshila ainda não estava ali.\n\nMas a Aura do lugar já parecia menos pesada.\n\nLucario falou só para Robson:\n\n— Ele quebrou o próprio medo. Não o Lairon.\n\n## Cena Final\n\nÀ noite, os dois Kirlia se encararam no jardim do hotel.\n\nO de Robson, fêmea.\n\nO de Wally, macho.\n\nTocaram os chifres de leve.\n\nUma faísca de Aura.\n\nAsh sussurrou:\n\n— Fofo.\n\n— Cala a boca — murmurou Renato, sem força.\n\nMay sorriu para o Silcoon.\n\n— Amanhã o ginásio. Depois o Contest.\n\nMauville piscava luzes elétricas em toda a rua.\n\nWally dormiu sem tossir de medo.\n\nPela primeira vez em muito tempo.\n\nNa estação, o tio comprou passagem de volta.\n\nOlhou a cidade uma última vez.\n\nE partiu sem tirar o orgulho do bolso.\n\n## CONTINUA…\n",
+"123": "EPISÓDIO 123\nGinásio de Wattson! Empate Elétrico!\n\nAsh acordou antes do sol.\n\nPikachu já no ombro, bochechas acesas.\n\n— Ginásio! Wattson! Agora!\n\nO grupo quase não acompanhou o passo.\n\nNo Ginásio de Mauville, Wattson ria alto, bigode branco, colete amarelo.\n\n— Bem-vindos! Quem quer choque de verdade?\n\nAsh ergueu a mão.\n\n— Eu!\n\nRobson ficou na arquibancada com o resto.\n\nLucario sentou fora da área de combate.\n\n## Ash × Wattson\n\nA batalha foi longa e barulhenta.\n\nWattson usou Electrike, Voltorb, Magneton.\n\nAsh respondeu com Treecko, Taillow e Pikachu.\n\nNo meio do caos, do outro lado da parede do ginásio, o parque de atrações roncava.\n\nUm Raikou de metal — atração elétrica — sobrecarregou.\n\nA energia vazou.\n\nPikachu absorveu demais.\n\nRaio atrás de Raio.\n\nMagneton caiu.\n\nWattson perdeu.\n\nCaiu sentado no chão da arena, o sorriso apagado pela primeira vez.\n\n— Eu... fiquei obsoleto.\n\nAsh ficou sem jeito, o Pikachu ainda fumegando.\n\n— Não foi só eu. Foi o Raikou de metal.\n\nMax confirmava no livro, pálido.\n\n— Sobrecarga. Perigoso.\n\n## Electrike e ânimo\n\nFora do ginásio, Wattson caminhou sozinho.\n\nEncontrou um Electrike pequeno, assustado com os fios da cidade.\n\nSentou no meio-fio.\n\nFalou com ele horas.\n\nRiu de novo quando o Electrike mordeu a bota sem força.\n\nQuando o técnico do parque explicou a sobrecarga, o ânimo voltou inteiro.\n\nWattson voltou ao ginásio como tempestade boa.\n\n— Onde está o irmão do Ash?\n\n— O que tem Electrike também!\n\n## Desafio a Robson\n\nRobson desceu.\n\n— Capturado há pouco — disse, mostrando a Poké Bola.\n\n— Então um contra um!\n\n— Electrike contra Electrike!\n\nNão era o formato clássico de ginásio.\n\nEra o desafio do líder, no espírito dele.\n\nRobson aceitou.\n\n— Electrike!\n\n— Electrike! — Wattson.\n\n## Electrike × Electrike\n\n— Presa de Fogo!\n\n— Faísca!\n\nOs dois choques se cruzaram no centro.\n\n— Rajada de Chamas!\n\nA bola de fogo curta surpreendeu Wattson.\n\n— Que golpe é esse num Electrike?!\n\n— O dele — respondeu Robson.\n\nA arquibancada murmurou.\n\n— Onda de Trovoada!\n\nO Electrike de Robson tremeu, paralisado um segundo.\n\n— Aguenta! Investida!\n\n— Presa Elétrica! — Wattson.\n\nOs dois golpes acertaram juntos.\n\nOs dois Electrike caíram ao mesmo tempo.\n\nSilêncio.\n\nDepois, Max:\n\n— Empate!\n\nWattson riu até tossir.\n\n— Empate magnífico!\n\nErgueu uma insígnia dourada com raio.\n\n— Fica com a Insígnia Dínamo.\n\n— Você mostrou respeito pelo elétrico.\n\n— E criatividade.\n\nRobson segurou a terceira insígnia de Hoenn.\n\nNorman pedira quatro.\n\nFaltava uma.\n\nAsh gritou da grade:\n\n— Eu já tenho a minha! Você também!\n\n## Cena Final\n\nLá fora, May olhou o hall do Contest.\n\nBeautifly ainda não existia — só o Silcoon no colo, tremendo de luz contida.\n\nEntão o casulo brilhou.\n\nLuz.\n\nAsas.\n\nBeautifly.\n\nPó fino no ar da rua elétrica.\n\n— Beautifly... — May quase não falou.\n\nRobson sorriu.\n\n— Eu disse que sentia.\n\nWally e o Kirlia bateram palmas.\n\nRenato:\n\n— Agora não tem desculpa pro Contest.\n\nMauville à noite era um circuito de luzes.\n\nE alguém, longe, em Galar, já fechava a mala de volta.\n\n## CONTINUA…\n",
+"124": "EPISÓDIO 124\nEyshila de Volta! Convite ao Festival do Milênio!\n\nNo Centro Pokémon de Mauville, a porta girou.\n\nCabelo familiar.\n\nMochila nova demais.\n\nCheiro de outro continente.\n\n— Vocês cresceram torto sem mim?\n\n— Eyshila! — Ash e Robson ao mesmo tempo.\n\nRenato bufou, sorrindo de verdade.\n\n— Demorou.\n\nEla abraçou os três depressa demais.\n\nNo ombro, Ambipom — a antiga Aipom, evoluída, duas caudas batendo palmas sozinhas.\n\nMay piscou.\n\n— Oi...\n\n— Você deve ser a May. E o Max. E o Wally.\n\n— Brock eu já conheço. Forretress novo, hein?\n\nBrock riu.\n\n— Só ele em Hoenn.\n\n## Galar\n\nNa mesa do café, Eyshila falou sem parar.\n\n— Galar é enorme.\n\n— Estádio. Torcida. Dynamax... outra história.\n\n— A Professora Magnolia. A Sônia. O laboratório.\n\nLançou três Poké Balls com cuidado.\n\nSkwovet, gordo, já de olho no pão de Max.\n\nGossifleur, girando como flor no chão limpo.\n\nHatenna, tímida, escondida atrás da perna dela.\n\n— E a Ambipom, óbvio.\n\nAzurill tentou roubar a fruta do Skwovet.\n\nSkwovet não deixou.\n\nGuerra curta de bochechas.\n\nRisadas na mesa.\n\nMay apresentou Beautifly, ainda com pó nas asas.\n\nWally, o Kirlia macho.\n\nEyshila assobiou.\n\n— Hoenn tá acelerado.\n\n— Eu saí e vocês evoluíram o mundo.\n\n## O convite\n\nEla tirou um panfleto colorido da mochila.\n\n— Festival do Milênio.\n\n— Fora da cidade. Três dias.\n\n— Tem atrações. Desejos. Um organizador chamado Butler.\n\n— Vocês vêm.\n\nAsh já estava de pé.\n\n— Óbvio!\n\nRobson leu o panfleto.\n\nUma estrela cadente desenhada.\n\nUm desejo escrito em letra fina.\n\n— A gente vai.\n\nBrock ajeitou o Forretress.\n\n— Eu cuido da comida.\n\nMax abriu o livro.\n\n— Festival do Milênio: origem histórica—\n\n— Max — May e Eyshila juntas.\n\nRenato pegou o panfleto.\n\n— Se tiver comida grátis, eu vou. Se não tiver, eu vou do mesmo jeito.\n\n## Conversa à parte\n\nÀ noite, Eyshila puxou Robson para o corredor do Centro.\n\n— Ouvi que você quebrou na praia.\n\n— Renato me contou. Por PokéNav. Ele digita com raiva.\n\nRobson olhou o chão.\n\n— Passei.\n\n— Augusto. Drew. Brawly. Josias.\n\n— Agora tenho três insígnias. Uma fita.\n\nEyshila cutucou a testa dele.\n\n— Continua idiota. Mas o idiota certo.\n\nLucario falou por Aura para os dois:\n\n— Ela está mais firme.\n\n— Galar fez bem.\n\nAmbipom bateu palmas nas duas caudas, como quem traduzia.\n\nRobson sorriu pequeno.\n\n— Obrigado por voltar.\n\n— Eu nunca fui embora de verdade — disse ela. — Só mudei de laboratório.\n\n## Cena Final\n\nO grupo fechou as mochilas no quarto.\n\nMauville ainda tinha o Contest de May no dia seguinte.\n\nDepois, o festival.\n\nAsh e Robson trocaram um olhar curto no corredor.\n\nAquele olhar.\n\nDe quem sabe que uma batalha entre irmãos vem aí, na floresta ou depois.\n\nEyshila notou de longe.\n\n— Não comecem antes do Contest.\n\n— Eu quero assistir os dois.\n\nRenato:\n\n— Eu também. Com pipoca.\n\nNo céu de Mauville, uma luz passou rápida.\n\nAvião.\n\nOu estrela.\n\nNinguém tinha certeza.\n\nMas o desejo já estava plantado.\n\n## CONTINUA…\n"
 };
 
 </script>
